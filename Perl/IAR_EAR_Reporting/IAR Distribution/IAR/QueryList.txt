@@ -1,0 +1,19 @@
+Line Item Pull
+
+SELECT sr.filer AS filer, sr.FILER+'-'+Left(sr.ENTRY_NBR,7)+'-'+Right(sr.ENTRY_NBR,1) AS ENTRY_NBR, sr.line_nbr, sr.coo, sr.hsusa, sr.imp_nbr, sr.cgn_nbr, sr.mid, sr.value AS [Value], sr.DUTY AS duties, sr.port as port_ent, e.liquid_date AS liquid, IIf(e.entry_date Is Null, iif(e.arvl_date is null, #1/1/1970#, e.arvl_date),e.ENTRY_DATE) AS entry_date, sr.primary_spi AS spi, sr.entry_nbr AS xxx FROM SMRY_AND_RLSE AS sr LEFT JOIN Entry AS e ON (e.filer = sr.filer) AND (e.entry_nbr = sr.entry_nbr);
+
+Entry Pull
+
+SELECT max(sr.imp_nbr) AS ior, max(sr.imp_nbr) AS cons, sr.FILER+'-'+Left(sr.ENTRY_NBR,7)+'-'+Right(sr.ENTRY_NBR,1) AS num, sr.filer AS filer, max(sr.port) AS port, sum(sr.value) AS [Value], sum(sr.DUTY) AS duties, max(IIf(e.entry_date Is Null, iif(e.arvl_date is null, #1/1/1970#, e.arvl_date),e.ENTRY_DATE)) AS entry_date, max(e.entry_type) AS entrytype, sr.entry_nbr FROM SMRY_AND_RLSE AS sr LEFT JOIN Entry AS e ON (e.filer = sr.filer) AND (e.entry_nbr = sr.entry_nbr) GROUP BY sr.entry_nbr, sr.filer;
+
+Create SMRY_AND_RLSE
+
+CREATE TABLE SMRY_AND_RLSE (year number, hsusa text, numentries number, [value] number, duty number, filer text, coo text, mid text, port text, imp_nbr text, cgn_nbr text, entry_nbr text, line_nbr number, primary_spi text, source text);
+    
+Fill from HSUSA
+
+INSERT INTO SMRY_AND_RLSE (year, hsusa, numentries, [value], duty, filer, coo, mid, port, imp_nbr, cgn_nbr, entry_nbr, line_nbr, primary_spi, source) SELECT DatePart('yyyy', iif(e.entry_date is null, e.arvl_date, e.ENTRY_DATE)), h.HSUSA, 1 AS [NumEntries], h.value AS [Value], iif(l.calc_duty is null, h.EST_DUTY, l.calc_duty) AS Duty, h.FILER, l.CTRY_ORIGIN as coo, l.MID, e.port_ent as port, e.imp_nbr, l.cgn_nbr, h.ENTRY_NBR, h.LINE_NBR, h.PRIMARY_SPI, 'H' as source FROM (ENTRY_SMRY_HSUSA AS h LEFT JOIN ENTRY_SMRY_LINE AS l ON (h.filer = l.filer) AND (h.ENTRY_NBR = l.ENTRY_NBR) AND (h.LINE_NBR = l.LINE_NBR))   INNER JOIN entry e ON (e.filer = h.filer and e.entry_nbr = h.entry_nbr);
+            
+Fill from CARGO
+
+INSERT INTO SMRY_AND_RLSE (year, hsusa, numentries, [value], duty, filer, coo, mid, port, imp_nbr, cgn_nbr, entry_nbr, line_nbr, primary_spi, source) SELECT DatePart('yyyy', iif(er.entry_date is null, er.arvl_date, er.ENTRY_DATE)), crs.hsusa, 1 AS [NumEntries], crs.line_val AS [Value], 0 AS Duty, crs.filer, crs.ctry_code as coo, crs.mid as mid, er.port_ent as port, er.imp_nbr, crs.cgn_nbr, crs.entry_nbr, crs.line_nbr, null as primary_spi, 'C' as source FROM (    CARGO_RLSE_LINE crs   INNER JOIN entry er ON er.entry_nbr = crs.entry_nbr)   LEFT JOIN ENTRY_SMRY_HSUSA shs on (shs.entry_nbr = crs.entry_nbr and shs.filer = crs.filer and shs.line_nbr = crs.line_nbr) WHERE shs.entry_nbr is null;

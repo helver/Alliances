@@ -1,0 +1,426 @@
+001,Aetna Casualty and Surety
+002,Accredited Surety & Cas Co. Inc
+003,Aetna Fire Underwriters Ins Co
+004,Aetna Casualty & Surety Co of IL
+005,Aetna Insurance Co.
+006,Century Reinsurance Co
+007,Aetna Life & Casualty Co
+008,Affiliated FM Insurance Co
+009,Amer Empire Ins. (Gr Amer. Ins. Co)
+010,Acceptance Ins Co
+011,Acceleration National Ins Co
+012,Alliance Assurance Co US BR
+013,Allegheny Mutual Casualty Co
+014,Amco Insurance Co
+015,Allied Fidelity Insurance Co
+016,Acstar Insurance Co
+017,Cigna Insurance Co
+018,Cigna Insurance Co of IL
+019,Alaska Pacific Assurance Co
+020,A I U Insurance Co
+021,Allied Mutual Insurance Co
+022,Allendale Mutual Ins Co
+025,Allstate Insurance Co
+027,Amwest Surety Insurance Co
+028,American Agriculture Ins Co
+029,American Automobile Insurance Co
+031,American Bankers Ins Co of FL
+033,American Bonding Co
+037,American Casualty Co Reading PA
+039,American Centennial Ins Co
+041,American Credit Indemnity Co
+042,American Economy Insurance Co
+045,American Employers Ins Co
+047,American-European Reins Corp
+049,American Fidelity Co
+051,American Fidelity Insurance Co
+053,American Fire & Casualty Co
+065,American Guarantee & Liab Inc So
+067,American Hardware Mutual Ins Co
+068,American Home Assurance Co
+073,American Indemnity Co
+077,American Insurance Co
+085,American Manufacturers Mut Ins
+089,American Motorists Insurance Co
+093,American Mutual Liability Ins Co
+097,American National Fire Ins Co
+101,American Re-insurance Co
+102,American Road Insurance Co
+103,American Resources Ins Co. INc
+104,American Surety Co
+105,American States Insurance Co
+106,American Surety & Casualty Co
+107,Antilles Insurance Co
+108,Anvil Insurance Co
+109,Argonaut Ins
+111,Arkwright Mutual Ins
+112,Atlantic Employees Insurance Co
+113,Associated Indenity Corp
+115,Atlantic Casualty & Fire Ins Co
+117,Atlantic Insurance Co
+121,Atlantic Mutual Insurance Co
+123,Automobile Ins Co Hartford Conn
+125,Auto-Owners Insurance Co
+127,American Southern Insurance Co
+129,Baleoa Insurance Co
+133,Bankers Multifile Lines Ins Co
+134,Belvedere America Reinsurance Co
+138,Bituminous Casualty Corp
+139,Bindford Insurance Co
+140,Bond Safeguard Insurance Co
+145,Boston Old Colony Insurance Co
+149,Buckeye Union Ins Co
+151,Cim Insurance Corp
+153,Camden Fire Insurance Assoc
+157,Capitol Indemnity Corp
+158,Carlisle Insurance Co
+161,Western National Assurance Co
+169,Centennial Insurance Co
+170,Central Mutual Insurance Co
+172,Central National Ins Co of Omaha
+173,Century Indemnity Co
+175,Century Surety Co
+177,Charter Oak Fire Ins Co
+178,Chilton Insurance Co
+179,Chrysler Insurance Co
+181,Cincinnati Insurnce Co
+182,Cigna Insurance Co of Ohio
+183,Cigna Insurance Co of Texas
+184,Cigna Insurance Co of Midwest
+185,Hartford Casualty Insurance Co
+187,Classified Ins Corp
+188,Colonial Surety Co
+189,Commercial Ins Co of Newark NJ
+197,Commercial Union Insurance Co
+201,Connecticut Indemnity Co
+205,Consolidated Insurance Co
+212,Contractors Bonding & Ins Co
+213,Continental Casualty Co
+214,Continental Ins Co - Puerto Rico
+215,CBIC Bonding & Insurance Co
+216,Cotton States Mutual Ins Co
+217,Continental Insurance Co
+218,Continental Surety & Fidelity Co
+219,Continental Western Insurance Co
+220,Co-Op De Segurge Multifiles De PR
+221,Cotten Belt Insurance Co Inc
+222,Corn-Husher Casualty
+223,Coronet Ins Co
+224,CNA-Causalty of Puerto Rico
+225,Cumis Ins Society Inc
+226,Delta Casualty Co
+227,Developers Ins Co
+228,Covenant Insurance Co
+229,North American Specialty Ins Co
+230,Dependable Insurance Co Inc
+231,Eastern Indemnity Co of MD
+232,Dairyland Insurance Co
+233,Empire Fire & Marine Ins Co
+234,Cumberland Casualty & Surety Co
+235,Covnenant Mutual Insurance Co
+241,Employers Fire Insurance Co
+245,Employers Mutual Casualty Co
+249,Employers Ins of Waubau A Mut Co
+253,Employers Reinsurance Corp
+255,Aegon Reinsurance Co of America
+256,Erie Insurance Co
+257,Evanston Insurance Co
+258,Fairmont Insurance Co
+259,Farmers Alliance Mutual Ins Co
+260,Explorer Insurance Co
+261,Farmland Mutual Insurance Co
+262,Far West Insurance Co
+263,Eric Reinsurance Co
+269,Federal Insurance Co
+270,Federated Mutual Insurance Co
+276,Frontier Insurance Co
+277,Fidelity & Casualty Co of NY
+280,Fidelity & Deposit Co
+281,Fidelity & Deposit Co of MD
+282,Fidelity & Guaranty Insurance
+283,Fidelity and Guaranty Insurance
+285,Fireman's Fund Insurance Co
+289,Fireman's Ins Co of Newark NJ
+290,First Financial Insurance Co
+291,First Calif Prop & Casualty Ins
+292,Folnsamerica Feinsurance Co
+293,First Ins Co of Hawaii Ltd
+294,Foremost Insurance Co
+295,Florida Farm Bur Mutual Ins Co
+296,Frankona Reinsurance Co US BR
+297,First National Insurance Co
+298,Fremont Indemnity Co
+299,G J Sciselli
+300,Consolidated Surety Ins Co
+301,Allianz Insurance Co
+302,General Accident Insurance Co
+303,General Casaulty Co of Wis
+305,General Insurance Co of America
+309,General Reinsurance Corp
+310,Glene Falls Insurance Co
+315,Global Surety & Ins Co
+317,Global Indemnity Co
+321,Graindealers Ins Co
+322,Gramey Insurance Co
+325,Granite State Ins Co
+329,Greater America Ins Co
+333,Greater Northern Ins Co
+337,Greater NY Mutual Ins Co
+341,Continental Reinsurance Corp
+342,Guard Casualty & Ins Co
+349,Gulf Insurance Co
+351,Hamilton Mutual Insurance Co
+353,Hanover Insurance Co
+356,Harleysville Mutual Insurance Co
+357,Sentry Ins a Mutual Co
+360,Harco National Insurance Co
+361,Hartford Accident & Indemnity Co
+364,Hartford Ins Co of Connecticut
+365,Hartford Fire Insurance Co
+386,Hartford Insurance Co of 1L
+367,Hartford Ins Co of the Midwest
+368,Hartford Ins Co of the Southeast
+369,Hawkeye-Security Ins Co
+370,Hawaiian Insurance & Guaranty Co
+371,Heritage Insurance Co
+372,Heart of Amreica Fire & Casualty
+373,Highlands Insurance Co
+374,Hartford Underwriters Insurance
+375,Highlands Underwriters Ins Co
+377,Home Indemnity Co
+381,Home Insurance Co
+389,Hudson Insurance Co
+390,Ideal Mutual Insurance Co
+391,IGF Insurance Co
+392,Cigna Reinsurance Co
+393,Illinois National Ins Co
+394,Imperial Casualty & Indemnity Co
+395,Indemnity Co of California
+396,Indemnity Ins Co of N America
+397,American Independent Reins Co
+401,Indiana Insurance Co
+402,Indiana Lumbermens Mutual Ins Co
+405,Industrial Indemnity Co
+406,Industrial Indemnity Co of NW
+409,Inland Insurance Co
+410,Insurance Company of Evanston
+411,Insurance Company of the West
+412,Insurance Co of North America
+413,Cigna Corp
+415,Insurance Co of Pacific Coast
+417,Insurance Co of the State of PA
+418,Integrity Insurance Co
+419,Integrity Mutual Insurance Co
+420,Integon Indemnity Corp
+421,International Fidelity Ins Co
+422,Intercargo Insurance Co
+423,International Credit of North
+424,International Business & Mer
+425,International Insurance Co
+429,International Service Ins Co
+431,Investers Ins Co of America
+435,Iblane Insurance Co Ltd
+437,International Ins Co
+438,ITT Ludon Properity Ins Co
+445,John Deere Insurance Co
+447,Kansas Bankers Surety Co
+449,Kansas City Fire & Marine Ins Co
+450,Kemper Reinsurance Co
+451,Kentucky Central Insurance Co
+452,Lancer Insurance Co
+453,Lawyers Surety Corp
+457,Liberty Mutual Insurance Co
+459,London Assurance U S Branch
+461,Lumbermens Mutual Casualty Co
+463,MIC Property & Casualty Ins Corp
+465,Maine Bonding & Casualty Co
+469,Puritan Insurance Co
+473,American Gen Fire & Casualty CO
+477,Maryland Casualty Co
+481,Massachusetts Bay Insurance Co
+482,Mead Reinsurance Corp
+485,Merchants Bonding Co (MUTUAL)
+486,Meritplan Insurance Co
+489,Michigan Millers Mutual Ins Co
+493,Michigan Mutual Insurance Co
+497,Mid-Century Insurance CO
+499,Mid-Continent Casualty Co
+501,Midland Insurance Co
+513,Millers Mutual Fire Insurance
+517,Millers Mutual Ins Assoc of IL
+520,Mission Insurance Co
+521,Millers National Insurance Co
+522,Minnesota Trust Co of Austin
+523,Morrison Assurance Co Inc
+524,MCA Insurance Co
+525,Motors Insurance Corp
+526,Munich America Reinsurance Co
+527,Minuch Reinsurance Co US BR
+528,National American Insurance Co
+529,National Automobile & Casualty
+531,National-BEN Franklin Ins Co MI
+533,National Ben-Franklin Insurance
+535,National Bonding & Accident
+537,National Excess Ins Co
+541,National Fire Ins Co of Hartford
+543,National General Fire & Casualty
+545,National Grange Mutual Ins Co
+549,National Indemnity Co
+550,National Mutual Insurance Co
+553,National Reinsurance Corp
+561,National Surety Corp
+565,National Union Fire Ins Co
+567,National United Insurance Co
+573,Nationwide Mutual Insurance Co
+574,Netherlands Insurance Co
+577,New Hampshire Insurance Co
+579,New South Insurance Co
+580,New York Underwriters Ins Co
+585,Newark Insurance Co
+589,Niagara Fire Insurance Co
+590,Northbrook Property & Cas Ins Co
+593,North America Reinsurance Corp
+597,North River Insurance Co
+605,Northern Assurance Co of America
+609,Northern Ins Co of New York
+611,North Star Reinsurance Corp
+613,Northwestern National Casualty Co
+616,Old Republic Surety Co
+617,Northwestern National Insurance Co
+618,Northwestern Pacific Indemnity
+619,Oceanic Insurance & Surety Co
+620,Occidental Fire & Casualty NC
+621,Ohio Casualty Insurance Co
+625,Ohio Farmers Insurance Ca
+627,Old Republic Insurance Co
+629,Oklahoma Surety Co
+630,Omaha Property & Casualty Ins Co
+631,North East Insurance Co
+637,Oregon Automobile Ins Co
+641,Pacific Employers Insurance Co
+645,Pacific Indemnity Co
+649,Pacific Insurance Co Ltd
+652,Pacific States Casualty Co
+657,Peerless Insurance Co
+661,Pekin Insurance Co
+669,Pennsylvania Manuf Assoc Inc
+673,Pennsylvania Millers Mut Ins Co
+677,Pennsylvania National Mutual
+679,Personal Serice Insurance Co
+681,Phoenix Assurance Co of New York
+685,Phoenix Insurance Co
+687,Pinnacle Insurance Co
+688,Planet Indemnity Co
+689,Planet Insurance Co
+693,General Accident Ins Co America
+694,Preferred National Insurance Co
+695,Prestige Casualty Co
+696,Progressive Casualty Ins Co
+697,Protective Insurance Co
+698,Progressive Mutual Insurance Co
+699,Prudential Reinsurance Co
+705,Mercantile & General Reinsurance
+709,Public Service Mutual Ins Co
+713,Puerto Rican-American Ins Co
+715,Ranger Insurance Co
+717,Regent Insurance Co
+719,Regency Insurance Co
+721,Reinsurance Corp of New York
+725,Reliance Insurance Co
+726,Reliance Insurance Co of NY
+727,Republic-Franklin Insurance Co
+728,Rockwood Insurance Co
+729,Republic Insurance Co
+731,Republic Western Insurance Co
+737,Royal Indemnity Co
+739,Royal Insurance Co of America
+741,Safeco Insurance Co of America
+745,Safeco National Insurance Co
+747,Safeco Insurance Co of IL
+748,Scor Reinsurance Co
+749,St Paul Fire & Marine INs Co
+750,B & H Insurance Co
+751,St Paul Mercury Insurance Co
+752,Sea Insurance Co LTD US BR
+753,Seaboard Surety Co
+757,Security Ins Co of Hartford
+765,Security National Ins Co
+766,Selective Insurance CO of America
+767,Sentry Indemnity Co
+768,Sentinel Insurance Co Ltd
+769,Select Insurance Co
+770,Bkandia America Reinsurance Corp
+771,South Carolina Insurance Co
+772,Southeastern Casualty Co
+774,Southeastern Reinsurance Co Inc
+775,St Paul Guardian Insurance Co
+777,Standard Fire Insurance Co
+781,State Automobile Mutual Ins Co
+785,State Farm Fire & Casualty Co
+789,State Surety Co
+792,Statewide Insurance Co
+797,Stuyvesant Ins Co
+804,Westfield Insurance Co
+810,Westfield National Insurance Co
+811,Sun Ins Office. LTD US BR
+712,Swiss Reinsurance Co US BR
+813,Surety Co of the Pacific
+814,Sun insurance Co of New York
+815,Surety Ins Co of Calif
+816,Amer Druggist Ins Co of Cinn
+817,Houston General Insurance Co
+818,Texas Pacific Indemnity Co
+821,Transamerica Insurance Co
+822,Transamerica Premier Ins Co
+825,Transcontinental Insurance Co
+826,Trans Pacific Insurance Co
+833,Transport Indemnity Co
+837,Transportation Insurance Co
+840,Travelers Indemnity Co of RI
+841,Travelers Indemnity Co
+842,Travelers Indemnity Co of IL
+843,Toklo Marine & Fire Insurance
+844,Travelers Indemnity Co of America
+845,Trinity Universal Insurance Co
+846,Tri-State Ins Co of Minnesota
+849,Tri-State Insurance Co
+850,Trinity Universal Ins of Kansas
+851,Twin City Fire Insurance Co
+855,Ulico Casualty Co
+856,Underwriters Indemnity Co
+857,Unigard Security Ins Co
+859,Union Indemnity Ins Co of NY
+860,Union Insurance Co
+862,United Capital Insurance Co
+863,United National Insurance Co
+864,United Doabial Insurance Co
+865,United Pacific Insurance Co
+866,United Pacific Ins Co
+867,United Southern Assurance
+868,U S Capital Insurance Cc
+869,United States Fidelity & Guaranty Co
+870,United Fire & Casualty Co
+873,United States Fire Insurance Co
+874,Universal Bonding Insurance Co
+875,Universal Surety of Amreica
+876,Universal Underwriters Ins Co
+877,Universal Surety Co
+878,Universal Omaha Cas Ins Co
+879,Universal Insurance Co
+880,Universal Security Ins Co
+881,Utica Mutual Insurance Co
+885,Valley Forge Insurance Co
+887,Van Tol Surety Co Inc
+889,Vigilant Insurance Co
+891,Washington Intl Ins Co
+893,West America Insurance Co
+895,Voyage Guaranty Insurance Co
+897,Westchester Fire Insurance Co
+901,Western Casualty & Surety Co
+905,Western Fire Insurance Co
+913,Western Surety Co
+921,Transamerica Ins Co of Michigan
+925,Wilshire Insurance Co
+927,Winterhur Reinsurance
+935,Worldwide Underwriters
+945,Zurich Insurance Co

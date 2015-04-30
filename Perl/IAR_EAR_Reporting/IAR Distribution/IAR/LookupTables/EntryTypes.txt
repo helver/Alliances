@@ -1,0 +1,36 @@
+00, NO CHG
+01, Consumption Entry Free and Dutiable  
+02, Consumption Entry Quota/Visa 
+03, Consumption Entry Countervailing/Antidumping Duty
+04, Consumption Entry Appraisement
+05, Consumption Entry Vessel Repair 
+06, Consumption Entry Foreign Trade Zone 
+07, Consumption Entry Quota/Visa and AD/CVD combinations 
+01, CONS
+11, Informal Entry Free and Dutiable
+12, Informal Entry Quota (Other than textiles) 
+21, Warehouse Entry Warehouse
+22, Warehouse Entry Re-Warehouse
+23, Warehouse Entry Temporary Importation Bond
+24, Warehouse Entry Trade Fair
+25, Warehouse Entry Permanent Exhibition
+26, Warehouse Entry Foreign Trade Zone (Admission)
+31, Warehouse Withdrawal For Consumption  
+32, Warehouse Withdrawal Quota/Visa 
+33, Warehouse Withdrawal Aircraft and Vessel Supply (Immediate Export)  
+34, Warehouse Withdrawal Countervailing and Antidumping Duty  
+35, Warehouse Withdrawal For Transportation 
+36, Warehouse Withdrawal For Immediate Exportation  
+37, Warehouse Withdrawal For Transportation and Exportation 
+38, Warehouse Withdrawal Quota/Visa and ADA/CVD combinations  
+41, Drawback Entry Manufacturer 
+42, Drawback Entry Same condition 
+43, Drawback Entry Rejected Importation 
+51, Government Entry Defense Contract Management Command - International (DCMC-I)  
+52, Any U.S. Federal Government agency (other than DCMAO)
+61, Transportation Entry Immediate Transportation 
+62, Transportation Entry Transportation and Exportation 
+63, Transportation Entry Immediate Exportation  
+64, Transportation Entry Barge Movement
+65, Transportation Entry Permit to Proceed  
+66, Transportation Entry Baggage  

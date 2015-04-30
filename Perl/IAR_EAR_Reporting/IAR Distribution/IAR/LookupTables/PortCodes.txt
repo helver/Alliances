@@ -1,0 +1,461 @@
+0101, Portland, ME
+0102, Bangor, ME
+0103, Eastport, ME
+0104, Jackman, ME
+0105, Vanceboro, ME
+0106, Houlton, ME
+0107, Fort Fairfield, ME
+0108, Van Buren, ME
+0109, Madawaska, ME
+0110, Fort Kent, ME
+0111, Bath, ME
+0112, Bar Harbor, ME
+0115, Calais, ME
+0118, Limestone, ME
+0121, Rockland, ME
+0122, Jonesport, ME
+0127, Bridgewater, ME
+0131, Portsmouth, NH
+0132, Belfast, ME
+0152, Searsport, ME
+0181, Lebanon Airport, NH
+0201, St. Albans, VT
+0203, Richford, VT
+0206, Beecher Falls, VT
+0207, Burlington, VT
+0209, Derby Line, VT
+0211, Norton, VT
+0212, Highgate Springs/Alburg, VT
+0401, Boston, MA
+0402, Springfield, MA
+0403, Worcester, MA
+0404, Gloucester, MA
+0405, New Bedford, MA
+0406, Plymouth, MA
+0407, Fall River, MA
+0408, Salem, MA
+0409, Provincetown, MA
+0410, Bridgeport, CT
+0411, Hartford, CT
+0411, Hartford. Connecticut
+0412, New Haven, CT
+0413, New London, CT
+0416, Lawrence, MA
+0417, Logan Airport, MA
+0501, Newport, RI
+0502, Providence, RI
+0503, Mellville, RI
+0701, Ogdensburg, NY
+0704, Massena, NY
+0705, Fort Covington, NY
+0706, Cape Vincent, NY
+0708, Alexandria Bay, NY
+0711, Chateaugay, NY
+0712, Champlain-Rouses Point, NY
+0714, Clayton, NY
+0715, Trout River, NY
+0901, Buffalo-Niagara Falls, NY
+0903, Rochester, NY
+0904, Oswego, NY
+0905, Sodus Point, NY
+0906, Syracuse, NY
+0907, Utica, NY
+0979, Buffalo, NY
+1101, Philadelphia, PA
+1102, Chester, PA
+1103, Wilmington, DE
+1104, Pittsburgh, PA
+1105, Paulsboro, PA
+1106, Wilkes-Barre/Scranton, PA
+1107, Camden, NJ
+1108, Philadelphia Intl. Airport, PA
+1108, Phila. Intl. Airport
+1109, Harrisburg, PA
+1113, Gloucester City, NJ
+1118, Marcus Hook, PA
+1181, Allentown/Bethlehem/Easton Airport, PA
+1301, Annapolis, MD
+1302, Cambridge, MD
+1303, Baltimore, MD
+1304, Crisfield, MD
+1001, New York, NY
+1002, Albany, NY
+1003, Newark, NJ 
+4601, Newark, NJ
+4601, New York/Newark AR
+1004, Perth Amboy, NJ
+4602, Perth Amboy, NJ
+1069, UPS
+4670, UPS
+1070, Federal Express, Jamaica, NY
+4770, Federal Express, Jamaica, NY
+1071, NYACC
+4771, NYACC
+1072, DHL, Jamaica, NY
+4772, DHL, Jamaica, NY
+4772, DHL Airways
+1081, Morristown Airport, Newark, NJ
+4681, Morristown Airport, Newark, NJ
+4701, John F. Kennedy Airport, NY
+1012, John F. Kennedy Airport, NY
+4701, JOHN F KENNEDY AIR
+3301, Raymond, MT
+3302, Eastport, ID
+3303, Salt Lake City, UT
+3304, Great Falls, MT
+3305, Butte, MT
+3306, Turner, MT
+3307, Denver, CO
+3308, Porthill, ID
+3309, Scobey, MT
+3310, Sweetgrass, MT
+3312, Whitetail, MT
+3316, Piegan, MT
+3317, Opheim, MT
+3318, Roosville, MT
+3319, Morgan, MT
+3321, Whitlash, MT
+3322, Del Bonita, MT
+3382, Natrona County Intl. Airport, WY
+3401, Pembina, ND
+3402, Noyes, MN
+3403, Portal, ND
+3404, Neche, ND
+3405, St. John, ND
+3406, Northgate, ND
+3407, Walhalla, ND
+3408, Hannah, ND
+3409, Sarles, ND
+3410, Ambrose, ND
+3413, Antler, ND
+3414, Sherwood, ND
+3415, Hansboro, ND
+3416, Maida, ND
+3417, Fortuna, ND
+3419, Westhope, ND
+3420, Noonan, ND
+3421, Carbury, ND
+3422, Dunseith, ND
+3423, Warroad, MN
+3424, Baudette, MN
+3425, Pinecreek, MN
+3426, Roseau, MN
+3481, Hector International Airport, Fargo, ND
+3501, Minneapolis-St. Paul, MN
+3601, Duluth, MN
+3602, Ashland, WI
+3604, International Falls/Ranier, MN
+3608, Superior, WI
+3613, Grand Portage, MN
+3614, Silver Bay, MN
+3701, Milwaukee, WI
+3702, Marinette, WI
+3703, Green Bay, WI
+3706, Manitowoc, WI
+3707, Sheboygan, WI
+3708, Racine, WI
+3801, Detroit, MI
+3802, Port Huron, MI
+3803, Sault Ste Marie, MI
+3804, Saginaw/Bay City/Flint, MI
+3805, Battle Creek, MI
+3806, Grand Rapids, MI
+3807, DETROIT METROPLTN
+3808, Escanaba, MI
+3809, Marquette, MI
+3814, Algonac, MI
+3815, Muskegon, MI
+3816, Grand Haven, MI
+3818, Rogers City, MI
+3819, Detour, MI
+3820, Mackinac Island, MI
+3842, Presque Island, MI
+3843, Alpena, MI
+3844, Ferrysburg, MI
+3881, Oakland/Pontiac Airport, MI
+3901, Chicago, IL
+3902, Peoria, IL
+3903, Omaha, NE
+3904, East Chicago, IN
+3905, Gary, IN
+3906, O'Hare Intl. Airport, IL
+3982, Greater Rockford Airport, IL
+3991, Nippon Courier Hub, IL
+3907, Des Moines, IA
+3908, Davenport, IA-Rock Island/Moline, IL
+3981, Waukegan Regional Airport, IL
+4101, Cleveland, OH
+4102, Cincinnati – Lawrenceburg, OH
+4103, Columbus, OH
+4104, Dayton, OH
+4105, Toledo - Sandusky, OH
+4106, Erie, PA
+4108, Ashtabula, OH
+4122, Ashtabula, OH
+4109, Conneaut, OH
+4122, Conneaut, OH
+4110, Indianapolis, IN
+4111, Fairport, OH
+4112, Akron, OH
+4115, Louisville, KY
+4116, Owensboro, KY - Evansville, IN
+4116, Owensboro-Evansvil
+4117, Huron, OH
+4121, Lorain, OH
+4181, Airborne Air Park, Wilmington, OH
+4182, Rickenbacker Airport, Columbus, OH
+4183, Fort Wayne Airport, IN
+4184, Bluegrass Airport, Lexington, KY
+4195, Emery World Wide Courier, Dayton, OH
+4195, Emery Courier
+4196, UPS Courier, Louisville, KY
+4197, DHL Courier, Cincinnati, OH
+4501, Kansas City, MO
+4502, St. Joseph, MO
+4503, St. Louis, MO
+4503, St Louis, MO
+4504, Wichita, KS
+4505, Springfield, MO
+1401, Norfolk, VA
+1402, Newport News, VA
+1404, Richmond-Petersburg, VA
+1406, Cape Charles, VA
+1407, Reedville, VA
+1408, Hopewell, VA
+1409, Charleston, WV
+1410, Front Royal, VA
+1501, Wilmington, NC
+1502, Greensboro, NC
+1502, Winston-Salem, NC
+1503, Durham, NC
+1506, Reidsville, NC
+1511, Beaufort-Morehead City, NC
+1512, Charlotte, NC
+1601, Charleston, SC
+1602, Georgetown, SC
+1603, Greenville-Spartanburg, SC
+1604, Columbia, SC
+1701, Brunswick, GA
+1703, Savannah, GA
+1704, Atlanta, GA
+1801, Tampa, FL
+1803, Jacksonville, FL
+1805, Fernandina Beach, FL
+1807, Boca Grande, FL
+1808, Orlando, FL
+1814, St. Petersburg, FL
+1816, Port Canaveral, FL
+1818, Panama City, FL
+1819, Pensacola, FL
+1821, Port Manatee, FL
+1881, Southwest Florida Regional Airport, FL
+1882, Sanford Regional Airport, FL
+4901, Aguadilla, PR
+4904, Fajardo, PR
+4905, Guanica, PR
+4906, Humacao, PR
+4907, Mayaguez, PR
+4908, Ponce, PR
+4909, San Juan, PR
+4911, Jobos, PR
+4912, Guayanilla, PR
+4913, San Juan Intl. Airport, PR
+4913, SAN JUAN INTL AIRP
+5101, Charlotte Amalie, Virgin Islands
+5102, Cruz Bay, Virgin Islands
+5103, Coral Bay, Virgin Islands
+5104, Christiansted, Virgin Islands
+5105, Frederiksted, Virgin Islands
+5201, Miami, FL
+5202, Key West, FL
+5203, Port Everglades, FL
+5204, West Palm Beach, FL
+5205, Fort Pierce, FL
+5206, Miami Intl. Airport , Miami, FL
+5270, International Courier Association
+5401, Washington, DC
+5402, Alexandria, VA
+1901, Mobile, AL
+1902, Gulfport, MS
+1903, Pascagoula, MS
+1904, Birmingham, AL
+1910, Huntsville, AL
+2001, Morgan City, LA
+2002, New Orleans, LA
+2003, Little Rock/North Little Rock, AR
+2004, Baton Rouge, LA
+2005, Port Sulphur, LA
+2006, Memphis, TN
+2007, Nashville, TN
+2008, Chattanooga, TN
+2009, Destrehan, LA
+2010, Gramercy, LA
+2011, Greenville, MS
+2012, Avondale, LA
+2013, St. Rose, LA
+2014, Good Hope, LA
+2015, Vicksburg, MS
+2016, Knoxville, TN
+2017, Lake Charles, LA
+2018, Shreveport-Bossier City, LA
+2095, Federal Express Courier, Memphis, TN
+2101, Port Arthur, TX
+2102, Sabine, TX
+2103, Orange, TX
+2104, Beaumont, TX
+2301, Brownsville-Cameron County, TX
+2302, Del Rio, TX
+2303, Eagle Pass, TX
+2304, Laredo, TX
+2305, Hidalgo, TX
+2307, Rio Grande City, TX
+2309, Progresso, TX
+2310, Roma, TX
+2402, El Paso, TX
+2403, Presidio, TX
+2404, Fabens, TX
+2406, Columbus, NM
+2407, Albuquerque, NM
+2481, Santa Teresa Airport, Dona Ana County, NM
+2601, Douglas, AZ
+2602, Lukeville, AZ
+2603, Naco, AZ
+2604, Nogales, AZ
+2605, Phoenix, AZ
+2606, Sasabe, AZ
+2608, San Luis, AZ
+2609, Tucson, AZ
+5301, Houston, TX
+5306, Texas City, TX
+5309, Houston Intercontinental Airport, Houston,TX
+5310, Galveston, TX
+5311, Freeport, TX
+5312, Corpus Christi, TX
+5313, Port Lavaca, TX
+5501, Dallas/Ft. Worth Airport, TX
+5501, Dallas/Ft. Worth, TX
+5502, Amarillo, TX
+5503, Lubbock, TX
+5504, Oklahoma City, OK
+5505, Tulsa, OK
+5506, Austin, TX
+5507, San Antonio, TX
+5582, Midland International Airport, TX
+2501, San Diego, CA
+2502, Andrade, CA
+2503, Calexico, CA
+2504, San Ysidro, CA
+2505, Tecate, CA
+2506, Otay Mesa Station, CA
+2704, Los Angeles, CA
+2707, Port San Luis, CA
+2709, Long Beach, CA
+2711, El Segundo, CA
+2712, Ventura, CA
+2713, Port Hueneme, CA
+2715, Capitan, CA
+2719, Morro, CA
+2720, Los Angeles Intl. Airport, Los Angeles, CA
+2720, Los Angeles Int Ar
+2722, Las Vegas, NV
+2770, DHL Worldwide, Los Angeles, CA
+2772, Gateway Freight Services, LAX
+2773, Air Cargo Handling Services, Inc
+2795, UPS, Ontario, CA
+2801, San Francisco Intl. Airport,San Francisco, CA
+2802, Eureka, CA
+2803, Fresno, CA
+2805, Monterey, CA
+2809, San Francisco, CA
+2810, Stockton, CA
+2811, Oakland, CA
+2812, Richmond, CA
+2813, Alameda, CA
+2815, Crockett, CA
+2816, Sacramento, CA
+2820, Martinez, CA
+2821, Redwood City, CA
+2827, Selby, CA
+2828, San Joaquin River, CA
+2829, San Pablo Bay, CA
+2830, Carquinez Strait, CA
+2831, Suisun Bay, CA
+2833, Reno, NV
+2834, San Jose International, San Francisco, CA
+2870, DHL Worldwide Express, San Francisco, CA
+2871, Air Cargo Handling Services, San Francisco, CA
+2901, Astoria, OR
+2902, Newport, OR
+2903, Coos Bay, OR
+2904, Portland, OR
+2905, Longview, WA
+2907, Boise, ID
+2908, Vancouver, WA
+2909, Kalama, WA
+2981, Kingsley Field, Klamath Falls, OR
+2991, Federal Express Courier, Portland, OR
+3001, Seattle, WA
+3002, Tacoma, WA
+3003, Aberdeen/Hoquiam, WA
+3004, Blaine, WA
+3005, Bellingham, WA
+3006, Everett, WA
+3007, Port Angeles, WA
+3008, Port Townsend, WA
+3009, Sumas, WA
+3010, Anacortes, WA
+3011, Nighthawk, WA
+3012, Danville, WA
+3013, Ferry, WA
+3014, Friday Harbor, WA
+3015, Boundary, WA
+3016, Laurier, WA
+3017, Point Roberts, WA
+3018, Kenmore Air Harbor, WA
+3019, Oroville, WA
+3020, Frontier, WA
+3022, Spokane, WA
+3023, Lynden, WA
+3025, Metaline Falls, WA
+3026, Olympia, WA
+3027, Neah Bay, WA
+3029, Seattle -Tacoma Intl. Airport, WA
+3029, SEATTLE-TACOMA INT. Airport, WA
+3081, Yakima Air Terminal, Yakima, WA
+3101, Juneau, AK
+3102, Ketchikan, AK
+3103, Skagway, AK
+3104, Alcan, AK
+3105, Wrangell, AK
+3106, Dalton Cache, AK
+3107, Valdez, AK
+3111, Fairbanks, AK
+3112, Petersburg, AK
+3115, Sitka, AK
+3124, Pelican, AK
+3125, Sand Point, AK
+3126, Anchorage, AK
+3127, Kodiak, AK
+3181, Saint Paul Airport, Anchorage, AK
+3195, Federal Express, Anchorage, AK
+3196, UPS, Anchorage, AK
+3196, UPS Courier Hub
+3201, Honolulu, HI
+3202, Hilo, HI
+3203, Kahului, HI
+3204, Nawiliwili-Port Allen, HI
+3205, Honolulu Intl. Airport, HI
+3295, UPS, Honolulu Airport, HI
+5271, DHL Worldwide Express, Miami, FL
+4191, Airborne Express Courier, 
+4192, Burlington Air Express, 
+4170, Burlington Air Express, 
+3071, U.P.S., Seattle-Tacoma
+3071, U.P.S.
+4778, TNT SkyPak
+4671, Federal Express ECCF, NJ
+1195, UPS Hub, Philadelpia, PA
+1195, UPS Hub Phil., PA
+4198, Federal Express HUB
+5295, UPS MIAMI INT'L AI
+2895, FED EXP COURIER FACILITY
