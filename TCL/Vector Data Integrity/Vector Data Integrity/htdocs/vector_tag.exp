@@ -1,0 +1,2007 @@
+#!/opt/expect/bin/expect
+
+# Vector Data Integrity Checker.
+#
+# Eric Helvey 913-534-7007
+# eric.l.helvey@mail.sprint.com
+#
+# Version 1.0 - 19 Sep 2000
+#
+# Version 1.1 - 1 Oct 2000
+#     Integrated the billing package.
+#     Refactored the entire program.
+#     Enhanced debugging mechanisms.
+#
+# Version 2.0 - 20 Oct 2000
+#     Integrated the connection tracing package.
+#     Documented the entire program.
+#     Added additional GUI functionality.
+#     Placed most Vector specific functionality in external souce file.
+#     Increased stability and error handling.
+
+
+
+# Just some comments on how I've written this.
+#
+# 1. One whole section of this script contains functions that are
+#    very specific to Vector switches.  There are three kinds of
+#    these functions:
+#     a. Parsing Functions
+#     b. Getting Functions
+#     c. Connecting Functions
+#
+# 2. The Connecting Functions handle general interactions with the
+#    switch.  This includes logging in, setting terminal configurations
+#    and other setups expected by the Getting Functions.
+#
+# 3. The Getting Functions are responsible for initiating data
+#    acquisition on the switch.  These functions ensure that data is
+#    retrieved once and only once.  These functions are also in
+#    charge of printing out debugging information for the data
+#    acquisition.  They also invoke the parse_all function and provide
+#    the regular expression and the connection handle to parse_all.
+#
+# 4. The Parsing Functions take in data from parse_all.  Parse_all sends
+#    one line of matching data at a time.  The Parsing Functions take
+#    that line and store in the "datalines" array under a unique key.
+#    At the same time, configurations are checked to see if any metadata
+#    about the data is needed.  If there is any metadata needed, the
+#    Parsing Functions create that metadata and store it in the
+#    datalines array under a unique key.
+#
+# 5. The Getting and Parsing Functions are named after the commands that
+#    they are intended to execute.  So if a command of "co switch sho"
+#    was to be executed, a Getting Function called "get_co_switch_sho"
+#    will be written that will call parse_all.  In addition, a
+#    "parse_co_switch_sho_line" will be written that will be invoked by
+#    parse_all for each line of the output that matches.
+#
+# 6. Parameters passed by reference to functions will be identified by
+#    a simple name such as "p1" or "p2".  The references will be
+#    dereferenced with an upvar command in the first or second line of
+#    the function.
+
+
+#
+#
+# Variable : debug
+#
+# Debugging level determines whether or not we should generate
+# debugging output and how that output should be displayed.
+# For graphical executions, the debugging output is displayed
+# in a separate window.  For text based invoctions, debugging
+# information is sent to the $debug_fh filehandle (which is
+# usually standard out, but can be standard error).
+set debug 0
+
+
+
+#
+#
+# Variable : graphical
+#
+# Graphical identifies whether this is a graphical invocation
+# or not.  We set this by checking for the existance of a particular
+# Tk function.
+set graphical 0
+
+
+#
+#
+# Variable : debug_fh
+#
+# The filehandle to use for text debugging messages.  Usually either
+# stdout or stderr.
+set debug_fh "stdout"
+
+
+#
+#
+# Function : setup_debugging
+#
+# setup_debugging is called once from inside the graphical setup block.
+# This function builds the debugging window and makes that window
+# available to the debug_log function.
+#
+# This function gets called once and accepts no parameters.
+proc setup_debugging {} {
+	global .debug
+
+	# Makes the window it's own window and not simply a widget in
+	# another window.
+	toplevel .debug
+
+	# Create the text area used to print the debugging statements.
+	# Also created the scroll bar and ties the two widgets together.
+	set t [text .debug.t -setgrid true -wrap word -width 80 -height 25 -yscrollcommand ".debug.sy set"]
+	scrollbar .debug.sy -orient vertical -command ".debug.t yview"
+
+	# Inserts the text widget and the scrollbar into the debugging
+	# window.
+	pack .debug.sy -side right -fill y
+	pack .debug.t -side left -fill both -expand true
+}
+
+
+#
+#
+# Function : debug_log
+#
+# Debug_log creates a highly controllable way of accepting debugging
+# output, displaying it, and deciding whether or not to display it.
+# What's nice about this is that it's a central location where all
+# debugging output must pass.  This allows us to have very tight
+# control over what gets displayed, how and when.
+#
+# This function gets called from all over the place and accepts
+# two parameters.  The first parameter is the debugging importance
+# of the message.  The second parameter is the message itself.
+proc debug_log { debug_level debug_message } {
+	global .debug debug_fh debug
+	global graphical
+
+	# We check to see if we should be logging debugging messages by
+	# first checking if debugging is turned on at all.  If it is, then
+	# we check to see that the debugging level of the message is lower
+	# than (more fundamental) than the current debugging level of the
+	# system.
+	if {$debug && $debug_level <= $debug} {
+
+		# If so, we check to see if we're running as a graphical
+		# application.  If we are not running graphically, then
+		# we write the message out to the debugging filehandle.
+		if {$graphical != 1} {
+			puts $debug_fh $debug_message
+		} else {
+
+			# If we are running as a graphical application, we
+			# append the message to the text contained in the
+			# debugging text window.
+			.debug.t insert end "$debug_message\n"
+		}
+	}
+}
+
+
+
+#
+#
+# Function : config_check
+#
+# config_check gives us a central location to determine how the
+# program is going to work.  Each operation will have certain
+# configurable action associated with it.  These configurable
+# actions determine what metadata is collected.  This metadata
+# enables certain operations to be performed.  This function
+# is the central authority for determining whether a particular
+# option is enabled or not.  Having this stored in a single
+# function also means we don't have to transport the configuration
+# array around to all the different functions.
+#
+# This function is called from all over the place and accepts one
+# parameter - the name of the configuration that we want to
+# check.  If the configuration is enabled we return true (1),
+# otherwise we return false.
+proc config_check { config } {
+	global configs
+
+	# If the configuration exists and is not zero, we return
+	# 1 for true.  Otherwise (if it doesn't exist, or it is
+	# zero) we return 0 for false.
+	if {[info exists configs($config)] && $configs($config)} {
+		return 1
+	} else {
+		return 0
+	}
+}
+
+
+source "vector_connections.exp"
+
+#
+#
+# Function : swap_fabric
+#
+# swap_fabric is a function that converts a port identifier on either
+# the first fabric or the second fabric of a switch to an identifier
+# of the first fabric.  We're doing this because the billing information
+# reported by the switch only contains first fabric port identifiers.
+#
+# swap_fabric takes a single argument - a port identifier.  Port
+# identifiers are of the form: 1A2 - number/letter/number.  swap_fabric
+# returns a port identifier.  This function is called from within the
+# parse_vpc_sho_line function and the parse_vcc_sho_line function when
+# the "fabric_mapping" option is enabled.
+proc swap_fabric { port } {
+	global fabric
+
+	if {$port == ""} {
+		return "000"
+	}
+
+	# The split operation takes the port identifier and splits it on the
+	# empty string.  What this does is to create a list where each
+	# character in $port is its own element in the list.  This list is
+	# then given the name "digits".
+	#
+	# If $port contained "1A1", digits would contain: { {1} {A} {1} }.
+	set digits [split $port {}]
+
+	# The first digit of a port identifier is going to be 1-4.  First
+	# fabric identifiers are 1 and 3.  Second fabric identifiers are
+	# 2 and 4.  So what we want to do is to subtract one from the
+	# first digit of the port identifier if the first digit is evenly
+	# divisable by two.
+	#
+	# expr indicates that this is a mathematical operation - the modulo
+	# operation.
+	#
+	# lindex is the same as elementAt().  It takes a list and an index
+	# and returns the element of the list that occupied that position
+	# within the list.
+	if {[expr [lindex $digits 0] % 2] == 0} {
+
+		# We already know what expr and lindex do.  lreplace takes four
+		# arguments, a list, a starting index, an ending index and a
+		# replacement list (which may just be a single element).
+		# lreplace replaces the elements in the list between the
+		# starting and ending elements with the replacement list.
+		set digits [lreplace $digits 0 0 [expr [lindex $digits 0] - 1]]
+		debug_log 4 "We swapped some fabric."
+	}
+
+
+	# Port identifers containing an E are special.  They essentially
+	# link up the different fabrics.  So when we're doing a mapping, we
+	# only have to remap the third digits of a port identifier when the
+	# second character is an E.
+	if {[lindex $digits 1] == "E"} {
+
+		# This should look very similar to the above operation with the
+		# main difference being the index of the $digits list that we're
+		# working with.
+		if {[expr [lindex $digits 2] % 2] == 0} {
+			set digits [lreplace $digits 2 2 [expr [lindex $digits 2] - 1]]
+			debug_log 4 "We swapped some fabric."
+		}
+	}
+
+	# Not sure about this statement at this time.
+    set fabric [lindex $digits 0]
+
+    # The join creates a single string from a list by concatenating the
+    # elements of the list with the string given as the second argument
+    # to the join function.
+    #
+    # We return this string which is the properly remapped port
+    # identifer.
+	return [join $digits ""]
+}
+
+
+
+#
+#
+# Function : parse_from_billing
+#
+# parse_from_billing takes in the data retrieved from the crscan command
+# and parses it up, extracting the useful information from that data.
+# Fabric swapping occurs here.
+#
+# This function accepts one argument, a reference to the datalines
+# array. This function is called from within the billing_info function.
+proc parse_from_billing { p1 fh p2 p3 p4 line p5 p6 } {
+	upvar $p1 datalines $p2 key $p3 from $p4 to $p5 count $p6 record
+
+	debug_log 5 "parsing line $count --$line--"
+
+	# If the line we're looking at contains the "Call Record" string,
+	# that means we're at the beginning of a new block.  At this point
+	# we want to process the information we've collected as we've gone
+	# through the old block.
+	if {   [regexp "Call Record (\[0-9]+)" $line trash record]
+	    || $line == "LastLine"} {
+
+		# If this is the first Call Record line we've found, then we
+		# don't have any previous information to work with, so we skip
+		# this stuff the first time through.
+		if {$count} {
+
+			# If the ports contained in this connection have the CTL
+			# label in them, then we don't want to process them.
+			if {[info exists key]} {
+				if {[regexp "CTL" $key] == 0} {
+
+					# We store the fact that this unique connection
+					# identifier exists, and we keep track of all the
+					# connections that are kept in the billing
+					# information.
+					set datalines($key,billing) 1
+					lappend $datalines(billedconns) $key
+
+					debug_log 4 "Appending $key to the billedconns list"
+				}
+
+				# Clear out the key variable in anticipation of the next
+				# cycle through the file.
+				unset key
+			}
+		}
+
+		# Increment the counter variable so that the second pass (and
+		# all subsequent passes) through the loop will result in the
+		# proper data processing and storage.
+		incr count
+
+		if {$line == "LastLine"} {
+			return
+		}
+	}
+
+	# If the data line contains this string, we want to store that
+	# portion of the of the data.  This is the "in" or "from" port.
+	# The connection identifier is composed from the "in" port and
+	# the "out" port.  The problem is that we're not guaranteed any
+	# particular order.  So we just read in the value and waid to
+	# do anything with it until we hit the start of the next block.
+	if {[regexp "^call_in_port_vp_vc\[ \t]+:(\[A-Z0-9/]*)" $line trash mydat]} {
+		set from $mydat
+		debug_log 5 "From port : --$from--$line"
+	}
+
+	# If the data line contains this string, we want to store that
+	# portion of the of the data.  This is the "out" or "to" port.
+	# The connection identifier is composed from the "in" port and
+	# the "out" port.  The problem is that we're not guaranteed any
+	# particular order.  So we just read in the value and waid to
+	# do anything with it until we hit the start of the next block.
+	if {[regexp "^call_out_port_vp_vc\[ \t]+:(\[A-Z0-9/]*)" $line trash mydat]} {
+		set to $mydat
+		debug_log 5 "To port : --$to--$line"
+	}
+
+
+	# If we've seen both the "from" and the "to" ports, then we can
+	# go ahead and do our fabric mapping.  One thing we need to do
+	# first however, is get rid of the /'s.  The ports reported in
+	# the billing data look like : 1A4/4 for vpc or 1B3/4/23 for vcc.
+	# When we convert the /'s to " "'s, we get the added benefit that
+	# we now have a list and not simply a string.  It makes picking
+	# out which portion of the string to perform fabric mapping on
+	# much easier.
+	if {[info exists from] && [info exists to]} {
+
+		# Convert /'s to " "'s.  Changes $from and $to from simple
+		# strings to strings/lists.
+		regsub -all "\/" $from " " from
+		regsub -all "\/" $to " " to
+
+		# The variable, key becomes the concatenation of $from and $to.
+		set key "$from $to"
+
+		debug_log 4 "Call Record $record -- $from -- $to -- $key"
+
+		# Here's where we do the fabric mapping.  It looks alot like
+		# the kinds of things we did up in the parse_co_vpc_sho_line
+		# and parse_co_vcc_sho_line functions.
+ 		if {[regexp "^\[1-9]\[A-E]\[1-9]$" [lindex $key 2]]} {
+			set key [lreplace $key 0 0 [swap_fabric [lindex $key 0]]]
+			set key [lreplace $key 2 2 [swap_fabric [lindex $key 2]]]
+		} else {
+			set key [lreplace $key 0 0 [swap_fabric [lindex $key 0]]]
+			set key [lreplace $key 3 3 [swap_fabric [lindex $key 3]]]
+		}
+
+
+		# At this point, we're just going to clear out the from and
+		# to variables in anticipation of the next run through the
+		# loop.
+		unset from
+		unset to
+	}
+}
+
+
+
+#
+#
+# Function : compare
+#
+# This function takes the data acquired from the billing information
+# stored by the switch and compares that with the configuration
+# information read by off of the switch.  This function identifies
+# differences between the data taken from those two sources.  This is
+# important because if a connection has been configured in the switch
+# but isn't in the billing information, then the company is losing
+# money.  If the connection is being billed but hasn't been configured,
+# then someone is paying for something they aren't getting.
+#
+# compare takes two argument, a reference to the datalines array, and a
+# file handle.  This function is called from billing_info.
+proc compare { p1 fh } {
+	upvar $p1 datalines
+
+	# We've got a couple of temporary arrays that we'll use to identify
+	# the connections that are absent from the billing information or
+	# from the switch information.
+	set missedbilling {}
+	set missedswitch {}
+
+
+	# What we're doing here is we're going to examine all of the
+	# connections (vpc and vcc) established on the switch.  We're then
+	# going to take the unqiue connection identifier and check for that
+	# identifier in the billing data.  If it doesn't exist, then the
+	# billing data has gotten out of date and we record that connection
+	# identifier as missing from the billing data.
+	foreach key [array names datalines] {
+		if {[regexp "^(.*),fabricmap" $key trash keyid]} {
+			if {   [regexp "CTL" $keyid] == 0
+			    && [info exists datalines($keyid,billing)] == 0} {
+				lappend missedbilling $keyid
+			}
+		}
+	}
+
+
+	# Then we do essentially the same thing but we start with the
+	# billing data and make sure we have information for each
+	# connection.  If there is no switch data for the connection we
+	# record that fact.
+	foreach key $datalines(billedconns) {
+		if {[info exists datalines($key,fabricmap)]} {
+			continue
+		} else {
+			lappend missedswitch $key
+		}
+	}
+
+	# Here we're just reporting all the connections that are not present
+	# in the billing data.
+	puts $fh "Missing from the Billing Records:"
+	foreach key $missedbilling {
+		if {[llength $key] == 4} {
+			puts $fh "$key -- $datalines($datalines($key,fabricmap),vpc)"
+		} else {
+			puts $fh "$key -- $datalines($datalines($key,fabricmap),vcc)"
+		}
+	}
+
+
+	# Here we're reporting all the connections that are not present in
+	# the switch data.
+	puts $fh "\n\nMissing from the Switch Data:"
+	foreach key $missedswitch {
+		puts $fh "$key"
+	}
+}
+
+
+#
+#
+# Function : get_billing_data
+#
+# This function goes out and acquires billing data as reported by vector
+# switches.  The switch itself reports in what machine and what
+# directory to find the billing information.  We log into the main
+# billing machine, find the latest billing file for the switch we're
+# interested in, ftp that file to main billing machine, and run the
+# crscan command on that file.  The output of the crscan command is then
+# stored and processed in the parse_from_billing function.
+#
+# This command accepts six parameters.  The first is the mainhost - or
+# the machine which has the crscan program on it.  The ftphost contains
+# the IP address of the machine that has the billing information for the
+# switch we're working on.  ftpdir contains the absolute path of the
+# directory that contains the switch billing data.  switchid contains
+# the specific switch code that marks which set of files we're
+# interested in.  fabric contains the fabric number associated with the
+# IP address on the switch that we're working on - either 1 or 3.  The
+# final parameter is a reference to the datalines array.  The function
+# returns a 1 or 0.  1 indicates a failure.  0 indicates a successful
+# data acquisition.  This function is invoked from the billing_info
+# function.
+proc get_billing_data { mainhost ftphost ftpdir switchid fabric fh p1 } {
+	upvar $p1 datalines
+
+	debug_log 4 "mainhost $mainhost ftphost $ftphost ftpdir $ftpdir switchid $switchid fabric $fabric"
+
+	# log_user determines whether or not we echo the telnet
+	# interactions.  Zero means that we don't echo anything.
+	log_user 0
+
+	set counter 0
+
+	while {$counter < 4} {
+		# Fire up telnet and log into the $mainhost.
+		if {[catch "spawn telnet $mainhost" reason]} {
+			incr counter
+		} else {
+			break
+		}
+		if {$counter >= 4} {
+			puts $fh "ERROR: Unable to connect to the billing host ($mainhost)."
+			return 1
+		}
+	}
+
+	# We now expect to find a login prompt.  In the event that we don't,
+	# we have to assume that we are unable to connect.  We're also
+	# running under the assumption that the default timeout length of
+	# 10 seconds is more than sufficient for us to expect to see a login
+	# prompt.  If we can't get connected, we error out of this function.
+	expect {
+	    timeout {
+	        puts "ERROR: Unable to connect to the billing host ($mainhost)."
+	        return 1
+	    }
+	    "login: "
+	}
+
+	# We now reduce the timeout to 2 seconds.  This should be sufficient
+	# for us at this point.
+	set timeout 2
+
+	# We have seen the login prompt.  So at this point we want to send a
+	# user name.
+	send "bso\r"
+
+	# We now expect to see a password prompt."
+	expect "Password: "
+
+	# So we send a password in response to the prompt.
+	send "mc68340\r"
+
+	# Here is where we run a command to find out what file we want to
+	# use.  Basically what I'm doing is assuming that the file we want is
+	# the file that was created last - or the latest update from the
+	# switch.  In order to find out what file was created last we use
+	# the "ls" command in UNIX, and give it the "rc" option - for order
+	# by date, and reverse the order.  The "1" option lists one file per
+	# line.  We also use the $switchid and the $fabric to list only
+	# those files that we're interested in.  When we run this command,
+	# the first line of the response will give us the file that we're
+	# interested in.
+	send "rsh $ftphost ls -1rc [set ftpdir]vss_account.*.[set switchid].[set fabric].cc\r"
+
+	# We've issued the command, now we're waiting for the response...
+	expect {
+		timeout {
+			puts $fh "ERROR: [set switchid] .cc file does not exist.  Could be a timing issue."
+			return 1
+		}
+		-re "[set ftpdir](\[^\r\n]*\.cc)" {
+			set ftpfile $expect_out(1,string)
+		}
+	}
+
+	if {[info exists ftpfile] == 0} {
+		puts $fh "ERROR: Could not retrieve ftpfile file name for [set switchid] using rsh command"
+		debug_log 1 "ERROR: Could not retrieve ftpfile file name for [set switchid] using rsh command"
+		return 1
+	}
+
+	# Now we expect a prompt.
+	expect "$ "
+
+	# We know what file we want, now we go get it using rcp.  This is
+	# MUCH easier than trying to script an FTP session.  One command,
+	# and  we're done.  VERY convenient.  I'm glad this is installed.
+	send "rcp $ftphost:[set ftpdir][set ftpfile] ./[set switchid].cc\r"
+
+	# After the rcp, we expect another prompt.
+	expect "$ "
+
+	# At this point, we have the file right where we want it.  So we go
+	# ahead and run the crscan command on the file.
+	send "./crscan ./[set switchid].cc\r"
+
+	# We know that we could have ALOT of data - probably over 10,000
+	# lines.  In order to handle that, we turn off the timeout.
+	set timeout -1
+
+	# Initialize some variables...
+	set dat2 ""
+	set count 0
+
+	# In this case, we expect to see a line telling us that the
+	# processing of the datafile is complete.  Until we get there, all
+	# lines we see is just data.  So we parse each line as we get it
+	# until we either run out of lines ("$ ") or we see the last line
+	# (-re "^Processing")
+	expect {
+		"Failed to open" {
+			puts $fh "ERROR: [set switchid] .cc file did not get transferred properly."
+			return 1
+		}
+		-re "^Processing of datafile ./[set switchid].cc complete.*\n" {
+			set dat2 "[set dat2]$expect_out(buffer)"
+			debug_log 4 "got last line --$expect_out(buffer)--"
+			parse_from_billing datalines $fh key from to "LastLine" count record
+		}
+		-gl "\n" {
+			set dat2 "[set dat2]$expect_out(buffer)"
+			debug_log 2 "Line # $count"
+			debug_log 4 "Found -- $expect_out(buffer)"
+			parse_from_billing datalines $fh key from to $expect_out(buffer) count record
+			incr count
+			exp_continue
+		}
+		"$ " {
+			debug_log 1 "WARNING: No connection information in .cc file."
+			puts $fh "WARNING: No connection information in .cc file."
+			send "\r"
+		}
+	}
+
+	# Now that we've gotten the bulk of the data, we can turn the
+	# timeout down to something a little more constrictive.
+	set timeout 1
+
+	# Expect a prompt...
+	expect "$ "
+
+	# Delete the temporary billing data file.
+	send "rm [set switchid].cc\r"
+
+	# Expect a prompt...
+	expect "$ "
+
+	# Log out of the server...
+	send "exit\r"
+
+	debug_log 5 "$dat2"
+
+    debug_log 2 "\n $count lines in billing data\n"
+
+	# Store the data we've just retrieved into the datalines array so
+	# that we can get at it whenever we want it.
+	set datalines(billinginfo) $dat2
+
+	debug_log 5 "$datalines(billinginfo)"
+
+	# We return 0 to indicate a successful data acquisition.
+	return 0
+}
+
+
+#
+#
+# Function : parse_all
+#
+# parse_all is a generic function designed to handle line-by-line data
+# acquisition and parsing.  This is a generic function and is used by
+# all "get_*" functions.  parse_all uses a spawn_id provided as a
+# parameter to the function and sends a given command out through that
+# spawn_id.  We then grab the output of the command and send it through
+# a parsing function, one line at a time.
+#
+# parse_all accepts four parameters, a command to run, a regular
+# expression which identifies a matching line of output, a function call
+# that gets evaluated and executed when the regular expression matches,
+# and a referece to the spawn_id of the connection that should be used.
+# This function is called from all "get_*" functions.
+proc parse_all { commy reg func p2 fh } {
+    upvar $p2 spawn_id
+
+	# Here we're actually sending the command to the switch over the
+	# spawn_id that was passed in.
+    send "$commy\r"
+
+	# At this point we're going to set a short timeout and just wait to
+	# get the the first matching line.  If we find the first line, we
+	# can then assume that everything is working properly.  In that
+	# situation, we'll turn the timeout off and just run through the
+	# rest of the data until  we hit the prompt again.
+	set timeout 4
+
+    expect {
+		timeout {
+			debug_log 1 "Got no love"
+			puts $fh "WARNING: Got timeout instead of switch data."
+			return
+		}
+        -gl "\n" {
+			if {[regexp $reg $expect_out(buffer) trash stuff]} {
+            	debug_log 2 "Found -- $stuff"
+	            eval $func \$stuff
+			} else {
+		    	exp_continue
+			}
+        }
+    }
+
+	# Now that we've got the first line, we can go ahead and make the
+	# timeout essentially infinite.
+    set timeout -1
+
+    expect {
+        -re "^localhost::>" {}
+        -gl "\n" {
+			if {[regexp $reg $expect_out(buffer) trash stuff]} {
+            	debug_log 2 "Found -- $stuff"
+            	eval $func \$stuff
+	    		exp_continue
+			}
+        }
+    }
+
+	# Return the timeout to its default value
+	set timeout 10
+}
+
+#
+#
+# Function : tagging_info
+#
+# tagging_info implements one of the major functional groups of our
+# script. In this case, it handles vector tagging validation.  In order
+# to do this,  tagging_info either acquires data or verifies that the
+# data has already been acquired.  In order to verify tagging, we need
+# data from the following commands: "co vpc sho", "co upc sho",
+# "co vcc sho", "co vpc sho advanced", "co vcc sho advanced".
+#
+# In addition to simply validating tagging, the tagging_info operation
+# will create a script which can be run on the switch.  This script will
+# perform the following tasks:
+#    1) Delete any unused upc contracts;
+#    2) Create new UPC contracts for existing, used UPC contracts;
+#    3) Delete all connections on the existing UPC contracts and
+#       re-create them on the new UPC contracts;
+#    4) Delete the old UPC contracts.
+#
+# tagging_info accepts four parameters, a host to connect to given in
+# dotted quad IP address form, a spawn_id which corresponds to a process
+# id, a file handle used for output, and a reference to the datalines
+# array which is used to store data collected as well as data generated.
+# This function is called from the main script body for command line
+# invocations, and from the "gogo" function for graphical invocations.
+proc tagging_info { host spawn_id fh p1 } {
+	upvar $p1 datalines
+	set count 0
+
+	# Acquire data.
+	get_co_upc_sho $spawn_id $fh datalines
+	get_co_vpc_sho $spawn_id $fh datalines
+	get_co_vpc_sho_advanced $spawn_id $fh datalines
+	get_co_vcc_sho $spawn_id $fh datalines
+	get_co_vcc_sho_advanced $spawn_id $fh datalines
+
+
+	debug_log 4 "datalines(gotupc) -- $datalines(gotupc)"
+	debug_log 4 "datalines(gotvpc) -- $datalines(gotvpc)"
+	debug_log 4 "datalines(gotvpcadvanced) -- $datalines(gotvpcadvanced)"
+	debug_log 4 "datalines(gotvcc) -- $datalines(gotvcc)"
+	debug_log 4 "datalines(gotvccadvanced) -- $datalines(gotvccadvanced)"
+
+	# Delete all UPC's not being used.
+	debug_log 2 "About to print out the deletes for unused upc contracts.\n\n"
+
+	# The untaggedupc element of the datalines array is a metadata
+	# element generated during the get_co_upc_sho functions.  This
+	# element is a list of upc contracts that do not have tagging turned
+	# on.  From this list we find all the contract that are unused.
+	foreach i $datalines(untaggedupc) {
+		debug_log 2 "$i -- $datalines($i,upc)"
+
+		# This element will let us know whether a particular contract is
+		# used or not.  If it is not used, we generated a delete command
+		# for this contract.
+		if {$datalines($i,upcused) == 0} {
+			puts $fh "co upc del $i"
+		}
+	}
+
+	# Just putting a little spacing in the script.
+	puts $fh "\n\n\n"
+
+	# Create new UPC's for existing used UPC's.  We've gone through and
+	# built a script to delete all the usused untagged upc contracts.
+	# At this point we're going to create new UPC contract for all
+	# existing untagged UPC contracts.
+	foreach i $datalines(untaggedupc) {
+
+		# Just making sure that this upc contract is, in fact, used.
+		if {$datalines($i,upcused) == 1} {
+			puts $fh "co upc new $i vbr0 [lrange $datalines($i,upc) 1 3] tag -cdvt [lindex $datalines($i,upc) 4]"
+		}
+	}
+
+	# Just putting a little spacing in the script.
+	puts $fh "\n\n\n"
+
+
+	# Print out vpc delete/new commands for each existing, used upc
+	# connection.  To do this, we look at the list of untagged upc
+	# connections.  When then check to see if we have a upc-to-vpc
+	# mapping for that particular upc contract.  The upc-to-vpc mapping
+	# is actually a list of vpc connection identifiers.  So if the
+	# mapping exists, we look at each vpc connection in turn and
+	# construct both a delete and an add command for each vpc
+	# connection.
+	foreach i $datalines(untaggedupc) {
+		if {[info exists datalines($i,upc_to_vpc)]} {
+        	foreach j $datalines($i,upc_to_vpc) {
+        	    set inctype "BADBAD"
+        	    set outctype "BADBAD"
+        	    set trash ""
+        	    regexp "^(\[^-]+)-(\[^-]+)-pp$" [lindex $datalines($j,vpcadvanced) 4] trash inctype outctype
+        	    puts $fh "co vpc del $j"
+        	    puts $fh "co vpc new $j [lrange $datalines($j,vpc) 6 6] -upc [lrange $datalines($j,vpc) 4 4] -inctype $inctype -outctype $outctype"
+	        }
+	    }
+	}
+
+	# Print out vcc delete/new commands for each existing, used upc
+	# connection.  To do this, we look at the list of untagged upc
+	# connections.  When then check to see if we have a upc-to-vcc
+	# mapping for that particular upc contract. The upc-to-vcc mapping
+	# is actually a list of vcc connection identifiers.  So if the
+	# mapping exists, we look at each vcc connection in turn and
+	# construct both a delete and an add command for each vcc
+	# connection.
+	foreach i $datalines(untaggedupc) {
+		if {[info exists datalines($i,upc_to_vcc)]} {
+        	foreach j $datalines($i,upc_to_vcc) {
+        	    set inctype "BADBAD"
+        	    set outctype "BADBAD"
+        	    set trash ""
+        	    if {[regexp "^(\[^-]+)-(\[^-]+)-pp$" [lindex $datalines($j,vccadvanced) 7] trash inctype outctype]} {
+        	        set ctypes "-inctype $inctype -outctype $outctype"
+        	    } else {
+        	        set ctypes ""
+        	    }
+        	    puts $fh "co vcc del $j"
+        	    puts $fh "co vcc new $j [lrange $datalines($j,vcc) 8 8] -upc [lrange $datalines($j,vcc) 6 6] $ctypes"
+	        }
+	    }
+	}
+
+	# Just a little spacing in the script.
+	puts $fh "\n\n\n"
+
+
+	# Delete existing UPC's for existing connections
+	foreach i $datalines(untaggedupc) {
+		if {$datalines($i,upcused) == 1} {
+			puts $fh "co upc del $i"
+		}
+	}
+}
+
+
+#
+#
+# Function : billing_info
+#
+# billing_info implements one of the major functional groups of our
+# script.  In this case, it handles validating that the switch is
+# reporting the proper billing information.  In order to verify this,
+# billing_info either acquires data from the switch or verifies that the
+# data has already been acquired.  It then acquires billing data from a
+# repository, and runs that data through a program that produces the
+# necessary information.  We then reconcile the connections that exist
+# in the switch with the connections that are reported in the billing
+# data.  The data needed from the switch is obtainable using the
+# following commands: "co switch call sho cr advanced", "co switch sho",
+# "co vcc sho", and "co vpc sho".
+#
+# billing_info accepts four parameters, a host to connect to given in
+# dotted quad IP address form, a spawn_id which corresponds to a process
+# id, a file handle used for output, and a reference to the datalines
+# array which is used to store data collected as well as data generated.
+# This function is called from the main script body for command line
+# invocations, and from the "gogo" function for graphical invocations.
+proc billing_info { host spawn_id fh p1 } {
+	upvar $p1 datalines
+	global switch_names
+
+	# Acquire data.
+	get_co_vpc_sho $spawn_id $fh datalines
+	get_co_vcc_sho $spawn_id $fh datalines
+	get_co_switch_call_sho_cr_advanced $spawn_id $fh datalines
+	get_co_switch_sho $spawn_id $fh datalines
+
+	# We get the fabric ID from the switch_names array.  This data is
+	# obtained in the "get_switch_names" function and is accessable as a
+	# global variable.
+	set fabric [lindex $switch_names($host) 0]
+
+	# Creating a new subsection of the datalines array.
+	set datalines(billedconns) {}
+
+	set counter 0
+	set temp "Primary URL"
+
+	# We had some difficulty with this section of data not being
+	# collected properly.  This is data obtained from the
+	# "co switch sho" command and the "co switch call sho cr advanced"
+	# command.  There are certain data items tht we must have available.
+	# The condition of the while loop checks to see if we have the
+	# needed data.  If not we re-issue the commands and try to obtain
+	# the data properly.
+	while {   [info exists datalines($temp,callcradvanced)] == 0
+	       || [info exists datalines(Switch,switch)] == 0} {
+
+		# We only want to try to get this data four times.  If it takes
+		# more tries than that, we've either totally gotten out of sync
+		# with the the switch, or the swith is having severe problems.  In
+		# either case it's probably best that we just stop trying.
+		incr counter
+		if {$counter > 4} {
+			puts $fh "ERROR: Probable configuration error."
+			return
+		}
+
+		# We log the fact that we didn't get the data.
+		debug_log 1 "Did not retrieve switch data properly."
+
+		# Now we have to clear the got* elements of the datalines array
+		# or else the get* functions will believe that we already have
+		# the data.  We actually do, but we want to reissue the command
+		# and have the switch give us the data again...
+		unset datalines(gotswitch)
+		unset datalines(gotcallcradvanced)
+		get_co_switch_call_sho_cr_advanced $spawn_id $fh datalines
+		get_co_switch_sho $spawn_id $fh datalines
+	}
+
+	# The location of the billing information is stored on the swithc in
+	# a format similar to:
+	#
+	# //123.123.123.123/path/to/directory
+	#
+	# We need to pull out the ip address and that full path of the
+	# directory where the .cc file lives.  This regular expression does
+	# that for us.
+    regexp "^//(\[^/]+)(/.*)$" $datalines($temp,callcradvanced) trash ftphost ftpdir
+
+	# Here we're just pulling out the switch id as collected from the
+	# switch.
+	set switchid $datalines(Switch,switch)
+
+    debug_log 3 "ftphost - $ftphost"
+    debug_log 3 "ftpdir - $ftpdir"
+	debug_log 3 "switchid - $switchid"
+
+	# Now we run the get_billing_data command.  If there are any errors
+	# ecountered during the execution of that function, get_billing_data
+	# will return "true" or 1.  In that case, we drop an error message
+	# and bail out since there won't be any data available for us to use
+	# in the compare function.
+	if {[get_billing_data "172.19.33.15" $ftphost $ftpdir $switchid $fabric $fh datalines]} {
+		puts $fh "Error getting billing data for $ftphost"
+		return
+	}
+
+	# If we've gotten this far, then we have the data from the switch
+	# and the data from the billing repository.  So we can now compare
+	# the data from the two sources and identify items that are missing
+	# from one or the other.
+	compare datalines $fh
+}
+
+
+
+#
+#
+# Function : completeness_info
+#
+# completeness_info is designed to make sure that a connection is
+# complete and bi-directional.  In some situations, this can be checked
+# within a single fabric.  In other situations, the completeness can
+# only be validated by checking on both fabrics.  What this function
+# does is a little complicated, so I'll describe it later.
+#
+# completeness_info accepts four parameters, a host to connect to given in
+# dotted quad IP address form, a spawn_id which corresponds to a process
+# id, a file handle used for output, and a reference to the datalines
+# array which is used to store data collected as well as data generated.
+# This function is called from the main script body for command line
+# invocations, and from the "gogo" function for graphical invocations.
+proc completeness_info { host spawn_id fh p1 } {
+	upvar $p1 datalines
+	global switch_names
+
+	# Acquire data.
+	get_co_vpc_sho $spawn_id $fh datalines
+	get_co_vcc_sho $spawn_id $fh datalines
+
+	# Set up the validate array.
+	set validate(-1) -1
+
+	# Run through the VPC connections...
+	foreach i $datalines(vpc_validate) {
+
+		# If the connection contains an E, then it's a cross fabric
+		# connection.  And we do those connections later.
+		if {[regexp "\[Ee]" [lrange $i 0 3]] == 0 && [regexp "CTL" $i] == 0} {
+			debug_log 5 "No E's."
+
+			# Add this connection to the validate array.
+			set validate([lrange $i 0 1]) "[lrange $i 2 6]"
+			debug_log 5 "$validate([lrange $i 0 1])--"
+		} else {
+
+			# Add the connections we're not doing to a list that we'll
+			# deal with later.
+			lappend datalines(cross_fabric) $i
+		}
+	}
+
+	# Run through the VPC connections...
+	foreach i $datalines(vcc_validate) {
+
+		# If the connection contains an E, then it's a cross fabric
+		# connection.  And we do those connections later.
+		if {[regexp "\[Ee]" [lrange $i 0 5]] == 0 && [regexp "CTL" $i] == 0} {
+			debug_log 5 "No E's."
+
+			# Add this connection to the validate array.
+			set validate([lrange $i 0 2]) "[lrange $i 3 8]"
+			debug_log 5 "$validate([lrange $i 0 2])"
+		} else {
+
+			# Add the connections we're not doing to a list that we'll
+			# deal with later.
+			lappend datalines(cross_fabric) $i
+		}
+	}
+
+	unset validate(-1)
+
+	# validate-validate does the actual connection tracing.  At this
+	# point we're dealing with intrafabric connections, so we send in
+	# the number 2 to indicate that there should be two pieces in each
+	# connection.
+	validate_validate validate 2 $fh
+
+	# Clear out the validate array.
+	unset validate
+}
+
+
+#
+#
+# Function : cross_fabric_check
+#
+# cross_fabric_check is designed to make sure that a connection is
+# complete and bi-directional.  In some situations, this can be checked
+# within a single fabric.  In other situations, the completeness can
+# only be validated by checking on both fabrics.  What this function
+# does is a little complicated, so I'll describe it later.
+#
+# cross_fabric_check accepts two parameters, a file handle used for
+# output, and a reference to the array used to store cross fabric
+# connections.  This function is called from the "gogo" function.
+proc cross_fabric_check { p1 fh } {
+	upvar $p1 cross_fabric
+
+	# Set up our array of stuff to check.
+	set validate(-1) -1
+
+	# Run through the connections for each fabric.
+	foreach j [array names cross_fabric] {
+		debug_log 5 "FABRIC - $j"
+
+		# Run through each connection...
+		foreach i $cross_fabric($j) {
+
+			# Skip all the CTL connections.
+			if {[regexp "CTL" $i] == 0} {
+				debug_log 5 "[get_key $i]--[get_val $i]--[get_names $i]"
+
+				# Add this connection the validate array.
+				set validate([get_key $i]) "[lrange $i [llength [get_key $i]] [expr [llength $i] - 1]]"
+
+				debug_log 5 "[get_key $i]--$validate([get_key $i])--"
+			}
+		}
+	}
+
+	unset validate(-1)
+
+	# validate-validate does the actual connection tracing.  At this
+	# point we're dealing with cross-fabric connections, so we send in
+	# the number 4 to indicate that there should be four pieces in each
+	# connection.
+	validate_validate validate 4 $fh
+
+	# Clear out the validate array.
+	unset validate
+}
+
+
+
+#
+#
+# Function - validate_validate
+#
+# I really need a more appropriate function name here.  What this
+# function does is to take in an array of connection information and
+# attempts to trace each connection making sure that all the pieces of
+# the connection are present and are named the same.  If any piece is
+# not present, or if the names of the piences are different, then an
+# error message is generated.
+#
+# validate_validate takes three arguments - a reference to an array that
+# contains the connection information to be traced, a count which is the
+# number of connections that will comprise a complete bidirectional
+# connection, and the output file handle.  There is no return value for
+# this function.  validate_validate is called from "completeness_info"
+# and "cross_fabric_check".
+proc validate_validate { p1 count fh } {
+	upvar $p1 validate
+
+	# We're going to run through all of the connections, one at a time.
+	foreach i [array names validate] {
+		set x $i
+
+		# The array names function above takes a static snapshot of the
+		# state of the $validate array.  The problem is that as we go
+		# through the connections, we're changing the array out from
+		# underneath that command.  So we need to make this check here
+		# to determine if we've already gone in and deleted this array
+		# entry.
+		if {[info exists validate($x)] == 0} {
+			continue
+		}
+
+		# $myconny is going to hold ALL the information about this
+		# connection so that we can give all the information back in
+		# any error messages.
+		set myconny ""
+
+		debug_log 4 "#######################"
+
+		# Just creating this error array.
+		set myerr(0) 0
+
+		# There are $count connection pieces in the full bidirectional
+		# connection.  Or at least there should be.  So we're going to
+		# make sure we don't go into any infinite loops by limiting how
+		# many links we're going to follow.  This will also help us
+		# identify certain types of misconfigured connections.
+		for {set j 0} {$j < $count} {incr j} {
+
+			debug_log 5 "pass $j"
+
+			# Append the data for this connection to $myconny.
+			set myconny "[set myconny]\t\t$x $validate($x)\n"
+
+			# Get the name of the connection.
+			set name [get_names $validate($x)]
+
+			set current $x
+			debug_log 4 "old data: $validate($x)"
+
+			# We're going to update $x to contain the originating port
+			# that corresponds to the destination port for the current
+			# connection pience we're looking at.  Usually, this will
+			# be an intra-fabric thing, so if we have 1A1 4 as the
+			# destination port for this connection, then $x will be
+			# 1A1 4.  But if the destination port is across the back
+			# plane, like 1E3 5 15, then $x will be 3E1 5 15.  The
+			# reason this is important is that we only store the
+			# originating ports - so we have to convert the destination
+			# ports to the originating ports that we're storing.
+			set x [swappy [lrange $validate($x) 0 [expr [llength $x] - 1]]]
+			debug_log 5 "x -- $x"
+
+			# If $x exists, then we're looking good.
+			if {[info exists validate($x)]} {
+				debug_log 4 "new data: $validate($x)"
+				debug_log 5 "[lrange $validate($x) 0 [expr [llength $validate($x)] - 2]]"
+
+				# Now we just have to check the connection name.
+				if {[get_names $validate($x)] == $name } {
+					debug_log 4 "It worked."
+				} else {
+
+					# The names were different, so we need to record an
+					# error message.
+					if {[info exists myerr(name)] == 0} {
+						debug_log 4 "Naming issue"
+						set myerr(name) 1
+					}
+				}
+			} else {
+				# If $x does not exists in our connection list, then
+				# we have a bit of a problem.  Here we're also making
+				# sure we don't report error messages for the same
+				# connection more than once.
+				if {[info exists myerr(conn)] == 0} {
+					puts $fh "Nonexistant connection link: $current $validate($current)\n$myconny"
+					debug_log 4 "No match."
+					set j $count
+					set myerr(conn) 1
+				}
+			}
+
+			# Now we're going to go in and delete pieces of the
+			# connections that we've already evaluated.  This is so that
+			# we don't spend a lot of time going over the connection
+			# again and again.
+			if {$j > 0} {
+				debug_log 5 "Deleting $current"
+				unset validate($current)
+			}
+		}
+
+		# Did we have an error with the name?  If so we print out that
+		# fact, and we store the fact that we have any errors.
+		if {[info exists myerr(name)]} {
+			puts $fh "Wrong name:"
+			set erer 1
+		}
+
+		# Did we have an error with the connection?  If so we print out
+		# that fact, and we store the fact that we have any errors.
+		if {[info exists myerr(conn)]} {
+			puts $fh "Nonexistant connection link:"
+			set erer 1
+		}
+
+		# If we had any errors, we print out the $myconny which contains
+		# all the information we have about this particular connection.
+		if {[info exists erer]} {
+			puts $fh "$myconny"
+		}
+
+		debug_log 4 "i - $i -- x - $x"
+
+		# Here we're clearing out the error variables.
+		unset myerr
+		if {[info exists erer]} {
+			unset erer
+		}
+	}
+
+}
+
+#
+#
+# Function - get_names
+#
+# get_names take a line from either a "co vcc sho" or "co vpc sho"
+# command and returns the name of the connection.  This is going to be
+# the last word in the connection line.  This function is called from
+# "completeness_info" and "cross_fabric_check".
+proc get_names { ident } {
+	debug_log 5 "name index: [expr [llength $ident] - 1]"
+	return [lindex $ident [expr [llength $ident] - 1]]
+}
+
+#
+#
+# Function - get_key
+#
+# get_key takes a line from either a "co vpc sho" or a "co vcc sho" and
+# will extract the "originating port" identifer from that string.
+#
+# get_key takes a single argument which is a line of data from a
+# "co vpc sho" or "co vcc sho" command.  It retuns a string containing
+# the originating port of the connection identified in the input.  It is
+# called from "completeness_info" and from "cross_fabric_check".
+proc get_key { ident } {
+
+	# If the number of words is greater than or equal to 8, this line
+	# of data must have come from a "co vcc sho".  That means that the
+	# data we want is in words 0, 1, and 2..
+	if {[llength $ident] >= 8} {
+		return [lrange $ident 0 2]
+	} else {
+		# Otherwise we want words 0 and 1.
+		return [lrange $ident 0 1]
+	}
+}
+
+#
+#
+# Function - get_val
+#
+# get_val takes a line from either a "co vpc sho" or a "co vcc sho" and
+# will extract the "destination port" identifer from that string.
+#
+# get_val takes a single argument which is a line of data from a
+# "co vpc sho" or "co vcc sho" command.  It retuns a string containing
+# the destination port of the connection identified in the input.  It is
+# called from "completeness_info" and from "cross_fabric_check".
+proc get_val { ident } {
+
+	# If the number of words is greater than or equal to 8, this line
+	# of data must have come from a "co vcc sho".  That means that the
+	# data we want is in words 3, 4, and 5.
+	if {[llength $ident] >= 8} {
+		return [lrange $ident 3 5]
+	} else {
+		# Otherwise we want words 2 and 3.
+		return [lrange $ident 2 3]
+	}
+}
+
+
+#
+#
+# Function - swappy
+#
+# swappy was written to take take a port identifer and swap the
+# alpha-numeric identifier if necessary.  We need to do this because
+# when we're tracing a connection across the backplane, and identifier
+# of 1E3 becomes 3E1, etc.
+#
+# swappy takes a single argument which is a port identifier (containing
+# the alpha-numeric port identifier as well as a vp and a vc identifer).
+# It returns the same information it got, after having swapped the
+# port identifier.  swappy is called from validate_validate.
+proc swappy { ident } {
+
+	# If the port doesn't have any 'E's in it, then we don't have
+	# to do anything.
+	if {[regexp "\[eE]" $ident]} {
+		debug_log 5 "ident - $ident"
+		set pt [lindex $ident 0]
+		debug_log 5 "pt - $pt"
+		set pts [split $pt ""]
+		debug_log 5 "pts - $pts"
+		set suf [lindex $pts 0]
+		debug_log 5 "suf - $suf"
+		set pts [lreplace $pts 0 0 [lindex $pts 2]]
+		debug_log 5 "pts - $pts"
+		set pts [lreplace $pts 2 2 $suf]
+		debug_log 5 "pts - $pts"
+		set ident [lreplace $ident 0 0 [join $pts ""]]
+		debug_log 5 "ident - $ident"
+	}
+	return $ident
+}
+
+
+
+#
+#
+# Function : get_switch_names
+#
+# get_switch_names goes out and gets the list of vector switches, their
+# CLLI names, and the IP addresses for fabrics 1 and 3 of each switch.
+# In order to make this information easily accessible, we store the
+# information keyed by both CLLI name, and by the IP addresses of both
+# fabrics.  This just makes it very easy for us to get the information
+# we need based on what we know.
+#
+# get_switch_names takes a single parameter - a reference to the
+# switch_names array.  It has no return value.  get_switch_names is
+# invoked from within the main body of the script.
+proc get_switch_names { p1 } {
+	global ippattern
+	upvar $p1 switch_names
+
+	debug_log 4 "\n\nDumping data gathered while reading switch names.\n\n"
+
+	# Here we're opening the file containing the list of vector switch
+	# CLLI's and their associated IP addresses.
+	set vsfh [open {G:\system~1\engine~1\bso\lists\vecsites.txt} r]
+
+	# We're going to run through each line of the file...
+	while {[gets $vsfh line] >= 0} {
+		debug_log 4 "$line"
+
+		# And if the line matches what we believe a line of data in the
+		# file should look like...
+		if {[regexp "\(\[A-Za-z0-9]+),([set ippattern]),([set ippattern])" $line trash name fab1 fab2]} {
+
+			# We store the information gleaned from the line into our
+			# switch_names array.
+			set switch_names($name) [list $fab1 $fab2]
+			set switch_names($fab1) [list 1 $name]
+			set switch_names($fab2) [list 3 $name]
+			debug_log 5 "got a line"
+		}
+	}
+
+	# Close the file handle...
+	close $vsfh
+}
+
+
+#
+#
+# Function : list_selected
+#
+# list_selected is a function that figures out what elements in a select
+# box have been selected.  The function looks at the list box passed in
+# as a parameter, and store the values in the list referenced by the
+# second parameter, p1.
+#
+# list_selected takes two parameters - a list box element, and a
+# reference to an array.  It has no return value.  list_selected is
+# invoked from within the "gogo" function.
+proc list_selected { listboxypoo p1 } {
+	upvar $p1 listofnames
+
+	# This is a little confusing.  When the list box was created, a
+	# function with the same name as the list box was also created.
+	# This allows us to have access to the attributes of the list box.
+	# In this case, when we run the listbox's named function sending in
+	# a parameter of "curselection", we will get a list of indexes into
+	# the list box identifying the elements of the list box that were
+	# selected.
+	foreach i [$listboxypoo curselection] {
+
+		# We then append each item, in order, onto our list...
+		lappend listofnames [$listboxypoo get $i]
+		debug_log 2 "Selected [$listboxypoo get $i]"
+	}
+}
+
+
+#
+#
+# Function : reset_display
+#
+# reset_display will clear all check boxes in the graphical user
+# interface, and will return the switches select box to having no items
+# selected.
+#
+# reset_display takes one parameter - a reference to a list of check
+# boxes contained in the UI.  There is no return value.  reset_display
+# is invoked as a result of the user pressing the "Reset" button on the
+# UI, and from the "gogo" function after a successful execution of that
+# function.
+proc reset_display { p1 } {
+	global checkbuttons
+	$p1 selection clear 0 [.switchesframe.switches size]
+
+	foreach i $checkbuttons {
+		$i deselect
+	}
+}
+
+
+#
+#
+# Function : select_all
+#
+# select_all will select all check boxes in the graphical user
+# interface.
+#
+# select_all takes one parameter - a reference to a list of check
+# boxes contained in the UI.  There is no return value.  select_all
+# is invoked as a result of the user pressing the "Select All" button
+# on the UI.
+proc select_all { p1 } {
+	$p1 selection set 0 end
+}
+
+
+#
+#
+# Function : processing_done
+#
+# processing_done is a function that pops up an alert box to inform the
+# user that the operation he requested is now complete.  It's for
+# information purposes only.
+#
+# The function takes no arguments and returns nothing. It does, however,
+# pop up a new alert box.  processing_done is called from within the
+# "gogo" function at the end of a successful pass through that function.
+proc processing_done {} {
+	tk_messageBox -icon error -type ok -title "Operation Complete" -parent . -message "Your operation has been completed."
+}
+
+#
+#
+# Function : invalid_input
+#
+# invalid_input is a function that pops up an alert box to inform the
+# user that the operation he requested can not be started because not
+# all of the information the system requires has been provided.  It's
+# for information purposes only.
+#
+# The function takes no arguments and returns nothing. It does, however,
+# pop up a new alert box.  invalid_input is called from within the
+# "gogo" function if an improper set of input have been selected.
+proc invalid_input {} {
+	tk_messageBox -icon error -type ok -title "Invalid Input" -parent . -message "You need to choose at least one switch, at least one fabric and at least one operation"
+}
+
+#
+#
+# Function : wrong_shell
+#
+# wrong_shell is a function that pops up an alert box to inform the user
+# that the operation he requested can not be completed because the
+# script was started incorrectly.  Basically if you run the script using
+# wish but you provide command line arguments, this message will show.
+# It's for informational purposes only.
+#
+# The function takes no arguments and returns nothing. It does, however,
+# pop up a new alert box.  wrong_shell is called from within the main
+# script body.
+proc wrong_shell {} {
+	tk_messageBox -icon error -type ok -title "Wrong Shell" -parent . -message "You have executed this command line using wish80.  Use tclsh80 instead."
+}
+
+#
+#
+# Function : fileDialog
+#
+# fileDialog is a function that pops up a file dialog box with a comlete
+# set of file dialog functionality.  This includes listing files,
+# directory navigation, file selection, and multiple file selection.
+#
+# The function takes two arguments: w which is the parent window that
+# this file dialog will report to, and ent which is the box for the file
+# name in the parent window that will be populated by the file name
+# chosen. fileDialog is called from the "gogo" function.
+proc fileDialog {w ent} {
+
+	# The following describes the contents of the variable "types".  In
+	# essence, types is a list of lists, describing file types and the
+	# file name extensions associated with those file types.
+	#
+    #   Type names		Extension(s)	Mac File Type(s)
+    #---------------------------------------------------------
+    set types {
+		{"Text files"		{.txt}	                    }
+		{"Text files"		{}		       TEXT         }
+		{"All files"		*                           }
+    }
+
+    # This is the line that actually pops up the file dialogue box and
+    # grabs the file information...
+	set file [tk_getSaveFile -filetypes $types -parent $w -initialfile Untitled -defaultextension .txt]
+
+	# If the file selected was blank, then we need to clear out the file
+	# name box in the parent window.
+    if [string compare $file ""] {
+		$ent delete 0 end
+		$ent insert 0 $file
+		$ent xview end
+    }
+}
+
+
+#
+#
+# Function : gogo
+#
+# gogo is the main function of the script when the script is invoked in a
+# graphical environment.  gogo runs the whole show.  It evaluates which
+# switches are to be queried, what operations are to be performed, what
+# file name to save the results under, and which fabrics to query.  It
+# spawns the telnet connections to the switches, open dialogue boxes,
+# and validates user input.
+#
+# gogo takes five arguments - all of which are references to data stored
+# in the scope of the main script body: fabrics, functions,
+# switch_names, commands, and the text box containing the output file
+# name.  The function has no return value.  gogo is invoked by the user
+# clicking on the "Execute" button of the GUI.
+proc gogo { p1 p2 p3 p4 p5 } {
+	upvar $p1 fabrics $p2 functions $p3 switch_names $p4 commands $p5 .filebox.fileask.ent
+	global commandnames fabricnames configs
+
+	debug_log 5 "p5 - $p5"
+
+	# Clear out the listofnames list.
+	set listofnames {}
+
+	# We need to get the file name that we're going to create or
+	# overwrite to store our results under.  That information is kept in
+	# the text box that we have a reference to.  The "get" operation on
+	# the text box returns the string that the text box contains.
+	set outfilename [$p5 get]
+
+	# Now that we have the information from the filebox, we can nuke it.
+	destroy .filebox
+
+	debug_log 5 "outfilename $outfilename"
+
+	# Create or overwrite our output file.  We also store a file handle
+	# for that file so that we can write stuff to it.
+	set fh [open $outfilename w]
+
+	# We now figure out which switches were selected by invoking the
+	# list_selected function.  This is a pretty generic function, but we
+	# know what we're feeding to the function, so we know what we'll get
+	# out of it.
+	list_selected .switchesframe.switches listofnames
+
+	# Here's our first error condition.  If the user didn't select any
+	# switches, we display our error message and return to normal
+	# operations.
+	if {[llength $listofnames] == 0} {
+		invalid_input
+		return
+	}
+
+	# What we're doing here is looking at which functions the user
+	# checked in the main GUI.  What we do first is to look at all of
+	# the functions, then we check to see if the value of that array
+	# element is 1.  If it's 1, that means the user selected it.  What
+	# we do then is to run through the configurations, and turn on each
+	# configuration associated with the functions that we're going to
+	# perform.
+	foreach k [array names functions] {
+		if {$functions($k) == 1} {
+			foreach j $configs($commands($k)) {
+				set configs($j) 1
+			}
+		}
+	}
+
+	# The found variable will simply let us know if we've found anything
+	# to do.
+	set found 0
+
+	# What we're doing here is essentially copying the list of fabrics
+	# that are checked, and the list of functions that are checked. This
+	# is because if we simply read them out of the original arrays, then
+	# the users can change them during the execution of the program and
+	# change what operations are performed.  We take the values now, so
+	# we know what they wanted to do.
+	foreach {i j} [array get fabrics] {
+		set fabs($i) $j
+	}
+
+	foreach {i j} [array get functions] {
+		set funcs($i) $j
+	}
+
+	# For each switch that was selected...
+	foreach j $listofnames {
+		debug_log 4 "inside outer foreach loop - $j"
+		debug_log 4 [join [array names fabrics] "--"]
+
+		set y ""
+
+		# and for each fabric...
+		foreach i [array names fabrics] {
+
+			set y "[set y]$i"
+
+			debug_log 1 "$y -- inside middle foreach loop - $i $fabrics($i)"
+
+			if {[config_check "connection_validation"]} {
+				set cross_fabric(-1) -1
+			}
+
+			# We check to see if that fabric was selected.  If it was...
+			if {$fabs($i) == 1} {
+
+				# We clear and recreate the datalines array.  Datalines
+				# is where we store all the data we acquire and metadata
+				# we create.  Doing this ensure us that we don't carry
+				# any data over from one switch/fabric to another.
+				set datalines(-1) -1
+				unset datalines
+				set datalines(errors) {}
+				set datalines(-1) -1
+
+				if {[config_check "connection_validation"]} {
+					set datalines(vpc_validate) {}
+					set datalines(vcc_validate) {}
+					set datalines(cross_fabric) {}
+				}
+
+				# We now go ahead and attempt to log into the switch and
+				# fabric for this run.  We do this by looking at our
+				# switch CLLI ($j) and our fabric ($i).  We get an IP
+				# address by doing a lookup into the switch_names array.
+				# We then run the "switch_login" function that attempts
+				# to telnet into the switch.  The return value of that
+				# function is the spawn_id for that process.  A 0
+				# indicates failure.  If we fail to log in properly, we
+				# just abort this switch/fabric and move on to the next
+				# one.  We don't need to worry about error messages
+				# here, since the switch_login function will generate
+				# them for us when they're needed.
+				if {[set spawn_id [vector_login [lindex $switch_names($j) $i] $fh]] == 0} {
+					puts $fh "Timeout on $j - Fabric [lindex $switch_names([lindex $switch_names($j) $i]) 0] -- IP [lindex $switch_names($j) $i]\n\n"
+					continue
+				}
+
+				# At this point we are logged into the switch and we
+				# have a valid, working connection.  So now we run the
+				# functions that the user selected.  We do this by
+				# checking each function, and working with the ones that
+				# the user selected.
+				foreach k [array names functions] {
+					debug_log 4 "inside inner foreach loop - $k $functions($k)"
+
+					if {$funcs($k) == 1} {
+
+						# Here we identify the fact that we actually
+						# have a function to perform.  If we didn't do
+						# this, we'd get an error message.
+						set found 1
+
+						# We identify what we're attempting to do and
+						# where we're attempting to do it.
+						puts $fh "$commandnames($commands($k)) on $j - Fabric [lindex $switch_names([lindex $switch_names($j) $i]) 0] -- IP [lindex $switch_names($j) $i]\n\n"
+						debug_log 1 "command $commands($k) on switch $j fabric $i which is IP [lindex $switch_names($j) $i]"
+
+						# Each function is implemented by a command that
+						# has been stored in the commands array.
+						# Additionally, the footprint of each command
+						# invocation is the same.
+						eval $commands($k) [lindex $switch_names($j) $i] $spawn_id $fh datalines
+						puts $fh "\n"
+					}
+				}
+
+				# At this point, we have completed our work on this
+				# switch.  We now log out of the switch, and clean up
+				# our processes.
+				vector_logout $spawn_id $fh
+
+				if {[config_check "connection_validation"]} {
+					set datalines(vpc_validate) {}
+					set datalines(vcc_validate) {}
+					set cross_fabric([lindex $switch_names([lindex $switch_names($j) $i]) 0]) $datalines(cross_fabric)
+				}
+
+				# We clear our spawn id so that next time we attempt to
+				# log into a switch we don't have any concerns about the
+				# validity of our spawn id.
+				unset spawn_id
+			}
+
+			if {[config_check "connection_validation"]} {
+				unset cross_fabric(-1)
+				debug_log 1 "y - $y"
+				if {[regexp "01" $y]} {
+					debug_log 1 "y - $y"
+					cross_fabric_check cross_fabric $fh
+				}
+			}
+
+			# If any of our operations produced errors, we print them
+			# into the output file at this point.
+			if {[info exists datalines(errors)]} {
+				foreach i $datalines(errors) {
+					puts $fh "$i"
+				}
+			}
+
+			# We add a little formating to make the output file easier
+			# to read and digest.
+			puts $fh ""
+			puts $fh "####################################################"
+
+			# We also flush the output file so that it gets updated as
+			# often as it actually changes.  Otherwise the script would
+			# buffer any updates to the file.
+			flush $fh
+		}
+
+		# If $found still is not 1, then we had some invalid input.  We
+		# alert the user to that fact and return to normal operations.
+		if {$found == 0} {
+			invalid_input
+			return
+		}
+	}
+
+	# At this point, an entire execution has been completed.  We close
+	# the output file, and alert the user that his operation is now
+	# complete.
+	close $fh
+	processing_done
+
+	# We also reset the display in anticipation of another run by the
+	# user.
+	reset_display .switchesframe.switches
+
+	unset fabs
+	unset funcs
+}
+
+#
+#
+# Function : choose_out_file
+#
+# choose_out_file is the second main function of the script when the
+# script is invoked in a graphical environment.  choose_out_file is
+# responsible for having the user choose an ouput file name, and
+# invoking the "gogo" function.
+#
+# choose_out_file takes four arguments - all of which are references to
+# data stored in the scope of the main script body: fabrics, functions,
+# commands, and switch_names.  The function has no return value.
+# choose_out_file is invoked by the user clicking on the "Execute"
+# button of the main GUI window.
+proc choose_out_file { p1 p2 p3 p4 } {
+	upvar $p1 fabrics $p2 functions $p3 switch_names $p4 commands
+
+	# Here we're just setting some window properties.
+	set w .filebox
+	catch {destroy $w}
+	toplevel $w
+	wm title $w "File Selection Dialogs"
+	wm iconname $w "Choose File"
+	wm transient .filebox .
+
+	# Creating a label (text) and inserting it into the window.
+	label $w.msg -wraplength 4i -justify left -text "Enter a file name in the entry box or click on the \"Browse\" buttons to select a file name."
+	pack $w.msg -side top
+
+	# This just gives us an easier way to reference the window.
+    set f [frame $w.fileask]
+
+    debug_log 5 "f -- $f"
+
+	# Here we're creating buttons and adding them to the window.
+	frame $w.buttons
+	pack $w.buttons -side bottom -fill x -pady 2m
+	button $w.buttons.dismiss -text Cancel -command "destroy $w"
+	button $w.buttons.execute -text Execute -command "gogo fabrics functions switch_names commands $f.ent"
+	pack $w.buttons.execute $w.buttons.dismiss -side left -expand 1
+
+	# Adding labels, buttons and text areas.
+    label $f.lab -text "Select a file use: " -anchor e
+    entry $f.ent -width 20
+    button $f.but -text "Browse ..." -command "fileDialog $w $f.ent"
+    pack $f.lab -side left
+    pack $f.ent -side left -expand yes -fill x
+    pack $f.but -side left
+    pack $f -fill x -padx 1c -pady 3
+}
+
+# This is a pattern that can be used to identify IP addresses in dotted
+# quad format.
+set ippattern "\[0-9]+\.\[0-9]+\.\[0-9]+\.\[0-9]+"
+
+# This is where we define command and configurations.  Each command
+# appears twice - once indexed with a number so that we can access it
+# from the GUI, and once indexed with a letter that corresponds to a
+# command line option.  The value of the commands array is the name of
+# the function to be invoked when it comes time to execute that command.
+# We also provide a label that is used in the GUI and in the reports.
+# Finally, we associate certain configuration options to the various
+# commands.
+set commands(0) "tagging_info"
+set commands(t) "tagging_info"
+set commandnames(tagging_info) "Tagging"
+set configs(tagging_info) { "upctagging" "upc_to_vpc_mapping" "upc_to_vcc_mapping" }
+
+set commands(1) "billing_info"
+set commands(b) "billing_info"
+set commandnames(billing_info) "Billing"
+set configs(billing_info) { "fabric_mapping" }
+
+set commands(2) "completeness_info"
+set commands(c) "completeness_info"
+set commandnames(completeness_info) "Connections"
+set configs(completeness_info) { "connection_validation" }
+
+# This is just a mapping of array indexes to fabric identifiers.
+set fabricnames(0) 1
+set fabricnames(1) 3
+
+
+# This is where we decide how we were invoked.  Either command line or
+# GUI.  If we have a command line argument that looks like an IP
+# address, then we know that we should be running in command line mode.
+# Otherwise we should be running in GUI mode.
+if {[regexp "^[set ippattern]$" [lindex $argv 1]]} {
+	set graphical 0
+
+	# Creating the swith_names array.
+	set switch_names(-1) -1
+
+	# Setting the standard output file to be standard out.
+	set fout "stdout"
+
+	# This is where we read in the switch names to ip address mappings.
+	get_switch_names switch_names
+
+	# If the "wm" function exists, then we've tried to run a command
+	# line run using the graphical Tcl interpreter.  This won't work.
+	# So at this point we print out an error message and stop.
+	if {[info commands wm] != ""} {
+		wrong_shell
+		exit
+	}
+
+	# Here's where we attempt to log in to the switch
+	if {[set spawn_id [vector_login [lindex $argv 1] $fout]] == 0} {
+		exit
+	}
+
+	# Create the datalines array.
+	set datalines(-1) -1
+
+	# The first command line argument contains the operations (commands)
+	# that the user wants to perform on the switch that's given in the
+	# second command line argument.  The operations are referenced with
+	# a single letter.  So we want to the look at each letter, one at a
+	# time, and set the appropriate configurations for each command.
+    foreach k [split [lindex $argv 0] ""] {
+		foreach j $configs($commands($k)) {
+			set configs($j) 1
+			debug_log 3 "$k $j $configs($j)"
+		}
+	}
+
+	if {[config_check "connection_validation"]} {
+		set datalines(vpc_validate) {}
+		set datalines(vcc_validate) {}
+		set datalines(cross_fabric) {}
+	}
+
+	# Now that we've set all the configurations, we go ahead and run the
+	# commands to acquire and manipulate the data.
+	foreach i [split [lindex $argv 0] ""] {
+		puts "$commandnames($commands($i)) on [lindex $switch_names([lindex $argv 1]) 1] - Fabric [lindex $switch_names([lindex $argv 1]) 0] -- IP [lindex $argv 1]\n\n"
+		$commands($i) [lindex $argv 1] $spawn_id $fout datalines
+	}
+
+	# At this point we're done...
+	vector_logout $spawn_id $fout
+
+	# This isn't really necessary.
+	exit
+
+} else {
+	set graphical 1
+	set switch_names(-1) -1
+
+	if {$debug} {setup_debugging}
+	debug_log 4 "argv\[0] is not an IP"
+
+	# Get a list of switch CLLI's and their associated IP addresses.
+	get_switch_names switch_names
+
+	# Remove the stupid switch name.
+	unset switch_names(-1)
+
+	# This is just debugging... it just prints a list of the switches.
+    if {$debug} {
+		foreach i [array names switch_names] {
+			if {$i == -1} { continue }
+			debug_log 4 "$i - [lindex $switch_names($i) 0] - [lindex $switch_names($i) 1]"
+		}
+	}
+
+
+	# Here we're creating the frame, populating the frame with the
+	# listbox and the scroll bar, and adding the check boxes for the
+	# fabrics.
+	wm title . "Vector Data Integrity Suite"
+	frame .switchesframe
+	listbox .switchesframe.switches -relief raised -height 16 -borderwidth 2 -yscrollcommand ".switchesframe.scroller set" -selectmode extended
+	scrollbar .switchesframe.scroller -command ".switchesframe.switches yview"
+	pack .switchesframe -side left -expand yes -fill both
+	pack .switchesframe.switches .switchesframe.scroller -side left -fill both -expand 1
+	checkbutton .fab1 -text "Fabric 1" -variable fabrics(0) -anchor w
+	checkbutton .fab3 -text "Fabric 3" -variable fabrics(1) -anchor w
+	pack .fab1 .fab3 -side top
+
+	# This little snippet adds a check box for each command and
+	# associates the proper actions with selecting each check box.
+	foreach i [array names commands] {
+		if {[regexp "^\[0-9]+$" $i] == 0} {
+			continue
+		}
+		checkbutton ".$commands($i)" -text $commandnames($commands($i)) -variable "functions($i)" -anchor w
+		lappend checkbuttons ".$commands($i)"
+	}
+
+	# Here we add the buttons and pack them into the GUI.
+	button .go -text "Execute" -command "choose_out_file fabrics functions switch_names commands"
+	button .clear -text "Reset" -command "reset_display .switchesframe.switches"
+	button .all -text "Select All" -command "select_all .switchesframe.switches"
+	button .do_exit -text "Exit" -command exit
+	eval pack .do_exit .clear .all .go $checkbuttons -side bottom -fill x
+
+	# Create the checkbuttons array contain the fabrics.
+	lappend checkbuttons .fab1 .fab3
+
+	# Add the switches to the listbox.
+	foreach i [lsort [array names switch_names]] {
+		if {[regexp "^$ippattern$" $i] == 0} {.switchesframe.switches insert end $i}
+	}
+}
+

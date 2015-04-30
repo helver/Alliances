@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?><script chaining="implicit" id="S0" src="/workspaces/1/documents/1910128.txt">
+  <commands>
+    <command id="C3" ns0:type="TimeSkewScriptCommand" xmlns:ns0="http://www.w3.org/2001/XMLSchema-instance">
+      <input>
+        <type>application/vnd.mandiant.mir.w32ports+xml</type>
+
+      </input>
+      <result>
+        <type>application/vnd.mandiant.document+xml</type>
+      </result>
+      <offset>PT6M20S</offset>
+    </command>
+    <command id="C4" ns0:type="TimelineScriptCommand" xmlns:ns0="http://www.w3.org/2001/XMLSchema-instance">
+      <input>
+
+        <type>application/vnd.mandiant.mir.w32ports+xml</type>
+      </input>
+      <result>
+        <type>application/vnd.mandiant.document+xml</type>
+      </result>
+      <fieldMap>
+        <type>application/vnd.mandiant.mir.w32files+xml</type>
+
+        <timeField>Created</timeField>
+      </fieldMap>
+    </command>
+  </commands>
+</script>

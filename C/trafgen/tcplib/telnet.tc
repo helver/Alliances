@@ -1,0 +1,3 @@
+pktsize       int     data/telnet.pktsize
+interarrival  float data/telnet.interarrival
+duration      float data/telnet.duration

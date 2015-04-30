@@ -1,0 +1,11 @@
+CREATE OR REPLACE FUNCTION call_reset_inactive_pps
+RETURN NUMBER
+AS
+  PRAGMA AUTONOMOUS_TRANSACTION;
+BEGIN
+  reset_inactive_pps();  
+  COMMIT;
+  RETURN 0;
+END;  
+/
+SHOW ERRORS

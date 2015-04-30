@@ -1,0 +1,50 @@
+<html>
+<head>
+  <title>Colors Legend</title>
+  <style type="text/css">
+    .legend {font-family:verdana,arial,sans-serif; font-size: 8pt; color:#000000; z-index: 50;}
+    .smallhead {font-family:verdana,sans-serif; font-weight: bold; font-size: 12pt;}
+  </style>
+</head>
+<body onload="window.focus();">
+  <table cellpadding="3" cellspacing="5" border="0">
+    <tr>
+      <td class="smallhead" colspan="2" align="center">Colors</td>
+    </tr>
+    <tr>
+      <td class="legend" valign="top"><img src="images/r.png" height="14"></td>
+      <td class="legend">Unavailable Seconds (UAS)<br>
+          Severely Errored Seconds (SES)<br>
+          Post FECs<br>
+          Sonet or DS3 Status Error<br>
+          Cell Rate drop of 80% from norms for ATM<Br>
+          Loss of communication for 3 polling cycles</td>
+    </tr>
+    <tr>
+      <td class="legend" valign="top"><img src="images/y.png" height="14"></td>
+      <td class="legend">5 or more Errored Seconds (ES)<br>
+          2 or more Code Violations (CVs) or Pre-FECs</td>
+    </tr>
+    <tr>
+      <td class="legend"><img src="images/e.png" height="14"></td>
+      <td class="legend">Did not respond to poll the last time</td>
+    </tr>
+    <tr>
+      <td class="legend"><img src="images/n.png" height="14"></td>
+      <td class="legend">Polling turned off because of an Alt-Route - no polling information</td>
+    </tr>
+    <tr>
+      <td class="legend"><img src="images/t.png" height="14"></td>
+      <td class="legend">Unmonitored test and turnup</td>
+    </tr>
+    <tr>
+      <td class="legend"><img src="images/g.png" height="14"></td>
+      <td class="legend">No alarm - all normal</td>
+    </tr>
+    <tr><td colspan="2">&nbsp;</td></tr>
+    <tr>
+      <td class="legend" colspan="2">Note:  The colored lines represent different circuits, however the colors themselves have no meaning</td>
+    </tr>
+  </table>
+</body>
+</html>

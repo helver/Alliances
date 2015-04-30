@@ -1,0 +1,52 @@
+
+
+{include file="header.tpl" title=foo} 
+
+{if $user == $me_user}
+{assign var=userlabel value="My"}
+{/if}
+
+<h2>{$userlabel} Widgets</h2> 
+
+<center><table border="0" bgcolor="#ffffff" cellpadding="3" cellspacing="0" width="856"> 
+<tr align="center" valign="top"> 
+<td> 
+<table border="0" bgcolor="#000000" cellpadding="16" cellspacing="8" width="850"> 
+<tr valign=top><td> 
+
+<form method="GET"> 
+<input type="hidden" name="comm_level" value="2"> 
+<table border="0" cellpadding=0> 
+<tr valign=top><td width="40%" class="whitetext" align="center"><h4>Widgets With Text</h4> These are great to drop inside eBay listings! These conform to eBay rules, so you will <b>not</b> get in trouble for adding these to your eBay listing template or individual listings.<br><br></td>
+<td width=18 rowspan=2><img src="/thematics/spacer.gif" width="26" height="1" border="0"></td>
+    <td class="whitetext" align="center"><h4>Widgets With No Text</h4> These are too big (by eBay rules), so please don't put them in your eBay listings. You can put them on your About Me page, in emails, in your blog, and other places on the web.</td></tr> 
+
+<tr valign=top><td nowrap><p class="whitetext"><b>Choose The Image For Your Widget:</b></p>
+{section name=img loop=$text_images}
+  <p><input type="radio" name="img" value="{$text_images[img]}" onClick="img_name=this.value; use_text=true; recalc_widget(this.form, '{$user}');"><img src="/thematics/{$text_images[img]}" /></p>
+{/section}
+<hr>
+<p class="whitetext"><b>Choose The Text For Your Widget:</b></p>
+<table width="350">
+{section name=i loop=$text_text}
+  <tr><td class="whitetext"><input type="radio" name="ttext" value='{$text_text[i]}' onClick="text_text=this.value; recalc_widget(this.form, '{$user}');">{$text_text[i]}<br><img src="/thematics/spacer.gif" width="26" height="3" border="0"><br></td></tr>
+{/section}
+</table>
+</td>
+
+<td nowrap>
+{section name=img loop=$notext_images}
+  <p><input type="radio" name="img" value="{$notext_images[img]}" onClick="img_name=this.value; use_text=false; recalc_widget(this.form, '{$user}');"><img src="/thematics/{$notext_images[img]}" /></p>
+{/section}
+</td></tr>
+<tr><td colspan="3"><br><hr></td></tr>
+
+<tr valign=top><td colspan="3" align="center"><h4>Select all of the text below, copy it, and paste it into your emails, website, and anywhere you want to get happy buyers buzzing about you!</h4><textarea name="widget_code" rows="6" cols="100"></textarea></td></tr>
+
+</table> 
+</form> 
+
+</td></tr></table> 
+</td></tr></table> 
+
+{include file="footer.tpl"} 

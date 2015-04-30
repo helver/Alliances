@@ -1,0 +1,3 @@
+nitems	  int	  data/ftp.nitems
+itemsize	int	  data/ftp.itemsize
+ctlsize	  int	  data/ftp.ctlsize

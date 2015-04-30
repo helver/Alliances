@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<script id="S0" chaining="implicit" src="/workspaces/1/documents/1910128.txt" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <commands>
+    <command xsi:type="C7" id="C7">
+      <input>
+        <type>application/vnd.mandiant.mir.w32files+xml</type>
+      </input>
+      <result>
+        <type>application/vnd.mandiant.document+xml</type>
+      </result>
+    </command>
+    <script chaining="none" id="S1">
+	  <commands>
+	    <command xsi:type="C1" id="C1">
+	      <module name="w32ports"/>
+	    </command>
+	    <command xsi:type="C2" id="C2">
+	      <module name="w32processes-API"/>
+	    </command>
+	    <command xsi:type="C3" id="C3">
+	      <module name="w32files"/>
+	    </command>
+	  </commands>
+	</script>
+    <command xsi:type="C4" id="C4">
+      <input>
+        <type>application/vnd.mandiant.mir.w32files+xml</type>
+      </input>
+      <result>
+        <type>application/vnd.mandiant.document+xml</type>
+      </result>
+    </command>
+    <script chaining="implicit" id="S2">
+	  <commands>
+	    <command xsi:type="C1" id="C8">
+	      <module name="w32ports"/>
+	    </command>
+	    <command xsi:type="C2" id="C9">
+	      <module name="w32processes-API"/>
+	    </command>
+	    <command xsi:type="C3" id="C10">
+	      <module name="w32files"/>
+	    </command>
+	  </commands>
+	</script>
+    <command xsi:type="C5" id="C5">
+      <input>
+        <type>application/vnd.mandiant.mir.w32files+xml</type>
+      </input>
+      <result>
+        <type>application/vnd.mandiant.document+xml</type>
+      </result>
+    </command>
+    <command xsi:type="C6" id="C6">
+      <input>
+        <type>application/vnd.mandiant.mir.w32files+xml</type>
+      </input>
+      <result>
+        <type>application/vnd.mandiant.document+xml</type>
+      </result>
+    </command>
+  </commands>
+</script>

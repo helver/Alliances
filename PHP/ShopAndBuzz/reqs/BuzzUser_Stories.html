@@ -1,0 +1,177 @@
+<html>
+<head>
+<title>Buzz Reqs - User Stories - BuzzUser</title>
+</head>
+<body>
+
+<h4><a href="Glossary_BuzzUser.html">BuzzUser</a>:</h4>
+
+<h5><a href="Glossary_BuzzUser.html">BuzzUser</a> Role is used by default after the 
+<a href="Glossary_BuzzUser.html">BuzzUser</a> has been authenticated.</h5>
+
+<dl>
+<dt><h4><a href="Glossary_BuzzUser.html">BuzzUser</a>'s registration must be confirmed.</h4></dt>
+<dd><h5>
+<ul>
+<li>Once the <a href="Glossary_BuzzUser.html">BuzzUser</a>'s account is created, an email is sent to
+the email address used to create the account.</li>
+<li>The registration is confirmed once the <a href="Glossary_Visitor.html">Visitor</a> follows the 
+link contained in the email and enters the code provided in the email.</li></ul></h5>
+<h5><a href="/signup/confirmemail/">http://buzz.alliances.org/signup/confirmemail/</a></h5>
+</dd>
+
+<dt><h4><a href="Glossary_BuzzUser.html">BuzzUsers</a> can recover their username and password using a 
+"forgot password" feature.</h4></dt>
+<dd><h5>
+<ul>
+<li>No visual cues about the existance or non-existance of an account associated with the 
+email address will provided to the user when the this feature is engaged.</li>
+<li>Username and password (but only one at a time) will be sent to the 
+<a href="Glossary_BuzzUser.html">BuzzUser</a>'s email address.</li>
+<li>If no account exists for the email address supplied, the email will contain a message stating 
+that and a link to the registration page.</li><ul></h5>
+<h5><a href="/forgot/">http://buzz.alliances.org/forgot/</a></h5>
+</dd>
+
+<dt><h4><a href="Glossary_BuzzUser.html">BuzzUsers</a> can choose a "remember me" option that will log them 
+in automatically.</h4></dt>
+<dd><h5>
+<ul>
+<li>Special cookie stored for longer period of time.</li>
+<li>Not a specific session cookie, but a user hint.</li>
+<li>Editing account settings, relationships or delivering email will require authentication (like LinkedIn).</li></ul></h5>
+<h5><a href="/login/">http://buzz.alliances.org/login/</a></h5>
+</dd>
+
+<dt><h4><a href="Glossary_BuzzUser.html">BuzzUsers</a> can configure how often to receive email 
+notifications from the site.</h4></dt>
+<dd><h5><ul>
+<li>Options include: Immediately, Daily, Weekly or Never.</li>
+<li><a href="Glossary_BuzzUser.html">BuzzUsers</a> can also elect to not receive emails from 
+specific <a href="Glossary_BuzzUser.html">BuzzUsers</a>.</li>
+
+<li>Emails include:<ul>
+<li><a href="Glossary_Seller.html">Seller</a> additions</li>
+<li>Referrals</li></ul></li></ul></h5>
+<h5><a href="/users/testypoo/preferences/">http://buzz.alliances.org/users/testypoo/preferences/</a></h5>
+</dd>
+
+<dt><h4><a href="Glossary_BuzzUser.html">BuzzUsers</a> will have a public profile page.</h4></dt>
+<dd><h5><ul>
+<li>The public profile page will contain <a href="Glossary_Seller.html">Seller</a> information if
+the <a href="Glossary_BuzzUser.html">BuzzUser</a> is a registered <a href="Glossary_Seller.html">Seller</a>.</li>
+<li>The public profile page will contain Hive information if the <a href="Glossary_BuzzUser.html">BuzzUser</a> 
+has a Hive.</li>
+<li>Additionally, Hive information will be displayed (new recommended <a href="Glossary_Seller.html">Sellers</a>, etc).</li>
+<li>The <a href="Glossary_BuzzUser.html">BuzzUser</a>'s public profile page URL will be http://&lt;domain&gt;/username/.</li>
+<li>There will be several domain names that will all function in a similar fashion.</li></ul></h5>
+<h5><a href="/users/testypoo/">http://buzz.alliances.org/users/testypoo/</a></h5>
+</dd>
+
+<dt><h4>Every <a href="Glossary_BuzzUser.html">BuzzUser</a> has a private profile page.</h4></dt>
+<dd><h5><ul>
+<li>Contains:<ul>
+<li>Interface for searching for <a href="Glossary_Seller.html">Sellers</a></li>
+<li>How many users are in My Hive and a list of them.</li>
+<li>List of new <a href="Glossary_Seller.html">Sellers</a> added to the Honeycombs of my Hive.</li>
+<li>Total commisions earned and paid by <a href="Glossary_Seller.html">Seller</a> and aggregated.</li>
+<li>System announcements (<a href="Glossary_Seller.html">Seller</a> inactive, Hive adds, payments, site feature)</li>
+<li>Links to public profile, accounts page, edit account info.</li></ul></li></ul></h5>
+<h5><a href="/users/testypoo/private/">http://buzz.alliances.org/users/testypoo/private/</a></h5>
+</dd>
+
+<dt><h4><a href="Glossary_BuzzUser.html">BuzzUsers</a> will be checked up on daily.</h4></dt>
+<dd><h5>If the <a href="Glossary_BuzzUser.html">BuzzUser</a> falls out of good standing with eBay, the 
+		<a href="Glossary_BuzzUser.html">BuzzUsers</a>'s account is inactivated.</h5>
+<h5><a href="/users/testypoo/private/">http://buzz.alliances.org/users/testypoo/private/</a></h5>
+</dd>
+	
+<dt><h4><a href="Glossary_BuzzUser.html">BuzzUsers</a> can invite people to the site.</h4></dt>
+<dd><h5><ul>
+<li>Invitees automatically have accounts created for them in with their email address.</li>
+<li>Referrals are emailed to the prospective users.</li>
+<li>Referrals will contain two links.  First link takes the prospective user to the registration page 
+where they complete their registration and are automatically included in the Hive of the 
+<a href="Glossary_BuzzUser.html">BuzzUser</a> that referred them.</li>
+<li>Second link takes the propective user to an email notification configuration page that allows the 
+user to configure how often they will receive email from the site (just like a normal <
+a href="Glossary_BuzzUser.html">BuzzUser</a>).</li></ul></h5>
+<h5><a href="/nomoreemail/myemail/">http://buzz.alliances.org/nomoreemail/myemail/</a></h5>
+<h5><a href="/inviteothers/">http://buzz.alliances.org/inviteothers/</a></h5>
+</dd>
+
+
+<dt><h4><a href="Glossary_BuzzUser.html">BuzzUsers</a> can recommend that a 
+<a href="Glossary_Seller.html">Seller</a> register.</h4></dt>
+<dd><h5>Invitiation is an email sent to the prospective <a href="Glossary_Seller.html">Seller</a>.  This would be
+		an email inviting a <a href="Glossary_Seller.html">Seller</a> to register as a <a href="Glossary_Seller.html">Seller</a>.  This is different
+		from a normal invitation only in the text of the email that is delivered.</h5>
+<h5><a href="/inviteothers/">http://buzz.alliances.org/inviteothers/</a></h5>
+</dd>
+
+<dt><h4><a href="Glossary_BuzzUser.html">BuzzUsers</a> will be able to create a network of friends.</h4></dt>
+<dd><h5><ul>
+<li>The network will be the universe of <a href="Glossary_BuzzUser.html">BuzzUsers</a>.</li>
+<li>The network is called "My Hive".</li>
+<li>Hive additions are unidirectional.</li>
+<li>When I add someone to "My Hive", the victim is given the opportunity to add me to theirs.</li>
+<li>Relationship:  BU  |  Victim  |  Hive  |  Honeycomb  |  Referred By  |  Commission Sched</li></ul></h5>
+<h5><a href="/users/testypoo/">http://buzz.alliances.org/users/testypoo/</a></h5>
+</dd>
+
+<dt><h4>A <a href="Glossary_BuzzUser.html">BuzzUser</a>'s referrals do not expire.</h4></dt>
+<dd><h5>This may be changed in the future.</h5></dd>
+
+<dt><h4><a href="Glossary_BuzzUser.html">BuzzUsers</a> can remove themselves from another 
+<a href="Glossary_BuzzUser.html">BuzzUser</a>'s Hive.</h4></dt>
+<dd><h5>This removal is silent and permanent.</h5>
+<h5><a href="/users/testypoo/blacklist/">http://buzz.alliances.org/users/testypoo/blacklist/</a></h5>
+</dd>
+
+<dt><h4>Any time a <a href="Glossary_BuzzUser.html">BuzzUser</a> hits a link back to eBay, the AsWas 
+affiliate code will be included in the link.</h4></dt>
+
+<dt><h4>When a <a href="Glossary_BuzzUser.html">BuzzUser</a> does something that would trigger a referral and the <a href="Glossary_BuzzUser.html">BuzzUser</a> already has a referral for the <a href="Glossary_Seller.html">Seller</a>, no new referral is created.</h4></dt>
+<dd><h5>The first referral for a <a href="Glossary_Seller.html">Seller</a> wins regardless of how the referral was created.</h5></dd>
+
+<dt><h4>A <a href="Glossary_BuzzUser.html">BuzzUser</a> may get a referral for a 
+<a href="Glossary_Seller.html">Seller</a> when the <a href="Glossary_BuzzUser.html">BuzzUser</a> views 
+a <a href="Glossary_Buyer.html">Buyer</a>'s "My Honeycomb" page.</h4></dt>
+<dd><h5>In this case, the <a href="Glossary_Buyer.html">Buyer</a> is the recommender.</h5>
+<h5><a href="/users/testypoo/honeycomb/">http://buzz.alliances.org/users/testypoo/honeycomb/</a></h5>
+</dd>
+
+<dt><h4>A <a href="Glossary_BuzzUser.html">BuzzUser</a> may get a referral when a 
+<a href="Glossary_Buyer.html">Buyer</a> creates a recommendation for a 
+<a href="Glossary_Seller.html">Seller</a>.</h4></dt>
+<dd><h5>This would only happen if the system actually attempts to deliver the email to
+		the <a href="Glossary_BuzzUser.html">BuzzUser</a>.  In other words, nothing in the Buzz system (configurations,
+		blacklists, email queueing, etc) would have stopped the email from being
+		delivered.</h5></dd>
+
+<dt><h4>A <a href="Glossary_BuzzUser.html">BuzzUser</a> may get a referral when the 
+<a href="Glossary_Visitor.html">Visitor</a> adds the <a href="Glossary_Seller.html">Seller</a> 
+directly - by doing a category search for example.</h4></dt>
+<dd><h5>In this case, there is no recommender.</h5>
+<h5><a href="/sellers/">http://buzz.alliances.org/sellers/</a></h5>
+</dd>
+
+<dt><h4><a href="Glossary_BuzzUser.html">BuzzUsers</a> who are made inactive:<ul>
+<li>Will not receive emails from the system</li>
+<li>Will receive an email informing them that they have been made inactive</li>
+<li>Will have a default template displayed instead of their profile pages</li>
+<li>Will be removed from any Hives/Honeycombs</li></ul></h4></dt>
+
+<dt><h4><a href="Glossary_BuzzUser.html">BuzzUsers</a> who are re-activated will have their accounts 
+return to their former state.</h4></dt>
+
+<dt><h4><a href="Glossary_BuzzUser.html">BuzzUsers</a> are not required to provide their PayPal information.</h4></dt>
+<dd><h5>Unless Paypal information is provided, no commissions can be paid.</h5></dd>
+
+
+</dl>
+
+
+
+</body>
+</html>

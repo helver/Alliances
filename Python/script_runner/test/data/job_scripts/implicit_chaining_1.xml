@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?><script chaining="implicit" id="S0" src="/workspaces/1/documents/1910128.txt" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <commands>
+    <command id="C1" xsi:type="AuditHostScriptCommand">
+      <input>
+        <type>application/vnd.mir+xml;type="host"</type>
+      </input>
+      <result>
+        <type>application/vnd.mir+xml;type="auditresult"</type>
+      </result>
+      <script chaining="none">
+        <commands>
+          <command xsi:type="ExecuteModuleCommand">
+            <module name="w32ports"/>
+          </command>
+          <command xsi:type="ExecuteModuleCommand">
+            <module name="w32processes-API"/>
+          </command>
+          <command xsi:type="ExecuteModuleCommand">
+            <module name="w32files"/>
+            <config xsi:type="ParameterListModuleConfig">
+              <parameters>
+                <param name="paths">
+                  <value xsi:type="ArrayOfString">
+                    <string>C:\</string>
+                    <string>D:\</string>
+                  </value>
+                </param>
+                <param name="depth">
+                  <value xsi:type="xsd:int">50</value>
+                </param>
+              </parameters>
+            </config>
+          </command>
+        </commands>
+      </script>
+    </command>
+    <command id="C2" xsi:type="IterateAuditResultCommand">
+      <input>
+        <type>application/vnd.mir+xml;type="auditresult"</type>
+      </input>
+      <result>
+        <type>application/vnd.mir+xml;type="document"</type>
+      </result>
+    </command>
+    <command id="C3" xsi:type="TimeSkewScriptCommand">
+      <input>
+        <type>application/vnd.mandiant.mir.w32files+xml</type>
+      </input>
+      <result>
+        <type>application/vnd.mandiant.document+xml</type>
+      </result>
+      <offset>PT6M20S</offset>
+    </command>
+    <command id="C4" xsi:type="TimelineScriptCommand">
+      <input>
+        <type>application/vnd.mandiant.mir.w32files+xml</type>
+      </input>
+      <result>
+        <type>application/vnd.mandiant.document+xml</type>
+      </result>
+      <fieldMap>
+        <type>application/vnd.mandiant.mir.w32files+xml</type>
+        <timeField>Created</timeField>
+      </fieldMap>
+    </command>
+  </commands>
+</script>

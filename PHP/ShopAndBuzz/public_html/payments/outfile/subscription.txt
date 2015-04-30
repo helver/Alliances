@@ -1,0 +1,3881 @@
+Key: txn_type 
+ Value: subscr_signup
+
+Key: subscr_id 
+ Value: S-14H54732K6501642G
+
+Key: last_name 
+ Value: Jones
+
+Key: residence_country 
+ Value: US
+
+Key: mc_currency 
+ Value: USD
+
+Key: item_name 
+ Value: Shop and Buzz Subscription
+
+Key: amount1 
+ Value: 0.00
+
+Key: amount3 
+ Value: 27.00
+
+Key: recurring 
+ Value: 1
+
+Key: verify_sign 
+ Value: An5ns1Kso7MWUdW4ErQKJJJ4qi4-AtSthW6UgSHdLiCeCB0Fb3wSz-KU
+
+Key: payer_status 
+ Value: verified
+
+Key: test_ipn 
+ Value: 1
+
+Key: payer_email 
+ Value: bobjones@homenet.tzo.com
+
+Key: first_name 
+ Value: Bob
+
+Key: receiver_email 
+ Value: antonio-delacruz@homenet.tzo.com
+
+Key: payer_id 
+ Value: XTERDHPJK6ZDN
+
+Key: reattempt 
+ Value: 1
+
+Key: item_number 
+ Value: sandbsub
+
+Key: subscr_date 
+ Value: 17:28:29 Jul 30, 2007 PDT
+
+Key: charset 
+ Value: windows-1252
+
+Key: notify_version 
+ Value: 2.4
+
+Key: period1 
+ Value: 1 M
+
+Key: mc_amount1 
+ Value: 0.00
+
+Key: period3 
+ Value: 2 M
+
+Key: mc_amount3 
+ Value: 27.00
+
+Item Name: Shop and Buzz Subscription
+
+Item Number: sandbsub
+
+Payment Amount: 
+
+Who Paid: bobjones@homenet.tzo.com
+
+Who's getting money: antonio-delacruz@homenet.tzo.com
+
+Payment Status: 
+
+Item Name: 
+
+Item Number: 
+
+Payment Amount: 
+
+Who Paid: 
+
+Who's getting money: 
+
+Payment Status: 
+
+Key: payment_date 
+ Value: 17:32:16 Jul 30, 2007 PDT
+
+Key: txn_type 
+ Value: subscr_payment
+
+Key: subscr_id 
+ Value: S-2B822802AE593122A
+
+Key: last_name 
+ Value: Jones
+
+Key: residence_country 
+ Value: US
+
+Key: item_name 
+ Value: test
+
+Key: payment_gross 
+ Value: 27.00
+
+Key: mc_currency 
+ Value: USD
+
+Key: business 
+ Value: antonio-delacruz@homenet.tzo.com
+
+Key: payment_type 
+ Value: instant
+
+Key: verify_sign 
+ Value: AiNqKT3ms71iwBTZh-IOL8Dm3zJTAR1HZYCGq.gJe-cYNu0aWKF4.-mO
+
+Key: payer_status 
+ Value: verified
+
+Key: test_ipn 
+ Value: 1
+
+Key: payer_email 
+ Value: bobjones@homenet.tzo.com
+
+Key: txn_id 
+ Value: 61V211153C5016143
+
+Key: receiver_email 
+ Value: antonio-delacruz@homenet.tzo.com
+
+Key: first_name 
+ Value: Bob
+
+Key: payer_id 
+ Value: XTERDHPJK6ZDN
+
+Key: receiver_id 
+ Value: FFNRA4CFPXAEY
+
+Key: item_number 
+ Value: testsub
+
+Key: payment_status 
+ Value: Completed
+
+Key: payment_fee 
+ Value: 1.08
+
+Key: mc_fee 
+ Value: 1.08
+
+Key: mc_gross 
+ Value: 27.00
+
+Key: charset 
+ Value: windows-1252
+
+Key: notify_version 
+ Value: 2.4
+
+Item Name: test
+
+Item Number: testsub
+
+Payment Amount: 27.00
+
+Who Paid: bobjones@homenet.tzo.com
+
+Who's getting money: antonio-delacruz@homenet.tzo.com
+
+Payment Status: Completed
+
+Key: txn_type 
+ Value: subscr_signup
+
+Key: subscr_id 
+ Value: S-2B822802AE593122A
+
+Key: last_name 
+ Value: Jones
+
+Key: residence_country 
+ Value: US
+
+Key: mc_currency 
+ Value: USD
+
+Key: item_name 
+ Value: test
+
+Key: amount3 
+ Value: 27.00
+
+Key: recurring 
+ Value: 1
+
+Key: verify_sign 
+ Value: A9YAdZnGTsVdn86ObwpvoQLbAWHNAlNPmTv9D6LIL.CLUcdnLtDbq3Wl
+
+Key: payer_status 
+ Value: verified
+
+Key: test_ipn 
+ Value: 1
+
+Key: payer_email 
+ Value: bobjones@homenet.tzo.com
+
+Key: first_name 
+ Value: Bob
+
+Key: receiver_email 
+ Value: antonio-delacruz@homenet.tzo.com
+
+Key: payer_id 
+ Value: XTERDHPJK6ZDN
+
+Key: reattempt 
+ Value: 1
+
+Key: item_number 
+ Value: testsub
+
+Key: subscr_date 
+ Value: 17:32:15 Jul 30, 2007 PDT
+
+Key: charset 
+ Value: windows-1252
+
+Key: notify_version 
+ Value: 2.4
+
+Key: period3 
+ Value: 2 M
+
+Key: mc_amount3 
+ Value: 27.00
+
+Item Name: test
+
+Item Number: testsub
+
+Payment Amount: 
+
+Who Paid: bobjones@homenet.tzo.com
+
+Who's getting money: antonio-delacruz@homenet.tzo.com
+
+Payment Status: 
+
+Item Name: 
+
+Item Number: 
+
+Payment Amount: 
+
+Who Paid: 
+
+Who's getting money: 
+
+Payment Status: 
+
+New Notification Received:
+  txn_type: subscr_signup
+  subscr_id: S-7MA56181XD897850Y
+  last_name: User
+  residence_country: US
+  mc_currency: USD
+  item_name: Shop and Buzz Subscription
+  amount1: 0.00
+  amount3: 27.00
+  recurring: 1
+  verify_sign: AYV7oH3PG4qMQhsgbyJBQQp97-nBAai2hEaKSVuy7U1NINXUxh32xMTx
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: blahbl_1187749698_per@alliances.org
+  first_name: Test
+  receiver_email: antonio-delacruz@homenet.tzo.com
+  payer_id: 48MPQQ2J85TBW
+  reattempt: 1
+  item_number: sandbsub
+  subscr_date: 21:08:57 Aug 21, 2007 PDT
+  charset: windows-1252
+  notify_version: 2.4
+  period1: 1 M
+  mc_amount1: 0.00
+  period3: 1 M
+  mc_amount3: 27.00
+New Notification Received:
+  txn_type: subscr_cancel
+  subscr_id: S-7MA56181XD897850Y
+  last_name: User
+  residence_country: US
+  mc_currency: USD
+  item_name: Shop and Buzz Subscription
+  amount1: 0.00
+  amount3: 27.00
+  recurring: 1
+  verify_sign: AQU0e5vuZCvSg-XJploSa.sGUDlpA2D99hU5O2NbcE7Xz306WSZzXALk
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: blahbl_1187749698_per@alliances.org
+  first_name: Test
+  receiver_email: antonio-delacruz@homenet.tzo.com
+  payer_id: 48MPQQ2J85TBW
+  reattempt: 1
+  item_number: sandbsub
+  subscr_date: 21:13:26 Aug 21, 2007 PDT
+  charset: windows-1252
+  notify_version: 2.4
+  period1: 1 M
+  mc_amount1: 0.00
+  period3: 1 M
+  mc_amount3: 27.00
+New Notification Received:
+  txn_type: subscr_signup
+  subscr_id: S-08888410MX8163211
+  last_name: User
+  residence_country: US
+  mc_currency: USD
+  item_name: Shop and Buzz Subscription
+  amount1: 0.00
+  amount3: 27.00
+  recurring: 1
+  verify_sign: AJRSZV5P2fQIoG926JMH0FzUviPTAvtGm0ruYu9NAbJqIApBq-LGxsZX
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: blahbl_1187749698_per@alliances.org
+  first_name: Test
+  receiver_email: antonio-delacruz@homenet.tzo.com
+  payer_id: 48MPQQ2J85TBW
+  reattempt: 1
+  item_number: sandbsub
+  subscr_date: 18:14:19 Aug 23, 2007 PDT
+  charset: windows-1252
+  notify_version: 2.4
+  period1: 1 M
+  mc_amount1: 0.00
+  period3: 1 M
+  mc_amount3: 27.00
+New Notification Received:
+  txn_type: subscr_cancel
+  subscr_id: S-08888410MX8163211
+  last_name: User
+  residence_country: US
+  mc_currency: USD
+  item_name: Shop and Buzz Subscription
+  amount1: 0.00
+  amount3: 27.00
+  recurring: 1
+  verify_sign: ARNvzVATFZVpWlSlQh8i2S5MkqOHA11pPWCqGYD4UJhT6MKrI9B67ewX
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: blahbl_1187749698_per@alliances.org
+  first_name: Test
+  receiver_email: antonio-delacruz@homenet.tzo.com
+  payer_id: 48MPQQ2J85TBW
+  reattempt: 1
+  item_number: sandbsub
+  subscr_date: 18:23:00 Aug 23, 2007 PDT
+  charset: windows-1252
+  notify_version: 2.4
+  period1: 1 M
+  mc_amount1: 0.00
+  period3: 1 M
+  mc_amount3: 27.00
+curl_resp: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<HTML><HEAD>
+<TITLE>302 Found</TITLE>
+</HEAD><BODY>
+<H1>Found</H1>
+The document has moved <A HREF="https://www.paypal.com/">here</A>.<P>
+<HR>
+<ADDRESS>Apache/1.3.33 Server at <A HREF="mailto:webmaster@paypal.com">www.paypal.com</A> Port 80</ADDRESS>
+</BODY></HTML>
+<br>
+New Notification Received:
+  txn_type: subscr_signup
+  subscr_id: S-307206213U216523Y
+  last_name: User
+  residence_country: US
+  mc_currency: USD
+  item_name: Shop and Buzz Subscription
+  amount1: 0.00
+  amount3: 27.00
+  recurring: 1
+  verify_sign: AEduwWQmfXBBDTIu3zxw25DZI4awAd9YE.M9BgQnX06rm4qTAgVHJw0U
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: blahbl_1187749698_per@alliances.org
+  first_name: Test
+  receiver_email: antonio-delacruz@homenet.tzo.com
+  payer_id: 48MPQQ2J85TBW
+  reattempt: 1
+  item_number: sandbsub
+  subscr_date: 18:30:31 Aug 23, 2007 PDT
+  charset: windows-1252
+  notify_version: 2.4
+  period1: 1 M
+  mc_amount1: 0.00
+  period3: 1 M
+  mc_amount3: 27.00
+curl_resp: HTTP/1.1 302 Found
+Date: Fri, 24 Aug 2007 01:30:41 GMT
+Server: Apache/1.3.33 (Unix) mod_fastcgi/2.4.2 mod_gzip/1.3.26.1a mod_ssl/2.8.22 OpenSSL/0.9.7e
+Set-Cookie: SzWDZL1Tw4729rjVwzEIbk4eZ7u=D3byLR4OnFeDMU8K-KDSu9wR262-1HpZnSDTAfHgxxmMu4Wgu4SxIjK7xAPsMi5ZOFIWRvPVOFWcCeiQrJU57tHYhyKqd43-ZGD7S0; path=/; domain=.paypal.com
+Set-Cookie: OL6S9fXi8y9NkAzRyU8cgsycszO=RorWUVTWdg5bULgKaBxBgD4c5Zoz4qQ-lPjjciPbrWrm7aZ-7iVm7Kw_Bt7ixOHPb42nuqvTlupqSY37qJDojYi8l9c70n0zqTN-Eo27E6rQr-Jh; path=/; domain=.paypal.com
+Set-Cookie: feel_cookie=61203020206220302020632036207765627363722064203020206520323620437573746F6D65722F67656E6572616C2F41626F72742E78736C20662030202067203520656E5F55532068203020206920313120702F67656E2F61626F7274206A203020206B2032332050616765204E6F7420466F756E64202D2050617950616C206C20302020; expires=Wed, 31-Dec-1969 23:59:59 GMT; path=/; domain=.paypal.com
+Location: https://www.paypal.com/
+Connection: close
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=iso-8859-1
+
+HTTP/1.1 200 OK
+Date: Fri, 24 Aug 2007 01:30:42 GMT
+Server: Apache/1.3.33 (Unix) mod_fastcgi/2.4.2 mod_gzip/1.3.26.1a mod_ssl/2.8.22 OpenSSL/0.9.7e
+Cache-Control: private
+Pragma: no-cache
+Expires: Thu, 05 Jan 1995 22:00:00 GMT
+Set-Cookie: KHcl0EuY7AKSMgfvHl7J5E7hPtK=lpRAh_SPBj3uFMO-vVmJaDY7LZiLdOcdp2V8INkkk_-xCmZSk8ON8ro3NJlnvrCoj41MHGPXHwCfmWDi; expires=Thu, 19-Aug-2027 01:30:42 GMT; path=/; domain=.paypal.com
+Set-Cookie: cookie_check=yes; expires=Mon, 21-Aug-2017 01:30:42 GMT; path=/; domain=.paypal.com
+Set-Cookie: SzWDZL1Tw4729rjVwzEIbk4eZ7u=0TAH1p8SZprj0HGCwVqbsGvbxCd3vzMYG-vb_S8T33mUEgnfciMv5VsVTcZCWySMtem1fVbmhWhE275OsMy1agzBnQUsW0XCcgGA2W; path=/; domain=.paypal.com
+Set-Cookie: OL6S9fXi8y9NkAzRyU8cgsycszO=0DaSobWgQkIBMzV-Ug7BI7VFnslkAxuX41lSFFoTqg6XKruhr9et9X32cJir_iwOE1gHH6sa1BP4cd6aFbfzcT5oJGC-8_i0Sl1vblB8IH2Da3Jc; path=/; domain=.paypal.com
+Set-Cookie: feel_cookie=61203020206220302020632036207765627363722064203020206520333020437573746F6D65722F686F6D65706167652F486F6D65506167652E78736C20662030202067203520656E5F55532068203020206920313920702F77656C2F696E6465782D6F757473696465206A203020206B2031362057656C636F6D65202D2050617950616C206C20302020; expires=Wed, 31-Dec-1969 23:59:59 GMT; path=/; domain=.paypal.com
+Set-Cookie: Apache=74.208.45.214.2596118791904213; path=/; expires=Sun, 16-Aug-37 01:30:42 GMT
+Connection: close
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!--
+       Script info: script: webscr, cmd: _home, template: p/wel/index-outside, date: Aug. 2, 2007 19:46:04 PDT; country: US, language: en_US, xslt server: 
+       installation: WEBSCR-475-20070823-1       web version: 47.5-380833 branch: live-475_int
+       content version: 47.5-372669
+       pexml version: 47.5-391791
+       page XSL: Customer/default/en_US/homepage/HomePage.xsl
+       hostname : NbR9FbQVzfrZ38hsAraPyuYyWBKyFCXDnaimu5EGrLY
+-->
+<title>Welcome - PayPal</title>
+<meta http-equiv="keywords" content="Send, money, payments, credit, credit card, instant, money, financial services, mobile, wireless, WAP, cell phones, two-way pagers, Windows CE">
+<meta http-equiv="description" content="PayPal lets you send money to anyone with email. PayPal is free for consumers and works seamlessly with your existing credit card and checking account. You can settle debts, borrow cash, divide bills or split expenses with friends all without going to an ATM or looking for your checkbook.">
+<link rel="stylesheet" type="text/css" href="https://www.paypalobjects.com/WEBSCR-475-20070823-1/css/xptlive.css">
+<link rel="stylesheet" type="text/css" href="https://www.paypalobjects.com/WEBSCR-475-20070823-1/css/default.css">
+<!--[if IE 6]><![endif]-->
+
+<!--[if IE 6]><link rel="stylesheet" type="text/css" href="https://www.paypalobjects.com/WEBSCR-475-20070823-1/css/ie60win.css"><![endif]-->
+
+<!--[if IE 7]><link rel="stylesheet" type="text/css" href="https://www.paypalobjects.com/WEBSCR-475-20070823-1/css/ie70win.css"><![endif]-->
+<link rel="stylesheet" type="text/css" href="https://www.paypalobjects.com/WEBSCR-475-20070823-1/css/xptLite.css">
+<link rel="stylesheet" type="text/css" href="https://www.paypalobjects.com/WEBSCR-475-20070823-1/css/rosetta.css">
+<link rel="stylesheet" type="text/css" href="https://www.paypalobjects.com/WEBSCR-475-20070823-1/css/en_US/lang.css">
+<style type="text/css"></style>
+<link rel="shortcut icon" href="https://www.paypalobjects.com/WEBSCR-475-20070823-1/en_US/i/icon/pp_favicon_x.ico">
+<script type="text/javascript" src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/js/pp_main.js"></script><script type="text/javascript" src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/js/lib/yui-0.12/yahoo.js"></script><script type="text/javascript" src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/js/lib/yui-0.12/dom.js"></script><script type="text/javascript" src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/js/lib/yui-0.12/event.js"></script><script type="text/javascript" src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/js/lib/yui-0.12/container.js"></script><script type="text/javascript" src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/js/lib/pui/pui-0.1/paypal.js"></script><script type="text/javascript" src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/js/lib/pui/pui-0.1/srdlightbox.js"></script><script type="text/javascript" src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/js/opinionlab/oo_engine.js"></script><script type="text/javascript">custom_var='Unknown';</script><script type="text/javascript" src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/js/lib/yui-0.12/yahoo.js"></script><script type="text/javascript" src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/js/lib/yui-0.12/event.js"></script><script type="text/javascript" src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/js/dropdown.js"></script><script type="text/javascript">
+if (typeof(YAHOO) == 'object') {
+	if (typeof(YAHOO.util)=='object') {
+		if (typeof(YAHOO.util.Event)=='object' && typeof(Iconix)!='undefined') YAHOO.util.Event.addListener(window, 'load', Iconix.detect);
+	}
+}
+		</script>
+</head>
+<body>
+<div class="betalink"><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_srd-beta-optin">Preview the new PayPal Homepage</a></div>
+<div class="mainHeader" id="header">
+<h1><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_home"><img border="0" src="https://www.paypal.com/en_US/i/logo/paypal_logo.gif" alt="PayPal"></a></h1>
+<div id="navGlobal"><ul>
+<li class="first signup"><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_registration-run"><span class="emphasis">Sign Up</span></a></li>
+<li class="login"><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_login-run">Log In</a></li>
+<li><a href="https://www.paypal.com/cgi-bin/helpweb?cmd=_help">Help</a></li>
+<li class="last"><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_security-center-outside">Security Center</a></li>
+</ul></div>
+</div>
+<form class="rosetta" id="rosetta" method="post" action="https://www.paypal.com/cgi-bin/webscr?cmd=_home&amp;dispatch=5885d80a13c0db1f941d8253416939c6057d1d6643efcf2a1df7e608afc2281b">
+<fieldset>
+<legend>Change Your Language</legend>
+<label for="rosetta_dropdown">Language Select</label><select id="rosetta_dropdown" name="locale.x"><option value="en_US" selected>U.S. English</option>
+<option value="es_XC">Español</option>
+<option value="fr_XC">Français</option>
+<option value="zh_XC">中文（简体）</option></select><button type="submit" name="testName" value="testValue" alt="Submit Language Change"><img src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/en_US/i/btn/btn_circlewitharrow.gif" border="0" alt=""></button><input type="hidden" id="" name="change_locale.x" value="1"><input type="hidden" name="CONTEXT" value="iVB_qJXqDNPF2EouHNR3w8_99r31Ga_OGTpVH6Zw5LBS1Vt8WQ5VvdQOBFZcDUf9ooGl1RakRaQDUvGNBeMMDFQKj1nioAuU4ODaEslbLcUBLfPVLlAdS8DLtPODPkfLmq1xF0">
+</fieldset>
+<input name="form_charset" type="hidden" value="UTF-8">
+</form>
+<div id="navPrimary"><ul>
+<li class="expanded" id="navMyAccount"><a href="http://www.paypal.com/cgi-bin/webscr?cmd=_home"><span>Welcome</span></a></li>
+<li id="navSendMoney"><a href="http://www.paypal.com/cgi-bin/webscr?cmd=_send-money"><span>Send Money</span></a></li>
+<li id="navRequestMoney"><a href="http://www.paypal.com/cgi-bin/webscr?cmd=p/req/index-outside"><span>Request Money</span></a></li>
+<li id="navMerchantTools"><a href="http://www.paypal.com/cgi-bin/webscr?cmd=_merchant-outside"><span>Merchant Services</span></a></li>
+<li id="navAuctionTools"><a href="http://www.paypal.com/cgi-bin/webscr?cmd=_auction-outside"><span>Auction Tools</span></a></li>
+</ul></div>
+<div id="navSecondary"></div>
+<div id="xptContentOuter"><table align="center" border="0" cellpadding="0" cellspacing="0" id="xptContentCustom"><tr valign="top"><td class="fullRowNoLeftNav"><table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr><td><table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tr valign="top"><td class="fullRowNoLeftNav"><table align="center" border="0" cellpadding="0" cellspacing="0" class="tableDarkYellowBorder" width="760">
+<tr><td colspan="6" height="7"></td></tr>
+<tr>
+<td width="11"></td>
+<td class="tableNoBorderless" height="75" width="356"><form method="post" name="login_form" action="https://www.paypal.com/cgi-bin/webscr?cmd=_login-submit&amp;dispatch=5885d80a13c0db1f941d8253416939c6057d1d6643efcf2a1df7e608afc2281b">
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td align="left"><span class="emphasis">Member Log-In</span></td>
+<td align="right" nowrap>
+<img alt="" border="0" src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/en_US/i/scr/pixel.gif" width="15" height="1"><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_email-recovery"><span class="small">Forgot your email address?</span></a><br><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_forgot-password"><span class="small">Forgot your password?</span></a>
+</td>
+<td width="12"><img alt="" border="0" src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/en_US/i/scr/pixel.gif" width="12" height="1"></td>
+</tr>
+<tr><td colspan="3" height="7"></td></tr>
+</table>
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td align="right" nowrap><span class="small">Email Address</span></td>
+<td width="11"><img alt="" border="0" src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/en_US/i/scr/pixel.gif" width="11" height="1"></td>
+<td nowrap width="120"><input type="text" class="small" style="width:120px;" name="login_email" value=""></td>
+<td width="12"><img alt="" border="0" src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/en_US/i/scr/pixel.gif" width="12" height="1"></td>
+<td><img alt="" border="0" src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/en_US/i/scr/pixel.gif" width="1" height="1"></td>
+<td width="12"><img alt="" border="0" src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/en_US/i/scr/pixel.gif" width="12" height="1"></td>
+</tr>
+<tr><td colspan="6" height="7"><img alt="" border="0" height="7" src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/en_US/i/scr/pixel.gif" width="1"></td></tr>
+<tr>
+<td align="right" nowrap><span class="small">Password</span></td>
+<td width="11"><img alt="" border="0" src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/en_US/i/scr/pixel.gif" width="11" height="1"></td>
+<td width="120">
+<input type="password" id="login_password" name="login_password" value="" class="small" style="width:120px;"><script type="text/javascript">
+<!-- hide from JavaScript-challenged browsers
+			if (document.login_form.login_email.value == '') {
+				document.login_form.login_email.focus();
+			} else {
+				document.login_form.login_password.focus();
+			}
+			// done hiding -->
+</script>
+</td>
+<td width="12"><img alt="" border="0" src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/en_US/i/scr/pixel.gif" width="12" height="1"></td>
+<td><input type="submit" name="submit.x" value="Log In" class="small"></td>
+<td width="12"><img alt="" border="0" src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/en_US/i/scr/pixel.gif" width="12" height="1"></td>
+</tr>
+</table>
+<input name="form_charset" type="hidden" value="UTF-8">
+</form></td>
+<td bgcolor="#CCCCCC" valign="top" width="1"></td>
+<td><table align="center" border="0" cellpadding="0" cellspacing="0" width="190">
+<tr><td align="center"><span class="smallEmphasis">Join PayPal Today</span></td></tr>
+<tr><td align="center" class="small">Now Over<br>100 million accounts</td></tr>
+<tr><td align="center"><img alt="" border="0" height="5" src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/en_US/i/scr/pixel.gif" width="1"></td></tr>
+<tr><td align="center"><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_registration-run"><img src="https://www.paypal.com/en_US/i/btn/btn_SignUpNow.gif" border="0" alt=""></a></td></tr>
+</table></td>
+<td bgcolor="#CCCCCC" valign="top" width="1"></td>
+<td><table align="center" border="0" cellpadding="0" cellspacing="0"><tr>
+<td><img alt="" border="0" src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/en_US/i/scr/pixel.gif" width="10" height="1"></td>
+<td><img src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/en_US/i/header/spot_globe.gif" border="0" alt=""></td>
+<td><img alt="" border="0" src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/en_US/i/scr/pixel.gif" width="5" height="1"></td>
+<td>
+<span class="small">Learn more about </span><br><span class="small"><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_display-country-functionality-outside">PayPal Worldwide</a></span>
+</td>
+</tr></table></td>
+</tr>
+<tr><td colspan="6" height="7"></td></tr>
+</table></td></tr></table></td></tr>
+<tr><td height="14" width="100%"></td></tr>
+<tr><td><table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tr valign="top"><td class="fullRowNoLeftNav"><table align="center" border="0" cellpadding="0" cellspacing="0"><tr>
+<td valign="top" width="563"><table align="center" border="0" cellpadding="0" cellspacing="0">
+<tr><td valign="top"><a href="https://www.paypal.com/cgi-bin/webscr?cmd=xpt/cps/general/NewConsumerWorks-outside"><img src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/en_US/i/header/hp_safereasier_563x115.jpg" border="0" alt=""></a></td></tr>
+<tr><td height="14" valign="top" width="563"><img alt="" border="0" height="14" src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/en_US/i/scr/pixel.gif" width="563"></td></tr>
+<tr><td><table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td width="178"><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_send-money"><img src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/en_US/i/header/spot_BuyersTab.gif" border="0" alt=""></a></td>
+<td><img alt="" border="0" src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/en_US/i/scr/pixel.gif" width="15" height="1"></td>
+<td width="178"><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_auction-outside"><img src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/en_US/i/header/spot_hpSellersTab.gif" border="0" alt=""></a></td>
+<td><img alt="" border="0" src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/en_US/i/scr/pixel.gif" width="15" height="1"></td>
+<td width="178"><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_merchant-outside"><img src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/en_US/i/header/spot_hpMerchantTab.gif" border="0" alt=""></a></td>
+</tr>
+<tr>
+<td bgcolor="#F9FAFC" valign="top" width="178"><table align="center" border="0" cellpadding="15" cellspacing="0" class="HomePage3RowsStyle" width="100%"><tr><td>
+<a href="https://www.paypal.com/cgi-bin/webscr?cmd=p/ema/index-outside">Send money</a> online from 190 countries and regions.<br><br>PayPal is <a href="https://www.paypal.com/cgi-bin/webscr?cmd=p/auc/new_ebay_buyer_intro-outside">free for buyers</a>.<br><br>Shop without sharing <a href="https://www.paypal.com/cgi-bin/webscr?cmd=xpt/cps/general/Privacy-outside">financial information</a>.<br><br><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_pbp-info-outside">100% protection</a> against unauthorized payments sent from your account. </td></tr></table></td>
+<td><img alt="" border="0" src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/en_US/i/scr/pixel.gif" width="15" height="1"></td>
+<td bgcolor="#F9FAFC" valign="top" width="178"><table align="center" border="0" cellpadding="15" cellspacing="0" class="HomePage3RowsStyle" width="100%"><tr><td>
+<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_auction-outside">Free eBay tools</a> make selling easier.<br><br>PayPal works hard to help <a href="https://www.paypal.com/cgi-bin/webscr?cmd=xpt/cps/bizui/BusinessSecurity-outside">protect sellers</a>.<br><br>PayPal simplifies <a href="https://www.paypal.com/cgi-bin/webscr?cmd=p/ship/center-outside">shipping and tracking</a>.<br><br><a href="https://www.paypal.com/cgi-bin/webscr?cmd=xpt/auctions/PaypalPreferred-outside">Earn cash back</a> with PayPal Preferred Rewards. </td></tr></table></td>
+<td><img alt="" border="0" src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/en_US/i/scr/pixel.gif" width="15" height="1"></td>
+<td bgcolor="#F9FAFC" valign="top" width="178"><table align="center" border="0" cellpadding="15" cellspacing="0" class="HomePage3RowsStyle" width="100%"><tr><td>
+<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_wp-standard-overview-outside">Accept credit cards online</a> with PayPal.<br><br>Get paid by phone, fax, and mail with <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_vt_hub-outside">Virtual Terminal</a>.<br><br>See how PayPal can <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_additional-payment-overview-outside">increase your sales</a>.<br><br>Learn more about our secure <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_merchant-outside">Merchant Services</a>.<br><br><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_profile-comparison">Compare our solutions side by side</a>
+</td></tr></table></td>
+</tr>
+</table></td></tr>
+</table></td>
+<td valign="top" width="14"></td>
+<td valign="top" width="183"><table align="center" border="0" cellpadding="0" cellspacing="0">
+<tr><td><script type="text/javascript">document.write('<script type="text/javascript" charset="iso-8859-1" src="https://paypalssl.doubleclick.net/adj/paypal.us/-outside;lang=en_US;u=;sz=183x90;tile=1;ord=1381191386?"><\/script>');</script></td></tr>
+<tr><td height="5" width="183"></td></tr>
+<tr><td width="183"><script type="text/javascript">document.write('<script type="text/javascript" charset="iso-8859-1" src="https://paypalssl.doubleclick.net/adj/paypal.us/-outside;lang=en_US;u=;sz=183x90;tile=2;ord=1381191386?"><\/script>');</script></td></tr>
+<tr><td height="5" width="183"></td></tr>
+<tr><td><a href="https://www.paypal.com/cgi-bin/webscr?cmd=xpt/cps/mobile/MobileOverview-outside"><img height="50" width="183" src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/en_US/i/bnr/bnr_mobile_183x50.gif" border="0" alt=""></a></td></tr>
+<tr><td height="5" width="183"></td></tr>
+<tr><td width="183"><script type="text/javascript">document.write('<script type="text/javascript" charset="iso-8859-1" src="https://paypalssl.doubleclick.net/adj/paypal.us/-outside;lang=en_US;u=;sz=9x9;tile=3;ord=1381191386?"><\/script>');</script></td></tr>
+</table></td>
+</tr></table></td></tr></table></td></tr>
+</table></td></tr></table></div>
+<div id="footer">
+<h5 class="accessAid">More Information</h5>
+<ul>
+<li><a href="http://www.paypal.com/cgi-bin/webscr?cmd=p/gen/about-outside">About</a></li>
+<li><a href="http://www.paypal.com/cgi-bin/webscr?cmd=xpt/cps/general/PayPalAccountTypes-outside">Accounts</a></li>
+<li><a href="http://www.paypal.com/cgi-bin/webscr?cmd=_display-fees-outside">Fees</a></li>
+<li><a href="http://www.paypal.com/cgi-bin/webscr?cmd=p/gen/ua/policy_privacy-outside">Privacy</a></li>
+<li><a href="http://www.paypal.com/cgi-bin/webscr?cmd=_security-center-outside">Security Center</a></li>
+<li><a href="http://www.paypal.com/cgi-bin/helpscr?cmd=_help&amp;t=escalateTab">Contact Us</a></li>
+<li><a href="http://www.paypal.com/cgi-bin/webscr?cmd=p/gen/ua/ua-outside">Legal Agreements</a></li>
+<li><a href="/developer">Developers</a></li>
+<li><a href="https://www.paypal.com/cgi-bin/webscr?cmd=p/gen/jobs-outside">Jobs</a></li>
+<li><a href="https://www.paypal.com/cgi-bin/webscr?cmd=xpt/cps/mobile/MobileOverview-outside">Mobile</a></li>
+<li><a href="https://ad.doubleclick.net/clk;30045328;11466062;u?https://www.paypal.com/us/cgi-bin/webscr?cmd=xpt/cps/general/PPPlusCC-outside">Plus Card</a></li>
+<li><a href="http://www.paypal.com/cgi-bin/webscr?cmd=_web-referrals-mrb-outside">Referrals</a></li>
+<li><a href="http://www.paypal.com/cgi-bin/webscr?cmd=_shop-ext">Shops</a></li>
+<li><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_batch-payment-overview-outside">Mass Pay</a></li>
+<li class="last">
+<!-- OnlineOpinionF3cS v3.0
+The following code is Copyright 1998-2006 Opinionlab, Inc.
+All rights reserved. Unauthorized use is prohibited.
+This product and other products of OpinionLab, Inc. are protected by U.S. Patent No. US 6606581, 6421724, 6785717 B1 and other patents pending.
+http://www.opinionlab.com-->
+<script type="text/javascript" src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/js/opinionlab/oo_engine.js"></script><script type="text/javascript">
+			var feedback_link='Site Feedback';
+            	O_GoT(feedback_link);
+             	custom_var='Unknown';</script>
+</li>
+</ul>
+<h5 class="accessAid">PayPal Worldwide</h5>
+<ul>
+<li><a href="http://www.paypal.com.au/" title="PayPal Australia">Australia</a></li>
+<li><a href="http://www.paypal.at/" title="PayPal Austria">Austria</a></li>
+<li><a href="http://www.paypal.be/" title="PayPal Belgium">Belgium</a></li>
+<li><a href="http://www.paypal.ca/" title="PayPal Canada">Canada</a></li>
+<li><a href="https://www.paypal.com/us/cgi-bin/webscr?cmd=xpt/general/CNPayPalComparison-outside" title="PayPal China">China</a></li>
+<li><a href="http://www.paypal.fr/" title="PayPal France">France</a></li>
+<li><a href="http://www.paypal.de/" title="PayPal Germany">Germany</a></li>
+<li><a href="http://www.paypal.it/" title="PayPal Italy">Italy</a></li>
+<li><a href="http://www.paypal.nl/" title="PayPal Netherlands">Netherlands</a></li>
+<li><a href="http://www.paypal.pl/" title="PayPal Poland">Poland</a></li>
+<li><a href="http://www.paypal.es/" title="PayPal Spain">Spain</a></li>
+<li><a href="http://www.paypal.ch/" title="PayPal Switzerland">Switzerland</a></li>
+<li><a href="http://www.paypal.co.uk/" title="PayPal United Kingdom">United Kingdom</a></li>
+<li class="last"><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_display-country-functionality-outside" title="Learn more about PayPal Worldwide">More...</a></li>
+</ul>
+<h5 class="accessAid">More eBay Sites</h5>
+<ul>
+<li><a href="http://www.ebay.com">eBay</a></li>
+<li><a href="http://www.half.com">Half.com</a></li>
+<li><a href="http://www.craigslist.org">Craigslist</a></li>
+<li><a href="http://www.kijiji.ca">Kijiji Canada</a></li>
+<li><a href="http://www.prostores.com">ProStores</a></li>
+<li><a href="http://www.rent.com">Rent.com</a></li>
+<li><a href="http://www.shopping.com">Shopping.com</a></li>
+<li class="last"><a href="http://www.skype.com">Skype</a></li>
+</ul>
+<p id="footerSecure"><script type="text/javascript">var lang = 'en';var baseUrl ='https://seal.verisign.com/splash?form_file=fdf\/splash.fdf&dn=SCGI.EBAY.COM&lang='+lang;document.write ('<a href=\"'+baseUrl+'\" onclick=\"PAYPAL1.util.openWind(event,\{location:1,status:1,resizable:1,scrollbars:1,width:560,height:500\})\">');var ver = -1;
+								var v_ua = navigator.userAgent.toLowerCase();
+								if (v_ua.match(/msie ([0-9]{1,}[\.0-9]{0,})/) != null){
+								ver = parseFloat( RegExp.$1 );
+								}
+								if((v_ua.indexOf("msie")!=-1) && (ver>=7)) {
+								var plat=-1;
+								if (v_ua.match(/windows nt ([0-9]{1,}[\.0-9]{0,})/) != null){
+								plat = parseFloat( RegExp.$1 );
+								}
+								if (plat >= 5.1) {
+								document.write("<img src='https://extended-validation-ssl.verisign.com/dot_clear.gif' style='display: none;' />");
+								}
+								}
+								</script><img border="0" src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/en_US/i/logo/verisign.gif" alt=""><script type="text/javascript">document.write ('<\/a>');</script><p><a target="_blank" href="http://www.verisign.com/ssl-certificate">About SSL Certificates</a></p></p>
+<p id="legal">Copyright © 1999-2007 PayPal. All rights reserved.<br><a href="http://www.paypal.com/cgi-bin/webscr?cmd=xpt/UserAgreement/general/FDIC-outside">Information about FDIC pass-through insurance</a></p>
+<p id="Privacy"><a href="http://www.paypal.com/cgi-bin/webscr?cmd=p/gen/privacy-outside"><img border="0" height="31" width="116" src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/en_US/i/logo/trustmark.gif" alt="Truste"></a><a target="_blank" href="http://www.bbbonline.org/cks.asp?id=20111061155818568"><img border="0" height="31" width="116" src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/en_US/i/logo/bbbmark.gif" alt="Better Business Bureau Online"></a></p>
+</div>
+<div id="ppwebapi" class="advonqo.mha,hfb.lnb-k`ox`o-rdhsqdonqo"></div>
+<!-- SiteCatalyst Code
+Copyright 1997-2005 Omniture, Inc.
+More info available at http://www.omniture.com -->
+<script type="text/javascript" src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/js/site_catalyst/pp_jscode_080706.js"></script>
+<script type="text/javascript">
+<!--
+/* SiteCatalyst Variables */
+s.prop1="p/wel/index-outside";
+s.prop7="Unknown";
+s.prop8="Unknown";
+s.prop9="Unknown";
+s.prop10="US";
+s.pageName="Homepage";
+s.channel="Homepage";
+s.prop50="en_US";
+s.prop18="1A2A3A5A";
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code)//--></script>
+<script type="text/javascript"><!--
+if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
+//--></script><noscript><img
+src="//paypal.112.2O7.net/b/ss/paypalglobal/1/H.6--NS/0?pageName=NonJavaScript"
+height="1" width="1" border="0" alt="" /></noscript><!--/DO NOT REMOVE/-->
+<!-- End SiteCatalyst Code -->
+<script type="text/javascript" src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/js/pp_naturalsearch.js"></script><script type="text/javascript">
+<!--
+var ppns = new PayPalNaturalSearch('https://www.paypal.com/cgi-bin/webscr?cmd=p/wel/index-outside','3484-30830-12422-0',this.document);
+			ppns.addEngines(new Array(
+										"A9.com",
+										".altavista.com",
+										"clusty.com",
+										"google.co.jp",
+										"google.co.kr",
+										"google.ru",
+										"www.google.com",
+										"icerocket.com",
+										"infospace.com",
+										"mooter.com",
+										"search.msn.",
+										"snap.com",
+										"search.yahoo.com",
+										"search.yahoo.co.jp"
+									,"www.overture.com/d/search/p/altavista/",
+									"aolsearch.aol.com",
+									"search.aol.com",
+									"web.ask.com",
+									"pictures.ask.com",
+									"images.google.com",
+									"groups.google.com",
+									"www.google.com/search",
+									"www.hotbot.com",
+									"search.netscape.com",
+									"s.teoma.com/",
+									"www.wisenut.com"
+								)); // End of aEngines array.
+			ppns.init();
+			-->
+</script>
+</body>
+</html>
+<br>
+New Notification Received:
+  txn_type: subscr_cancel
+  subscr_id: S-307206213U216523Y
+  last_name: User
+  residence_country: US
+  mc_currency: USD
+  item_name: Shop and Buzz Subscription
+  amount1: 0.00
+  amount3: 27.00
+  recurring: 1
+  verify_sign: AbSsiPBC4HFldPPSw55tahYr7Z2YAOwyLqrIhMN8GweB9UE8qmyLirpu
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: blahbl_1187749698_per@alliances.org
+  first_name: Test
+  receiver_email: antonio-delacruz@homenet.tzo.com
+  payer_id: 48MPQQ2J85TBW
+  reattempt: 1
+  item_number: sandbsub
+  subscr_date: 18:33:43 Aug 23, 2007 PDT
+  charset: windows-1252
+  notify_version: 2.4
+  period1: 1 M
+  mc_amount1: 0.00
+  period3: 1 M
+  mc_amount3: 27.00
+curl_resp: HTTP/1.1 302 Found
+Date: Fri, 24 Aug 2007 01:33:48 GMT
+Server: Apache/1.3.33 (Unix) mod_fastcgi/2.4.2 mod_gzip/1.3.26.1a mod_ssl/2.8.22 OpenSSL/0.9.7e
+Set-Cookie: SzWDZL1Tw4729rjVwzEIbk4eZ7u=estpzwQlbYVlXhvJ6YQJtXqus2CAiN8ZBk8OMMSyqvV6oBTWLGCEAJ2kscbMeWyQKh_mJ2WA6rcLEHcvRmBb1XZ1cTWzwJmAvz_9TW; path=/; domain=.paypal.com
+Set-Cookie: OL6S9fXi8y9NkAzRyU8cgsycszO=r7KEzCGAl12uIDyw3jFZPVXejp4yA2W1nguLYGmEHnmQtXgpZOVSy529_lvaE7bXVgv_FBW7NEFAjwOLoJvCBoaQ3n743RqRfSbRh-Hm5WMjAQy3; path=/; domain=.paypal.com
+Set-Cookie: feel_cookie=61203020206220302020632036207765627363722064203020206520323620437573746F6D65722F67656E6572616C2F41626F72742E78736C20662030202067203520656E5F55532068203020206920313120702F67656E2F61626F7274206A203020206B2032332050616765204E6F7420466F756E64202D2050617950616C206C20302020; expires=Wed, 31-Dec-1969 23:59:59 GMT; path=/; domain=.paypal.com
+Location: https://www.paypal.com/cgi-bin/webscr
+Connection: close
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=iso-8859-1
+
+HTTP/1.1 200 OK
+Date: Fri, 24 Aug 2007 01:33:51 GMT
+Server: Apache/1.3.33 (Unix) mod_fastcgi/2.4.2 mod_gzip/1.3.26.1a mod_ssl/2.8.22 OpenSSL/0.9.7e
+Cache-Control: private
+Pragma: no-cache
+Expires: Thu, 05 Jan 1995 22:00:00 GMT
+Set-Cookie: KHcl0EuY7AKSMgfvHl7J5E7hPtK=AGvP0T-sYnUG_4N4UfjJCEQXb7BwnrD_0l06IkWFZ_yKXu_BeJEt71OINNBFhz7G0HGy6dLzymjx4lIp; expires=Thu, 19-Aug-2027 01:33:52 GMT; path=/; domain=.paypal.com
+Set-Cookie: cookie_check=yes; expires=Mon, 21-Aug-2017 01:33:52 GMT; path=/; domain=.paypal.com
+Set-Cookie: SzWDZL1Tw4729rjVwzEIbk4eZ7u=ouuqqOX62D9pYpkC7cAycp8XcOWI_ucd8yRdphWFgAUR_oYwLBv7ZtS7pFKh-9xZ60PcaoLOhaht3IfW4jI5V1jMKlTR2yIS2R_r2W; path=/; domain=.paypal.com
+Set-Cookie: OL6S9fXi8y9NkAzRyU8cgsycszO=lZHnw5DWOOqujIgBR7UgtPgZVFMqYYkz9SmW4ExM2RyqAbFfBlmJ2lGdVjgCnsur5moeAGRrnuk72xSV6_25U0Q6JdwSARF9iO8Bm51VxLWXH7m6; path=/; domain=.paypal.com
+Set-Cookie: feel_cookie=61203020206220302020632036207765627363722064203020206520333020437573746F6D65722F686F6D65706167652F486F6D65506167652E78736C20662030202067203520656E5F55532068203020206920313920702F77656C2F696E6465782D6F757473696465206A203020206B2031362057656C636F6D65202D2050617950616C206C20302020; expires=Wed, 31-Dec-1969 23:59:59 GMT; path=/; domain=.paypal.com
+Set-Cookie: Apache=74.208.45.214.312381187919231793; path=/; expires=Sun, 16-Aug-37 01:33:51 GMT
+Connection: close
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!--
+       Script info: script: webscr, cmd: _home, template: p/wel/index-outside, date: Aug. 2, 2007 19:46:04 PDT; country: US, language: en_US, xslt server: 
+       installation: WEBSCR-475-20070823-1       web version: 47.5-380833 branch: live-475_int
+       content version: 47.5-372669
+       pexml version: 47.5-391791
+       page XSL: Customer/default/en_US/homepage/HomePage.xsl
+       hostname : mOWAUz7P3EzmJ0lXCj6Rwx-NKz9hNqWBUP6uXXBeiX8
+-->
+<title>Welcome - PayPal</title>
+<meta http-equiv="keywords" content="Send, money, payments, credit, credit card, instant, money, financial services, mobile, wireless, WAP, cell phones, two-way pagers, Windows CE">
+<meta http-equiv="description" content="PayPal lets you send money to anyone with email. PayPal is free for consumers and works seamlessly with your existing credit card and checking account. You can settle debts, borrow cash, divide bills or split expenses with friends all without going to an ATM or looking for your checkbook.">
+<link rel="stylesheet" type="text/css" href="https://www.paypalobjects.com/WEBSCR-475-20070823-1/css/xptlive.css">
+<link rel="stylesheet" type="text/css" href="https://www.paypalobjects.com/WEBSCR-475-20070823-1/css/default.css">
+<!--[if IE 6]><![endif]-->
+
+<!--[if IE 6]><link rel="stylesheet" type="text/css" href="https://www.paypalobjects.com/WEBSCR-475-20070823-1/css/ie60win.css"><![endif]-->
+
+<!--[if IE 7]><link rel="stylesheet" type="text/css" href="https://www.paypalobjects.com/WEBSCR-475-20070823-1/css/ie70win.css"><![endif]-->
+<link rel="stylesheet" type="text/css" href="https://www.paypalobjects.com/WEBSCR-475-20070823-1/css/xptLite.css">
+<link rel="stylesheet" type="text/css" href="https://www.paypalobjects.com/WEBSCR-475-20070823-1/css/rosetta.css">
+<link rel="stylesheet" type="text/css" href="https://www.paypalobjects.com/WEBSCR-475-20070823-1/css/en_US/lang.css">
+<style type="text/css"></style>
+<link rel="shortcut icon" href="https://www.paypalobjects.com/WEBSCR-475-20070823-1/en_US/i/icon/pp_favicon_x.ico">
+<script type="text/javascript" src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/js/pp_main.js"></script><script type="text/javascript" src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/js/lib/yui-0.12/yahoo.js"></script><script type="text/javascript" src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/js/lib/yui-0.12/dom.js"></script><script type="text/javascript" src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/js/lib/yui-0.12/event.js"></script><script type="text/javascript" src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/js/lib/yui-0.12/container.js"></script><script type="text/javascript" src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/js/lib/pui/pui-0.1/paypal.js"></script><script type="text/javascript" src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/js/lib/pui/pui-0.1/srdlightbox.js"></script><script type="text/javascript" src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/js/opinionlab/oo_engine.js"></script><script type="text/javascript">custom_var='Unknown';</script><script type="text/javascript" src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/js/lib/yui-0.12/yahoo.js"></script><script type="text/javascript" src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/js/lib/yui-0.12/event.js"></script><script type="text/javascript" src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/js/dropdown.js"></script><script type="text/javascript">
+if (typeof(YAHOO) == 'object') {
+	if (typeof(YAHOO.util)=='object') {
+		if (typeof(YAHOO.util.Event)=='object' && typeof(Iconix)!='undefined') YAHOO.util.Event.addListener(window, 'load', Iconix.detect);
+	}
+}
+		</script>
+</head>
+<body>
+<div class="betalink"><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_srd-beta-optin">Preview the new PayPal Homepage</a></div>
+<div class="mainHeader" id="header">
+<h1><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_home"><img border="0" src="https://www.paypal.com/en_US/i/logo/paypal_logo.gif" alt="PayPal"></a></h1>
+<div id="navGlobal"><ul>
+<li class="first signup"><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_registration-run"><span class="emphasis">Sign Up</span></a></li>
+<li class="login"><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_login-run">Log In</a></li>
+<li><a href="https://www.paypal.com/cgi-bin/helpweb?cmd=_help">Help</a></li>
+<li class="last"><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_security-center-outside">Security Center</a></li>
+</ul></div>
+</div>
+<form class="rosetta" id="rosetta" method="post" action="https://www.paypal.com/cgi-bin/webscr?cmd=_home&amp;dispatch=5885d80a13c0db1f941d8253416939c6057d1d6643efcf2a1df7e608afc2281b">
+<fieldset>
+<legend>Change Your Language</legend>
+<label for="rosetta_dropdown">Language Select</label><select id="rosetta_dropdown" name="locale.x"><option value="en_US" selected>U.S. English</option>
+<option value="es_XC">Español</option>
+<option value="fr_XC">Français</option>
+<option value="zh_XC">中文（简体）</option></select><button type="submit" name="testName" value="testValue" alt="Submit Language Change"><img src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/en_US/i/btn/btn_circlewitharrow.gif" border="0" alt=""></button><input type="hidden" id="" name="change_locale.x" value="1"><input type="hidden" name="CONTEXT" value="5Dd7qmE4gKiixPVQKdLNu_2fWIaVxwJgUlwyBN9YJcyqAj8aXB--yYOr9R6dh4aDgOLE7r4WplizLsE--oynpuKpDV9MqkEkTEqpt3ed8q4Z2x5_jVaFX7aQBO92hbPS6Xauzm">
+</fieldset>
+<input name="form_charset" type="hidden" value="UTF-8">
+</form>
+<div id="navPrimary"><ul>
+<li class="expanded" id="navMyAccount"><a href="http://www.paypal.com/cgi-bin/webscr?cmd=_home"><span>Welcome</span></a></li>
+<li id="navSendMoney"><a href="http://www.paypal.com/cgi-bin/webscr?cmd=_send-money"><span>Send Money</span></a></li>
+<li id="navRequestMoney"><a href="http://www.paypal.com/cgi-bin/webscr?cmd=p/req/index-outside"><span>Request Money</span></a></li>
+<li id="navMerchantTools"><a href="http://www.paypal.com/cgi-bin/webscr?cmd=_merchant-outside"><span>Merchant Services</span></a></li>
+<li id="navAuctionTools"><a href="http://www.paypal.com/cgi-bin/webscr?cmd=_auction-outside"><span>Auction Tools</span></a></li>
+</ul></div>
+<div id="navSecondary"></div>
+<div id="xptContentOuter"><table align="center" border="0" cellpadding="0" cellspacing="0" id="xptContentCustom"><tr valign="top"><td class="fullRowNoLeftNav"><table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr><td><table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tr valign="top"><td class="fullRowNoLeftNav"><table align="center" border="0" cellpadding="0" cellspacing="0" class="tableDarkYellowBorder" width="760">
+<tr><td colspan="6" height="7"></td></tr>
+<tr>
+<td width="11"></td>
+<td class="tableNoBorderless" height="75" width="356"><form method="post" name="login_form" action="https://www.paypal.com/cgi-bin/webscr?cmd=_login-submit&amp;dispatch=5885d80a13c0db1f941d8253416939c6057d1d6643efcf2a1df7e608afc2281b">
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td align="left"><span class="emphasis">Member Log-In</span></td>
+<td align="right" nowrap>
+<img alt="" border="0" src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/en_US/i/scr/pixel.gif" width="15" height="1"><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_email-recovery"><span class="small">Forgot your email address?</span></a><br><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_forgot-password"><span class="small">Forgot your password?</span></a>
+</td>
+<td width="12"><img alt="" border="0" src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/en_US/i/scr/pixel.gif" width="12" height="1"></td>
+</tr>
+<tr><td colspan="3" height="7"></td></tr>
+</table>
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td align="right" nowrap><span class="small">Email Address</span></td>
+<td width="11"><img alt="" border="0" src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/en_US/i/scr/pixel.gif" width="11" height="1"></td>
+<td nowrap width="120"><input type="text" class="small" style="width:120px;" name="login_email" value=""></td>
+<td width="12"><img alt="" border="0" src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/en_US/i/scr/pixel.gif" width="12" height="1"></td>
+<td><img alt="" border="0" src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/en_US/i/scr/pixel.gif" width="1" height="1"></td>
+<td width="12"><img alt="" border="0" src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/en_US/i/scr/pixel.gif" width="12" height="1"></td>
+</tr>
+<tr><td colspan="6" height="7"><img alt="" border="0" height="7" src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/en_US/i/scr/pixel.gif" width="1"></td></tr>
+<tr>
+<td align="right" nowrap><span class="small">Password</span></td>
+<td width="11"><img alt="" border="0" src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/en_US/i/scr/pixel.gif" width="11" height="1"></td>
+<td width="120">
+<input type="password" id="login_password" name="login_password" value="" class="small" style="width:120px;"><script type="text/javascript">
+<!-- hide from JavaScript-challenged browsers
+			if (document.login_form.login_email.value == '') {
+				document.login_form.login_email.focus();
+			} else {
+				document.login_form.login_password.focus();
+			}
+			// done hiding -->
+</script>
+</td>
+<td width="12"><img alt="" border="0" src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/en_US/i/scr/pixel.gif" width="12" height="1"></td>
+<td><input type="submit" name="submit.x" value="Log In" class="small"></td>
+<td width="12"><img alt="" border="0" src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/en_US/i/scr/pixel.gif" width="12" height="1"></td>
+</tr>
+</table>
+<input name="form_charset" type="hidden" value="UTF-8">
+</form></td>
+<td bgcolor="#CCCCCC" valign="top" width="1"></td>
+<td><table align="center" border="0" cellpadding="0" cellspacing="0" width="190">
+<tr><td align="center"><span class="smallEmphasis">Join PayPal Today</span></td></tr>
+<tr><td align="center" class="small">Now Over<br>100 million accounts</td></tr>
+<tr><td align="center"><img alt="" border="0" height="5" src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/en_US/i/scr/pixel.gif" width="1"></td></tr>
+<tr><td align="center"><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_registration-run"><img src="https://www.paypal.com/en_US/i/btn/btn_SignUpNow.gif" border="0" alt=""></a></td></tr>
+</table></td>
+<td bgcolor="#CCCCCC" valign="top" width="1"></td>
+<td><table align="center" border="0" cellpadding="0" cellspacing="0"><tr>
+<td><img alt="" border="0" src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/en_US/i/scr/pixel.gif" width="10" height="1"></td>
+<td><img src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/en_US/i/header/spot_globe.gif" border="0" alt=""></td>
+<td><img alt="" border="0" src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/en_US/i/scr/pixel.gif" width="5" height="1"></td>
+<td>
+<span class="small">Learn more about </span><br><span class="small"><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_display-country-functionality-outside">PayPal Worldwide</a></span>
+</td>
+</tr></table></td>
+</tr>
+<tr><td colspan="6" height="7"></td></tr>
+</table></td></tr></table></td></tr>
+<tr><td height="14" width="100%"></td></tr>
+<tr><td><table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tr valign="top"><td class="fullRowNoLeftNav"><table align="center" border="0" cellpadding="0" cellspacing="0"><tr>
+<td valign="top" width="563"><table align="center" border="0" cellpadding="0" cellspacing="0">
+<tr><td valign="top"><a href="https://www.paypal.com/cgi-bin/webscr?cmd=xpt/cps/general/NewConsumerWorks-outside"><img src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/en_US/i/header/hp_safereasier_563x115.jpg" border="0" alt=""></a></td></tr>
+<tr><td height="14" valign="top" width="563"><img alt="" border="0" height="14" src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/en_US/i/scr/pixel.gif" width="563"></td></tr>
+<tr><td><table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td width="178"><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_send-money"><img src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/en_US/i/header/spot_BuyersTab.gif" border="0" alt=""></a></td>
+<td><img alt="" border="0" src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/en_US/i/scr/pixel.gif" width="15" height="1"></td>
+<td width="178"><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_auction-outside"><img src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/en_US/i/header/spot_hpSellersTab.gif" border="0" alt=""></a></td>
+<td><img alt="" border="0" src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/en_US/i/scr/pixel.gif" width="15" height="1"></td>
+<td width="178"><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_merchant-outside"><img src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/en_US/i/header/spot_hpMerchantTab.gif" border="0" alt=""></a></td>
+</tr>
+<tr>
+<td bgcolor="#F9FAFC" valign="top" width="178"><table align="center" border="0" cellpadding="15" cellspacing="0" class="HomePage3RowsStyle" width="100%"><tr><td>
+<a href="https://www.paypal.com/cgi-bin/webscr?cmd=p/ema/index-outside">Send money</a> online from 190 countries and regions.<br><br>PayPal is <a href="https://www.paypal.com/cgi-bin/webscr?cmd=p/auc/new_ebay_buyer_intro-outside">free for buyers</a>.<br><br>Shop without sharing <a href="https://www.paypal.com/cgi-bin/webscr?cmd=xpt/cps/general/Privacy-outside">financial information</a>.<br><br><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_pbp-info-outside">100% protection</a> against unauthorized payments sent from your account. </td></tr></table></td>
+<td><img alt="" border="0" src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/en_US/i/scr/pixel.gif" width="15" height="1"></td>
+<td bgcolor="#F9FAFC" valign="top" width="178"><table align="center" border="0" cellpadding="15" cellspacing="0" class="HomePage3RowsStyle" width="100%"><tr><td>
+<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_auction-outside">Free eBay tools</a> make selling easier.<br><br>PayPal works hard to help <a href="https://www.paypal.com/cgi-bin/webscr?cmd=xpt/cps/bizui/BusinessSecurity-outside">protect sellers</a>.<br><br>PayPal simplifies <a href="https://www.paypal.com/cgi-bin/webscr?cmd=p/ship/center-outside">shipping and tracking</a>.<br><br><a href="https://www.paypal.com/cgi-bin/webscr?cmd=xpt/auctions/PaypalPreferred-outside">Earn cash back</a> with PayPal Preferred Rewards. </td></tr></table></td>
+<td><img alt="" border="0" src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/en_US/i/scr/pixel.gif" width="15" height="1"></td>
+<td bgcolor="#F9FAFC" valign="top" width="178"><table align="center" border="0" cellpadding="15" cellspacing="0" class="HomePage3RowsStyle" width="100%"><tr><td>
+<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_wp-standard-overview-outside">Accept credit cards online</a> with PayPal.<br><br>Get paid by phone, fax, and mail with <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_vt_hub-outside">Virtual Terminal</a>.<br><br>See how PayPal can <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_additional-payment-overview-outside">increase your sales</a>.<br><br>Learn more about our secure <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_merchant-outside">Merchant Services</a>.<br><br><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_profile-comparison">Compare our solutions side by side</a>
+</td></tr></table></td>
+</tr>
+</table></td></tr>
+</table></td>
+<td valign="top" width="14"></td>
+<td valign="top" width="183"><table align="center" border="0" cellpadding="0" cellspacing="0">
+<tr><td><script type="text/javascript">document.write('<script type="text/javascript" charset="iso-8859-1" src="https://paypalssl.doubleclick.net/adj/paypal.us/-outside;lang=en_US;u=;sz=183x90;tile=1;ord=107530984?"><\/script>');</script></td></tr>
+<tr><td height="5" width="183"></td></tr>
+<tr><td width="183"><script type="text/javascript">document.write('<script type="text/javascript" charset="iso-8859-1" src="https://paypalssl.doubleclick.net/adj/paypal.us/-outside;lang=en_US;u=;sz=183x90;tile=2;ord=107530984?"><\/script>');</script></td></tr>
+<tr><td height="5" width="183"></td></tr>
+<tr><td><a href="https://www.paypal.com/cgi-bin/webscr?cmd=xpt/cps/mobile/MobileOverview-outside"><img height="50" width="183" src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/en_US/i/bnr/bnr_mobile_183x50.gif" border="0" alt=""></a></td></tr>
+<tr><td height="5" width="183"></td></tr>
+<tr><td width="183"><script type="text/javascript">document.write('<script type="text/javascript" charset="iso-8859-1" src="https://paypalssl.doubleclick.net/adj/paypal.us/-outside;lang=en_US;u=;sz=9x9;tile=3;ord=107530984?"><\/script>');</script></td></tr>
+</table></td>
+</tr></table></td></tr></table></td></tr>
+</table></td></tr></table></div>
+<div id="footer">
+<h5 class="accessAid">More Information</h5>
+<ul>
+<li><a href="http://www.paypal.com/cgi-bin/webscr?cmd=p/gen/about-outside">About</a></li>
+<li><a href="http://www.paypal.com/cgi-bin/webscr?cmd=xpt/cps/general/PayPalAccountTypes-outside">Accounts</a></li>
+<li><a href="http://www.paypal.com/cgi-bin/webscr?cmd=_display-fees-outside">Fees</a></li>
+<li><a href="http://www.paypal.com/cgi-bin/webscr?cmd=p/gen/ua/policy_privacy-outside">Privacy</a></li>
+<li><a href="http://www.paypal.com/cgi-bin/webscr?cmd=_security-center-outside">Security Center</a></li>
+<li><a href="http://www.paypal.com/cgi-bin/helpscr?cmd=_help&amp;t=escalateTab">Contact Us</a></li>
+<li><a href="http://www.paypal.com/cgi-bin/webscr?cmd=p/gen/ua/ua-outside">Legal Agreements</a></li>
+<li><a href="/developer">Developers</a></li>
+<li><a href="https://www.paypal.com/cgi-bin/webscr?cmd=p/gen/jobs-outside">Jobs</a></li>
+<li><a href="https://www.paypal.com/cgi-bin/webscr?cmd=xpt/cps/mobile/MobileOverview-outside">Mobile</a></li>
+<li><a href="https://ad.doubleclick.net/clk;30045328;11466062;u?https://www.paypal.com/us/cgi-bin/webscr?cmd=xpt/cps/general/PPPlusCC-outside">Plus Card</a></li>
+<li><a href="http://www.paypal.com/cgi-bin/webscr?cmd=_web-referrals-mrb-outside">Referrals</a></li>
+<li><a href="http://www.paypal.com/cgi-bin/webscr?cmd=_shop-ext">Shops</a></li>
+<li><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_batch-payment-overview-outside">Mass Pay</a></li>
+<li class="last">
+<!-- OnlineOpinionF3cS v3.0
+The following code is Copyright 1998-2006 Opinionlab, Inc.
+All rights reserved. Unauthorized use is prohibited.
+This product and other products of OpinionLab, Inc. are protected by U.S. Patent No. US 6606581, 6421724, 6785717 B1 and other patents pending.
+http://www.opinionlab.com-->
+<script type="text/javascript" src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/js/opinionlab/oo_engine.js"></script><script type="text/javascript">
+			var feedback_link='Site Feedback';
+            	O_GoT(feedback_link);
+             	custom_var='Unknown';</script>
+</li>
+</ul>
+<h5 class="accessAid">PayPal Worldwide</h5>
+<ul>
+<li><a href="http://www.paypal.com.au/" title="PayPal Australia">Australia</a></li>
+<li><a href="http://www.paypal.at/" title="PayPal Austria">Austria</a></li>
+<li><a href="http://www.paypal.be/" title="PayPal Belgium">Belgium</a></li>
+<li><a href="http://www.paypal.ca/" title="PayPal Canada">Canada</a></li>
+<li><a href="https://www.paypal.com/us/cgi-bin/webscr?cmd=xpt/general/CNPayPalComparison-outside" title="PayPal China">China</a></li>
+<li><a href="http://www.paypal.fr/" title="PayPal France">France</a></li>
+<li><a href="http://www.paypal.de/" title="PayPal Germany">Germany</a></li>
+<li><a href="http://www.paypal.it/" title="PayPal Italy">Italy</a></li>
+<li><a href="http://www.paypal.nl/" title="PayPal Netherlands">Netherlands</a></li>
+<li><a href="http://www.paypal.pl/" title="PayPal Poland">Poland</a></li>
+<li><a href="http://www.paypal.es/" title="PayPal Spain">Spain</a></li>
+<li><a href="http://www.paypal.ch/" title="PayPal Switzerland">Switzerland</a></li>
+<li><a href="http://www.paypal.co.uk/" title="PayPal United Kingdom">United Kingdom</a></li>
+<li class="last"><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_display-country-functionality-outside" title="Learn more about PayPal Worldwide">More...</a></li>
+</ul>
+<h5 class="accessAid">More eBay Sites</h5>
+<ul>
+<li><a href="http://www.ebay.com">eBay</a></li>
+<li><a href="http://www.half.com">Half.com</a></li>
+<li><a href="http://www.craigslist.org">Craigslist</a></li>
+<li><a href="http://www.kijiji.ca">Kijiji Canada</a></li>
+<li><a href="http://www.prostores.com">ProStores</a></li>
+<li><a href="http://www.rent.com">Rent.com</a></li>
+<li><a href="http://www.shopping.com">Shopping.com</a></li>
+<li class="last"><a href="http://www.skype.com">Skype</a></li>
+</ul>
+<p id="footerSecure"><script type="text/javascript">var lang = 'en';var baseUrl ='https://seal.verisign.com/splash?form_file=fdf\/splash.fdf&dn=SCGI.EBAY.COM&lang='+lang;document.write ('<a href=\"'+baseUrl+'\" onclick=\"PAYPAL1.util.openWind(event,\{location:1,status:1,resizable:1,scrollbars:1,width:560,height:500\})\">');var ver = -1;
+								var v_ua = navigator.userAgent.toLowerCase();
+								if (v_ua.match(/msie ([0-9]{1,}[\.0-9]{0,})/) != null){
+								ver = parseFloat( RegExp.$1 );
+								}
+								if((v_ua.indexOf("msie")!=-1) && (ver>=7)) {
+								var plat=-1;
+								if (v_ua.match(/windows nt ([0-9]{1,}[\.0-9]{0,})/) != null){
+								plat = parseFloat( RegExp.$1 );
+								}
+								if (plat >= 5.1) {
+								document.write("<img src='https://extended-validation-ssl.verisign.com/dot_clear.gif' style='display: none;' />");
+								}
+								}
+								</script><img border="0" src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/en_US/i/logo/verisign.gif" alt=""><script type="text/javascript">document.write ('<\/a>');</script><p><a target="_blank" href="http://www.verisign.com/ssl-certificate">About SSL Certificates</a></p></p>
+<p id="legal">Copyright © 1999-2007 PayPal. All rights reserved.<br><a href="http://www.paypal.com/cgi-bin/webscr?cmd=xpt/UserAgreement/general/FDIC-outside">Information about FDIC pass-through insurance</a></p>
+<p id="Privacy"><a href="http://www.paypal.com/cgi-bin/webscr?cmd=p/gen/privacy-outside"><img border="0" height="31" width="116" src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/en_US/i/logo/trustmark.gif" alt="Truste"></a><a target="_blank" href="http://www.bbbonline.org/cks.asp?id=20111061155818568"><img border="0" height="31" width="116" src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/en_US/i/logo/bbbmark.gif" alt="Better Business Bureau Online"></a></p>
+</div>
+<div id="ppwebapi" class="advonqo.mha,hfb.lnb-k`ox`o-rdhsqdonqo"></div>
+<!-- SiteCatalyst Code
+Copyright 1997-2005 Omniture, Inc.
+More info available at http://www.omniture.com -->
+<script type="text/javascript" src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/js/site_catalyst/pp_jscode_080706.js"></script>
+<script type="text/javascript">
+<!--
+/* SiteCatalyst Variables */
+s.prop1="p/wel/index-outside";
+s.prop7="Unknown";
+s.prop8="Unknown";
+s.prop9="Unknown";
+s.prop10="US";
+s.pageName="Homepage";
+s.channel="Homepage";
+s.prop50="en_US";
+s.prop18="1A2A3A5A";
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code)//--></script>
+<script type="text/javascript"><!--
+if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
+//--></script><noscript><img
+src="//paypal.112.2O7.net/b/ss/paypalglobal/1/H.6--NS/0?pageName=NonJavaScript"
+height="1" width="1" border="0" alt="" /></noscript><!--/DO NOT REMOVE/-->
+<!-- End SiteCatalyst Code -->
+<script type="text/javascript" src="https://www.paypalobjects.com/WEBSCR-475-20070823-1/js/pp_naturalsearch.js"></script><script type="text/javascript">
+<!--
+var ppns = new PayPalNaturalSearch('https://www.paypal.com/cgi-bin/webscr?cmd=p/wel/index-outside','3484-30830-12422-0',this.document);
+			ppns.addEngines(new Array(
+										"A9.com",
+										".altavista.com",
+										"clusty.com",
+										"google.co.jp",
+										"google.co.kr",
+										"google.ru",
+										"www.google.com",
+										"icerocket.com",
+										"infospace.com",
+										"mooter.com",
+										"search.msn.",
+										"snap.com",
+										"search.yahoo.com",
+										"search.yahoo.co.jp"
+									,"www.overture.com/d/search/p/altavista/",
+									"aolsearch.aol.com",
+									"search.aol.com",
+									"web.ask.com",
+									"pictures.ask.com",
+									"images.google.com",
+									"groups.google.com",
+									"www.google.com/search",
+									"www.hotbot.com",
+									"search.netscape.com",
+									"s.teoma.com/",
+									"www.wisenut.com"
+								)); // End of aEngines array.
+			ppns.init();
+			-->
+</script>
+</body>
+</html>
+<br>
+New Notification Received:
+  txn_type: subscr_cancel
+  subscr_id: S-5H867980JX7163737
+  last_name: User
+  residence_country: US
+  mc_currency: USD
+  item_name: Shop and Buzz Subscription
+  amount1: 0.00
+  amount3: 27.00
+  recurring: 1
+  verify_sign: AZRkIJt56.lSBKvRg7965EG6MMW.Ai3RAt0pL0R3f1m9okd0UmaN6T4n
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: blahbl_1187749698_per@alliances.org
+  first_name: Test
+  receiver_email: antonio-delacruz@homenet.tzo.com
+  payer_id: 48MPQQ2J85TBW
+  reattempt: 1
+  item_number: sandbsub
+  subscr_date: 18:45:31 Aug 23, 2007 PDT
+  charset: windows-1252
+  notify_version: 2.4
+  period1: 1 M
+  mc_amount1: 0.00
+  period3: 1 M
+  mc_amount3: 27.00
+curl_resp: HTTP/1.1 200 OK
+Date: Fri, 24 Aug 2007 01:45:41 GMT
+Server: Apache/1.3.27 (Unix) mod_ssl/2.8.12 OpenSSL/0.9.7a mod_fastcgi/2.4.2 PHP/4.3.2
+Set-Cookie: -1ILhdyICORs4hS4xTUr41S8iP0=yYvds9Vyg5TWP1dwyRvCIeak4i9xod94l8xsZp2Uk3usnr9JSwpJtBGP_Ul6U7PcYlQOJfbgSQNch9wy; expires=Thu, 19-Aug-2027 01:45:42 GMT; path=/; domain=.paypal.com
+Set-Cookie: cookie_check=yes; expires=Mon, 21-Aug-2017 01:45:42 GMT; path=/; domain=.paypal.com
+Set-Cookie: aC-6QtMWfQIUAVIPbKlEQNGuStK=DRtJBoHQ6DKCnQuGvr71mAmj2d9ChKbeJlsZCChNDoyrnBSAv-3RxUp_1UNL3LruWp-9QA06-aQhTbkq0Ed4niHPObLsDYycNU5TNW; path=/; domain=.paypal.com
+Set-Cookie: SvfiN4zqfyzJ1gFvN8H6qdRUVje=2_4Y32krnYqvULT9t0BvakOxvdnBglZOqWk3e8TXmkMLIh1awczkNY0GaYfXIOziRSanbGjv_uFtxFvqMlxOePE9Khw32cXTAvnH3rD7iXGSJ6GB; path=/; domain=.paypal.com
+Set-Cookie: feel_cookie=612030202062203020206320362077656273637220642030202065203337204D65726368616E742F686F6D65706167652F53616E64426F782D6F7574736964652E78736C20662030202067203520656E5F55532068203020206920323120702F77656C2F73616E64626F782D6F757473696465206A203020206B2031362057656C636F6D65202D2050617950616C206C20302020; expires=Wed, 31-Dec-1969 23:59:59 GMT; path=/; domain=.paypal.com
+Set-Cookie: Apache=74.208.45.214.250571187919941881; path=/; expires=Sun, 16-Aug-37 01:45:41 GMT
+Connection: close
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!--
+       Script info: script: webscr, cmd: _home, template: p/wel/sandbox-outside, date: Aug. 2, 2007 19:46:04 PDT; country: US, language: en_US, xslt server: 
+       installation: SBWEBSCR-475-20070823-1       web version: 47.5-380833 branch: live-475_int
+       content version: 47.5-372669
+       pexml version: 47.5-391791
+       page XSL: Merchant/default/en_US/homepage/SandBox-outside.xsl
+       hostname : M-4q6bL1flsy6g.SGL6.worJGjzvUty.3Q1zHlAGgnQ
+-->
+<title>Welcome - PayPal</title>
+<meta http-equiv="keywords" content="Send, money, payments, credit, credit card, instant, money, financial services, mobile, wireless, WAP, cell phones, two-way pagers, Windows CE">
+<meta http-equiv="description" content="PayPal lets you send money to anyone with email. PayPal is free for consumers and works seamlessly with your existing credit card and checking account. You can settle debts, borrow cash, divide bills or split expenses with friends all without going to an ATM or looking for your checkbook.">
+<link rel="stylesheet" type="text/css" href="https://www.sandbox.paypal.com/SBWEBSCR-475-20070823-1/css/xpt.css">
+<link rel="stylesheet" type="text/css" href="https://www.sandbox.paypal.com/SBWEBSCR-475-20070823-1/css/xptInvoice.css">
+<link rel="stylesheet" type="text/css" href="https://www.sandbox.paypal.com/SBWEBSCR-475-20070823-1/css/xptObsolete.css">
+<link rel="stylesheet" type="text/css" href="https://www.sandbox.paypal.com/SBWEBSCR-475-20070823-1/css/xptdev.css">
+<link rel="stylesheet" type="text/css" href="https://www.sandbox.paypal.com/SBWEBSCR-475-20070823-1/css/sandbox.css">
+<link rel="stylesheet" type="text/css" href="https://www.sandbox.paypal.com/SBWEBSCR-475-20070823-1/css/default.css">
+<!--[if IE 6]><![endif]-->
+
+<!--[if IE 6]><link rel="stylesheet" type="text/css" href="https://www.sandbox.paypal.com/SBWEBSCR-475-20070823-1/css/ie60win.css"><![endif]-->
+
+<!--[if IE 7]><link rel="stylesheet" type="text/css" href="https://www.sandbox.paypal.com/SBWEBSCR-475-20070823-1/css/ie70win.css"><![endif]-->
+<link rel="stylesheet" type="text/css" href="https://www.sandbox.paypal.com/SBWEBSCR-475-20070823-1/css/en_US/lang.css">
+<style type="text/css"></style>
+<link rel="shortcut icon" href="https://www.sandbox.paypal.com/SBWEBSCR-475-20070823-1/en_US/i/icon/pp_favicon_x.ico">
+<script type="text/javascript" src="https://www.sandbox.paypal.com/SBWEBSCR-475-20070823-1/js/pp_main.js"></script>
+</head>
+<body id="xptSandbox">
+<div id="xptContentMain"><table align="center" border="0" cellpadding="0" cellspacing="0" id="xptContentContainer" width="760">
+<tr><td></td></tr>
+<tr><td valign="top"><div>
+<img src="https://www.sandbox.paypal.com/SBWEBSCR-475-20070823-1/en_US/i/logo/logo_paypalSandbox_w_100x50.gif" border="0" alt=""><br><br><div class="textCenter" id="sandbox_redirect">
+<hr>
+<br><br><span class="emphasis">To access the PayPal Sandbox, please log in to <a href="https://developer.paypal.com/">PayPal Developer Central</a>.</span><br><br><br><hr>
+</div>
+</div></td></tr>
+</table></div>
+<script type="text/javascript" src="https://www.sandbox.paypal.com/SBWEBSCR-475-20070823-1/js/pp_naturalsearch.js"></script><script type="text/javascript">
+<!--
+var ppns = new PayPalNaturalSearch('https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=p/wel/sandbox-outside','3484-30830-12422-0',this.document);
+			ppns.addEngines(new Array(
+										"A9.com",
+										".altavista.com",
+										"clusty.com",
+										"google.co.jp",
+										"google.co.kr",
+										"google.ru",
+										"www.google.com",
+										"icerocket.com",
+										"infospace.com",
+										"mooter.com",
+										"search.msn.",
+										"snap.com",
+										"search.yahoo.com",
+										"search.yahoo.co.jp"
+									,"www.overture.com/d/search/p/altavista/",
+									"aolsearch.aol.com",
+									"search.aol.com",
+									"web.ask.com",
+									"pictures.ask.com",
+									"images.google.com",
+									"groups.google.com",
+									"www.google.com/search",
+									"www.hotbot.com",
+									"search.netscape.com",
+									"s.teoma.com/",
+									"www.wisenut.com"
+								)); // End of aEngines array.
+			ppns.init();
+			-->
+</script>
+</body>
+</html>
+<br>
+New Notification Received:
+  txn_type: subscr_signup
+  subscr_id: S-0FX077766K964634F
+  last_name: User
+  residence_country: US
+  mc_currency: USD
+  item_name: Shop and Buzz Subscription
+  amount1: 0.00
+  amount3: 27.00
+  recurring: 1
+  verify_sign: AzNxhn0jS6dmOx4qH6YCQPlq-i1wA4ax6b7S3ZZs7NiOCyxgoO4ag5lg
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: blahbl_1187749698_per@alliances.org
+  first_name: Test
+  receiver_email: antonio-delacruz@homenet.tzo.com
+  payer_id: 48MPQQ2J85TBW
+  reattempt: 1
+  item_number: sandbsub
+  subscr_date: 18:53:20 Aug 23, 2007 PDT
+  charset: windows-1252
+  notify_version: 2.4
+  period1: 1 M
+  mc_amount1: 0.00
+  period3: 1 M
+  mc_amount3: 27.00
+curl_resp: HTTP/1.1 200 OK
+Date: Fri, 24 Aug 2007 01:53:24 GMT
+Server: Apache/1.3.27 (Unix) mod_ssl/2.8.12 OpenSSL/0.9.7a mod_fastcgi/2.4.2 PHP/4.3.2
+Set-Cookie: cookie_check=yes; expires=Mon, 21-Aug-2017 01:53:24 GMT; path=/; domain=.paypal.com
+Set-Cookie: Apache=74.208.45.214.60231187920404662; path=/; expires=Sun, 16-Aug-37 01:53:24 GMT
+Connection: close
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED<br>
+New Notification Received:
+  txn_type: subscr_cancel
+  subscr_id: S-0FX077766K964634F
+  last_name: User
+  residence_country: US
+  mc_currency: USD
+  item_name: Shop and Buzz Subscription
+  amount1: 0.00
+  amount3: 27.00
+  recurring: 1
+  verify_sign: Aa0LuxVvkM9rsxiZZxSoR-aYEFsdAU5vMmFGnNgivehgEL254EkwfRr8
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: blahbl_1187749698_per@alliances.org
+  first_name: Test
+  receiver_email: antonio-delacruz@homenet.tzo.com
+  payer_id: 48MPQQ2J85TBW
+  reattempt: 1
+  item_number: sandbsub
+  subscr_date: 19:32:19 Aug 23, 2007 PDT
+  charset: windows-1252
+  notify_version: 2.4
+  period1: 1 M
+  mc_amount1: 0.00
+  period3: 1 M
+  mc_amount3: 27.00
+curl_resp: HTTP/1.1 200 OK
+Date: Fri, 24 Aug 2007 02:32:27 GMT
+Server: Apache/1.3.27 (Unix) mod_ssl/2.8.12 OpenSSL/0.9.7a mod_fastcgi/2.4.2 PHP/4.3.2
+Set-Cookie: cookie_check=yes; expires=Mon, 21-Aug-2017 02:32:27 GMT; path=/; domain=.paypal.com
+Set-Cookie: Apache=74.208.45.214.83701187922747100; path=/; expires=Sun, 16-Aug-37 02:32:27 GMT
+Connection: close
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED<br>
+New Notification Received:
+  txn_type: subscr_signup
+  subscr_id: S-7SE583776D7935344
+  last_name: User
+  residence_country: US
+  mc_currency: USD
+  item_name: Shop and Buzz Subscription
+  amount1: 0.00
+  amount3: 27.00
+  recurring: 1
+  verify_sign: AbRHa4aRwBxJPLCkdAvMnEXIhe9WA0DIvnqeEvTPNuxfjn.lOC.HShrE
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: blahbl_1187749698_per@alliances.org
+  first_name: Test
+  receiver_email: antonio-delacruz@homenet.tzo.com
+  payer_id: 48MPQQ2J85TBW
+  reattempt: 1
+  item_number: 410d192e1e1e4ddd431e2b56280ef094
+  subscr_date: 19:33:41 Aug 23, 2007 PDT
+  charset: windows-1252
+  notify_version: 2.4
+  period1: 1 M
+  mc_amount1: 0.00
+  period3: 1 M
+  mc_amount3: 27.00
+curl_resp: HTTP/1.1 200 OK
+Date: Fri, 24 Aug 2007 02:33:45 GMT
+Server: Apache/1.3.27 (Unix) mod_ssl/2.8.12 OpenSSL/0.9.7a mod_fastcgi/2.4.2 PHP/4.3.2
+Set-Cookie: cookie_check=yes; expires=Mon, 21-Aug-2017 02:33:45 GMT; path=/; domain=.paypal.com
+Set-Cookie: Apache=74.208.45.214.167931187922825533; path=/; expires=Sun, 16-Aug-37 02:33:45 GMT
+Connection: close
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED<br>
+New Notification Received:
+  txn_type: subscr_cancel
+  subscr_id: S-7SE583776D7935344
+  last_name: User
+  residence_country: US
+  mc_currency: USD
+  item_name: Shop and Buzz Subscription
+  amount1: 0.00
+  amount3: 27.00
+  recurring: 1
+  verify_sign: A5uDUxjLEqNDIrGBRnhQ6n4kl5nfAExwcTUmPT6j1rwnsKlC-rG3MQDf
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: blahbl_1187749698_per@alliances.org
+  first_name: Test
+  receiver_email: antonio-delacruz@homenet.tzo.com
+  payer_id: 48MPQQ2J85TBW
+  reattempt: 1
+  item_number: 410d192e1e1e4ddd431e2b56280ef094
+  subscr_date: 19:35:49 Aug 23, 2007 PDT
+  charset: windows-1252
+  notify_version: 2.4
+  period1: 1 M
+  mc_amount1: 0.00
+  period3: 1 M
+  mc_amount3: 27.00
+curl_resp: HTTP/1.1 200 OK
+Date: Fri, 24 Aug 2007 02:35:56 GMT
+Server: Apache/1.3.27 (Unix) mod_ssl/2.8.12 OpenSSL/0.9.7a mod_fastcgi/2.4.2 PHP/4.3.2
+Set-Cookie: cookie_check=yes; expires=Mon, 21-Aug-2017 02:35:57 GMT; path=/; domain=.paypal.com
+Set-Cookie: Apache=74.208.45.214.23161187922956876; path=/; expires=Sun, 16-Aug-37 02:35:56 GMT
+Connection: close
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED<br>
+New Notification Received:
+  txn_type: subscr_signup
+  subscr_id: S-4BB75322F9242260L
+  last_name: User
+  residence_country: US
+  mc_currency: USD
+  item_name: Shop and Buzz Subscription
+  amount1: 0.00
+  amount3: 27.00
+  recurring: 1
+  verify_sign: A5VOe3uredF2Xk2HEkjPdmxfx0ZIAHwisvDg51mz7rlHX.VlecmbpROS
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: blahbl_1187749698_per@alliances.org
+  first_name: Test
+  receiver_email: antonio-delacruz@homenet.tzo.com
+  payer_id: 48MPQQ2J85TBW
+  reattempt: 1
+  item_number: 09e6df725c312cc9c8181e3b972944de
+  subscr_date: 19:36:35 Aug 23, 2007 PDT
+  charset: windows-1252
+  notify_version: 2.4
+  period1: 1 M
+  mc_amount1: 0.00
+  period3: 1 M
+  mc_amount3: 27.00
+curl_resp: HTTP/1.1 200 OK
+Date: Fri, 24 Aug 2007 02:37:03 GMT
+Server: Apache/1.3.27 (Unix) mod_ssl/2.8.12 OpenSSL/0.9.7a mod_fastcgi/2.4.2 PHP/4.3.2
+Set-Cookie: cookie_check=yes; expires=Mon, 21-Aug-2017 02:37:04 GMT; path=/; domain=.paypal.com
+Set-Cookie: Apache=74.208.45.214.85611187923023800; path=/; expires=Sun, 16-Aug-37 02:37:03 GMT
+Connection: close
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED<br>
+New Notification Received:
+  txn_type: subscr_cancel
+  subscr_id: S-4BB75322F9242260L
+  last_name: User
+  residence_country: US
+  mc_currency: USD
+  item_name: Shop and Buzz Subscription
+  amount1: 0.00
+  amount3: 27.00
+  recurring: 1
+  verify_sign: AFNN5PWxJMju2tWfd8feo-Pimf8rA0NaiKqPf.6yI8BCo3bntS5ZjFMt
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: blahbl_1187749698_per@alliances.org
+  first_name: Test
+  receiver_email: antonio-delacruz@homenet.tzo.com
+  payer_id: 48MPQQ2J85TBW
+  reattempt: 1
+  item_number: 09e6df725c312cc9c8181e3b972944de
+  subscr_date: 19:38:26 Aug 23, 2007 PDT
+  charset: windows-1252
+  notify_version: 2.4
+  period1: 1 M
+  mc_amount1: 0.00
+  period3: 1 M
+  mc_amount3: 27.00
+curl_resp: HTTP/1.1 200 OK
+Date: Fri, 24 Aug 2007 02:38:35 GMT
+Server: Apache/1.3.27 (Unix) mod_ssl/2.8.12 OpenSSL/0.9.7a mod_fastcgi/2.4.2 PHP/4.3.2
+Set-Cookie: cookie_check=yes; expires=Mon, 21-Aug-2017 02:38:35 GMT; path=/; domain=.paypal.com
+Set-Cookie: Apache=74.208.45.214.179731187923115705; path=/; expires=Sun, 16-Aug-37 02:38:35 GMT
+Connection: close
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED<br>
+New Notification Received:
+  txn_type: subscr_signup
+  subscr_id: S-6SK31522VL545642A
+  last_name: User
+  residence_country: US
+  mc_currency: USD
+  item_name: Shop and Buzz Subscription
+  amount1: 0.00
+  amount3: 27.00
+  recurring: 1
+  verify_sign: A-KvpftX-GJU5LoCcHmXH580jWFCAgysHqy05izsxCTs.NNA23amCsfl
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: blahbl_1187749698_per@alliances.org
+  first_name: Test
+  receiver_email: antonio-delacruz@homenet.tzo.com
+  payer_id: 48MPQQ2J85TBW
+  reattempt: 1
+  item_number: 6709b955943a2aa8e2666dcc832bee0d
+  subscr_date: 19:38:54 Aug 23, 2007 PDT
+  charset: windows-1252
+  notify_version: 2.4
+  period1: 1 M
+  mc_amount1: 0.00
+  period3: 1 M
+  mc_amount3: 27.00
+curl_resp: HTTP/1.1 200 OK
+Date: Fri, 24 Aug 2007 02:39:02 GMT
+Server: Apache/1.3.27 (Unix) mod_ssl/2.8.12 OpenSSL/0.9.7a mod_fastcgi/2.4.2 PHP/4.3.2
+Set-Cookie: cookie_check=yes; expires=Mon, 21-Aug-2017 02:39:02 GMT; path=/; domain=.paypal.com
+Set-Cookie: Apache=74.208.45.214.17044118792314236; path=/; expires=Sun, 16-Aug-37 02:39:02 GMT
+Connection: close
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED<br>
+New Notification Received:
+  txn_type: subscr_cancel
+  subscr_id: S-6SK31522VL545642A
+  last_name: User
+  residence_country: US
+  mc_currency: USD
+  item_name: Shop and Buzz Subscription
+  amount1: 0.00
+  amount3: 27.00
+  recurring: 1
+  verify_sign: AkdfPRSIvKpef0fBwQxbXYjXh9HrA1p83OL078Ow1OP2B17fLSWbnQcM
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: blahbl_1187749698_per@alliances.org
+  first_name: Test
+  receiver_email: antonio-delacruz@homenet.tzo.com
+  payer_id: 48MPQQ2J85TBW
+  reattempt: 1
+  item_number: 6709b955943a2aa8e2666dcc832bee0d
+  subscr_date: 19:41:22 Aug 23, 2007 PDT
+  charset: windows-1252
+  notify_version: 2.4
+  period1: 1 M
+  mc_amount1: 0.00
+  period3: 1 M
+  mc_amount3: 27.00
+curl_resp: HTTP/1.1 200 OK
+Date: Fri, 24 Aug 2007 02:41:30 GMT
+Server: Apache/1.3.27 (Unix) mod_ssl/2.8.12 OpenSSL/0.9.7a mod_fastcgi/2.4.2 PHP/4.3.2
+Set-Cookie: cookie_check=yes; expires=Mon, 21-Aug-2017 02:41:31 GMT; path=/; domain=.paypal.com
+Set-Cookie: Apache=74.208.45.214.321551187923290899; path=/; expires=Sun, 16-Aug-37 02:41:30 GMT
+Connection: close
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED<br>
+Verified<br>
+subscr_cancel<br>
+New Notification Received:
+  txn_type: subscr_signup
+  subscr_id: S-6MU562256F7073203
+  last_name: User
+  residence_country: US
+  mc_currency: USD
+  item_name: Shop and Buzz Subscription
+  amount1: 0.00
+  amount3: 27.00
+  recurring: 1
+  verify_sign: A8nuYovPP9JePTTltBYWWfIDzw7iAbCxdkRgVcamFvBwXkiDd0WMLuF.
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: blahbl_1187749698_per@alliances.org
+  first_name: Test
+  receiver_email: antonio-delacruz@homenet.tzo.com
+  payer_id: 48MPQQ2J85TBW
+  reattempt: 1
+  item_number: aad67a34954435d9fd06703f8127b154
+  subscr_date: 19:43:59 Aug 23, 2007 PDT
+  charset: windows-1252
+  notify_version: 2.4
+  period1: 1 M
+  mc_amount1: 0.00
+  period3: 1 M
+  mc_amount3: 27.00
+curl_resp: HTTP/1.1 200 OK
+Date: Fri, 24 Aug 2007 02:44:03 GMT
+Server: Apache/1.3.27 (Unix) mod_ssl/2.8.12 OpenSSL/0.9.7a mod_fastcgi/2.4.2 PHP/4.3.2
+Set-Cookie: cookie_check=yes; expires=Mon, 21-Aug-2017 02:44:03 GMT; path=/; domain=.paypal.com
+Set-Cookie: Apache=74.208.45.214.15949118792344370; path=/; expires=Sun, 16-Aug-37 02:44:03 GMT
+Connection: close
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED<br>
+Verified<br>
+subscr_signup<br>
+New Notification Received:
+  txn_type: subscr_cancel
+  subscr_id: S-6MU562256F7073203
+  last_name: User
+  residence_country: US
+  mc_currency: USD
+  item_name: Shop and Buzz Subscription
+  amount1: 0.00
+  amount3: 27.00
+  recurring: 1
+  verify_sign: AZHExQTAPYQMXAY7o1X7iBS9OvbOA65XTeHeT7x1yHjEWvT0GBZZzF8a
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: blahbl_1187749698_per@alliances.org
+  first_name: Test
+  receiver_email: antonio-delacruz@homenet.tzo.com
+  payer_id: 48MPQQ2J85TBW
+  reattempt: 1
+  item_number: aad67a34954435d9fd06703f8127b154
+  subscr_date: 19:46:28 Aug 23, 2007 PDT
+  charset: windows-1252
+  notify_version: 2.4
+  period1: 1 M
+  mc_amount1: 0.00
+  period3: 1 M
+  mc_amount3: 27.00
+curl_resp: HTTP/1.1 200 OK
+Date: Fri, 24 Aug 2007 02:46:33 GMT
+Server: Apache/1.3.27 (Unix) mod_ssl/2.8.12 OpenSSL/0.9.7a mod_fastcgi/2.4.2 PHP/4.3.2
+Set-Cookie: cookie_check=yes; expires=Mon, 21-Aug-2017 02:46:33 GMT; path=/; domain=.paypal.com
+Set-Cookie: Apache=74.208.45.214.9611187923593718; path=/; expires=Sun, 16-Aug-37 02:46:33 GMT
+Connection: close
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED<br>
+Verified<br>
+subscr_cancel<br>
+New Notification Received:
+  txn_type: subscr_signup
+  subscr_id: S-3WU46045863840511
+  last_name: User
+  residence_country: US
+  mc_currency: USD
+  item_name: Shop and Buzz Subscription
+  amount1: 0.00
+  amount3: 27.00
+  recurring: 1
+  verify_sign: Aqr-A.geNRX8cQhyj.B63VhVgXW4AhZQSp1Y4WEDufMoaKrRu9ZR9v4r
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: blahbl_1187749698_per@alliances.org
+  first_name: Test
+  receiver_email: antonio-delacruz@homenet.tzo.com
+  payer_id: 48MPQQ2J85TBW
+  reattempt: 1
+  item_number: 66e483627aaca2fc280a5f610c08ebc2
+  subscr_date: 19:46:53 Aug 23, 2007 PDT
+  charset: windows-1252
+  notify_version: 2.4
+  period1: 1 M
+  mc_amount1: 0.00
+  period3: 1 M
+  mc_amount3: 27.00
+curl_resp: HTTP/1.1 200 OK
+Date: Fri, 24 Aug 2007 02:47:01 GMT
+Server: Apache/1.3.27 (Unix) mod_ssl/2.8.12 OpenSSL/0.9.7a mod_fastcgi/2.4.2 PHP/4.3.2
+Set-Cookie: cookie_check=yes; expires=Mon, 21-Aug-2017 02:47:01 GMT; path=/; domain=.paypal.com
+Set-Cookie: Apache=74.208.45.214.20961187923621189; path=/; expires=Sun, 16-Aug-37 02:47:01 GMT
+Connection: close
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED<br>
+Verified<br>
+subscr_signup<br>
+New Notification Received:
+  txn_type: subscr_cancel
+  subscr_id: S-3WU46045863840511
+  last_name: User
+  residence_country: US
+  mc_currency: USD
+  item_name: Shop and Buzz Subscription
+  amount1: 0.00
+  amount3: 27.00
+  recurring: 1
+  verify_sign: APHl8jpG1f-K2VXiMZdCTXk-xI.PAkxWy9-DSjyyahbQsPadANXMiltT
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: blahbl_1187749698_per@alliances.org
+  first_name: Test
+  receiver_email: antonio-delacruz@homenet.tzo.com
+  payer_id: 48MPQQ2J85TBW
+  reattempt: 1
+  item_number: 66e483627aaca2fc280a5f610c08ebc2
+  subscr_date: 19:47:43 Aug 23, 2007 PDT
+  charset: windows-1252
+  notify_version: 2.4
+  period1: 1 M
+  mc_amount1: 0.00
+  period3: 1 M
+  mc_amount3: 27.00
+curl_resp: HTTP/1.1 200 OK
+Date: Fri, 24 Aug 2007 02:47:50 GMT
+Server: Apache/1.3.27 (Unix) mod_ssl/2.8.12 OpenSSL/0.9.7a mod_fastcgi/2.4.2 PHP/4.3.2
+Set-Cookie: cookie_check=yes; expires=Mon, 21-Aug-2017 02:47:51 GMT; path=/; domain=.paypal.com
+Set-Cookie: Apache=74.208.45.214.72181187923670734; path=/; expires=Sun, 16-Aug-37 02:47:50 GMT
+Connection: close
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED<br>
+Verified<br>
+subscr_cancel<br>
+New Notification Received:
+  txn_type: subscr_signup
+  subscr_id: S-6BC89640RP855800X
+  last_name: User
+  residence_country: US
+  mc_currency: USD
+  item_name: Shop and Buzz Subscription
+  amount1: 0.00
+  amount3: 27.00
+  recurring: 1
+  verify_sign: AFM-AidGGbwY0UR0LaqEWJF.N0ITA2cYjVvvamXjrQaNqTFvpDLYkeE2
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: blahbl_1187749698_per@alliances.org
+  first_name: Test
+  receiver_email: eric_1187924029_biz@alliances.org
+  payer_id: 48MPQQ2J85TBW
+  reattempt: 1
+  item_number: 5bc9ee7d19d4c8b8a5132835356ea8bd
+  subscr_date: 20:29:00 Aug 23, 2007 PDT
+  charset: windows-1252
+  notify_version: 2.4
+  period1: 1 M
+  mc_amount1: 0.00
+  period3: 1 M
+  mc_amount3: 27.00
+curl_resp: HTTP/1.1 200 OK
+Date: Fri, 24 Aug 2007 03:29:02 GMT
+Server: Apache/1.3.27 (Unix) mod_ssl/2.8.12 OpenSSL/0.9.7a mod_fastcgi/2.4.2 PHP/4.3.2
+Set-Cookie: cookie_check=yes; expires=Mon, 21-Aug-2017 03:29:03 GMT; path=/; domain=.paypal.com
+Set-Cookie: Apache=74.208.45.214.77411187926142935; path=/; expires=Sun, 16-Aug-37 03:29:02 GMT
+Connection: close
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED<br>
+Verified<br>
+subscr_signup<br>
+New Notification Received:
+  txn_type: subscr_cancel
+  subscr_id: S-6BC89640RP855800X
+  last_name: User
+  residence_country: US
+  mc_currency: USD
+  item_name: Shop and Buzz Subscription
+  amount1: 0.00
+  amount3: 27.00
+  recurring: 1
+  verify_sign: AaGD514Om2btBjv.bymv0OnAY02QAuC1Hc7dzj4RaHfFpk6tSrE6DVBR
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: blahbl_1187749698_per@alliances.org
+  first_name: Test
+  receiver_email: eric_1187924029_biz@alliances.org
+  payer_id: 48MPQQ2J85TBW
+  reattempt: 1
+  item_number: 5bc9ee7d19d4c8b8a5132835356ea8bd
+  subscr_date: 19:17:34 Aug 24, 2007 PDT
+  charset: windows-1252
+  notify_version: 2.4
+  period1: 1 M
+  mc_amount1: 0.00
+  period3: 1 M
+  mc_amount3: 27.00
+curl_resp: HTTP/1.1 200 OK
+Date: Sat, 25 Aug 2007 02:17:38 GMT
+Server: Apache/1.3.27 (Unix) mod_ssl/2.8.12 OpenSSL/0.9.7a mod_fastcgi/2.4.2 PHP/4.3.2
+Set-Cookie: cookie_check=yes; expires=Tue, 22-Aug-2017 02:17:39 GMT; path=/; domain=.paypal.com
+Set-Cookie: Apache=74.208.45.214.268691188008258825; path=/; expires=Mon, 17-Aug-37 02:17:38 GMT
+Connection: close
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED<br>
+Verified<br>
+subscr_cancel<br>
+New Notification Received:
+  payment_date: 03:02:09 Aug 25, 2007 PDT
+  txn_type: subscr_payment
+  subscr_id: S-2WH23518DS834754E
+  last_name: Helvey
+  residence_country: US
+  item_name: Shop and Buzz Subscription
+  payment_gross: 27.00
+  mc_currency: USD
+  business: antonio-delacruz@homenet.tzo.com
+  payment_type: instant
+  verify_sign: ATEw8jkQvl.LVMmgTGRFIUM5PQO-AKsw74arQE2Km.oSNcdLOiJa1mNh
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: eric@alliances.org
+  txn_id: 1HD8739467838524X
+  receiver_email: antonio-delacruz@homenet.tzo.com
+  first_name: Eric
+  payer_id: SJJTWMZZC72FQ
+  receiver_id: FFNRA4CFPXAEY
+  item_number: sandbsub
+  payment_status: Completed
+  payment_fee: 1.08
+  mc_fee: 1.08
+  mc_gross: 27.00
+  charset: windows-1252
+  notify_version: 2.4
+Unknown transaction type.<br>
+New Notification Received:
+  payment_date: 04:47:20 Aug 25, 2007 PDT
+  txn_type: subscr_payment
+  subscr_id: S-9YA858100R0672152
+  last_name: Helvey
+  residence_country: US
+  item_name: Shop and Buzz Subscription
+  payment_gross: 27.00
+  mc_currency: USD
+  business: antonio-delacruz@homenet.tzo.com
+  payment_type: instant
+  verify_sign: AHgWmfkk94Yj3fcWfXkhOCE808S1A5Oca0wmkwhhm9JJZrtE.mNZ.hFG
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: eric@alliances.org
+  txn_id: 7BV223823J5954609
+  receiver_email: antonio-delacruz@homenet.tzo.com
+  first_name: Eric
+  payer_id: SJJTWMZZC72FQ
+  receiver_id: FFNRA4CFPXAEY
+  item_number: sandbsub
+  payment_status: Completed
+  payment_fee: 1.08
+  mc_fee: 1.08
+  mc_gross: 27.00
+  charset: windows-1252
+  notify_version: 2.4
+Unknown transaction type.<br>
+New Notification Received:
+  payment_date: 04:51:43 Aug 25, 2007 PDT
+  txn_type: subscr_payment
+  subscr_id: S-3XD610523L815784S
+  last_name: Helvey
+  residence_country: US
+  item_name: Shop and Buzz Subscription
+  payment_gross: 27.00
+  mc_currency: USD
+  business: antonio-delacruz@homenet.tzo.com
+  payment_type: instant
+  verify_sign: AqXSI8UkoXZqJmOuAbpiP.oOgEymA7-ORAjwI4pIyFs35coHDCPfTfD0
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: eric@alliances.org
+  txn_id: 6N419233K56845605
+  receiver_email: antonio-delacruz@homenet.tzo.com
+  first_name: Eric
+  payer_id: SJJTWMZZC72FQ
+  receiver_id: FFNRA4CFPXAEY
+  item_number: sandbsub
+  payment_status: Completed
+  payment_fee: 1.08
+  mc_fee: 1.08
+  mc_gross: 27.00
+  charset: windows-1252
+  notify_version: 2.4
+Unknown transaction type.<br>
+New Notification Received:
+  payment_date: 04:54:48 Aug 25, 2007 PDT
+  txn_type: subscr_payment
+  subscr_id: S-4RM59748Y48798004
+  last_name: Helvey
+  residence_country: US
+  item_name: Shop and Buzz Subscription
+  payment_gross: 27.00
+  mc_currency: USD
+  business: antonio-delacruz@homenet.tzo.com
+  payment_type: instant
+  verify_sign: AwD4sJJmdrzDKNGw7KMAMuZSx1AHA-OC2pDeiilfLEXvFmO1qw4sy8xh
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: eric@alliances.org
+  txn_id: 7W094061HW597062F
+  receiver_email: antonio-delacruz@homenet.tzo.com
+  first_name: Eric
+  payer_id: SJJTWMZZC72FQ
+  receiver_id: FFNRA4CFPXAEY
+  item_number: sandbsub
+  payment_status: Completed
+  payment_fee: 1.08
+  mc_fee: 1.08
+  mc_gross: 27.00
+  charset: windows-1252
+  notify_version: 2.4
+Unknown transaction type.<br>
+New Notification Received:
+  txn_type: subscr_signup
+  subscr_id: S-9L476342YX971223F
+  last_name: User
+  residence_country: US
+  mc_currency: USD
+  item_name: Shop and Buzz Subscription
+  amount1: 0.00
+  amount3: 27.00
+  recurring: 1
+  verify_sign: A7RDVvm5.2PXCU98J5a5IlWk-2P-AH4ZH3b-pmSxZU9DjuU1iB0KYDMX
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: blahbl_1187749698_per@alliances.org
+  first_name: Test
+  receiver_email: eric_1187924029_biz@alliances.org
+  payer_id: 48MPQQ2J85TBW
+  reattempt: 1
+  item_number: 643829a0cba29740b0e9aba27fd764db
+  subscr_date: 18:24:24 Aug 25, 2007 PDT
+  charset: windows-1252
+  notify_version: 2.4
+  period1: 1 M
+  mc_amount1: 0.00
+  period3: 1 M
+  mc_amount3: 27.00
+curl_resp: HTTP/1.1 200 OK
+Date: Sun, 26 Aug 2007 01:24:30 GMT
+Server: Apache/1.3.27 (Unix) mod_ssl/2.8.12 OpenSSL/0.9.7a mod_fastcgi/2.4.2 PHP/4.3.2
+Set-Cookie: cookie_check=yes; expires=Wed, 23-Aug-2017 01:24:31 GMT; path=/; domain=.paypal.com
+Set-Cookie: Apache=74.208.45.214.277261188091470926; path=/; expires=Tue, 18-Aug-37 01:24:30 GMT
+Connection: close
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED<br>
+Verified<br>
+subscr_signup<br>
+New Notification Received:
+  txn_type: subscr_signup
+  subscr_id: S-16Y55797KA637903C
+  last_name: User
+  residence_country: US
+  mc_currency: USD
+  item_name: Shop and Buzz Subscription
+  amount1: 0.00
+  amount3: 27.00
+  recurring: 1
+  verify_sign: AC1Pceetp6cF9jCoovoNDLB7YYuzAtJphm6I8IhmnE1p3nDG6MEU.dBO
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: blahbl_1187749698_per@alliances.org
+  first_name: Test
+  receiver_email: eric_1187924029_biz@alliances.org
+  payer_id: 48MPQQ2J85TBW
+  reattempt: 1
+  item_number: a5fc7f0049c32c6b557585958541a03a
+  subscr_date: 18:28:07 Aug 25, 2007 PDT
+  charset: windows-1252
+  notify_version: 2.4
+  period1: 4 M
+  mc_amount1: 0.00
+  period3: 1 M
+  mc_amount3: 27.00
+curl_resp: HTTP/1.1 200 OK
+Date: Sun, 26 Aug 2007 01:28:14 GMT
+Server: Apache/1.3.27 (Unix) mod_ssl/2.8.12 OpenSSL/0.9.7a mod_fastcgi/2.4.2 PHP/4.3.2
+Set-Cookie: cookie_check=yes; expires=Wed, 23-Aug-2017 01:28:14 GMT; path=/; domain=.paypal.com
+Set-Cookie: Apache=74.208.45.214.97011188091694271; path=/; expires=Tue, 18-Aug-37 01:28:14 GMT
+Connection: close
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED<br>
+Verified<br>
+subscr_signup<br>
+New Notification Received:
+  payment_date: 19:49:28 Aug 26, 2007 PDT
+  txn_type: web_accept
+  last_name: Helvey
+  residence_country: US
+  item_name: As Was Invoice For $item_name_month $year
+  payment_gross: 10.00
+  mc_currency: USD
+  business: eric_1187924029_biz@alliances.org
+  payment_type: instant
+  verify_sign: An5ns1Kso7MWUdW4ErQKJJJ4qi4-Ar1dAEToMJy89LbYk5tyYGWh4PZ6
+  payer_status: unverified
+  test_ipn: 1
+  tax: 0.00
+  payer_email: eric@alliances.org
+  txn_id: 4KN14610TJ537810E
+  quantity: 1
+  receiver_email: eric_1187924029_biz@alliances.org
+  first_name: Eric
+  payer_id: SJJTWMZZC72FQ
+  receiver_id: EKA84KL7LFHKJ
+  item_number: $item_number
+  payment_status: Completed
+  payment_fee: 0.59
+  mc_fee: 0.59
+  shipping: 0.00
+  mc_gross: 10.00
+  custom: 
+  charset: windows-1252
+  notify_version: 2.4
+Unknown transaction type.<br>
+New Notification Received:
+  payment_date: 20:26:24 Aug 26, 2007 PDT
+  txn_type: web_accept
+  last_name: Helvey
+  residence_country: US
+  item_name: As Was Invoice For August 2007
+  payment_gross: 10.00
+  mc_currency: USD
+  business: eric_1187924029_biz@alliances.org
+  payment_type: instant
+  verify_sign: AMbAD4ffJKldluY.a87h39OOak-4AdcRAMkg6Mvp-wyqHpvtraRtXnPg
+  payer_status: unverified
+  test_ipn: 1
+  tax: 0.00
+  payer_email: eric@alliances.org
+  txn_id: 49394810JV584492U
+  quantity: 1
+  receiver_email: eric_1187924029_biz@alliances.org
+  first_name: Eric
+  payer_id: SJJTWMZZC72FQ
+  receiver_id: EKA84KL7LFHKJ
+  item_number: 12007082600
+  payment_status: Completed
+  payment_fee: 0.59
+  mc_fee: 0.59
+  shipping: 0.00
+  mc_gross: 10.00
+  custom: 
+  charset: windows-1252
+  notify_version: 2.4
+Unknown transaction type.<br>
+New Notification Received:
+  payment_date: 20:39:08 Aug 26, 2007 PDT
+  txn_type: web_accept
+  last_name: Helvey
+  residence_country: US
+  item_name: As Was Invoice For August 2007
+  payment_gross: 10.00
+  mc_currency: USD
+  business: eric_1187924029_biz@alliances.org
+  payment_type: instant
+  verify_sign: A8ssWDx.fIO6M4jWo7THgzAkSpgyA1MnH6zNWKZzkkgAcJy2KJ9.KnEw
+  payer_status: unverified
+  test_ipn: 1
+  tax: 0.00
+  payer_email: eric@alliances.org
+  txn_id: 726680292V286221D
+  quantity: 1
+  receiver_email: eric_1187924029_biz@alliances.org
+  first_name: Eric
+  payer_id: SJJTWMZZC72FQ
+  receiver_id: EKA84KL7LFHKJ
+  item_number: 12007082600
+  payment_status: Completed
+  payment_fee: 0.59
+  mc_fee: 0.59
+  shipping: 0.00
+  mc_gross: 10.00
+  custom: 
+  charset: windows-1252
+  notify_version: 2.4
+curl_resp: HTTP/1.1 200 OK
+Date: Mon, 27 Aug 2007 03:39:15 GMT
+Server: Apache/1.3.27 (Unix) mod_ssl/2.8.12 OpenSSL/0.9.7a mod_fastcgi/2.4.2 PHP/4.3.2
+Set-Cookie: cookie_check=yes; expires=Thu, 24-Aug-2017 03:39:16 GMT; path=/; domain=.paypal.com
+Set-Cookie: Apache=74.208.45.214.234151188185955830; path=/; expires=Wed, 19-Aug-37 03:39:15 GMT
+Connection: close
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED<br>
+Verified<br>
+web_accept<br>
+New Notification Received:
+  payment_date: 20:44:39 Aug 26, 2007 PDT
+  txn_type: web_accept
+  last_name: Helvey
+  residence_country: US
+  item_name: As Was Invoice For August 2007
+  payment_gross: 10.00
+  mc_currency: USD
+  business: eric_1187924029_biz@alliances.org
+  payment_type: instant
+  verify_sign: AcGS0NDjYXsERggAmaHtXr5TiXoLAXiE6Ae2L-U9fKrT9eKXd33q6hse
+  payer_status: unverified
+  test_ipn: 1
+  tax: 0.00
+  payer_email: eric@alliances.org
+  txn_id: 0SF89940H12441647
+  quantity: 1
+  receiver_email: eric_1187924029_biz@alliances.org
+  first_name: Eric
+  payer_id: SJJTWMZZC72FQ
+  receiver_id: EKA84KL7LFHKJ
+  item_number: 12007082600
+  payment_status: Completed
+  payment_fee: 0.59
+  mc_fee: 0.59
+  shipping: 0.00
+  mc_gross: 10.00
+  custom: 
+  charset: windows-1252
+  notify_version: 2.4
+curl_resp: HTTP/1.1 200 OK
+Date: Mon, 27 Aug 2007 03:44:52 GMT
+Server: Apache/1.3.27 (Unix) mod_ssl/2.8.12 OpenSSL/0.9.7a mod_fastcgi/2.4.2 PHP/4.3.2
+Set-Cookie: cookie_check=yes; expires=Thu, 24-Aug-2017 03:44:52 GMT; path=/; domain=.paypal.com
+Set-Cookie: Apache=74.208.45.214.244251188186292620; path=/; expires=Wed, 19-Aug-37 03:44:52 GMT
+Connection: close
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED<br>
+Verified<br>
+web_accept<br>
+New Notification Received:
+  payment_date: 03:01:15 Aug 31, 2007 PDT
+  txn_type: subscr_payment
+  subscr_id: S-14H54732K6501642G
+  last_name: Jones
+  residence_country: US
+  item_name: Shop and Buzz Subscription
+  payment_gross: 27.00
+  mc_currency: USD
+  business: antonio-delacruz@homenet.tzo.com
+  payment_type: instant
+  verify_sign: A-LEstPIDKVKTDpl6ZMbT1VqRHu.A6PlCFpfGfIbiUA1SKOFp4dEn1ba
+  payer_status: verified
+  test_ipn: 1
+  payer_email: bobjones@homenet.tzo.com
+  txn_id: 8A8846356J112371B
+  receiver_email: antonio-delacruz@homenet.tzo.com
+  first_name: Bob
+  payer_id: XTERDHPJK6ZDN
+  receiver_id: FFNRA4CFPXAEY
+  item_number: sandbsub
+  payment_status: Completed
+  payment_fee: 1.08
+  mc_fee: 1.08
+  mc_gross: 27.00
+  charset: windows-1252
+  notify_version: 2.4
+Unknown transaction type.<br>
+New Notification Received:
+  txn_type: subscr_eot
+  subscr_id: S-7MA56181XD897850Y
+  last_name: User
+  residence_country: US
+  item_name: Shop and Buzz Subscription
+  mc_currency: USD
+  verify_sign: AiKZhEEPLJjSIccz.2M.tbyW5YFwA6QQmGv0TAO0yLerKTcSiImHI.u.
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: blahbl_1187749698_per@alliances.org
+  first_name: Test
+  receiver_email: antonio-delacruz@homenet.tzo.com
+  payer_id: 48MPQQ2J85TBW
+  item_number: sandbsub
+  charset: windows-1252
+  notify_version: 2.4
+Unknown transaction type.<br>
+New Notification Received:
+  txn_type: subscr_eot
+  subscr_id: S-6BC89640RP855800X
+  last_name: User
+  residence_country: US
+  item_name: Shop and Buzz Subscription
+  mc_currency: USD
+  verify_sign: AQmAdWZK-kX4.gQv-QeSzs65mDqqAM3QZPPJdf-jenpQTMtKiFMjYoKZ
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: blahbl_1187749698_per@alliances.org
+  first_name: Test
+  receiver_email: eric_1187924029_biz@alliances.org
+  payer_id: 48MPQQ2J85TBW
+  item_number: 5bc9ee7d19d4c8b8a5132835356ea8bd
+  charset: windows-1252
+  notify_version: 2.4
+Unknown transaction type.<br>
+New Notification Received:
+  txn_type: subscr_eot
+  subscr_id: S-08888410MX8163211
+  last_name: User
+  residence_country: US
+  item_name: Shop and Buzz Subscription
+  mc_currency: USD
+  verify_sign: AiVCFakel7..1bpEroKpGPNBPYiiAszaZw3qQkukG6.ZEYDcMT0a7shB
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: blahbl_1187749698_per@alliances.org
+  first_name: Test
+  receiver_email: antonio-delacruz@homenet.tzo.com
+  payer_id: 48MPQQ2J85TBW
+  item_number: sandbsub
+  charset: windows-1252
+  notify_version: 2.4
+Unknown transaction type.<br>
+New Notification Received:
+  txn_type: subscr_eot
+  subscr_id: S-307206213U216523Y
+  last_name: User
+  residence_country: US
+  item_name: Shop and Buzz Subscription
+  mc_currency: USD
+  verify_sign: AIkKNboJiyuxWLOHUlzTd3lpqCSxAZXQqTlVAxoSUo4RQ1NnX4O0sTlS
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: blahbl_1187749698_per@alliances.org
+  first_name: Test
+  receiver_email: antonio-delacruz@homenet.tzo.com
+  payer_id: 48MPQQ2J85TBW
+  item_number: sandbsub
+  charset: windows-1252
+  notify_version: 2.4
+Unknown transaction type.<br>
+New Notification Received:
+  txn_type: subscr_eot
+  subscr_id: S-5H867980JX7163737
+  last_name: User
+  residence_country: US
+  item_name: Shop and Buzz Subscription
+  mc_currency: USD
+  verify_sign: AbjL43N3.JyhHxA-CvzRyX9eVuPIAxho29vNciSMbQWijGFNAHbY2RH5
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: blahbl_1187749698_per@alliances.org
+  first_name: Test
+  receiver_email: antonio-delacruz@homenet.tzo.com
+  payer_id: 48MPQQ2J85TBW
+  item_number: sandbsub
+  charset: windows-1252
+  notify_version: 2.4
+Unknown transaction type.<br>
+New Notification Received:
+  txn_type: subscr_eot
+  subscr_id: S-0FX077766K964634F
+  last_name: User
+  residence_country: US
+  item_name: Shop and Buzz Subscription
+  mc_currency: USD
+  verify_sign: AQEgFLG-gYJRPNwVRAb4gD.Dx6t9AHLRCrlDCRxEA.P1JGQC9UbBw6A9
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: blahbl_1187749698_per@alliances.org
+  first_name: Test
+  receiver_email: antonio-delacruz@homenet.tzo.com
+  payer_id: 48MPQQ2J85TBW
+  item_number: sandbsub
+  charset: windows-1252
+  notify_version: 2.4
+Unknown transaction type.<br>
+New Notification Received:
+  txn_type: subscr_eot
+  subscr_id: S-7SE583776D7935344
+  last_name: User
+  residence_country: US
+  item_name: Shop and Buzz Subscription
+  mc_currency: USD
+  verify_sign: AomRS5l2W2xlt2An.GaSrAzpCl-NA1yukB47Vn2XDue7XsW5GIBgOvHh
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: blahbl_1187749698_per@alliances.org
+  first_name: Test
+  receiver_email: antonio-delacruz@homenet.tzo.com
+  payer_id: 48MPQQ2J85TBW
+  item_number: 410d192e1e1e4ddd431e2b56280ef094
+  charset: windows-1252
+  notify_version: 2.4
+Unknown transaction type.<br>
+New Notification Received:
+  txn_type: subscr_eot
+  subscr_id: S-4BB75322F9242260L
+  last_name: User
+  residence_country: US
+  item_name: Shop and Buzz Subscription
+  mc_currency: USD
+  verify_sign: AOh0tu.5JUQyG2Aao4MpntBA2sFjAvtfvOO4xnYKi4pOCRN2j0AV1x-b
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: blahbl_1187749698_per@alliances.org
+  first_name: Test
+  receiver_email: antonio-delacruz@homenet.tzo.com
+  payer_id: 48MPQQ2J85TBW
+  item_number: 09e6df725c312cc9c8181e3b972944de
+  charset: windows-1252
+  notify_version: 2.4
+Unknown transaction type.<br>
+New Notification Received:
+  txn_type: subscr_eot
+  subscr_id: S-6SK31522VL545642A
+  last_name: User
+  residence_country: US
+  item_name: Shop and Buzz Subscription
+  mc_currency: USD
+  verify_sign: AUaxvSojqajxsiGA9qXfGuCulUctAWqDxB-j4871X-IPnYTLM8EQR0cR
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: blahbl_1187749698_per@alliances.org
+  first_name: Test
+  receiver_email: antonio-delacruz@homenet.tzo.com
+  payer_id: 48MPQQ2J85TBW
+  item_number: 6709b955943a2aa8e2666dcc832bee0d
+  charset: windows-1252
+  notify_version: 2.4
+Unknown transaction type.<br>
+New Notification Received:
+  txn_type: subscr_eot
+  subscr_id: S-6MU562256F7073203
+  last_name: User
+  residence_country: US
+  item_name: Shop and Buzz Subscription
+  mc_currency: USD
+  verify_sign: AcF4-oQAUSNZW2o34q4.GqaD-N32A5AtKfeFASp7asxGDBtQdTRXSGff
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: blahbl_1187749698_per@alliances.org
+  first_name: Test
+  receiver_email: antonio-delacruz@homenet.tzo.com
+  payer_id: 48MPQQ2J85TBW
+  item_number: aad67a34954435d9fd06703f8127b154
+  charset: windows-1252
+  notify_version: 2.4
+Unknown transaction type.<br>
+New Notification Received:
+  txn_type: subscr_eot
+  subscr_id: S-3WU46045863840511
+  last_name: User
+  residence_country: US
+  item_name: Shop and Buzz Subscription
+  mc_currency: USD
+  verify_sign: AhgprmtRJOVDoT3RcSpi5Kop6IgqAirUcbdT-s3KzzHqWzSGTd4sAnZH
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: blahbl_1187749698_per@alliances.org
+  first_name: Test
+  receiver_email: antonio-delacruz@homenet.tzo.com
+  payer_id: 48MPQQ2J85TBW
+  item_number: 66e483627aaca2fc280a5f610c08ebc2
+  charset: windows-1252
+  notify_version: 2.4
+Unknown transaction type.<br>
+New Notification Received:
+  payment_date: 03:02:29 Sep 25, 2007 PDT
+  txn_type: subscr_payment
+  subscr_id: S-2WH23518DS834754E
+  last_name: Helvey
+  residence_country: US
+  item_name: Shop and Buzz Subscription
+  payment_gross: 27.00
+  mc_currency: USD
+  business: antonio-delacruz@homenet.tzo.com
+  payment_type: instant
+  verify_sign: APb8CGFRx0PZBw44.G3VWinnROS3ATKKpYpg2pGUjVNuHXS3XT2xrJzF
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: eric@alliances.org
+  txn_id: 12H408973H2710004
+  receiver_email: antonio-delacruz@homenet.tzo.com
+  first_name: Eric
+  payer_id: SJJTWMZZC72FQ
+  receiver_id: FFNRA4CFPXAEY
+  item_number: sandbsub
+  payment_status: Completed
+  payment_fee: 1.08
+  mc_fee: 1.08
+  mc_gross: 27.00
+  charset: windows-1252
+  notify_version: 2.4
+Unknown transaction type.<br>
+New Notification Received:
+  payment_date: 03:28:38 Sep 25, 2007 PDT
+  txn_type: subscr_payment
+  subscr_id: S-9YA858100R0672152
+  last_name: Helvey
+  residence_country: US
+  item_name: Shop and Buzz Subscription
+  payment_gross: 27.00
+  mc_currency: USD
+  business: antonio-delacruz@homenet.tzo.com
+  payment_type: instant
+  verify_sign: AzPDZOD-L0S1t2Kks2qv1carH17wAbsU9Re7TopLZa7huJb3oO2dR4.-
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: eric@alliances.org
+  txn_id: 7FE711588B9126539
+  receiver_email: antonio-delacruz@homenet.tzo.com
+  first_name: Eric
+  payer_id: SJJTWMZZC72FQ
+  receiver_id: FFNRA4CFPXAEY
+  item_number: sandbsub
+  payment_status: Completed
+  payment_fee: 1.08
+  mc_fee: 1.08
+  mc_gross: 27.00
+  charset: windows-1252
+  notify_version: 2.4
+Unknown transaction type.<br>
+New Notification Received:
+  payment_date: 03:30:23 Sep 25, 2007 PDT
+  txn_type: subscr_payment
+  subscr_id: S-3XD610523L815784S
+  last_name: Helvey
+  residence_country: US
+  item_name: Shop and Buzz Subscription
+  payment_gross: 27.00
+  mc_currency: USD
+  business: antonio-delacruz@homenet.tzo.com
+  payment_type: instant
+  verify_sign: AYwPIblb0hsJbonrBRtdBiUIqGvtA6xCW8ycHyyEZCrwCOEd7tAkNlCL
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: eric@alliances.org
+  txn_id: 3JG89231WT5240825
+  receiver_email: antonio-delacruz@homenet.tzo.com
+  first_name: Eric
+  payer_id: SJJTWMZZC72FQ
+  receiver_id: FFNRA4CFPXAEY
+  item_number: sandbsub
+  payment_status: Completed
+  payment_fee: 1.08
+  mc_fee: 1.08
+  mc_gross: 27.00
+  charset: windows-1252
+  notify_version: 2.4
+Unknown transaction type.<br>
+New Notification Received:
+  payment_date: 03:31:29 Sep 25, 2007 PDT
+  txn_type: subscr_payment
+  subscr_id: S-4RM59748Y48798004
+  last_name: Helvey
+  residence_country: US
+  item_name: Shop and Buzz Subscription
+  payment_gross: 27.00
+  mc_currency: USD
+  business: antonio-delacruz@homenet.tzo.com
+  payment_type: instant
+  verify_sign: AwD4sJJmdrzDKNGw7KMAMuZSx1AHAlm8a5iUvHM0SdCNIy1iAIC-H4X3
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: eric@alliances.org
+  txn_id: 0WP44137C9942420V
+  receiver_email: antonio-delacruz@homenet.tzo.com
+  first_name: Eric
+  payer_id: SJJTWMZZC72FQ
+  receiver_id: FFNRA4CFPXAEY
+  item_number: sandbsub
+  payment_status: Completed
+  payment_fee: 1.08
+  mc_fee: 1.08
+  mc_gross: 27.00
+  charset: windows-1252
+  notify_version: 2.4
+Unknown transaction type.<br>
+New Notification Received:
+  payment_date: 03:02:05 Sep 26, 2007 PDT
+  txn_type: subscr_payment
+  subscr_id: S-9L476342YX971223F
+  last_name: User
+  residence_country: US
+  item_name: Shop and Buzz Subscription
+  payment_gross: 27.00
+  mc_currency: USD
+  business: eric_1187924029_biz@alliances.org
+  payment_type: instant
+  verify_sign: AdI-q.L83Q9tNkt6GdBwNewpoJ-SARvFYEioe.symRNNc8zybu5.-Yx9
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: blahbl_1187749698_per@alliances.org
+  txn_id: 1R6900726X4587226
+  receiver_email: eric_1187924029_biz@alliances.org
+  first_name: Test
+  payer_id: 48MPQQ2J85TBW
+  receiver_id: EKA84KL7LFHKJ
+  item_number: 643829a0cba29740b0e9aba27fd764db
+  payment_status: Completed
+  payment_fee: 1.08
+  mc_fee: 1.08
+  mc_gross: 27.00
+  charset: windows-1252
+  notify_version: 2.4
+Unknown transaction type.<br>
+New Notification Received:
+  payment_date: 03:02:35 Sep 30, 2007 PDT
+  txn_type: subscr_payment
+  subscr_id: S-2B822802AE593122A
+  last_name: Jones
+  residence_country: US
+  item_name: test
+  payment_gross: 27.00
+  mc_currency: USD
+  business: antonio-delacruz@homenet.tzo.com
+  payment_type: instant
+  verify_sign: AGUQuuWfLZ5aSvjlMCEwwanzgwVbABsc6iz9Okf6bMIKAeiQI3hATXn6
+  payer_status: verified
+  test_ipn: 1
+  payer_email: bobjones@homenet.tzo.com
+  txn_id: 0B736886JS693173E
+  receiver_email: antonio-delacruz@homenet.tzo.com
+  first_name: Bob
+  payer_id: XTERDHPJK6ZDN
+  receiver_id: FFNRA4CFPXAEY
+  item_number: testsub
+  payment_status: Completed
+  payment_fee: 1.08
+  mc_fee: 1.08
+  mc_gross: 27.00
+  charset: windows-1252
+  notify_version: 2.4
+Unknown transaction type.<br>
+New Notification Received:
+  txn_type: subscr_signup
+  subscr_id: S-3LA22475UG227350K
+  last_name: Helvey
+  residence_country: US
+  mc_currency: USD
+  item_name: Shop and Buzz Subscription
+  amount1: 0.00
+  amount3: 27.00
+  recurring: 1
+  verify_sign: ATsJE8Vfo.E9ZwHwLilgHDZKG.lUAv-0N-aT7.-EJCqE5R5Qkzq8g8xl
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: eric@alliances.org
+  first_name: Eric
+  receiver_email: eric_1187924029_biz@alliances.org
+  payer_id: SJJTWMZZC72FQ
+  reattempt: 1
+  item_number: e0987f3399ade5aa85463e8ef83df51a
+  subscr_date: 20:28:24 Oct 21, 2007 PDT
+  charset: windows-1252
+  notify_version: 2.4
+  period1: 4 M
+  mc_amount1: 0.00
+  period3: 1 M
+  mc_amount3: 27.00
+curl_resp: HTTP/1.1 200 OK
+Date: Mon, 22 Oct 2007 03:28:28 GMT
+Server: Apache/1.3.27 (Unix) mod_ssl/2.8.12 OpenSSL/0.9.7a mod_fastcgi/2.4.2 PHP/4.3.2
+Set-Cookie: cookie_check=yes; expires=Thu, 19-Oct-2017 03:28:29 GMT; path=/; domain=.paypal.com
+Set-Cookie: navcmd=_notify-validate; path=/; domain=.paypal.com
+Set-Cookie: Apache=74.208.45.214.169621193023708411; path=/; expires=Wed, 14-Oct-37 03:28:28 GMT
+Connection: close
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED<br>
+Verified<br>
+subscr_signup<br>
+New Notification Received:
+  txn_type: subscr_signup
+  subscr_id: S-94M6780960931292K
+  last_name: Helvey
+  residence_country: US
+  mc_currency: USD
+  item_name: Shop and Buzz Subscription
+  amount1: 0.00
+  amount3: 27.00
+  recurring: 1
+  verify_sign: AsVAbp1JG5amyDhl1VLLa1xlmpSdAESD8fM7nd84LwW5ZCCJvgZjqFyH
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: eric@alliances.org
+  first_name: Eric
+  receiver_email: eric_1187924029_biz@alliances.org
+  payer_id: SJJTWMZZC72FQ
+  reattempt: 1
+  item_number: ea66ffbe22d8ef1ec864d4a75c5f9365
+  subscr_date: 20:31:38 Oct 21, 2007 PDT
+  charset: windows-1252
+  notify_version: 2.4
+  period1: 4 M
+  mc_amount1: 0.00
+  period3: 1 M
+  mc_amount3: 27.00
+curl_resp: HTTP/1.1 200 OK
+Date: Mon, 22 Oct 2007 03:31:44 GMT
+Server: Apache/1.3.27 (Unix) mod_ssl/2.8.12 OpenSSL/0.9.7a mod_fastcgi/2.4.2 PHP/4.3.2
+Set-Cookie: cookie_check=yes; expires=Thu, 19-Oct-2017 03:31:44 GMT; path=/; domain=.paypal.com
+Set-Cookie: navcmd=_notify-validate; path=/; domain=.paypal.com
+Set-Cookie: Apache=74.208.45.214.170161193023904320; path=/; expires=Wed, 14-Oct-37 03:31:44 GMT
+Connection: close
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED<br>
+Verified<br>
+subscr_signup<br>
+New Notification Received:
+  txn_type: subscr_signup
+  subscr_id: S-4JS49558LG314214C
+  last_name: Helvey
+  residence_country: US
+  mc_currency: USD
+  item_name: Shop and Buzz Subscription
+  amount1: 0.00
+  amount3: 27.00
+  recurring: 1
+  verify_sign: AHyCESZgP0LFo.g-FMsqyBSS2uQmAExjwA0LjhT-fF425FmFee9qhbCD
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: eric@alliances.org
+  first_name: Eric
+  receiver_email: eric_1187924029_biz@alliances.org
+  payer_id: SJJTWMZZC72FQ
+  reattempt: 1
+  item_number: d50fb414bc6597164711b6bce7d617bf
+  subscr_date: 20:33:32 Oct 21, 2007 PDT
+  charset: windows-1252
+  notify_version: 2.4
+  period1: 4 M
+  mc_amount1: 0.00
+  period3: 1 M
+  mc_amount3: 27.00
+curl_resp: HTTP/1.1 200 OK
+Date: Mon, 22 Oct 2007 03:33:40 GMT
+Server: Apache/1.3.27 (Unix) mod_ssl/2.8.12 OpenSSL/0.9.7a mod_fastcgi/2.4.2 PHP/4.3.2
+Set-Cookie: cookie_check=yes; expires=Thu, 19-Oct-2017 03:33:41 GMT; path=/; domain=.paypal.com
+Set-Cookie: navcmd=_notify-validate; path=/; domain=.paypal.com
+Set-Cookie: Apache=74.208.45.214.211031193024020653; path=/; expires=Wed, 14-Oct-37 03:33:40 GMT
+Connection: close
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED<br>
+Verified<br>
+subscr_signup<br>
+New Notification Received:
+  payment_date: 09:16:38 Oct 25, 2007 PDT
+  txn_type: subscr_payment
+  subscr_id: S-4RM59748Y48798004
+  last_name: Helvey
+  residence_country: US
+  item_name: Shop and Buzz Subscription
+  payment_gross: 27.00
+  mc_currency: USD
+  business: antonio-delacruz@homenet.tzo.com
+  payment_type: instant
+  verify_sign: AGrjYQoZqh3WzP9e8dPAsuXgbFV8A-AoIt4WoUJfsT.z0BrzVYWYO2eS
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: eric@alliances.org
+  txn_id: 9EP927111V8625135
+  receiver_email: antonio-delacruz@homenet.tzo.com
+  first_name: Eric
+  payer_id: SJJTWMZZC72FQ
+  receiver_id: FFNRA4CFPXAEY
+  item_number: sandbsub
+  payment_status: Completed
+  payment_fee: 1.08
+  mc_fee: 1.08
+  mc_gross: 27.00
+  charset: windows-1252
+  notify_version: 2.4
+Unknown transaction type.<br>
+New Notification Received:
+  payment_date: 09:40:01 Oct 25, 2007 PDT
+  txn_type: subscr_payment
+  subscr_id: S-3XD610523L815784S
+  last_name: Helvey
+  residence_country: US
+  item_name: Shop and Buzz Subscription
+  payment_gross: 27.00
+  mc_currency: USD
+  business: antonio-delacruz@homenet.tzo.com
+  payment_type: instant
+  verify_sign: ADLttxWcFmVRDt2o0A5ZXyGGcQ1mA3b81-lEEzyEAhZQLmbJ3tVm9wGs
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: eric@alliances.org
+  txn_id: 7UX350238F757933F
+  receiver_email: antonio-delacruz@homenet.tzo.com
+  first_name: Eric
+  payer_id: SJJTWMZZC72FQ
+  receiver_id: FFNRA4CFPXAEY
+  item_number: sandbsub
+  payment_status: Completed
+  payment_fee: 1.08
+  mc_fee: 1.08
+  mc_gross: 27.00
+  charset: windows-1252
+  notify_version: 2.4
+Unknown transaction type.<br>
+New Notification Received:
+  payment_date: 11:58:25 Oct 25, 2007 PDT
+  txn_type: subscr_payment
+  subscr_id: S-9YA858100R0672152
+  last_name: Helvey
+  residence_country: US
+  item_name: Shop and Buzz Subscription
+  payment_gross: 27.00
+  mc_currency: USD
+  business: antonio-delacruz@homenet.tzo.com
+  payment_type: instant
+  verify_sign: Ai1PaghZh5FmBLCDCTQpwG8jB264A0vgfOtztZT.di0Q8oM6TLLmtxYJ
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: eric@alliances.org
+  txn_id: 5XC32015RU563970C
+  receiver_email: antonio-delacruz@homenet.tzo.com
+  first_name: Eric
+  payer_id: SJJTWMZZC72FQ
+  receiver_id: FFNRA4CFPXAEY
+  item_number: sandbsub
+  payment_status: Completed
+  payment_fee: 1.08
+  mc_fee: 1.08
+  mc_gross: 27.00
+  charset: windows-1252
+  notify_version: 2.4
+Unknown transaction type.<br>
+New Notification Received:
+  payment_date: 13:02:56 Oct 25, 2007 PDT
+  txn_type: subscr_payment
+  subscr_id: S-2WH23518DS834754E
+  last_name: Helvey
+  residence_country: US
+  item_name: Shop and Buzz Subscription
+  payment_gross: 27.00
+  mc_currency: USD
+  business: antonio-delacruz@homenet.tzo.com
+  payment_type: instant
+  verify_sign: AHAmqLcdvQhPcwAExJMd1myazdxYAixDwjEtd4Ukc8-K0HzVACTfgFj9
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: eric@alliances.org
+  txn_id: 1S542449T4296893U
+  receiver_email: antonio-delacruz@homenet.tzo.com
+  first_name: Eric
+  payer_id: SJJTWMZZC72FQ
+  receiver_id: FFNRA4CFPXAEY
+  item_number: sandbsub
+  payment_status: Completed
+  payment_fee: 1.08
+  mc_fee: 1.08
+  mc_gross: 27.00
+  charset: windows-1252
+  notify_version: 2.4
+Unknown transaction type.<br>
+New Notification Received:
+  payment_date: 03:05:27 Oct 26, 2007 PDT
+  txn_type: subscr_payment
+  subscr_id: S-9L476342YX971223F
+  last_name: User
+  residence_country: US
+  item_name: Shop and Buzz Subscription
+  payment_gross: 27.00
+  mc_currency: USD
+  business: eric_1187924029_biz@alliances.org
+  payment_type: instant
+  verify_sign: AYLKqm22S9v97NuNpDTAbIGbrzP1AIZ5dTH0B.g7vfaPmCmDP1TpIfPt
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: blahbl_1187749698_per@alliances.org
+  txn_id: 21E540399M422863A
+  receiver_email: eric_1187924029_biz@alliances.org
+  first_name: Test
+  payer_id: 48MPQQ2J85TBW
+  receiver_id: EKA84KL7LFHKJ
+  item_number: 643829a0cba29740b0e9aba27fd764db
+  payment_status: Completed
+  payment_fee: 1.08
+  mc_fee: 1.08
+  mc_gross: 27.00
+  charset: windows-1252
+  notify_version: 2.4
+Unknown transaction type.<br>
+New Notification Received:
+  payment_date: 03:01:10 Oct 31, 2007 PDT
+  txn_type: subscr_payment
+  subscr_id: S-14H54732K6501642G
+  last_name: Jones
+  residence_country: US
+  item_name: Shop and Buzz Subscription
+  payment_gross: 27.00
+  mc_currency: USD
+  business: antonio-delacruz@homenet.tzo.com
+  payment_type: instant
+  verify_sign: AOHZh3KCxLpyj8Kb.nPhLkHS6nGeAFcyToreWiODqm69AibFCvxDTetp
+  payer_status: verified
+  test_ipn: 1
+  payer_email: bobjones@homenet.tzo.com
+  txn_id: 1WJ50481X9960002V
+  receiver_email: antonio-delacruz@homenet.tzo.com
+  first_name: Bob
+  payer_id: XTERDHPJK6ZDN
+  receiver_id: FFNRA4CFPXAEY
+  item_number: sandbsub
+  payment_status: Completed
+  payment_fee: 1.08
+  mc_fee: 1.08
+  mc_gross: 27.00
+  charset: windows-1252
+  notify_version: 2.4
+Unknown transaction type.<br>
+New Notification Received:
+  payment_date: 03:00:47 Nov 25, 2007 PST
+  txn_type: subscr_payment
+  subscr_id: S-6R947625GF235961C
+  last_name: Helvey
+  residence_country: US
+  item_name: Shop and Buzz Subscription
+  payment_gross: 27.00
+  mc_currency: USD
+  business: antonio-delacruz@homenet.tzo.com
+  payment_type: instant
+  verify_sign: AWUsZD7dvQTUQGuH-5G8mNSSexp8ALfYiyL8LEhTx8pSVjwJSldf5v1S
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: eric@alliances.org
+  txn_id: 7GD49802U0496231M
+  receiver_email: antonio-delacruz@homenet.tzo.com
+  first_name: Eric
+  payer_id: SJJTWMZZC72FQ
+  receiver_id: FFNRA4CFPXAEY
+  item_number: sandbsub
+  payment_status: Completed
+  payment_fee: 1.08
+  mc_fee: 1.08
+  mc_gross: 27.00
+  charset: windows-1252
+  notify_version: 2.4
+Unknown transaction type.<br>
+New Notification Received:
+  payment_date: 03:15:21 Nov 25, 2007 PST
+  txn_type: subscr_payment
+  subscr_id: S-4RM59748Y48798004
+  last_name: Helvey
+  residence_country: US
+  item_name: Shop and Buzz Subscription
+  payment_gross: 27.00
+  mc_currency: USD
+  business: antonio-delacruz@homenet.tzo.com
+  payment_type: instant
+  verify_sign: AGTfPuzqssuQmiAdvaT8tTBgeYFjAWMoEj5-irJ1Tf4dbcmUaNDakjJp
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: eric@alliances.org
+  txn_id: 7T6257824F491045C
+  receiver_email: antonio-delacruz@homenet.tzo.com
+  first_name: Eric
+  payer_id: SJJTWMZZC72FQ
+  receiver_id: FFNRA4CFPXAEY
+  item_number: sandbsub
+  payment_status: Completed
+  payment_fee: 1.08
+  mc_fee: 1.08
+  mc_gross: 27.00
+  charset: windows-1252
+  notify_version: 2.4
+Unknown transaction type.<br>
+New Notification Received:
+  payment_date: 03:17:00 Nov 25, 2007 PST
+  txn_type: subscr_payment
+  subscr_id: S-3XD610523L815784S
+  last_name: Helvey
+  residence_country: US
+  item_name: Shop and Buzz Subscription
+  payment_gross: 27.00
+  mc_currency: USD
+  business: antonio-delacruz@homenet.tzo.com
+  payment_type: instant
+  verify_sign: AJtxjMAL5GzOFGuxjt4lOANP1rDAAt29UaqksAdz7UDThx4VanLSJoyF
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: eric@alliances.org
+  txn_id: 9EA00370XU634321V
+  receiver_email: antonio-delacruz@homenet.tzo.com
+  first_name: Eric
+  payer_id: SJJTWMZZC72FQ
+  receiver_id: FFNRA4CFPXAEY
+  item_number: sandbsub
+  payment_status: Completed
+  payment_fee: 1.08
+  mc_fee: 1.08
+  mc_gross: 27.00
+  charset: windows-1252
+  notify_version: 2.4
+Unknown transaction type.<br>
+New Notification Received:
+  payment_date: 03:23:23 Nov 25, 2007 PST
+  txn_type: subscr_payment
+  subscr_id: S-9YA858100R0672152
+  last_name: Helvey
+  residence_country: US
+  item_name: Shop and Buzz Subscription
+  payment_gross: 27.00
+  mc_currency: USD
+  business: antonio-delacruz@homenet.tzo.com
+  payment_type: instant
+  verify_sign: ADmhMw5gqASpvy.X38.nDdwooKz7AzK6344837l3V.Ya7qsXb8c6V6x5
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: eric@alliances.org
+  txn_id: 0ET24143NT994000V
+  receiver_email: antonio-delacruz@homenet.tzo.com
+  first_name: Eric
+  payer_id: SJJTWMZZC72FQ
+  receiver_id: FFNRA4CFPXAEY
+  item_number: sandbsub
+  payment_status: Completed
+  payment_fee: 1.08
+  mc_fee: 1.08
+  mc_gross: 27.00
+  charset: windows-1252
+  notify_version: 2.4
+Unknown transaction type.<br>
+New Notification Received:
+  payment_date: 03:26:22 Nov 25, 2007 PST
+  txn_type: subscr_payment
+  subscr_id: S-2WH23518DS834754E
+  last_name: Helvey
+  residence_country: US
+  item_name: Shop and Buzz Subscription
+  payment_gross: 27.00
+  mc_currency: USD
+  business: antonio-delacruz@homenet.tzo.com
+  payment_type: instant
+  verify_sign: ApBHX6qbpxJW-Ll3oP22LSbo0WeuAJznuhWcUNpRvCiSYzSdgSCLqnZT
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: eric@alliances.org
+  txn_id: 0N787511DU5802505
+  receiver_email: antonio-delacruz@homenet.tzo.com
+  first_name: Eric
+  payer_id: SJJTWMZZC72FQ
+  receiver_id: FFNRA4CFPXAEY
+  item_number: sandbsub
+  payment_status: Completed
+  payment_fee: 1.08
+  mc_fee: 1.08
+  mc_gross: 27.00
+  charset: windows-1252
+  notify_version: 2.4
+Unknown transaction type.<br>
+New Notification Received:
+  payment_date: 05:46:06 Nov 26, 2007 PST
+  txn_type: subscr_payment
+  subscr_id: S-9L476342YX971223F
+  last_name: User
+  residence_country: US
+  item_name: Shop and Buzz Subscription
+  payment_gross: 27.00
+  mc_currency: USD
+  business: eric_1187924029_biz@alliances.org
+  payment_type: instant
+  verify_sign: AwcJ38ZmJl2kWiHtn4.iL.RaAdoTAghlT-QPHdCMuD3uFH6F2s8TgZsy
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: blahbl_1187749698_per@alliances.org
+  txn_id: 6HW50374F4705482E
+  receiver_email: eric_1187924029_biz@alliances.org
+  first_name: Test
+  payer_id: 48MPQQ2J85TBW
+  receiver_id: EKA84KL7LFHKJ
+  item_number: 643829a0cba29740b0e9aba27fd764db
+  payment_status: Completed
+  payment_fee: 1.08
+  mc_fee: 1.08
+  mc_gross: 27.00
+  charset: windows-1252
+  notify_version: 2.4
+Unknown transaction type.<br>
+New Notification Received:
+  payment_date: 03:01:11 Nov 30, 2007 PST
+  txn_type: subscr_payment
+  subscr_id: S-2B822802AE593122A
+  last_name: Jones
+  residence_country: US
+  item_name: test
+  payment_gross: 27.00
+  mc_currency: USD
+  business: antonio-delacruz@homenet.tzo.com
+  payment_type: instant
+  verify_sign: AsXd5xFhWEqM.JzoKSv802G1CUZGAVyasX1k8ZEtetkRy2d.n7TWA9tP
+  payer_status: verified
+  test_ipn: 1
+  payer_email: bobjones@homenet.tzo.com
+  txn_id: 9X424731JM114072C
+  receiver_email: antonio-delacruz@homenet.tzo.com
+  first_name: Bob
+  payer_id: XTERDHPJK6ZDN
+  receiver_id: FFNRA4CFPXAEY
+  item_number: testsub
+  payment_status: Completed
+  payment_fee: 1.08
+  mc_fee: 1.08
+  mc_gross: 27.00
+  charset: windows-1252
+  notify_version: 2.4
+Unknown transaction type.<br>
+New Notification Received:
+  payment_date: 03:01:41 Dec 25, 2007 PST
+  txn_type: subscr_payment
+  subscr_id: S-6R947625GF235961C
+  last_name: Helvey
+  residence_country: US
+  item_name: Shop and Buzz Subscription
+  payment_gross: 27.00
+  mc_currency: USD
+  business: antonio-delacruz@homenet.tzo.com
+  payment_type: instant
+  verify_sign: ApmlBbJkAKXjyzfvrtyYE54Z2utKA025Z-Zzxm-UCBGhOIgAyBZuusIO
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: eric@alliances.org
+  txn_id: 1PX73185R2251880N
+  receiver_email: antonio-delacruz@homenet.tzo.com
+  first_name: Eric
+  payer_id: SJJTWMZZC72FQ
+  receiver_id: FFNRA4CFPXAEY
+  item_number: sandbsub
+  payment_status: Completed
+  payment_fee: 1.08
+  mc_fee: 1.08
+  mc_gross: 27.00
+  charset: windows-1252
+  notify_version: 2.4
+Unknown transaction type.<br>
+New Notification Received:
+  payment_date: 03:10:53 Dec 25, 2007 PST
+  txn_type: subscr_payment
+  subscr_id: S-4RM59748Y48798004
+  last_name: Helvey
+  residence_country: US
+  item_name: Shop and Buzz Subscription
+  payment_gross: 27.00
+  mc_currency: USD
+  business: antonio-delacruz@homenet.tzo.com
+  payment_type: instant
+  verify_sign: A37vH7ml5ElUnXgAEf4nmNDFvob2A1o3gPQFVSK1.49ssfr.uVR-8hCS
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: eric@alliances.org
+  txn_id: 1CH893721X0365533
+  receiver_email: antonio-delacruz@homenet.tzo.com
+  first_name: Eric
+  payer_id: SJJTWMZZC72FQ
+  receiver_id: FFNRA4CFPXAEY
+  item_number: sandbsub
+  payment_status: Completed
+  payment_fee: 1.08
+  mc_fee: 1.08
+  mc_gross: 27.00
+  charset: windows-1252
+  notify_version: 2.4
+Unknown transaction type.<br>
+New Notification Received:
+  payment_date: 03:11:31 Dec 25, 2007 PST
+  txn_type: subscr_payment
+  subscr_id: S-3XD610523L815784S
+  last_name: Helvey
+  residence_country: US
+  item_name: Shop and Buzz Subscription
+  payment_gross: 27.00
+  mc_currency: USD
+  business: antonio-delacruz@homenet.tzo.com
+  payment_type: instant
+  verify_sign: AWHwKBMoVXhTmv6W8P6KccBSLnxQAOV0GjZ6p5xEVOF9H45GYh-lw1QD
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: eric@alliances.org
+  txn_id: 4R45882632382803B
+  receiver_email: antonio-delacruz@homenet.tzo.com
+  first_name: Eric
+  payer_id: SJJTWMZZC72FQ
+  receiver_id: FFNRA4CFPXAEY
+  item_number: sandbsub
+  payment_status: Completed
+  payment_fee: 1.08
+  mc_fee: 1.08
+  mc_gross: 27.00
+  charset: windows-1252
+  notify_version: 2.4
+Unknown transaction type.<br>
+New Notification Received:
+  payment_date: 03:16:05 Dec 25, 2007 PST
+  txn_type: subscr_payment
+  subscr_id: S-9YA858100R0672152
+  last_name: Helvey
+  residence_country: US
+  item_name: Shop and Buzz Subscription
+  payment_gross: 27.00
+  mc_currency: USD
+  business: antonio-delacruz@homenet.tzo.com
+  payment_type: instant
+  verify_sign: A6pK.xU2vMY4RgtnJ7H01SJqK8vuAvn.zp86mr8j3vl.Em4.C5s6hgl.
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: eric@alliances.org
+  txn_id: 3NV358439P9622914
+  receiver_email: antonio-delacruz@homenet.tzo.com
+  first_name: Eric
+  payer_id: SJJTWMZZC72FQ
+  receiver_id: FFNRA4CFPXAEY
+  item_number: sandbsub
+  payment_status: Completed
+  payment_fee: 1.08
+  mc_fee: 1.08
+  mc_gross: 27.00
+  charset: windows-1252
+  notify_version: 2.4
+Unknown transaction type.<br>
+New Notification Received:
+  payment_date: 03:18:12 Dec 25, 2007 PST
+  txn_type: subscr_payment
+  subscr_id: S-2WH23518DS834754E
+  last_name: Helvey
+  residence_country: US
+  item_name: Shop and Buzz Subscription
+  payment_gross: 27.00
+  mc_currency: USD
+  business: antonio-delacruz@homenet.tzo.com
+  payment_type: instant
+  verify_sign: AMU8ZMztjw6-tUX1gweg3XuFGFoKAxAmdU7HxxPPvbt-N.xrbI2VsRjN
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: eric@alliances.org
+  txn_id: 72G99508BM054941E
+  receiver_email: antonio-delacruz@homenet.tzo.com
+  first_name: Eric
+  payer_id: SJJTWMZZC72FQ
+  receiver_id: FFNRA4CFPXAEY
+  item_number: sandbsub
+  payment_status: Completed
+  payment_fee: 1.08
+  mc_fee: 1.08
+  mc_gross: 27.00
+  charset: windows-1252
+  notify_version: 2.4
+Unknown transaction type.<br>
+New Notification Received:
+  payment_date: 03:01:50 Dec 26, 2007 PST
+  txn_type: subscr_payment
+  subscr_id: S-16Y55797KA637903C
+  last_name: User
+  residence_country: US
+  item_name: Shop and Buzz Subscription
+  payment_gross: 27.00
+  mc_currency: USD
+  business: eric_1187924029_biz@alliances.org
+  payment_type: instant
+  verify_sign: AkfgVt4mgiL269Ar.5F.5h3IVDjZA4HpN1EtNMi1egdPOU-ptwBTFivg
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: blahbl_1187749698_per@alliances.org
+  txn_id: 7H338748BJ684723J
+  receiver_email: eric_1187924029_biz@alliances.org
+  first_name: Test
+  payer_id: 48MPQQ2J85TBW
+  receiver_id: EKA84KL7LFHKJ
+  item_number: a5fc7f0049c32c6b557585958541a03a
+  payment_status: Completed
+  payment_fee: 1.08
+  mc_fee: 1.08
+  mc_gross: 27.00
+  charset: windows-1252
+  notify_version: 2.4
+Unknown transaction type.<br>
+New Notification Received:
+  payment_date: 03:21:31 Dec 26, 2007 PST
+  txn_type: subscr_payment
+  subscr_id: S-9L476342YX971223F
+  last_name: User
+  residence_country: US
+  item_name: Shop and Buzz Subscription
+  payment_gross: 27.00
+  mc_currency: USD
+  business: eric_1187924029_biz@alliances.org
+  payment_type: instant
+  verify_sign: Ai1PaghZh5FmBLCDCTQpwG8jB264AYHsDVeO-n3F-oR785rH.v3m102c
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: blahbl_1187749698_per@alliances.org
+  txn_id: 4FF74843MW525770T
+  receiver_email: eric_1187924029_biz@alliances.org
+  first_name: Test
+  payer_id: 48MPQQ2J85TBW
+  receiver_id: EKA84KL7LFHKJ
+  item_number: 643829a0cba29740b0e9aba27fd764db
+  payment_status: Completed
+  payment_fee: 1.08
+  mc_fee: 1.08
+  mc_gross: 27.00
+  charset: windows-1252
+  notify_version: 2.4
+Unknown transaction type.<br>
+New Notification Received:
+  payment_date: 03:01:16 Dec 31, 2007 PST
+  txn_type: subscr_payment
+  subscr_id: S-14H54732K6501642G
+  last_name: Jones
+  residence_country: US
+  item_name: Shop and Buzz Subscription
+  payment_gross: 27.00
+  mc_currency: USD
+  business: antonio-delacruz@homenet.tzo.com
+  payment_type: instant
+  verify_sign: A2puzRIuO4S3z3avBO6t7p6TN9B7ASAZY5-WEbA7eHAUCog0hlVrxGjc
+  payer_status: verified
+  test_ipn: 1
+  payer_email: bobjones@homenet.tzo.com
+  txn_id: 2GA44996TD7360815
+  receiver_email: antonio-delacruz@homenet.tzo.com
+  first_name: Bob
+  payer_id: XTERDHPJK6ZDN
+  receiver_id: FFNRA4CFPXAEY
+  item_number: sandbsub
+  payment_status: Completed
+  payment_fee: 1.08
+  mc_fee: 1.08
+  mc_gross: 27.00
+  charset: windows-1252
+  notify_version: 2.4
+Unknown transaction type.<br>
+New Notification Received:
+  payment_date: 03:22:01 Jan 25, 2008 PST
+  txn_type: subscr_payment
+  subscr_id: S-6R947625GF235961C
+  last_name: Helvey
+  residence_country: US
+  item_name: Shop and Buzz Subscription
+  payment_gross: 27.00
+  mc_currency: USD
+  business: antonio-delacruz@homenet.tzo.com
+  payment_type: instant
+  verify_sign: AQiLX0Dhx27BSfkEHlpLDjbAY4rCAA9Rj3JpqL7jRSoZrsNB5Pgc11BO
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: eric@alliances.org
+  txn_id: 4FX61193CH620253B
+  receiver_email: antonio-delacruz@homenet.tzo.com
+  first_name: Eric
+  payer_id: SJJTWMZZC72FQ
+  receiver_id: FFNRA4CFPXAEY
+  item_number: sandbsub
+  payment_status: Completed
+  payment_fee: 1.08
+  mc_fee: 1.08
+  mc_gross: 27.00
+  charset: windows-1252
+  notify_version: 2.4
+Unknown transaction type.<br>
+New Notification Received:
+  payment_date: 06:10:19 Jan 25, 2008 PST
+  txn_type: subscr_payment
+  subscr_id: S-4RM59748Y48798004
+  last_name: Helvey
+  residence_country: US
+  item_name: Shop and Buzz Subscription
+  payment_gross: 27.00
+  mc_currency: USD
+  business: antonio-delacruz@homenet.tzo.com
+  payment_type: instant
+  verify_sign: A00tg2K8Kw0De44-WQ-WtBdq7IBvAsZIrLS0YcujjLIZb5rsbnyiz7g3
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: eric@alliances.org
+  txn_id: 4GT64851WR224471D
+  receiver_email: antonio-delacruz@homenet.tzo.com
+  first_name: Eric
+  payer_id: SJJTWMZZC72FQ
+  receiver_id: FFNRA4CFPXAEY
+  item_number: sandbsub
+  payment_status: Completed
+  payment_fee: 1.08
+  mc_fee: 1.08
+  mc_gross: 27.00
+  charset: windows-1252
+  notify_version: 2.4
+Unknown transaction type.<br>
+New Notification Received:
+  payment_date: 06:11:22 Jan 25, 2008 PST
+  txn_type: subscr_payment
+  subscr_id: S-3XD610523L815784S
+  last_name: Helvey
+  residence_country: US
+  item_name: Shop and Buzz Subscription
+  payment_gross: 27.00
+  mc_currency: USD
+  business: antonio-delacruz@homenet.tzo.com
+  payment_type: instant
+  verify_sign: A8RQ0F8gkUzMctcqZ4r9aZzwD7JUAYbHyYMxnrs1Y7SW-PCaHHKS-vVE
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: eric@alliances.org
+  txn_id: 75407600KY658701E
+  receiver_email: antonio-delacruz@homenet.tzo.com
+  first_name: Eric
+  payer_id: SJJTWMZZC72FQ
+  receiver_id: FFNRA4CFPXAEY
+  item_number: sandbsub
+  payment_status: Completed
+  payment_fee: 1.08
+  mc_fee: 1.08
+  mc_gross: 27.00
+  charset: windows-1252
+  notify_version: 2.4
+Unknown transaction type.<br>
+New Notification Received:
+  payment_date: 06:13:48 Jan 25, 2008 PST
+  txn_type: subscr_payment
+  subscr_id: S-9YA858100R0672152
+  last_name: Helvey
+  residence_country: US
+  item_name: Shop and Buzz Subscription
+  payment_gross: 27.00
+  mc_currency: USD
+  business: antonio-delacruz@homenet.tzo.com
+  payment_type: instant
+  verify_sign: AsHHNagb.7.bEv0xdlSMpx5bhnw1AeVg6X3KeFSTAfHmkB83gnmCwbjo
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: eric@alliances.org
+  txn_id: 88715294WE763364K
+  receiver_email: antonio-delacruz@homenet.tzo.com
+  first_name: Eric
+  payer_id: SJJTWMZZC72FQ
+  receiver_id: FFNRA4CFPXAEY
+  item_number: sandbsub
+  payment_status: Completed
+  payment_fee: 1.08
+  mc_fee: 1.08
+  mc_gross: 27.00
+  charset: windows-1252
+  notify_version: 2.4
+Unknown transaction type.<br>
+New Notification Received:
+  payment_date: 06:16:22 Jan 25, 2008 PST
+  txn_type: subscr_payment
+  subscr_id: S-2WH23518DS834754E
+  last_name: Helvey
+  residence_country: US
+  item_name: Shop and Buzz Subscription
+  payment_gross: 27.00
+  mc_currency: USD
+  business: antonio-delacruz@homenet.tzo.com
+  payment_type: instant
+  verify_sign: AVUaCBIcbVkD-57cbzNv5hxDc56AAYqYod-gk-6dSkN3Ul0A8he6O9ZQ
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: eric@alliances.org
+  txn_id: 9W358601H3821671S
+  receiver_email: antonio-delacruz@homenet.tzo.com
+  first_name: Eric
+  payer_id: SJJTWMZZC72FQ
+  receiver_id: FFNRA4CFPXAEY
+  item_number: sandbsub
+  payment_status: Completed
+  payment_fee: 1.08
+  mc_fee: 1.08
+  mc_gross: 27.00
+  charset: windows-1252
+  notify_version: 2.4
+Unknown transaction type.<br>
+New Notification Received:
+  payment_date: 03:54:53 Jan 26, 2008 PST
+  txn_type: subscr_payment
+  subscr_id: S-16Y55797KA637903C
+  last_name: User
+  residence_country: US
+  item_name: Shop and Buzz Subscription
+  payment_gross: 27.00
+  mc_currency: USD
+  business: eric_1187924029_biz@alliances.org
+  payment_type: instant
+  verify_sign: ABlYq.7R2IHqQTc1kx9HVB4oCrebABU1t2WOkkkiaWV.kZC7uoZ0WgR3
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: blahbl_1187749698_per@alliances.org
+  txn_id: 15H43610RJ9525000
+  receiver_email: eric_1187924029_biz@alliances.org
+  first_name: Test
+  payer_id: 48MPQQ2J85TBW
+  receiver_id: EKA84KL7LFHKJ
+  item_number: a5fc7f0049c32c6b557585958541a03a
+  payment_status: Completed
+  payment_fee: 1.08
+  mc_fee: 1.08
+  mc_gross: 27.00
+  charset: windows-1252
+  notify_version: 2.4
+Unknown transaction type.<br>
+New Notification Received:
+  payment_date: 05:21:26 Jan 26, 2008 PST
+  txn_type: subscr_payment
+  subscr_id: S-9L476342YX971223F
+  last_name: User
+  residence_country: US
+  item_name: Shop and Buzz Subscription
+  payment_gross: 27.00
+  mc_currency: USD
+  business: eric_1187924029_biz@alliances.org
+  payment_type: instant
+  verify_sign: AT-Gy1E9Jnkn7PyEjBxvkRE97VqtAvu-V8gt13UOejfCVf0y-O2pnzUI
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: blahbl_1187749698_per@alliances.org
+  txn_id: 9FC529844D235153L
+  receiver_email: eric_1187924029_biz@alliances.org
+  first_name: Test
+  payer_id: 48MPQQ2J85TBW
+  receiver_id: EKA84KL7LFHKJ
+  item_number: 643829a0cba29740b0e9aba27fd764db
+  payment_status: Completed
+  payment_fee: 1.08
+  mc_fee: 1.08
+  mc_gross: 27.00
+  charset: windows-1252
+  notify_version: 2.4
+Unknown transaction type.<br>
+New Notification Received:
+  payment_date: 03:39:27 Jan 30, 2008 PST
+  txn_type: subscr_payment
+  subscr_id: S-2B822802AE593122A
+  last_name: Jones
+  residence_country: US
+  item_name: test
+  payment_gross: 27.00
+  mc_currency: USD
+  business: antonio-delacruz@homenet.tzo.com
+  payment_type: instant
+  verify_sign: ASYY8mfFwkNXx5lj9ns0rHN0wEtKAg.Gkp49qZE3YXH.srne22H5y7jU
+  payer_status: verified
+  test_ipn: 1
+  payer_email: bobjones@homenet.tzo.com
+  txn_id: 6M719106RL362142D
+  receiver_email: antonio-delacruz@homenet.tzo.com
+  first_name: Bob
+  payer_id: XTERDHPJK6ZDN
+  receiver_id: FFNRA4CFPXAEY
+  item_number: testsub
+  payment_status: Completed
+  payment_fee: 1.08
+  mc_fee: 1.08
+  mc_gross: 27.00
+  charset: windows-1252
+  notify_version: 2.4
+Unknown transaction type.<br>
+New Notification Received:
+  payment_date: 19:08:49 Feb 22, 2008 PST
+  txn_type: subscr_payment
+  subscr_id: S-94M6780960931292K
+  last_name: Helvey
+  residence_country: US
+  item_name: Shop and Buzz Subscription
+  payment_gross: 27.00
+  mc_currency: USD
+  business: eric_1187924029_biz@alliances.org
+  payment_type: instant
+  verify_sign: AFcWxV21C7fd0v3bYYYRCpSSRl31At6azmQjGrU0AJyYnnX3mhLi36en
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: eric@alliances.org
+  txn_id: 3K754125JV972982W
+  receiver_email: eric_1187924029_biz@alliances.org
+  first_name: Eric
+  payer_id: SJJTWMZZC72FQ
+  receiver_id: EKA84KL7LFHKJ
+  item_number: ea66ffbe22d8ef1ec864d4a75c5f9365
+  payment_status: Completed
+  payment_fee: 1.08
+  mc_fee: 1.08
+  mc_gross: 27.00
+  charset: windows-1252
+  notify_version: 2.4
+Unknown transaction type.<br>
+New Notification Received:
+  payment_date: 20:31:54 Feb 22, 2008 PST
+  txn_type: subscr_payment
+  subscr_id: S-3LA22475UG227350K
+  last_name: Helvey
+  residence_country: US
+  item_name: Shop and Buzz Subscription
+  payment_gross: 27.00
+  mc_currency: USD
+  business: eric_1187924029_biz@alliances.org
+  payment_type: instant
+  verify_sign: AgMScY6ZpP-yCmbkuVqpFCPy4lgxAy-pl8grzlkWeoGVsqY23LYh5aR0
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: eric@alliances.org
+  txn_id: 44F86898DW372590A
+  receiver_email: eric_1187924029_biz@alliances.org
+  first_name: Eric
+  payer_id: SJJTWMZZC72FQ
+  receiver_id: EKA84KL7LFHKJ
+  item_number: e0987f3399ade5aa85463e8ef83df51a
+  payment_status: Completed
+  payment_fee: 1.08
+  mc_fee: 1.08
+  mc_gross: 27.00
+  charset: windows-1252
+  notify_version: 2.4
+Unknown transaction type.<br>
+New Notification Received:
+  payment_date: 00:24:11 Feb 23, 2008 PST
+  txn_type: subscr_payment
+  subscr_id: S-4JS49558LG314214C
+  last_name: Helvey
+  residence_country: US
+  item_name: Shop and Buzz Subscription
+  payment_gross: 27.00
+  mc_currency: USD
+  business: eric_1187924029_biz@alliances.org
+  payment_type: instant
+  verify_sign: AvTHXVl4lFKutBuG-FTmymrhZEx-ABYrDeriBnHYGoynXyK4LjW1pGis
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: eric@alliances.org
+  txn_id: 07296862XF626432A
+  receiver_email: eric_1187924029_biz@alliances.org
+  first_name: Eric
+  payer_id: SJJTWMZZC72FQ
+  receiver_id: EKA84KL7LFHKJ
+  item_number: d50fb414bc6597164711b6bce7d617bf
+  payment_status: Completed
+  payment_fee: 1.08
+  mc_fee: 1.08
+  mc_gross: 27.00
+  charset: windows-1252
+  notify_version: 2.4
+Unknown transaction type.<br>
+New Notification Received:
+  payment_date: 12:28:08 Feb 25, 2008 PST
+  txn_type: subscr_payment
+  subscr_id: S-6R947625GF235961C
+  last_name: Helvey
+  residence_country: US
+  item_name: Shop and Buzz Subscription
+  payment_gross: 27.00
+  mc_currency: USD
+  business: antonio-delacruz@homenet.tzo.com
+  payment_type: instant
+  verify_sign: AAi5YjmW0uzvNe0HiJgIkDCN-nNJADN4rzZXwEF.ySqiSeZOStNwkCh9
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: eric@alliances.org
+  txn_id: 262003126A4454418
+  receiver_email: antonio-delacruz@homenet.tzo.com
+  first_name: Eric
+  payer_id: SJJTWMZZC72FQ
+  receiver_id: FFNRA4CFPXAEY
+  item_number: sandbsub
+  payment_status: Completed
+  payment_fee: 1.08
+  mc_fee: 1.08
+  mc_gross: 27.00
+  charset: windows-1252
+  notify_version: 2.4
+Unknown transaction type.<br>
+New Notification Received:
+  txn_type: subscr_failed
+  subscr_id: S-16Y55797KA637903C
+  last_name: User
+  residence_country: US
+  item_name: Shop and Buzz Subscription
+  payment_gross: 27.00
+  mc_currency: USD
+  verify_sign: AhdxfSbr8BmDG7l-h7rMNCYqhgKNAjGXhKXLNHelvKJj-s53clLjipnI
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: blahbl_1187749698_per@alliances.org
+  first_name: Test
+  receiver_email: eric_1187924029_biz@alliances.org
+  payer_id: 48MPQQ2J85TBW
+  retry_at: 21:29:25 Feb 29, 2008 PST
+  item_number: a5fc7f0049c32c6b557585958541a03a
+  mc_gross: 27.00
+  charset: windows-1252
+  notify_version: 2.4
+Unknown transaction type.<br>
+New Notification Received:
+  txn_type: subscr_failed
+  subscr_id: S-9L476342YX971223F
+  last_name: User
+  residence_country: US
+  item_name: Shop and Buzz Subscription
+  payment_gross: 27.00
+  mc_currency: USD
+  verify_sign: AiKZhEEPLJjSIccz.2M.tbyW5YFwAYtsAUZuw5rodz9L5q0EN1.CvZS8
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: blahbl_1187749698_per@alliances.org
+  first_name: Test
+  receiver_email: eric_1187924029_biz@alliances.org
+  payer_id: 48MPQQ2J85TBW
+  retry_at: 21:40:54 Feb 29, 2008 PST
+  item_number: 643829a0cba29740b0e9aba27fd764db
+  mc_gross: 27.00
+  charset: windows-1252
+  notify_version: 2.4
+Unknown transaction type.<br>
+New Notification Received:
+  txn_type: subscr_failed
+  subscr_id: S-16Y55797KA637903C
+  last_name: User
+  residence_country: US
+  item_name: Shop and Buzz Subscription
+  payment_gross: 27.00
+  mc_currency: USD
+  verify_sign: ABf7JPWdPawK0twNvIEDjwAiWdZGALkAnTIiWo0D2wa2nwBOlm8VetzW
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: blahbl_1187749698_per@alliances.org
+  first_name: Test
+  receiver_email: eric_1187924029_biz@alliances.org
+  payer_id: 48MPQQ2J85TBW
+  retry_at: 01:59:43 Mar 06, 2008 PST
+  item_number: a5fc7f0049c32c6b557585958541a03a
+  mc_gross: 27.00
+  charset: windows-1252
+  notify_version: 2.4
+Unknown transaction type.<br>
+New Notification Received:
+  txn_type: subscr_failed
+  subscr_id: S-9L476342YX971223F
+  last_name: User
+  residence_country: US
+  item_name: Shop and Buzz Subscription
+  payment_gross: 27.00
+  mc_currency: USD
+  verify_sign: ABsLLsnDFJud.tCikqPCarD2d0erAGzLMolpG9MVo7.UWUrq.Ky-9meJ
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: blahbl_1187749698_per@alliances.org
+  first_name: Test
+  receiver_email: eric_1187924029_biz@alliances.org
+  payer_id: 48MPQQ2J85TBW
+  retry_at: 02:06:30 Mar 06, 2008 PST
+  item_number: 643829a0cba29740b0e9aba27fd764db
+  mc_gross: 27.00
+  charset: windows-1252
+  notify_version: 2.4
+Unknown transaction type.<br>
+New Notification Received:
+  txn_type: subscr_cancel
+  subscr_id: S-16Y55797KA637903C
+  last_name: User
+  residence_country: US
+  mc_currency: USD
+  item_name: Shop and Buzz Subscription
+  amount1: 0.00
+  amount3: 27.00
+  recurring: 1
+  verify_sign: AwiMzJoyzZjaSVI96bXuHO0SHzRNAqp1pK4u519Ly-W1-byDDRgIKPj7
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: blahbl_1187749698_per@alliances.org
+  first_name: Test
+  receiver_email: eric_1187924029_biz@alliances.org
+  payer_id: 48MPQQ2J85TBW
+  reattempt: 1
+  item_number: a5fc7f0049c32c6b557585958541a03a
+  subscr_date: 02:00:09 Mar 06, 2008 PST
+  charset: windows-1252
+  notify_version: 2.4
+  period1: 4 M
+  mc_amount1: 0.00
+  period3: 1 M
+  mc_amount3: 27.00
+curl_resp: HTTP/1.1 200 OK
+Date: Thu, 06 Mar 2008 10:00:39 GMT
+Server: Apache/1.3.27 (Unix) mod_ssl/2.8.12 OpenSSL/0.9.7a mod_fastcgi/2.4.2 PHP/4.3.2
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=%7CXEWWtkEnZ5b7U67z5fCuQLtkkomM-FG-T7YlaauCks_1S-Pm1ggM29uDlmaUZIusRkIEwm%7CsYmvW8cyhx-0SPShmwW04pc4_f_CpbDsWJ7vd5jj_KPKHDYNCO-nyww-7ZSfBisazYbkKm%7C; path=/; domain=.paypal.com
+Set-Cookie: cookie_check=yes; expires=Sun, 04-Mar-2018 10:00:41 GMT; path=/; domain=.paypal.com
+Set-Cookie: navcmd=_notify-validate; path=/; domain=.paypal.com
+Set-Cookie: Apache=74.208.45.214.100101204797639867; path=/; expires=Wed, 22-Jan-02 03:32:23 GMT
+Connection: close
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED<br>
+Verified<br>
+subscr_cancel<br>
+New Notification Received:
+  txn_type: subscr_eot
+  subscr_id: S-16Y55797KA637903C
+  last_name: User
+  residence_country: US
+  item_name: Shop and Buzz Subscription
+  mc_currency: USD
+  verify_sign: ApK7mLXxQvoI4L5DlaTOjxqvNs3wAe-DsS7g1Q2r4Tbyz6vxUTx2SWgX
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: blahbl_1187749698_per@alliances.org
+  first_name: Test
+  receiver_email: eric_1187924029_biz@alliances.org
+  payer_id: 48MPQQ2J85TBW
+  item_number: a5fc7f0049c32c6b557585958541a03a
+  charset: windows-1252
+  notify_version: 2.4
+Unknown transaction type.<br>
+New Notification Received:
+  txn_type: subscr_cancel
+  subscr_id: S-9L476342YX971223F
+  last_name: User
+  residence_country: US
+  mc_currency: USD
+  item_name: Shop and Buzz Subscription
+  amount1: 0.00
+  amount3: 27.00
+  recurring: 1
+  verify_sign: ACUe-E7Hjxmeel8FjYAtjnx-yjHAAlA3G2pytEMicIWuBMDl6r84.g0y
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: blahbl_1187749698_per@alliances.org
+  first_name: Test
+  receiver_email: eric_1187924029_biz@alliances.org
+  payer_id: 48MPQQ2J85TBW
+  reattempt: 1
+  item_number: 643829a0cba29740b0e9aba27fd764db
+  subscr_date: 02:44:39 Mar 06, 2008 PST
+  charset: windows-1252
+  notify_version: 2.4
+  period1: 1 M
+  mc_amount1: 0.00
+  period3: 1 M
+  mc_amount3: 27.00
+curl_resp: HTTP/1.1 200 OK
+Date: Thu, 06 Mar 2008 10:51:45 GMT
+Server: Apache/1.3.27 (Unix) mod_ssl/2.8.12 OpenSSL/0.9.7a mod_fastcgi/2.4.2 PHP/4.3.2
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=%7Cl8SqFR3DXTaYaEuSxDhEKs5WpLbvuPCvgltaZ38N2-woaeS0U5N4frzx8ZZdPWnrQTTJ7m%7CZxW8BcjuQleCy1ZgCXD_6f8drZ4t_J_5ltAxXCnMCVN3uI0lqZ4lCkK1Eo1gGTOkHgsYFG%7C; path=/; domain=.paypal.com
+Set-Cookie: cookie_check=yes; expires=Sun, 04-Mar-2018 10:51:45 GMT; path=/; domain=.paypal.com
+Set-Cookie: navcmd=_notify-validate; path=/; domain=.paypal.com
+Set-Cookie: Apache=74.208.45.214.240441204800705141; path=/; expires=Wed, 22-Jan-02 04:23:29 GMT
+Connection: close
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED<br>
+Verified<br>
+subscr_cancel<br>
+New Notification Received:
+  txn_type: subscr_eot
+  subscr_id: S-9L476342YX971223F
+  last_name: User
+  residence_country: US
+  item_name: Shop and Buzz Subscription
+  mc_currency: USD
+  verify_sign: AQU0e5vuZCvSg-XJploSa.sGUDlpATxfqZTUSYe0AjcNEyPSoJe6LUuJ
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: blahbl_1187749698_per@alliances.org
+  first_name: Test
+  receiver_email: eric_1187924029_biz@alliances.org
+  payer_id: 48MPQQ2J85TBW
+  item_number: 643829a0cba29740b0e9aba27fd764db
+  charset: windows-1252
+  notify_version: 2.4
+Unknown transaction type.<br>
+New Notification Received:
+  payment_date: 03:07:45 Mar 22, 2008 PDT
+  txn_type: subscr_payment
+  subscr_id: S-94M6780960931292K
+  last_name: Helvey
+  residence_country: US
+  item_name: Shop and Buzz Subscription
+  payment_gross: 27.00
+  mc_currency: USD
+  business: eric_1187924029_biz@alliances.org
+  payment_type: instant
+  verify_sign: AQ4JU8ksOCKd8I5Z-8BgOwvrYJ-UA0pngdXgIpNGonCVcxFMxlzbik93
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: eric@alliances.org
+  txn_id: 7EY51869EY210703A
+  receiver_email: eric_1187924029_biz@alliances.org
+  first_name: Eric
+  payer_id: SJJTWMZZC72FQ
+  receiver_id: EKA84KL7LFHKJ
+  item_number: ea66ffbe22d8ef1ec864d4a75c5f9365
+  payment_status: Completed
+  payment_fee: 1.08
+  mc_fee: 1.08
+  mc_gross: 27.00
+  charset: windows-1252
+  notify_version: 2.4
+Unknown transaction type.<br>
+New Notification Received:
+  payment_date: 03:07:59 Mar 22, 2008 PDT
+  txn_type: subscr_payment
+  subscr_id: S-3LA22475UG227350K
+  last_name: Helvey
+  residence_country: US
+  item_name: Shop and Buzz Subscription
+  payment_gross: 27.00
+  mc_currency: USD
+  business: eric_1187924029_biz@alliances.org
+  payment_type: instant
+  verify_sign: ArgX1JoEl.LNTJ5nkTmgzkfLaDiVAQUHsQxCTbi1bk73uA5UYPjWenPk
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: eric@alliances.org
+  txn_id: 348675050X660540N
+  receiver_email: eric_1187924029_biz@alliances.org
+  first_name: Eric
+  payer_id: SJJTWMZZC72FQ
+  receiver_id: EKA84KL7LFHKJ
+  item_number: e0987f3399ade5aa85463e8ef83df51a
+  payment_status: Completed
+  payment_fee: 1.08
+  mc_fee: 1.08
+  mc_gross: 27.00
+  charset: windows-1252
+  notify_version: 2.4
+Unknown transaction type.<br>
+New Notification Received:
+  payment_date: 03:09:54 Mar 22, 2008 PDT
+  txn_type: subscr_payment
+  subscr_id: S-4JS49558LG314214C
+  last_name: Helvey
+  residence_country: US
+  item_name: Shop and Buzz Subscription
+  payment_gross: 27.00
+  mc_currency: USD
+  business: eric_1187924029_biz@alliances.org
+  payment_type: instant
+  verify_sign: A3e353rW-52Ri8A5A65QHVmbtV4rA7LHVdIDm6kMpdlB1sroYbaob3Hf
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: eric@alliances.org
+  txn_id: 6UH69916FC780291P
+  receiver_email: eric_1187924029_biz@alliances.org
+  first_name: Eric
+  payer_id: SJJTWMZZC72FQ
+  receiver_id: EKA84KL7LFHKJ
+  item_number: d50fb414bc6597164711b6bce7d617bf
+  payment_status: Completed
+  payment_fee: 1.08
+  mc_fee: 1.08
+  mc_gross: 27.00
+  charset: windows-1252
+  notify_version: 2.4
+Unknown transaction type.<br>
+New Notification Received:
+  payment_date: 03:07:30 Apr 22, 2008 PDT
+  txn_type: subscr_payment
+  subscr_id: S-3LA22475UG227350K
+  last_name: Helvey
+  residence_country: US
+  item_name: Shop and Buzz Subscription
+  payment_gross: 27.00
+  mc_currency: USD
+  business: eric_1187924029_biz@alliances.org
+  payment_type: instant
+  verify_sign: A2YnYs6LuOd-R8BHIdbWTA6xHgalAor5OG8Ro94A5lXt4h17KkLqAdjY
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: eric@alliances.org
+  txn_id: 1NX352681M7043158
+  receiver_email: eric_1187924029_biz@alliances.org
+  first_name: Eric
+  payer_id: SJJTWMZZC72FQ
+  receiver_id: EKA84KL7LFHKJ
+  item_number: e0987f3399ade5aa85463e8ef83df51a
+  payment_status: Completed
+  payment_fee: 1.08
+  mc_fee: 1.08
+  mc_gross: 27.00
+  charset: windows-1252
+  notify_version: 2.4
+Unknown transaction type.<br>
+New Notification Received:
+  payment_date: 03:08:40 Apr 22, 2008 PDT
+  txn_type: subscr_payment
+  subscr_id: S-4JS49558LG314214C
+  last_name: Helvey
+  residence_country: US
+  item_name: Shop and Buzz Subscription
+  payment_gross: 27.00
+  mc_currency: USD
+  business: eric_1187924029_biz@alliances.org
+  payment_type: instant
+  verify_sign: AgePMPfbDDc05TM5uouG2O9s9U74AS.a3Ds.AeByU4ZcEvxw4W-wievj
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: eric@alliances.org
+  txn_id: 34D46844CP596123X
+  receiver_email: eric_1187924029_biz@alliances.org
+  first_name: Eric
+  payer_id: SJJTWMZZC72FQ
+  receiver_id: EKA84KL7LFHKJ
+  item_number: d50fb414bc6597164711b6bce7d617bf
+  payment_status: Completed
+  payment_fee: 1.08
+  mc_fee: 1.08
+  mc_gross: 27.00
+  charset: windows-1252
+  notify_version: 2.4
+Unknown transaction type.<br>
+New Notification Received:
+  payment_date: 04:07:41 Apr 22, 2008 PDT
+  txn_type: subscr_payment
+  subscr_id: S-94M6780960931292K
+  last_name: Helvey
+  residence_country: US
+  item_name: Shop and Buzz Subscription
+  payment_gross: 27.00
+  mc_currency: USD
+  business: eric_1187924029_biz@alliances.org
+  payment_type: instant
+  verify_sign: ADmhMw5gqASpvy.X38.nDdwooKz7AuKCr9wRgJL6taEGWbZdAVaRUrxL
+  payer_status: unverified
+  test_ipn: 1
+  payer_email: eric@alliances.org
+  txn_id: 5FE218145P020291D
+  receiver_email: eric_1187924029_biz@alliances.org
+  first_name: Eric
+  payer_id: SJJTWMZZC72FQ
+  receiver_id: EKA84KL7LFHKJ
+  item_number: ea66ffbe22d8ef1ec864d4a75c5f9365
+  payment_status: Completed
+  payment_fee: 1.08
+  mc_fee: 1.08
+  mc_gross: 27.00
+  charset: windows-1252
+  notify_version: 2.4
+Unknown transaction type.<br>

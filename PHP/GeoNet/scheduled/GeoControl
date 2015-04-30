@@ -1,0 +1,42 @@
+#!/usr/bin/bash
+#
+# Copyright (c) 2002 Sprint
+# All rights reserved.
+#
+#ident  "@(#)GeoMonitor  1.0  2002/06/04 LGA"
+
+# loading the profile
+. /etc/profile
+
+PREFIX=/work/WADappl/Projects/GeoNet/
+WATCHDOG=${PREFIX}scheduled/GeoWatchdog.pl
+SHUTDOWN=${PREFIX}scheduled/GeoShutdown.pl
+LOGDIR=${PREFIX}scheduled/logs/
+LOG=${LOGDIR}Watchdog.log
+SCHED_DIR=${PREFIX}scheduled
+
+cd $SCHED_DIR
+
+case $1 in
+'start')
+  rm ${LOGDIR}Watchdog.lock
+  if [ -r ${WATCHDOG} ]; then
+    /usr/bin/perl ${WATCHDOG} >> ${LOG} 2>&1 &
+  fi
+  ;;
+'auto')
+  if [ -r ${WATCHDOG} ]; then
+    /usr/bin/perl ${WATCHDOG} >> ${LOG} 2>&1 &
+  fi
+  ;;
+'stop')
+  if [ -r ${SHUTDOWN} ]; then
+    /usr/bin/perl ${SHUTDOWN} $2 > ${LOG}
+  fi
+  echo 1 > ${LOGDIR}Watchdog.lock
+  ;;
+*)
+  echo "Usage: $0  { start | stop }"
+  exit 1
+esac
+exit 0

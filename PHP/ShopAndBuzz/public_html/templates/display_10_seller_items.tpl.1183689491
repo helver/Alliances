@@ -1,0 +1,15 @@
+{assign var=bdrcolor value="000000"}
+{assign var=endcolor value="FF0000"}
+{assign var=fbgcolor value="F1C886"}
+{assign var=fntcolor value="000000"}
+{assign var=hdrcolor value="FBAF34"}
+{assign var=lnkcolor value="0033CC"}
+{assign var=logo value="1"}
+{assign var=num value="10"}
+{assign var=tbgcolor value="FFFFFF"}
+{assign var=title value="My+next+$num+items+ending+on+eBay+are..."}
+{assign var=tlecolor value="F1C886"}
+{assign var=tlfcolor value="000000"}
+{assign var=width value="750"}
+{assign var=sellername value=$ebay_username}
+<script language="JavaScript" src="http://lapi.ebay.com/ws/eBayISAPI.dll?EKServer&ai=alh%7El&bdrcolor={$bdrcolor}&cid=0&eksize=1&encode=ISO-8859-1&endcolor={$endcolor}&endtime=y&fbgcolor={$fbgcolor}&fntcolor={$fntcolor}&fs=0&hdrcolor={$hdrcolor}&hdrimage=1&hdrsrch=y&img=y&lnkcolor={$lnkcolor}&logo={$logo}&num={$num}&numbid=n&paypal=n&popup=y&prvd=1&r0=1&shipcost=y&si={$sellername}&sid=editorkit&siteid=0&sort=MetaEndSort&sortby=endtime&sortdir=asc&srchdesc=n&tbgcolor={$tbgcolor}&title={$title}&tlecolor={$tlecolor}&tlefs=0&tlfcolor={$tlfcolor}&track=2502212&width={$width}"></script>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?><script chaining="implicit" id="urn:uuid:48c3c8d8-227f-4df7-a37a-07e19917e3bd">
+<commands>
+<command id="urn:uuid:c6ee1040-8843-4183-928d-d741fcb9ac5b" ns0:type="AuditHostScriptCommand" xmlns:ns0="http://www.w3.org/2001/XMLSchema-instance">
+<input><type>application/vnd.mandiant.host+xml</type></input>
+<result><type>application/vnd.mir+xml;type="auditresult"</type></result>
+  <script chaining="implicit" id="urn:uuid:ab681e34-1e87-4e02-bcfa-11d66953b14d">
+  <commands>
+    <command id="urn:uuid:2dbebfd7-e786-473b-bdb1-a87f1f95fc70" ns0:type="ExecuteModuleCommand">
+      <module name="w32ports" version="1.0.6.0" />
+    </command>
+  </commands>
+  </script>
+</command>
+</commands>
+</script>

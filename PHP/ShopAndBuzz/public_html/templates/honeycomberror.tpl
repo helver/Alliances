@@ -1,0 +1,27 @@
+{include file="header.tpl" title=foo}
+{* user: {$user}<br>
+me_user: {$me_user}<br>
+me_user_obj: {$me_user_obj->getDisplayName()}
+*} 
+
+{assign var=userlabel value="$user's"}
+{assign var=ebay_username value=$user_obj->eBay_get_username()}
+<h2>Honycomb Add Error</h2>
+
+<center><table border="0" bgcolor="#ffffff" cellpadding="3" cellspacing="0" width="856">
+<tr align="center" valign="top">
+<td>
+<table border="0" bgcolor="#000000" cellpadding="16" cellspacing="8" width="850">
+<tr align=left valign=top><td>
+
+<p class="whitetext">Ooops!, it appears that there was a problem adding {$user} to your
+honeycomb.  The most likely problem is that you haven't actually bought anything from {$user} on
+which we can legitimately base your honeycomb addition.  On the positive side, that's an easy
+thing to fix: Buy something from {$user}!</p>
+
+<tr align=left valign=top><td align="center"><br>{include file="display_10_seller_items.tpl"}</td></tr>
+
+</tr></table>
+</td></tr></table>
+
+{include file="footer.tpl"}

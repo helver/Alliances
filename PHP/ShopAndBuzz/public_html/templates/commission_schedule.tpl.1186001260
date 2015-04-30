@@ -1,0 +1,50 @@
+{include file="header.tpl" title=foo} 
+
+<h2>{$user}'s Commission Schedules</h2> 
+
+<center><table border="0" bgcolor="#ffffff" cellpadding="3" cellspacing="0" width="856"> 
+<tr align="center" valign="top"> 
+<td> 
+<table border="0" bgcolor="#000000" cellpadding="16" cellspacing="8" width="850"> 
+<tr><td> 
+
+<form method="POST" action="/users/{$user}/commission_schedule/"> 
+<input type="hidden" name="comm_level" value="2"> 
+<table border="0"> 
+<tr><td class="whitetext" align="center" colspan="2">Commissions to Your Buzzing Buyers</td></tr> 
+
+<tr><td class="whitetext" align="right">Commission Type:</td><td>{$referer_pay_type}</td></tr> 
+<tr><td class="whitetext" align="right">Commission Amount:</td><td>{$referer_amount} (leave out $ or %)</td></tr> 
+<tr><td class="whitetext">&nbsp; &nbsp; For example, a 2% commission (use percent) or a flat $3 commission (use flatrate).</td></tr>
+<tr><td class="whitetext" align="right">Limit:</td><td>{$referer_max_limit}</td></tr> 
+<tr><td class="whitetext" align="right">Limit Type:</td><td>{$referer_limit_type}</td></tr> 
+<tr><td class="whitetext">&nbsp; &nbsp; For example, give these buzzing people this commission for their referred buyers' first <b>3 purchases</b> with you, or the commission is available to them for 20 days from the time they make the referral.</td></tr>
+<tr><td class="whitetext" align="right">Minimum Purchase Amount:</td><td>${$referer_min_pay_threshold}</td></tr> 
+<tr><td class="whitetext" align="right">Maximum Payment Amount:</td><td>${$referer_max_amount}</td></tr> 
+<tr><td class="whitetext">&nbsp; &nbsp; Use these if you want to only give the commission when the purchase is above, below, or in between certain purchase amounts. For example, give these buyers this commission if the referred sale comes in between $50 and $1000.</td></tr>
+<tr><td colspan="2"><input type="submit" value="Update Level 2 Commission Schedule"></td></tr> 
+</table> 
+</form> 
+
+<form method="POST" action="/users/{$user}/commission_schedule/"> 
+<input type="hidden" name="comm_level" value="1"> 
+<table border="0"> 
+<tr><td class="whitetext" align="center" colspan="2">Commissions to Referred Buyers</td></tr>  
+<tr><td class="whitetext" align="right">Commission Type:</td><td>{$buyer_pay_type}</td></tr> 
+<tr><td class="whitetext" align="right">Commission Amount:</td><td>{$buyer_amount} (leave out $ or %)</td></tr>
+<tr><td class="whitetext">&nbsp; &nbsp; For example, a 2% commission (use percent) or a flat $3 commission (use flatrate).</td></tr>
+<tr><td class="whitetext" align="right">Limit:</td><td>{$buyer_max_limit}</td></tr>  
+<tr><td class="whitetext" align="right">Limit Type:</td><td>{$buyer_limit_type}</td></tr>
+<tr><td class="whitetext">&nbsp; &nbsp; For example, give these buyers this commission for their first <b>3 purchases</b> with you, or the commission is available to them for 20 days from the time their friend makes the referral.</td></tr>
+
+<tr><td class="whitetext" align="right">Minimum Purchase Amount:</td><td>${$buyer_min_pay_threshold}</td></tr> 
+<tr><td class="whitetext" align="right">Maximum Payment Amount:</td><td>${$buyer_max_amount}</td></tr> 
+<tr><td class="whitetext">&nbsp; &nbsp; Use these if you want to only give the commission when the purchase is above, below, or in between certain purchase amounts. For example, give these buyers this commission if the referred sale comes in between $50 and $1000.</td></tr>
+<tr><td colspan="2"><input type="submit" value="Update Commission Schedule for Referred Buyers"></td></tr> 
+</table> 
+</form> 
+
+</td></tr></table> 
+</td></tr></table> 
+
+{include file="footer.tpl"} 

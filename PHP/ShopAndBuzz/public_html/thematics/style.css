@@ -1,0 +1,108 @@
+BODY    	{
+	font-size: 12pt;
+	font-family: Calibri, Tahoma, Geneva, sans-serif;
+	color: #000000;
+	text-align: justify;
+}
+TABLE {
+	font-family : Calibri, Tahoma, Geneva, sans-serif;
+	font-size : 12pt;
+	color: #000000;
+	text-align: justify;
+}
+TH {
+	font-family : Calibri, Tahoma, Geneva, sans-serif;
+	font-size : 16pt;
+	color: #000000;
+}
+TD {
+	font-family : Calibri, Tahoma, Geneva, sans-serif;
+	font-size : 12pt;
+	color: #000000;
+	text-align: justify;
+}
+A:link      	{
+	color: #efdac1;
+	text-decoration: underline;
+	font-weight: bold;
+}
+A:visited   {
+	color: #efdac1;
+	text-decoration: underline;
+	font-weight: bold;
+}
+A:active   {
+	color: #f1c886;
+	text-decoration: underline;
+	font-weight: bold;
+}
+A:hover    {
+	color: #f1c886;
+	text-decoration: underline;
+	font-weight: bold;
+}
+H2 {
+	font-family : Calibri, Tahoma, Geneva, sans-serif;
+	font-size : 24pt;
+	color: #351d04;
+}
+H4 {
+	font-family : Calibri, Tahoma, Geneva, sans-serif;
+	font-size : 14pt;
+	color: #fbaf34;
+}
+.whitetext {
+	font-family : Calibri, Tahoma, Geneva, sans-serif;
+	font-size : 13pt;
+	color: #ffffff;
+}
+.errortext {
+	font-family : Calibri, Tahoma, Geneva, sans-serif;
+	font-size : 12pt;
+	color: #ff2222;
+}
+.tableHeader {
+	font-family : Calibri, Tahoma, Geneva, sans-serif;
+	font-size : 10pt;
+	color: #ffffff;
+}
+.small {
+	font-family: Calibri, Tahoma, Geneva, sans-serif;
+	font-size: 9pt;
+	text-align: left;
+	font-weight: bold;
+}
+.formfield {
+	font-family: Calibri, Tahoma, Geneva, sans-serif;
+	font-size: 10pt;
+	border-style: solid; 
+	color: #000000; 
+	border-left:1px solid #f1c886; 
+	border-right:1px solid #f1c886; 
+	border-top:1px solid #f1c886; 
+	border-bottom:1px solid #f1c886;
+}
+#userdisplay {
+	font-family: Calibri, Tahoma, Geneva, sans-serif;
+	font-size: 10pt;
+	color: #ffffff; 
+	height: 25;
+}
+TD.bkg-header {
+background: url('web-header.jpg') left top no-repeat;
+}
+TD.bkg-main {
+background: url('web-bkg-main.jpg') left top no-repeat;
+}
+TD.bkg-footer {
+background: url('web-footer.jpg') left top no-repeat;
+}
+TD.bkg-hive {
+background: url('web-headline-hive.jpg') left top no-repeat;
+}
+TD.bkg-honeycomb {
+background: url('web-headline-honeycomb.jpg') left top no-repeat;
+}
+TD.bkg-news {
+background: url('web-headline-news.jpg') left top no-repeat;
+}

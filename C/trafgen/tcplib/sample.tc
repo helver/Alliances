@@ -1,0 +1,7 @@
+
+characteristic	type	granularity	distfile
+
+e.g.
+
+pktsize	int	10	data/sample.pktsize
+duration	float	1000	data/sample.duration

@@ -1,0 +1,1 @@
+ps -e  -o pid,args | sort -n +3 | egrep  '(getFlagDB2|GeoWatchdog|outage|DWDM_DataCollector)' | cut -c 1-5,20-300

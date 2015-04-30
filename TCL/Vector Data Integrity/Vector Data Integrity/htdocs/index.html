@@ -1,0 +1,66 @@
+<html>
+<head>
+<title>Vector Data Integrity Suite</title>
+<style type="text/css">
+.header {font-family: arial,sans-serif; font-size: 30pt; font-weight: bold; line-height: 50pt; margin-left: 100; margin-right: 100;}
+.content {font-family: verdana,arial,sans-serif; font-size: 9pt; line-height: 14pt; margin-left: 100; margin-right: 100;}
+.bigmargin {margin-left: 100; margin-right: 100;}
+A:link {color:#0000ff; text-decoration: none;}
+A:visited {color:#0000ff; text-decoration: none;}
+A:hover {color:#ff0000; text-decoration: none;}
+</style>
+</head>
+<body>
+<div align="center" class="header">
+Vector Data Integrity Suite
+</div>
+<p class="content">The Vector Data Integrity Suite is a series of TCL applets that operate
+under a single GUI interface.  The current set of operations available
+include "Connection Tracing", "Billing Reconciliation", and "UPC Contract
+Tagging Validation".</p>
+
+<hr color="#cccccc" width="300" size="2">
+<p class="content">In order to use this tool you need the following pieces:</p>
+<p class="content"><a href="expect-5_21r1b1-setup.exe">Expect</a> - Install this first.<br>
+<a href="vector_tag.exp">vector_tag.exp</a> - Grab this.<br>
+<a href="vector_connections.exp">vector_connections.exp</a> - And grab this.</p>
+<hr color="#cccccc" width="300" size="2">
+
+<p class="content">In order to run the program, you need to have access to the G: drive.
+Without the G: drive, you won't have any switches available to you, so
+you won't get much done.</p>
+
+<p class="content">The set up involves adding the path to "wish80" to your %PATH%.  How
+to do that is beyond the scope of this document.  Additionally, the two
+files "vector_tag.exp" and "vector_connections.exp" should be in the
+same directory.</p>
+
+<p class="content">Assuming that you put the two "vector_" programs in the directory
+called "C:\vector", you would run the program by going into a dos prompt
+and issuing the following commands:</p>
+<div class="bigmargin">
+<pre>
+      cd c:\vector
+      wish80 vector_tag.exp
+</pre>
+</div>
+<p class="content">This will start the program up in GUI mode - which is the most useful.
+However the program can also be run in command-line mode.  The syntax
+is as follows:</p>
+<div class="bigmargin">
+<pre>
+      tclsh80 vector_tag.exp [tcb] 127.0.0.1
+</pre>
+</div>
+<p class="content">In this case, the options [tcb] indicate that you can run the program
+with between 1 and 3 of the options given.  The 127.0.0.1 would be replaced
+by the IP address of the Vector switch that you wanted to check up on.
+The output will come back on standard out (to the screen) but you can
+redirect the output to a file like so:</p>
+<div class="bigmargin">
+<pre>
+      tclsh80 vector_tag.exp [tcb] 127.0.0.1 > c:\output1.txt
+</pre>
+</div>
+</body>
+</html>

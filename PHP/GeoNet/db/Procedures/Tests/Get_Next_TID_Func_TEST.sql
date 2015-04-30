@@ -1,0 +1,3 @@
+select p.projectid, p.sr, p.manualsr, substr(d.devlgroupname, 0, 15), d.sr, substr(pc.lastname, 0, 10), f.sr from project p, project_assignment pa, project_contact pc, fundedvps f, developer_group d where p.devlgroupid = d.devlgroupid and pa.projectid = p.projectid and pa.roleid = 8 and pa.contactid = pc.contactid and f.vpid = pc.contactid and (p.sr is null or p.sr = '');
+execute SR_Assignment;
+select p.projectid, p.sr, p.manualsr, substr(d.devlgroupname, 0, 15), d.sr, substr(pc.lastname, 0, 10), f.sr from project p, project_assignment pa, project_contact pc, fundedvps f, developer_group d where p.devlgroupid = d.devlgroupid and pa.projectid = p.projectid and pa.roleid = 8 and pa.contactid = pc.contactid and f.vpid = pc.contactid and (p.sr is null or p.sr = '');

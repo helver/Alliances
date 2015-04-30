@@ -1,0 +1,129 @@
+Trafgen HOWTO -
+
+There are two parts to the configuration and execution of the
+trafgen program:
+
+1) The commandline arguments to trafgen itself.
+2) The config file.
+
+
+Commandline arguments:
+
+-c config_file    - names the config file to be used for this run.
+                    The -c is the only argument that MUST be present.
+
+-p port_offset    - Starts the range of port numbers that trafgen will
+                    use.  To use standard ports, port_offset should be
+                    0.  For the purpose of the experiments, port_offset
+                    will probably be [1-9]000.  This range should match
+                    up with the range used by the tcpdiscardd server.
+
+-h host           - This specifies a default host.  Can be given in
+                    either dotted decimal notionation, or as a 
+                    canonical name.  Host arguments in the config
+                    file will be used in place of this default host.
+
+-m mtu            - default MTU value.
+
+-f tuning_factor  - This is the proverbial "big red button".
+                    Increasing the value of the tuning_factor will
+                    slow down the rate that packets and data are
+                    generated.  A value of 1 is the default.
+                    0 < x < 1 will generate a higher data rate than
+                    was measured.  x > 1 will generate a lower data
+                    rate than was measured.
+
+-d debug_value    - The debug value.  Probably best to keep it at 0.
+                    If you want to see what's going on, set it between
+                    1 and 5.
+
+-r random_seed    - Specifies the seed value for the random number
+                    generator.  Used to be able to reproduce test
+                    runs.
+
+
+EXAMPLE:
+
+./trafgen -c test.conf
+
+         Will run the program with program defaults using
+         the config file, test.conf from the local directory.
+
+
+./trafgen -c test.conf -f 2 -p 6000 -d 0
+
+         Will run the program with half as much traffic 
+         generated as it normally would, with a port offset
+         of 6000 (meaning data sent to 6080, 6023, etc),
+         with no debugging messages.
+
+etc.
+
+
+--------------------------------------------------------
+The configuration file:
+
+
+The general layout for a single config file line is:
+
+SERVICE [option value]*
+
+
+
+There are currently 5 supported services, each of which has
+its own set of available options.  The following are the
+services and their options:
+
+
+
+TCPLIB addr port streams dur rate delay
+       
+       Tcplib streams can define their destination host, 
+       destination port, number of instances, total 
+       duration, individual flow rate, and delay time.
+
+TELNET addr port dur delay 
+
+       Telnet streams can define their destination host,
+       destination port, total duration, and delay time.
+
+FTP addr port size delay
+
+       FTP streams can define their destination host, 
+       destination port, total transfer size, and delay
+       time.
+
+HTTP addr port size streams delay
+
+       HTTP streams can define their destination host, 
+       destination port, total transfer size, number of
+       instances and delay time.
+
+SMTP addr port size delay
+
+       SMTP streams can define their destination host,
+       destination port, total transfer size, and delay
+       time.
+
+NNTP addr port size delay
+
+       NNTP streams can define their destination host,
+       destination port, total transfer size, and delay
+       time.
+
+
+
+EXAMPLE:
+
+tcplib addr jarok.cs.ohiou.edu
+
+       runs one tcplib stream to jarok, delay 0 (starts
+       immediately), infinite duration (until program
+       completes) at the standard speed.
+
+ftp addr jarok.cs.ohiou.edu size 10M time 50
+
+       runs one ftp stream to jarok, starting 50 seconds
+       after the program begins, transferring 10 Megabytes
+       to jarok.
+

@@ -1,0 +1,1056 @@
+#!/opt/expect/bin/expect
+
+# Vector Data Integrity Checker - Vector Switch Specific Functionality
+#
+# Eric Helvey 913-534-7007
+# eric.l.helvey@mail.sprint.com
+#
+# Version 1.0 - 13 Oct 2000
+
+
+########################################################################
+##
+##   Begin Vector switch specific functions.
+##
+########################################################################
+
+
+#
+#
+# Function : parse_co_vcc_sho_advanced_line
+#
+# The parse_co_vcc_sho_advanced_line takes a line as read from a file
+# or from a switch as the result of a "co vcc sho advanced"
+# command.  In this function we would perform configuration
+# specific metadata acquisition for vcc_advanced lines.
+#
+# This function takes two arguments, a reference to the datalines
+# array (which contains all data and metadata) and the line of
+# data from the datasource to be added to the datalines.  This
+# function is called from within the parse_all function.
+proc parse_co_vcc_sho_advanced_line { p2 line } {
+    upvar 2 $p2 datalines
+
+	# Convert all blocks of whitespace into a single space.
+	# This has the side effect of converting the line into
+	# a list.
+    regsub -all "\[ \t]+" $line " " line
+
+    # Add the line into the data store using the first 6
+    # elements of the list as the key into the data store.
+    set datalines([lrange $line 0 5],vccadvanced) $line
+}
+
+
+
+#
+#
+# Function : parse_co_vcc_sho_line
+#
+# The parse_co_vcc_sho_line takes a line as read from a file or from a
+# switch as the result of a "co vcc sho" command.  In this
+# function we would perform configuration specific metadata
+# acquisition for vcc lines.
+#
+# This function takes two arguments, a reference to the datalines
+# array (which contains all data and metadata) and the line of
+# data from the datasource to be added to the datalines.  This
+# function is called from within the parse_all function.
+proc parse_co_vcc_sho_line { p2 line } {
+    upvar 2 $p2 datalines
+
+	# Convert all blocks of whitespace into a single space.
+	# This has the side effect of converting the line into
+	# a list.
+    regsub -all "\[ \t]+" $line " " line
+
+    # Add the line into the data store using the first 6
+    # elements of the list as the key into the data store.
+    set datalines([lrange $line 0 5],vcc) $line
+
+	# Perform configuration specific metadata acquisition
+	# for the upc_to_vcc_mapping option.
+    if {   [regexp "^\[0-9]CTL$" [lindex $line 3]] == 0
+        && [config_check "upc_to_vcc_mapping"]} {
+		set upcnum [lindex $line 6]
+
+		# We're storing a list of keys into the datalines(*,vcc) array
+		# in the datalines(*,upc_to_vcc) array.
+    	if {[info exists datalines($upcnum,upc)]} {
+    	    lappend datalines($upcnum,upc_to_vcc) [lrange $line 0 5]
+		}
+	}
+
+	# Perform configuration specific metadata acquisition
+	# for the upctagging option.
+	if {   [regexp "^\[0-9]CTL$" [lindex $line 3]] == 0
+        && [config_check "upctagging"]} {
+		set upcnum [lindex $line 6]
+
+		# We're recording the fact that this upc contract number
+		# was actually used by a vcc connection.  We'll need to
+		# know this in order to know whether we need to recreate
+		# connections or whether we can just delete the contract.
+        set datalines($upcnum,upcused) 1
+    }
+
+	if {[config_check "connection_validation"]} {
+		lappend datalines(vcc_validate) $line
+	}
+
+	# Fabric mapping is used for the billing and switch data
+	# synchronization. Basically the switch data contains connections
+	# and ports on both fabrics.  The billing data, however, only
+	# contains information for one fabric.  The fabric mapping makes the
+	# conversion from one fabric to another for the purposes of
+	# validating the billing information.
+    if {[config_check "fabric_mapping"]} {
+
+		# If the line has a CTL connection of doesn't match our notion
+		# of what the line should be, we ignore it and move on.
+    	if {   [regexp "CTL" $line]
+    	    || [regexp "^(\[1-9]\[A-E]\[1-9].*\[ \t]+(\[^ \t]*))" $line trash stuff name] == 0} {
+			return
+		}
+
+		debug_log 4 "$stuff"
+
+		# What we're doing in these three lines is:
+		# 1. Store the original "key" in the variable indexer.
+		# 2. Convert the from port to first fabric numbers.
+		# 3. Convert the to port to first fabric numbers.
+		set key [set indexer [lrange $stuff 0 5]]
+		set key [lreplace $key 0 0 [swap_fabric [lindex $key 0]]]
+		set key [lreplace $key 3 3 [swap_fabric [lindex $key 3]]]
+
+		debug_log 3 "$key"
+
+		# Now we actually store the mapping.
+		set datalines($key,fabricmap) $indexer
+	}
+}
+
+
+
+#
+#
+# Function : parse_co_vpc_sho_advanced_line
+#
+# The parse_co_vpc_sho_advanced_line takes a line as read from a file
+# or from a switch as the result of a "co vpc sho advanced"
+# command.  In this function we would perform configuration
+# specific metadata acquisition for vpc lines.
+#
+# This function takes two arguments, a reference to the datalines
+# array (which contains all data and metadata) and the line of
+# data from the datasource to be added to the datalines.  This
+# function is called from within the parse_all function.
+proc parse_co_vpc_sho_advanced_line { p2 line } {
+    upvar 2 $p2 datalines
+
+	# collapse all multiple spaces into a single space.  This has
+	# the side effect of turning $line into an list.
+    regsub -all "\[ \t]+" $line " " line
+
+    # Assign the entire data line to a uniquely identifiable element
+    # of the datalines array.
+    set datalines([lrange $line 0 3],vpcadvanced) $line
+}
+
+
+
+#
+#
+# Function : parse_co_vpc_sho_line
+#
+# The parse_co_vpc_sho_line takes a line as read from a file
+# or from a switch as the result of a "co vpc sho"
+# command.  In this function we would perform configuration
+# specific metadata acquisition for vpc lines.
+#
+# This function takes two arguments, a reference to the datalines
+# array (which contains all data and metadata) and the line of
+# data from the datasource to be added to the datalines.  This
+# function is called from within the parse_all function.
+proc parse_co_vpc_sho_line { p2 line } {
+    upvar 2 $p2 datalines
+
+	# collapse all multiple spaces into a single space.  This has
+	# the side effect of turning $line into an list.
+    regsub -all "\[ \t]+" $line " " line
+    set upcnum [lindex $line 4]
+
+    # Assign the entire data line to a uniquely identifiable element
+    # of the datalines array.
+    set datalines([lrange $line 0 3],vpc) $line
+
+
+	# For the upc_to_vpc_mapping, we're collecting lists of upc
+	# contracts and the vpc connections associated with those upc
+	# contracts.  So we're storing the key into the datalines(*,vpc)
+	# array.
+    if {[config_check "upc_to_vpc_mapping"]} {
+    	if {[info exists datalines($upcnum,upc)]} {
+    	    lappend datalines($upcnum,upc_to_vpc) [lrange $line 0 3]
+    	}
+	}
+
+	if {[config_check "connection_validation"]} {
+		lappend datalines(vpc_validate) $line
+	}
+
+	# For upctagging, we're just identifying the fact that this
+	# particular upc contract is used by at least one vpc connection.
+	if {[config_check "upctagging"]} {
+   	    set datalines($upcnum,upcused) 1
+	}
+
+	# Fabric mapping is used for the billing and switch data
+	# synchronization.  Basically the switch data contains connections
+	# and ports on both fabrics.  The billing data, however, only
+	# contains information for one fabric.  The fabric mapping makes
+	# the conversion from one fabric to another for the purposes of
+	# validating the billing information.
+	if {[config_check "fabric_mapping"]} {
+
+		# Only perform the fabric mapping on data lines that need
+		# the mapping to be performed.
+    	if {   [regexp "CTL" $line]
+    	    || [regexp "^(\[1-9]\[A-E]\[1-9].*\[ \t]+(\[^ \t]*))" $line trash stuff name] == 0} {
+			return
+		}
+
+		debug_log 4 "$stuff"
+
+		# What we're doing in these three lines is:
+		# 1. Store the original "key" in the variable indexer.
+		# 2. Convert the from port to first fabric numbers.
+		# 3. Convert the to port to first fabric numbers.
+		set key [set indexer [lrange $stuff 0 3]]
+		set key [lreplace $key 0 0 [swap_fabric [lindex $key 0]]]
+		set key [lreplace $key 2 2 [swap_fabric [lindex $key 2]]]
+
+		debug_log 3 "$key"
+
+		# Store the data in a uniquely identifiable location in
+		# the datalines array.
+		set datalines($key,fabricmap) $indexer
+	}
+
+}
+
+
+#
+#
+# Function : parse_co_upc_sho_line
+#
+# The parse_co_upc_sho_line takes a line as read from a file
+# or from a switch as the result of a "co upc sho"
+# command.  In this function we would perform configuration
+# specific metadata acquisition for upc lines.
+#
+# This function takes two arguments, a reference to the datalines
+# array (which contains all data and metadata) and the line of
+# data from the datasource to be added to the datalines.  This
+# function is called from within the parse_all function.
+proc parse_co_upc_sho_line { p1 line } {
+    upvar 2 $p1 datalines
+
+	# collapse all multiple spaces into a single space.  This has
+	# the side effect of turning $line into an list.
+    regsub -all "\[ \t]+" $line " " line
+
+	# If this data line matches what we think of as a upc line, then
+	# we'll add that to a uniquely identifiable address within the
+	# datalines array.
+    if {[regexp "^\[0-9]+$" [lindex $line 4]]} {
+        set datalines([lindex $line 0],upc) $line
+
+		# For the upctagging metadata, what we're looking for is upc
+		# contracts that don't have tagging set.  So the regular
+		# expression below filters out all upc contracts that have
+		# tagging set.  Then we'll want to keep track of the upc
+		# contracts that are used - so we create and initialize a
+		# location within the datalines array to store whether or not
+		# any vpc or vcc connections use this upc contract.
+        if {[config_check "upctagging"]} {
+        	if {[regexp "^\[0-9]+$" [lindex $line 4]] && [regexp "^TAG$" [lindex $line 5]] == 0} {
+        	    lappend datalines(untaggedupc) [lindex $line 0]
+        	    set datalines([lindex $line 0],upcused) 0
+        	}
+		}
+    }
+}
+
+
+
+#
+#
+# Function : parse_co_switch_call_sho_cr_advanced_line
+#
+# The parse_co_switch_call_sho_cr_advanced_line takes a line as read
+# from a file or from a switch as the result of a
+# "co switch call sho cr advanced" command.
+#
+# This function takes two arguments, a reference to the datalines
+# array (which contains all data and metadata) and the line of
+# data from the datasource to be added to the datalines.  This
+# function is called from within the parse_all function.
+proc parse_co_switch_call_sho_cr_advanced_line { p1 line } {
+	upvar 2 $p1 datalines
+
+	# We're substituting all mulitple space-tab combinations with
+	# single spaces.
+    regsub -all "\[ \t]+" $line " " line
+
+    # Here, we're assigning a pattern to the variable
+    # call_cr_advanced_re.  Basically all of the data that we're
+    # interested in in the output of this command is in the format:
+    # key = value.  So what this pattern will do is to parse up lines
+    # like that and remember the keys and their associated values.
+    set call_cr_advanced_re "\[ \t]*(\[^=]*)=\[ \t]*(.*)"
+
+	# if the call_cr_advanced_re pattern is matched on the line,
+	# then we store this line of data in a uniquely identifiable
+	# location within the datalines array.
+    if {[regexp $call_cr_advanced_re $line trash key val]} {
+		regsub "\[ \t]*$" $key "" key
+    	set datalines($key,callcradvanced) $val
+    	debug_log 3 "$key -- $val"
+	}
+
+}
+
+
+#
+#
+# Function : parse_co_switch_sho_line
+#
+# The parse_co_switch_sho_line takes a line as read
+# from a file or from a switch as the result of a co switch sho"
+# command.
+#
+# This function takes two arguments, a reference to the datalines
+# array (which contains all data and metadata) and the line of
+# data from the datasource to be added to the datalines.  This
+# function is called from within the parse_all function.
+proc parse_co_switch_sho_line { p1 line } {
+	upvar 2 $p1 datalines
+
+	# These are the lines that we're going to skip:  Either lines that
+	# are all whitespace (the second pattern) or lines that begin with
+	# the string "Switch Status".
+	if {[regexp "^Switch Status" $line] || [regexp "^\[ \t]*$" $line]} {
+		return
+	}
+
+	debug_log 1 "parsing: $line"
+
+	# We know that we want to keep all the other lines.  However the
+	# other lines are in one of four possible formats - so we need to
+	# use regular expressions to figure out what kind of line we're
+	# dealing with at this point in time.  Each of these four block
+	# applies a pattern and remembers certain components of that
+	# pattern.  If the pattern matches, then we store some of the data
+	# contained in that line.  Otherwise we keep looking at other
+	# patterns.
+
+	if {[regexp "^(FT\[^:]+):\[ \t]+(\[^,]+),\[ \t]+(FT\[^:]+):\[ \t]+(\[^\r\n]+)\[\r]?\n" $line trash hwt hw swt sw]} {
+		set datalines($hwt,switch) $hw
+		set datalines($swt,switch) $sw
+		debug_log 2 "got a hw/sw line"
+		return
+	}
+
+    if {[regexp "^Switch '\[^_]*_(\[^_]*)_(\[^_]*)',\[ \t]+Type\[ \t]+(.*)" $line trash effs switch_id switch_type]} {
+		set datalines(Switch,switch) $switch_id
+		set datalines(Type,switch) $switch_type
+		debug_log 2 "got a switch type/id line"
+		debug_log 1 "$effs"
+		if {[info exists effs] && [string length $effs] != 11} {
+			lappend datalines(errors) "ERROR: Switch CLLI ($effs) is wrong."
+		}
+		return
+	}
+
+	if {[regexp "^(\[^:]+)\[ \t]*:\[ \t]+(.*)" $line trash key val]} {
+		regsub "\[ \t]+$" $key "" key
+		set datalines($key,switch) $val
+		debug_log 2 "$key --- $val"
+		return
+	}
+
+	if {[regexp "^(.+)\[\t]\[ \t]*(.*)" $line trash key val]} {
+		regsub "\[ \t]+$" $key "" key
+		set datalines($key,switch) $val
+		debug_log 2 "got a normal key/value pair line"
+		return
+	}
+
+	debug_log 2 "got nothing that matched."
+
+
+}
+
+
+#
+#
+# Function : switch_login
+#
+# The switch_login function is used to establish a telnet session to
+# a switch.  This telnet session is used by other commands to issue
+# switch commands and retrieve data.  What's happening is that the
+# spawn command creates the connection and sets a variable called
+# spawn_id.  This spawn id is then used to allow "send" and "expect"
+# commands to use that connection.
+#
+# switch_login takes two arguments - an IP address and a file handle.
+# The function telnet's to the IP address.  The file handle is used to
+# write out a message if the script was unable to log into the switch.
+# switch_login returns the spawn_id of the connection.  switch_login
+# is called from two places within the program - from the "gogo"
+# function in a graphical invocation, and from the main script in
+# a command line invocation.
+proc vector_login { host fh } {
+
+	# The log_use function determines whether or not the actual
+	# interactions with the switch will be displayed.  In this case,
+	# log_user 0 means that the person running the script will not
+	# see the interactions with the switch, only the results that
+	# we explicity allow them to see.
+	log_user 0
+
+	set counter 0
+
+	while {$counter < 4} {
+		# Fire up telnet and log into the $mainhost.
+		if {[catch "spawn telnet $host" reason]} {
+			incr counter
+		} else {
+			break
+		}
+		if {$counter >= 4} {
+			puts $fh "ERROR: Unable to connect to the vector switch ($host).  Something majorly wrong."
+			puts $fh "####################################################"
+			return 0
+		}
+	}
+
+	set errmessage "ERROR: Unable to connect to vector host ($host).  Timeout or Switch busy."
+
+	# if we match the timeout, that means that we saw neither the
+	# login prompt, or the error message.  Usually this will mean
+	# that there is some sort of a network error.  In this case,
+	# we record a debugging message, and stop.
+	expect {
+	    timeout {
+	        debug_log 1 $errmessage
+	        debug_log 5 "expect 1 timeout"
+	        puts $fh "$errmessage ($host)"
+			puts $fh "####################################################"
+			close
+			wait
+	        return 0
+	    }
+		"Escape character is '^]'" {
+			debug_log 5 "got here"
+		}
+	}
+
+
+	# What expect does is to wait until it sees one of the things it
+	# is waiting for.  In this case it expects to find one of three
+	# things - "login:", the "Another telnet sessions is active"
+	# message, or nothing - a timeout.  When it encounters one of these
+	# things, it executes the commands associated with that trigger,
+	# then moves out of the expect statement.
+	#
+	# In this expect block we want to see the login prompt, but we have
+	# to be able to handle errors...
+	#
+    # If we match the following message, that means that someone
+    # else is already logged into the switch.  Since the switches
+    # only allow one login session at a time, we get an error
+    # message.  In this case, we record the debugging message and
+    # stop.
+	#
+	# The login prompt is what we really want to see.  The fact that
+	# there is no block of statments simply means that we have
+	# completed the execution of the expect statement and we're ready
+	# to move on.
+	expect {
+		timeout {
+			close
+			wait
+			return 0
+		}
+
+	    "Another telnet session is active on this switch" {
+	        debug_log 1 $errmessage
+	        debug_log 5 "expect 2 message 1"
+	        puts $fh "$errmessage ($host)"
+			puts $fh "####################################################"
+			close
+			wait
+			return 0
+		}
+
+	    "Another VMI is running on this switch" {
+	        debug_log 1 $errmessage
+	        debug_log 5 "expect 2 message 2"
+	        puts $fh "$errmessage ($host)"
+			puts $fh "####################################################"
+			close
+			wait
+			return 0
+		}
+
+	    "login: " {}
+	}
+
+
+	# If we've gotten here that means that we've received the login
+	# prompt.  At this point, we need to login.  Here's our user name.
+	# In this case we don't have a password.  If we did, we'd have to
+	# wait for that prompt as well.
+	send "vmi\r"
+
+	# If we logged in correctly, we'd expect to see a shell prompt
+	# something like this.
+	expect {
+		timeout {
+			close
+			wait
+			return 0
+		}
+		"assword: " {
+			debug_log 1 "Saw a password prompt.  This is a bad thing."
+			puts $fh "ERROR: Password prompt encountered on $host.  This is unexpected."
+			puts $fh "####################################################"
+			close
+			wait
+			return 0
+		}
+		"localhost::>" {}
+	}
+
+	# In order to configure the switch so that it doesn't break up the
+	# output of the commands that we'll be running, we instruct the
+	# switch to break the output after 0 rows of output - in other words,
+	# don't break up the output at all.
+	send "rows 0\r"
+
+	# The successful exection of the previous command should leave us
+	# back at the prompt.
+	expect "localhost::>"
+
+	debug_log 2 "spawn_id - $spawn_id"
+
+	# At this point, we're done logging in and and we simply return the
+	# spawn id back to the calling function.
+	return $spawn_id
+}
+
+
+
+#
+#
+# Function ; switch_logout
+#
+# The switch_logout function is used to shut down a connection to
+# a switch.  This is accomplished by simply issuing an "exit" command
+# on the switch.
+#
+# switch_logout takes two arguments - a spawn id and a file handle.
+# switch_logout is called from two places within the program - from
+# the "gogo" function in a graphical invocation, and from the main
+# script in a command line invocation.
+proc vector_logout { spawn_id fh } {
+	send "exit\r"
+	close
+	wait
+}
+
+
+#
+#
+# Function : get_co_upc_sho
+#
+# The get_co_upc_sho function runs the "co upc sho" command on the
+# switch, initiates the parsing of the results of the command, and
+# produces debugging output to verify that the data was collected
+# properly. Additionally, this function decides whether or not the
+# commands should actually be run.  If the function has already been
+# invoked on this switch, then we have the data, so we just skip the
+# very slow process of retrieving the data.
+#
+# get_co_upc_sho takes three parameters, a connection id, a file handle,
+# and a reference to the datalines array.  This function is called from
+# within main operation functions that require the data from a
+# "co upc sho" command.
+proc get_co_upc_sho { spawn_id fh p1 } {
+	upvar $p1 datalines
+
+	# If this variable exists, the we've already been through this
+	# function once, and we already have this data available to us,
+	# so there's no reason to actually run the command.
+	if {[info exists datalines(gotupc)] == 0} {
+
+		# Here we're setting up a regular expression that will match all
+		# of the lines that we want to evaluate.  In other words, all
+		# the lines that we're interested in from the output of this
+		# command will look like this:
+		set upc_re "^  (\[1-9]\[^\r\n]*)\[\r]?\n"
+
+		debug_log 2 "\n\nDumping data gathered while reading upc data lines.\n\n"
+
+		# Clear the input buffer
+		expect "*"
+
+		# The parse_all function actually runs the command and scans the
+		# output for matching lines.  parse_all also invokes the parse_*
+		# functions like "parse_co_upc_sho_line".
+		parse_all "co upc sho" $upc_re "parse_co_upc_sho_line datalines" spawn_id $fh
+
+		debug_log 3 "\n\nDumping a list of upc contracts and the data associated with them.\n\n"
+
+		# This is a little debugging snippet that prints out all of the
+		# upc lines discovered in the output.  By checking this against
+		# the actual output of the command we can identify any "misses"
+		# by the regular expression used in parse_all.
+		foreach i [array names datalines] {
+
+			# Only print those lines in the upc portion of datalines.
+			if {[regexp ",upc$" $i]} {
+		    	debug_log 3 "$i - $datalines($i)"
+			}
+		}
+
+		# This is a little debugging snippet that runs only if the
+		# upctagging option is enabled.  What this will do is to
+		# identify all the lines from the "co upc sho" command that do
+		# not have tagging enabled.
+		if {[config_check "upctagging"]} {
+			debug_log 3 "\n\nDumping a list of upc contracts that don't have tagging set and the data associated with them.\n\n"
+			foreach i $datalines(untaggedupc) {
+				debug_log 3 "$i - $datalines($i,upc)"
+			}
+		}
+
+		# Remember the fact that we've already acquired this data.
+		set datalines(gotupc) 1
+	}
+}
+
+
+
+#
+#
+# Function : get_co_vpc_sho
+#
+# The get_co_vpc_sho function runs the "co vpc sho" command on the
+# switch, initiates the parsing of the results of the command, and
+# produces debugging output to verify that the data was collected
+# properly.  Additionally, this function decides whether or not the
+# commands should actually be run.  If the function has already been
+# invoked on this switch, then we have the data, so we just skip the
+# very slow process of retrieving the data.
+#
+# get_co_vpc_sho takes three parameters, a connection id, a file handle,
+# and a reference to the datalines array.  This function is called from
+# within main operation functions that require the data from a
+# "co vpc sho" command.
+proc get_co_vpc_sho { spawn_id fh p1 } {
+	upvar $p1 datalines
+
+	# If this variable exists, the we've already been through this
+	# function once, and we already have this data available to us,
+	# so there's no reason to actually run the command.
+	if {[info exists datalines(gotvpc)] == 0} {
+
+		# Here we're setting up a regular expression that will match all
+		# of the lines that we want to evaluate.  In other words, all
+		# the lines that we're interested in from the output of this
+		# command will look like this:
+		set vpc_re "^\[ \t]*(\[0-9]\[A-Z]\[0-9]\[^\r\n]*)\[\r]?\n"
+
+		debug_log 2 "\n\nDumping data gathered while reading vpc data lines.\n\n"
+
+		# Clear the input buffer
+		expect "*"
+
+		# The parse_all function actually runs the command and scans the
+		# output for matching lines.  parse_all also invokes the parse_*
+		# functions like "parse_co_upc_sho_line".
+		parse_all {co vpc sho} $vpc_re "parse_co_vpc_sho_line datalines" spawn_id $fh
+
+		debug_log 3 "\n\nDumping a list of VPC data.\n\n"
+
+		# This is just the data acquisition dump - to make sure we got
+		# all the right data.
+		foreach i [array names datalines] {
+			if {[regexp ",vpc$" $i]} {
+				debug_log 3 "[lindex [split $i ,] 0] -- $datalines($i)"
+			}
+		}
+
+
+		# Here we're dumping the upc contract to vpc connection mapping.
+		# We're simply making sure that this metadata was collected
+		# correctly.
+		if {[config_check "upc_to_vpc_mapping"]} {
+			debug_log 3 "\n\nDumping a list of upc contract numbers that the VPC data associated with those contracts.\n\n"
+			foreach i [array names datalines] {
+				if {[regexp "^(\[0-9]+),upc$" $i trash connum] == 0} {
+					continue
+				}
+				if {[info exists datalines($connum,upc_to_vpc)]} {
+					foreach j $datalines($connum,upc_to_vpc) {
+		        	    debug_log 3 "$connum - $datalines($j,vpc)"
+			    	}
+				}
+			}
+		}
+
+
+		# Here we're dumping the fabric mapping metadata to validate our
+		# fabric mapping efforts.
+		if {[config_check "fabric_mapping"]} {
+			debug_log 3 "\n\nDumping a list of remapped vpc identifiers and the actual vpc data associated with them.\n\n"
+			foreach i [array names datalines] {
+				if {[regexp "^(.+),fabricmap$" $i trash connum]} {
+					if {[info exists datalines($datalines($connum,fabricmap),vpc)]} {
+						debug_log 3 "$connum - $datalines($datalines($connum,fabricmap),vpc)"
+					}
+				}
+			}
+		}
+
+		# Remember the fact that we've been in this function before.
+		set datalines(gotvpc) 1
+	}
+}
+
+
+#
+#
+# Function : get_co_vpc_sho_advanced
+#
+# The get_co_vpc_sho_advanced function runs the "co vpc sho advanced"
+# command on the switch, initiates the parsing of the results of the
+# command, and produces debugging output to verify that the data was
+# collected properly.  Additionally, this function decides whether or
+# not the commands should actually be run.  If the function has already
+# been invoked on this switch, then we have the data, so we just skip
+# the very slow process of retrieving the data.
+#
+# get_co_vpc_sho_advanced takes three parameters, a connection id, a
+# file handle, and a reference to the datalines array.  This function
+# is called from within main operation functions that require the data
+# from a "co vpc sho advanced" command.
+proc get_co_vpc_sho_advanced { spawn_id fh p1 } {
+	upvar $p1 datalines
+
+	# If this variable exists, the we've already been through this
+	# function once, and we already have this data available to us,
+	# so there's no reason to actually run the command.
+	if {[info exists datalines(gotvpcadvanced)] == 0} {
+
+		# Here we're setting up a regular expression that will match all
+		# of the lines that we want to evaluate.  In other words, all
+		# the lines that we're interested in from the output of this
+		# command will look like this:
+		set vpc_adv_re "^\[ \t]*(\[0-9]\[A-Z]\[0-9]\[^\r\n]*)\[\r]?\n"
+
+		debug_log 2 "\n\nDumping data gathered while reading vpc advanced switch data.\n\n"
+
+		# Clear the input buffer
+		expect "*"
+
+		# The parse_all function actually runs the command and scans the
+		# output for matching lines.  parse_all also invokes the parse_*
+		# functions like "parse_co_vpc_sho_advanced_line".
+		parse_all {co vpc sho advanced} $vpc_adv_re "parse_co_vpc_sho_advanced_line datalines" spawn_id $fh
+
+		debug_log 3 "\n\nDumping a list of VPC identifiers and the vpc advanced data associated with those identifiers.\n\n"
+
+		# This is just the data acquisition dump - to make sure we got
+		# all the right data.
+		foreach i [array names datalines] {
+			if {[regexp "^(.+),vpcadvanced$" $i trash connum]} {
+	            debug_log 3 "$connum - $datalines($connum,vpcadvanced)"
+		    }
+		}
+
+
+		# Remember the fact that we've been in this function before.
+		set datalines(gotvpcadvanced) 1
+	}
+}
+
+
+#
+#
+# Function : get_co_vcc_sho
+#
+# The get_co_vcc_sho function runs the "co vcc sho" command on the
+# switch, initiates the parsing of the results of the command, and
+# produces debugging output to verify that the data was collected
+# properly.  Additionally, this function decides whether or not the
+# commands should actually be run.  If the function has already been
+# invoked on this switch, then we have the data, so we just skip the
+# very slow process of retrieving the data.
+#
+# get_co_vcc_sho takes three parameters, a connection id, a file handle,
+# and a reference to the datalines array.  This function is called from
+# within main operation functions that require the data from a
+# "co vcc sho" command.
+proc get_co_vcc_sho { spawn_id fh p1 } {
+	upvar $p1 datalines
+
+	# If this variable exists, the we've already been through this
+	# function once, and we already have this data available to us,
+	# so there's no reason to actually run the command.
+	if {[info exists datalines(gotvcc)] == 0} {
+
+		# Here we're setting up a regular expression that will match all
+		# of the lines that we want to evaluate.  In other words, all
+		# the lines that we're interested in from the output of this
+		# command will look like this:
+		set vcc_re "^\[ \t](\[1-9]\[A-Z]\[0-9]\[^\r\n]*)\[\r]?\n"
+
+		debug_log 2 "\n\nDumping data gathered while reading vcc switch data.\n\n"
+
+		# Clear the input buffer
+		expect "*"
+
+		# The parse_all function actually runs the command and scans the
+		# output for matching lines.  parse_all also invokes the parse_*
+		# functions like "parse_co_vcc_sho_line".
+		parse_all {co vcc show} $vcc_re "parse_co_vcc_sho_line datalines" spawn_id $fh
+
+		debug_log 3 "\n\nDumping a list of VCC data.\n\n"
+
+		# This is just the data acquisition dump - to make sure we got
+		# all the right data.
+		foreach i [array names datalines] {
+			if {[regexp ",vcc$" $i]} {
+				debug_log 3 "[lindex [split $i ,] 0] -- $datalines($i)"
+			}
+		}
+
+		# Here we're dumping the upc contract to vpc connection mapping.
+		# We're simply making sure that this metadata was collected
+		# correctly.
+		if {[config_check "upc_to_vcc_mapping"]} {
+			debug_log 3 "\n\nDumping a list of upc contract numbers that the VCC data associated with those contracts.\n\n"
+			foreach i [array names datalines] {
+				if {[regexp "^(\[0-9]+),upc$" $i trash connum] == 0} {
+					continue
+				}
+				if {[info exists datalines($connum,upc_to_vcc)]} {
+					foreach j $datalines($connum,upc_to_vcc) {
+		        	    debug_log 3 "$connum - $datalines($j,vcc)"
+			    	}
+				}
+			}
+		}
+
+		# Here we're dumping the fabric mapping metadata to validate our
+		# fabric mapping efforts.
+		if {[config_check "fabric_mapping"]} {
+			debug_log 3 "\n\nDumping a list of remapped vcc identifiers and the actual vcc data associated with them.\n\n"
+			foreach i [array names datalines] {
+				if {[regexp "^(.+),fabricmap$" $i trash connum]} {
+					if {[info exists datalines($datalines($connum,fabricmap),vcc)]} {
+						debug_log 3 "$connum - $datalines($datalines($connum,fabricmap),vcc)"
+					}
+				}
+			}
+		}
+
+		# Remember the fact that we've been in this function before.
+		set datalines(gotvcc) 1
+	}
+}
+
+
+#
+#
+# Function : get_co_vcc_sho_advanced
+#
+# The get_co_vcc_sho_advanced function runs the "co vpc sho advanced"
+# command on the switch, initiates the parsing of the results of the
+# command, and produces debugging output to verify that the data was
+# collected properly.  Additionally, this function decides whether or
+# not the commands should actually be run.  If the function has already
+# been invoked on this switch, then we have the data, so we just skip
+# the very slow process of retrieving the data.
+#
+# get_co_vcc_sho_advanced takes three parameters, a connection id, a
+# file handle, and a reference to the datalines array.  This function
+# is called from within main operation functions that require the data
+# from a "co vpc sho advanced" command.
+proc get_co_vcc_sho_advanced { spawn_id fh p1 } {
+	upvar $p1 datalines
+
+	# If this variable exists, the we've already been through this
+	# function once, and we already have this data available to us,
+	# so there's no reason to actually run the command.
+	if {[info exists datalines(gotvccadvanced)] == 0} {
+
+		# Here we're setting up a regular expression that will match all
+		# of the lines that we want to evaluate.  In other words, all
+		# the lines that we're interested in from the output of this
+		# command will look like this:
+		set vcc_adv_re "^\[ \t](\[1-9]\[A-Z]\[0-9]\[^\r\n]*)\[\r]?\n"
+
+		debug_log 2 "\n\nDumping data gathered while reading vcc advanced switch data.\n\n"
+
+		# Clear the input buffer
+		expect "*"
+
+		# The parse_all function actually runs the command and scans the
+		# output for matching lines.  parse_all also invokes the parse_*
+		# functions like "parse_co_vcc_sho_advanced_line".
+		parse_all {co vcc show advanced} $vcc_adv_re "parse_co_vcc_sho_advanced_line datalines" spawn_id $fh
+
+		debug_log 3 "\n\nDumping a list of VCC identifiers and the vcc advanced data associated with those identifiers.\n\n"
+
+		# This is just the data acquisition dump - to make sure we got
+		# all the right data.
+		foreach i [array names datalines] {
+			if {[regexp "^(.+),vccadvanced$" $i trash connum]} {
+				debug_log 3 "$connum - $datalines($connum,vccadvanced)"
+			}
+		}
+
+		# Remember the fact that we've been in this function before.
+		set datalines(gotvccadvanced) 1
+	}
+}
+
+
+
+#
+#
+# Function get_co_switch_call_sho_cr_advanced
+#
+# The get_co_switch_call_sho_cr_advanced function runs the
+# "co switch call sho cr advanced" command on the switch, initiates the
+# parsing of the results of the command, and produces debugging output
+# to verify that the data was collected properly.  Additionally, this
+# function decides whether or not the commands should actually be run.
+# If the function has already been invoked on this switch, then we have
+# the data, so we just skip the very slow process of retrieving the
+# data.
+#
+# get_co_switch_call_sho_cr_advanced takes three parameters, a
+# connection id, a file handle, and a reference to the datalines array.
+# This function is called from within main operation functions that
+# require the data from a "co switch call sho cr advanced" command.
+proc get_co_switch_call_sho_cr_advanced { spawn_id fh p1 } {
+	upvar $p1 datalines
+
+	# If this variable exists, the we've already been through this
+	# function once, and we already have this data available to us,
+	# so there's no reason to actually run the command.
+	if {[info exists datalines(gotcallcradvanced)] == 0} {
+
+		# Here we're setting up a regular expression that will match all
+		# of the lines that we want to evaluate.  In other words, all
+		# the lines that we're interested in from the output of this
+		# command will look like this:
+		set call_cr_advanced_re "^(.*\[ \t]+=\[ \t]+.*)\[\r]?\n"
+
+		debug_log 2 "\n\nDumping data gathered while reading advanced call record data.\n\n"
+
+		# Clear the input buffer
+		expect "*"
+
+		# The parse_all function actually runs the command and scans the
+		# output for matching lines.  parse_all also invokes the parse_*
+		# functions like "parse_co_switch_call_sho_cr_advanced_line".
+		parse_all {co switch call sho cr advanced} $call_cr_advanced_re "parse_co_switch_call_sho_cr_advanced_line datalines" spawn_id $fh
+
+		debug_log 3 "\n\nDumping a list of advanced call record parameters.\n\n"
+
+		# This is just the data acquisition dump - to make sure we got
+		# all the right data.
+		foreach i [array names datalines] {
+			if {[regexp "^(.+),callcradvanced$" $i trash connum]} {
+				debug_log 3 "$connum - $datalines($connum,callcradvanced)"
+			}
+		}
+
+		# Remember the fact that we've been in this function before.
+		set datalines(gotcallcradvanced) 1
+	}
+}
+
+
+
+#
+#
+# Function : get_co_switch_sho
+#
+# The get_co_switch_sho function runs the "co switch sho" command on the
+# switch, initiates the parsing of the results of the command, and
+# produces debugging output to verify that the data was collected
+# properly.  Additionally, this function decides whether or not the
+# commands should actually be run.  If the function has already been
+# invoked on this switch, then we have the data, so we just skip the
+# very slow process of retrieving the data.
+#
+# get_co_switch_sho takes three parameters, a connection id, a file
+# handle, and a reference to the datalines array.  This function is
+# called from within main operation functions that require the data
+# from a "co switch sho" command.
+proc get_co_switch_sho { spawn_id fh p1 } {
+	upvar $p1 datalines
+
+	# If this variable exists, the we've already been through this
+	# function once, and we already have this data available to us,
+	# so there's no reason to actually run the command.
+	if {[info exists datalines(gotswitch)] == 0} {
+
+		# Here we're setting up a regular expression that will match all
+		# of the lines that we want to evaluate.  This pattern is
+		# different from the other patterns that we've used.  Essentially
+		# this pattern will match ALL lines and just allow the parse
+		# function to decide what lines are actual data and what lines
+		# are fluff.  This is mostly because the output of this command
+		# comes in several different formats and it's not efficient to
+		# make those checks here.
+		set switch_re "^(.*)\[\r]?\n"
+
+		debug_log 2 "\n\nDumping data gathered while reading switch configuration data.\n\n"
+
+		# The parse_all function actually runs the command and scans the
+		# output for matching lines.  parse_all also invokes the parse_*
+		# functions like "parse_co_switch_sho_line".
+		parse_all {co switch sho} $switch_re "parse_co_switch_sho_line datalines" spawn_id $fh
+
+		debug_log 3 "\n\nDumping a list of switch configuration parameters.\n\n"
+
+		# This is just the data acquisition dump - to make sure we got
+		# all the right data.
+		foreach i [array names datalines] {
+			if {[regexp "^(.+),switch$" $i trash connum]} {
+				debug_log 3 "$connum - $datalines($connum,switch)"
+			}
+		}
+
+		# Remember the fact that we've been in this function before.
+		set datalines(gotswitch) 1
+	}
+}
+
+
+
+########################################################################
+##
+## This is the end of the Vector specific functions
+##
+########################################################################
+

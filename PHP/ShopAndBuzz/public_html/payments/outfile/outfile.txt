@@ -1,0 +1,195 @@
+Key: payment_date 
+ Value: 19:04:17 Jul 09, 2007 PDT
+
+Key: txn_type 
+ Value: web_accept
+
+Key: last_name 
+ Value: Jones
+
+Key: residence_country 
+ Value: US
+
+Key: item_name 
+ Value: AsWas Invoice For July 2007
+
+Key: payment_gross 
+ Value: 300.00
+
+Key: mc_currency 
+ Value: USD
+
+Key: business 
+ Value: antonio-delacruz@homenet.tzo.com
+
+Key: payment_type 
+ Value: instant
+
+Key: verify_sign 
+ Value: A2au.lYQQ-ST0ZF39ZkoWI41.FZXAfQS8Czd9miMDGfCicBJS17VsWKj
+
+Key: payer_status 
+ Value: verified
+
+Key: test_ipn 
+ Value: 1
+
+Key: tax 
+ Value: 0.00
+
+Key: payer_email 
+ Value: bobjones@homenet.tzo.com
+
+Key: txn_id 
+ Value: 18591451PA235122V
+
+Key: quantity 
+ Value: 1
+
+Key: receiver_email 
+ Value: antonio-delacruz@homenet.tzo.com
+
+Key: first_name 
+ Value: Bob
+
+Key: payer_id 
+ Value: XTERDHPJK6ZDN
+
+Key: receiver_id 
+ Value: FFNRA4CFPXAEY
+
+Key: item_number 
+ Value: 200707adelac0500
+
+Key: payment_status 
+ Value: Completed
+
+Key: payment_fee 
+ Value: 9.00
+
+Key: mc_fee 
+ Value: 9.00
+
+Key: shipping 
+ Value: 0.00
+
+Key: mc_gross 
+ Value: 300.00
+
+Key: custom 
+ Value: 
+
+Key: charset 
+ Value: windows-1252
+
+Key: notify_version 
+ Value: 2.4
+
+Item Name: AsWas Invoice For July 2007
+
+Item Number: 200707adelac0500
+
+Payment Amount: 300.00
+
+Who Paid: bobjones@homenet.tzo.com
+
+Who's getting money: antonio-delacruz@homenet.tzo.com
+
+Payment Status: Completed
+
+Key: txn_type 
+ Value: web_accept
+
+Key: payment_date 
+ Value: 19:06:29 Jul 09, 2007 PDT
+
+Key: last_name 
+ Value: Clayborn
+
+Key: residence_country 
+ Value: US
+
+Key: pending_reason 
+ Value: echeck
+
+Key: item_name 
+ Value: AsWas Invoice For July 2007
+
+Key: payment_gross 
+ Value: 500.00
+
+Key: mc_currency 
+ Value: USD
+
+Key: business 
+ Value: antonio-delacruz@homenet.tzo.com
+
+Key: payment_type 
+ Value: echeck
+
+Key: verify_sign 
+ Value: AGpf1aVKqUzCwOV5nd0J2zgu5YNDA8cpg.s4Oer0fLi0LnDhFRd4gzEK
+
+Key: payer_status 
+ Value: verified
+
+Key: test_ipn 
+ Value: 1
+
+Key: tax 
+ Value: 0.00
+
+Key: payer_email 
+ Value: anklebiter@homenet.tzo.com
+
+Key: txn_id 
+ Value: 04F32900M0840730F
+
+Key: quantity 
+ Value: 1
+
+Key: receiver_email 
+ Value: antonio-delacruz@homenet.tzo.com
+
+Key: first_name 
+ Value: Deloris
+
+Key: payer_id 
+ Value: WXMSFCDENNE2C
+
+Key: receiver_id 
+ Value: FFNRA4CFPXAEY
+
+Key: item_number 
+ Value: 200707brobid0100
+
+Key: payment_status 
+ Value: Pending
+
+Key: shipping 
+ Value: 0.00
+
+Key: mc_gross 
+ Value: 500.00
+
+Key: custom 
+ Value: 
+
+Key: charset 
+ Value: windows-1252
+
+Key: notify_version 
+ Value: 2.4
+
+Item Name: AsWas Invoice For July 2007
+
+Item Number: 200707brobid0100
+
+Payment Amount: 500.00
+
+Who Paid: anklebiter@homenet.tzo.com
+
+Who's getting money: antonio-delacruz@homenet.tzo.com
+
+Payment Status: Pending
+

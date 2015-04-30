@@ -1,0 +1,2 @@
+nitems	  int	  data/nntp.nitems
+itemsize	int	  data/nntp.itemsize

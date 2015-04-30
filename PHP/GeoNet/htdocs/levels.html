@@ -1,0 +1,48 @@
+<html>
+<head>
+  <title>Access Levels Legend</title>
+  <style type="text/css">
+    .legend {font-family:verdana,arial,sans-serif; font-size: 8pt; color:#000000; z-index: 50;}
+    .smallhead {font-family:verdana,sans-serif; font-weight: bold; font-size: 12pt;}
+  </style>
+</head>
+<body onload="window.focus();">
+  <table cellpadding="3" cellspacing="5" border="0">
+    <tr>
+      <td class="smallhead" colspan="2" align="center">Access Levels</td>
+    </tr>
+    <tr>
+      <td class="legend" valign="top">Customers</td>
+      <td class="legend">Have access to Color Block, Map, Alarm History, and Tid History pages.<br>
+          Can not see element IP addresses.</td>
+    </tr>
+    <tr>
+      <td class="legend" valign="top">Internal Customers</td>
+      <td class="legend">Can see element IP addresses.</td>
+    </tr>
+    <tr>
+      <td valign="top" class="legend">Users</td>
+      <td class="legend">Have access to Database Update pages.<br>
+        Cannot create or modify UserGroups.<br>
+        Can acknolwedge alarms.</td>
+    </tr>
+    <tr>
+      <td valign="top" class="legend">Admin</td>
+      <td class="legend">Can create or modify UserGroups.<br>
+        Can assign customers to UserGroups.<br>
+        Can add or modify Users.<br>
+        Cannot set a user's access level to Admin or SuperAdmin.<br>
+        Cannot change the access level of any Admin or SuperAdmin.</td>
+    </tr>
+    <tr>
+      <td valign="top" class="legend">Super Admin</td>
+      <td class="legend">Can set a user's access level to Admin or SuperAdmin.</td>
+    </tr>
+    <tr><td colspan="2">&nbsp;</td></tr>
+    <tr>
+      <td class="legend" colspan="2">Each access level retains the abilities of the access
+        levels below it, unless otherwise specified.</td>
+    </tr>
+  </table>
+</body>
+</html>

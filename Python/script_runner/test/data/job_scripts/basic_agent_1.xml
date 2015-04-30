@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?><script chaining="implicit" id="S0" src="/workspaces/1/documents/1910128.txt" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <commands>
+    <command id="C1" xsi:type="AuditHostScriptCommand">
+      <input>
+        <type>application/vnd.mir+xml;type="host"</type>
+      </input>
+      <result>
+        <type>application/vnd.mir+xml;type="auditresult"</type>
+      </result>
+      <script chaining="none">
+        <commands>
+          <command xsi:type="ExecuteModuleCommand">
+            <module name="w32ports"/>
+          </command>
+          <command xsi:type="ExecuteModuleCommand">
+            <module name="w32processes-API"/>
+          </command>
+          <command xsi:type="ExecuteModuleCommand">
+            <module name="w32files"/>
+            <config xsi:type="ParameterListModuleConfig">
+              <parameters>
+                <param name="paths">
+                  <value xsi:type="ArrayOfString">
+                    <string>C:\</string>
+                    <string>D:\</string>
+                  </value>
+                </param>
+                <param name="depth">
+                  <value xsi:type="xsd:int">50</value>
+                </param>
+              </parameters>
+            </config>
+          </command>
+        </commands>
+      </script>
+    </command>
+  </commands>
+</script>

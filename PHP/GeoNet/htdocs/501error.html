@@ -1,0 +1,375 @@
+<html>
+<head>
+<meta http-equiv="expires" content="-1">
+<meta name="keywords" content="GeoNet">
+<title>GeoNet - View Group Memberships</title>
+<style type="text/css">
+/* styles for top bar */
+
+.siteTitle { font-family: arial,helvetica,sans-serif; font-size:16px; color:#000000; line-height:15px; font-weight: bold }
+
+a.topRightLinks { font-family: verdana,geneva,sans-serif; font-size:11px; color:#000000; line-height:12px }
+a.topRightLinks:link { font-family: verdana,geneva,sans-serif; font-size:11px; color:#000000; line-height:12px }
+a.topRightLinks:hover { font-family: verdana,geneva,sans-serif; font-size:11px; color:#000000; line-height:12px }
+a.topRightLinks:visited { font-family: verdana,geneva,sans-serif; font-size:11px; color:#000000; line-height:12px }
+a.topRightLinks:active { font-family: verdana,geneva,sans-serif; font-size:11px; color:#000000; line-height:12px }
+
+.topNavButton { font-family: verdana,geneva,sans-serif; font-size:10px; color:#ffffff; font-weight: bold }
+
+a.topNavButton { font-family: verdana,geneva,sans-serif; font-size:10px; color:#ffffff; font-weight: bold; text-decoration: none }
+a.topNavButton:link { font-family: verdana,geneva,sans-serif; font-size:10px; color:#ffffff; font-weight: bold; text-decoration: none }
+a.topNavButton:hover { font-family: verdana,geneva,sans-serif;font-size:10px; color:#ffffff; font-weight: bold; text-decoration: none }
+a.topNavButton:visited { font-family: verdana,geneva,sans-serif;font-size:10px; color:#ffffff; font-weight: bold; text-decoration: none }
+a.topNavButton:active { font-family: verdana,geneva,sans-serif;font-size:10px; color:#ffffff; font-weight: bold; text-decoration: none }
+
+a.topNavLink { font-family: arial,helvetica,sans-serif; font-size:11px; color:#000000 }
+a.topNavLink:link { font-family: arial,helvetica,sans-serif; font-size:11px; color:#000000 }
+a.topNavLink:hover { font-family: arial,helvetica,sans-serif; font-size:11px; color:#000000 }
+a.topNavLink:visited { font-family: arial,helvetica,sans-serif; font-size:11px; color:#000000 }
+a.topNavLink:active { font-family: arial,helvetica,sans-serif; font-size:11px; color:#000000 }
+
+
+.topTitleRow { background-color: #EEEEEE } /* row for site title */
+.topFrameCell { background-color: #FFFFFF } /* row for global nav */
+.topSubNavRow { background-color: #999999 } /* row for section buttons */
+.currentSection { background-color: #FF0000 } /* current site section */
+.leftSectionBorder { background-color: #dddddd }
+.rightSectionBorder { background-color: #333333 }
+
+
+
+/* styles for left nav */
+
+a.leftNavLink {font-family: arial, helvetica, sans-serif;font-size:11px;color:#000000;text-decoration: none} 
+a.leftNavLink:link { font-family: arial,helvetica,sans-serif;font-size:11px; color:#000000;text-decoration: non } 
+a.leftNavLink:hover { font-family: arial,helvetica,sans-serif;font-size:11px; color:#000000;text-decoration: non } 
+a.leftNavLink:visited { font-family: arial,helvetica,sans-serif;font-size:11px; color:#000000;text-decoration: non } 
+a.leftNavLink:active { font-family: arial,helvetica,sans-serif;font-size:11px; color:#000000;text-decoration: non } 
+
+
+.leftNavCol { background-color: #FFFFFF } /* column for left nav */
+
+.leftDiv { background-color: #000000 } /* divider lines for links */
+
+
+
+/* footer styles */
+
+a.linkFooter { font-family:arial,helvetica,sans-serif;font-size:11px;color:#000000;text-decoration: underline } 
+a.linkFooter:link { font-family:arial,helvetica,sans-serif;font-size:11px;color:#000000;text-decoration: underline } 
+a.linkFooter:hover { font-family:arial,helvetica,sans-serif;font-size:11px;color:#000000;text-decoration: underline } 
+a.linkFooter:active { font-family:arial,helvetica,sans-serif;font-size:11px;color:#000000;text-decoration: underline } 
+a.linkFooter:visited { font-family:arial,helvetica,sans-serif;font-size:11px;color:#000000;text-decoration: underline } 
+
+
+.txtFooter { font-family:arial,helvetica,sans-serif;font-size:11px;color:#000000 }
+
+.footerRow { background-color: #EEEEEE } /* footer row */
+
+
+
+/* general styles */
+
+.divLines { background-color: #000000 } /* divider lines for page */
+
+
+
+/*added by ISG*/
+.bodyText {font-family:arial,helvetica,sans-serif;font-size:12px;color:#000000}
+.bodyTextSmall {font-family:arial,helvetica,sans-serif;font-size:10px;color:#000000}
+.bodyTextBold { font-family: arial,helvetica,sans-serif;font-size:12px;color:#000000;font-weight:bold;}
+
+
+/* added by VCC-meb */
+.globalback { background-color: #ffffff;  background-image: url(/univincludes/globalnav/images/global_back.gif)}
+.search-textfield {FONT-SIZE: 13px; WIDTH: 120px}
+.divspace {font-size: 12px; font-family: arial, helvetica, san-serif; }
+.globalNavButton { font-family: arial,helvetica,sans-serif; font-size:11px; color:#000000}
+a.globalNavButton { font-family: arial,helvetica,sans-serif; font-size:11px; color:#000000; text-decoration: none }
+a.globalNavButton:link { font-family: arial,helvetica,sans-serif; font-size:11px; color:#000000; text-decoration: none }
+a.globalNavButton:hover { font-family: arial,helvetica,sans-serif;font-size:11px; color:#000000; text-decoration: none }
+a.globalNavButton:visited { font-family: arial,helvetica,sans-serif;font-size:11px; color:#000000; text-decoration: none }
+a.globalNavButton:active { font-family: arial,helvetica,sans-serif;font-size:11px; color:#000000; text-decoration: none }
+
+
+/*For orgunittool */
+.pageTitle {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+}    .frameStockTicker { background-color: #D80000 }
+    .bodyStockTicker { background-color: #FFFFFF }
+    .subHeadStockTicker { background-color: #E5E7D4 }
+    .headerStockTicker { background-color: #CCCCCC }
+    .divStockTicker { background-color: #000000 }
+    .bottomStockTicker { background-color: #000000 }
+    .textStockTicker { font-family: arial,geneva,sans-serif; font-size: 12px; color: #000000; line-height: 14px; font-weight: bold }
+    .closeTicker { font-family: arial,geneva,sans-serif; font-size: 11px; color: #000000; line-height: 10px }
+    .noteStockTicker { font-family: arial,geneva,sans-serif; font-size: 11px; color: #ffffff; line-height: 10px }
+    .contentsmall { font-family: verdana,sans-serif; font-size: 10px; }
+    .contentsmalllink { font-family: verdana,sans-serif; font-size: 10px; }
+    .contentmedium { font-family: verdana,sans-serif; font-size: 11px; }
+    .nextprevious { color:#ffffff; background-color:#000000; font-family: verdana,sans-serif; font-size: 11px; }
+    .content { font-family: verdana,sans-serif; font-size: 12px; }   
+    .grayhead {font-family: arial,sans-serif; font-size: 10pt; font-weight:bold; color:#000000; background-color:#dddddd;}    
+    .redtext { font-family: arial,sans-serif; font-weight: bold; font-size: 12px; color: #cc0000}
+    .header {font-family: arial,helvetica,sans-serif; color:#666666; background-color:#E1D7AA; font-weight: bold; font-size: 12pt;}
+    .fieldlabels { font-family: verdana,sans-serif; font-size: 12px; }
+    .fieldName { font-family: verdana,sans-serif; font-size: 12px; }
+    .tableHeader { font-family: verdana,sans-serif; font-weight: bold; font-size: 13px; }
+    .error { font-family: verdana,sans-serif; font-weight: bold; font-size: 12px; color: #cc0000}
+    .tableContent { font-family: verdana,sans-serif; font-size: 12px; background-color:#E1D7AA; }   
+    .tableHead { font-family: verdana,sans-serif; font-size: 12px; background-color:#E1D7AA; font-weight: bold; }   
+    .pagehead {font-family: arial,helvetica,sans-serif; font-size: 14pt; color:#000000; font-weight: bold;}
+    A:Link { color: d80000; text-decoration:none;}
+    A:Hover { color: 0000ff;}
+    A:Visited { color: d80000; text-decoration:none;}
+    A:Link.normal { color: 000000; text-decoration:none;}
+    A:Hover.normal { color: d80000;}
+    A:Visited.normal { color: 000000; text-decoration:none;}
+    A:Link.contentsmalllink { color: 0000ff; text-decoration:none;}
+    A:Hover.contentsmalllink { color: d80000; text-decoration:underline;}
+    A:Visited.contentsmalllink { color: 0000ff; text-decoration:none;}
+    A:link.nextprevious {color: #ffffff;}
+    A:visited.nextprevious {color: #ffffff;}
+    A:hover.nextprevious {color: #ff0000;}
+
+  A:link {color:#0000ff;}
+  A:visited {color:#0000ff;}
+  A:hover {color:#ff0000;}
+
+  .hdr_lrg { font-family: Arial, sans-serif; font-size: 20; color: #666666; }
+  .hdr_nrm { font-family: Arial, sans-serif; font-size: 15; color: #666666; }
+  .hdr_sml { font-family: Arial, sans-serif; font-size: 9; color: #666666; }
+
+  .fieldlabels { font-family: verdana, sans-serif; font-size: 10; }
+  .tableHeader { font-family: verdana, sans-serif; font-size: 11; font-weight:bold; }
+  .tableHeader_sml { font-family: verdana, sans-serif; font-size: 9; font-weight: bold; }
+
+  .content9 { font-family: verdana, sans-serif; font-size: 9; }
+  .eventnochange { font-family: verdana, sans-serif; font-size: 9; }
+  .eventrecentchange { font-family: verdana, sans-serif; font-size: 9; background-color: #ff9999; }
+
+
+  a:link {font-family:arial,sans-serif; text-decoration:none; font-weight:bold; font-size: 10pt; color:#000000; z-index: 50;}
+  a:hover {font-family:arial,sans-serif; text-decoration:none; font-weight:bold; font-size: 10pt; color:#000000; z-index: 50;}
+  a:visited {font-family:arial,sans-serif; text-decoration:none; font-weight:bold; font-size: 10pt; color:#000000; z-index: 50;}
+  div.leftside {position:absolute; top: 80; left: 0; font-family:verdana,arial,sans-serif; font-weight:bold; font-size: 10pt; color:#000000; z-index: 50;}
+  .leftside {font-family:verdana,arial,sans-serif; font-weight:bold; font-size: 10pt; color:#000000; z-index: 50;}
+
+  #menuShow{
+  border: 1px solid #666666;
+  background-color: #ffffff;
+  padding: 13px;
+  font-size: 13px;
+  font-family: Verdana, Arial;
+  position: absolute;
+  width: auto;
+  height: auto;
+  z-index: 150;
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity = 80);
+  }
+
+  #menuSelect{
+  background-color: #ffffff;
+  padding: 0px;
+  font-size: 13px;
+  font-family: Verdana, Arial;
+  position: absolute;
+  width: auto;
+  height: auto;
+  z-index: 150;
+  }
+
+  #legendShow{
+  border: 1px solid #666666;
+  background-color: #ffffff;
+  padding: 13px;
+  font-size: 13px;
+  font-family: Verdana, Arial;
+  position: absolute;
+  width: auto;
+  height: auto;
+  z-index: 150;
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity = 80);
+  }
+
+  #legendSelect{
+  background-color: #ffffff;
+  padding: 0px;
+  font-size: 13px;
+  font-family: Verdana, Arial;
+  position: absolute;
+  width: auto;
+  height: auto;
+  z-index: 150;
+  }
+
+</style>
+</head>
+
+<body marginleft="0" margintop="0" leftmargin="0" topmargin="0" marginheight="0" marginwidth="0" link="#d80000" vlink="#663333" onLoad="window.location.reload();">
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr height="70">
+  <td height="70" class="topFrameCell">
+
+<!-- globalnav_top.inc : top part of global navigation -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td class="globalback" height="21"> <table border="0" cellpadding="0" cellspacing="0">
+        <tr height="21"> 
+          <td valign="top"><img src="/univincludes/globalnav/images/spacer.gif" width="1" height="21" alt="" border="0"></td>
+
+          <td valign="top">&nbsp;&nbsp;<a href="http://ppld.corp.sprint.com"  class="globalNavButton">PinPoint</a><span class="globalNavButton">&nbsp;&nbsp;|</span>
+		  <img src="/univincludes/globalnav/images/arrow.gif" width="9" height="7" border="0">&nbsp;Sprint Overview</a><span class="globalNavButton">&nbsp;&nbsp;|</span>
+		  <img src="/univincludes/globalnav/images/arrow.gif" width="9" height="7" border="0">&nbsp;Career Center</a><span class="globalNavButton">&nbsp;&nbsp;|</span>
+		  <img src="/univincludes/globalnav/images/arrow.gif" width="9" height="7" border="0">&nbsp;Workplace Support</a><span class="globalNavButton">&nbsp;&nbsp;|</span>
+		  <img src="/univincludes/globalnav/images/arrow.gif" width="9" height="7" border="0">&nbsp;Pay & Benefits</a><span class="globalNavButton">&nbsp;&nbsp;|</span>
+
+		  <img src="/univincludes/globalnav/images/arrow.gif" width="9" height="7" border="0">&nbsp;Internal Sites</a><span class="globalNavButton">&nbsp;&nbsp;|</span>
+		  <img src="/univincludes/globalnav/images/arrow.gif" width="9" height="7" border="0">&nbsp;External Sites</a><span class="globalNavButton">&nbsp;&nbsp;|</span>
+		  <img src="/univincludes/globalnav/images/arrow.gif" width="9" height="7" border="0">&nbsp;Help</a></td>
+        </tr>
+      </table></td>
+  </tr>
+
+  <tr> 
+    <td height="49"><a href="http://www.sprint.com"><img src="/univincludes/globalnav/images/navbar_logo.gif" alt="" border="0" WIDTH="123" HEIGHT="44"></a></td>
+  </tr>
+</table>
+  </td>
+  </tr>
+
+  <tr height="26">
+  <td height="26" class="topTitleRow">
+    <!-- begin site title header -->
+
+    <table border="0" cellspacing="0" cellpadding="0" width="793" height="26">
+    <tr>
+      <!-- first top nav row (left fade and top site title and links) -->
+      <td height="26" width="141" class="topFrameCell"><img src="/CorporateTheme/univincludes/globalnav/images/spacer.gif" width="141" height="1" alt="" border="0"></td>
+      <td height="26" width="652" nowrap>
+      <table border="0" cellspacing="0" cellpadding="0">
+        <tr height="26" width="652">
+        <td width="7" height="26" align="left"><img src="/CorporateTheme/univincludes/globalnav/images/nav_corner.gif" width="7" height="26" alt="" border="0"></td>
+        <td width="360" height="26"> <span class="siteTitle">GeoNet - Temporary Error</span>
+
+        </td>
+        <td width="245" height="26" align="right"> <a href="mailto:eric.l.helvey@mail.sprint.com?subject=GeoNet - Temporary Error" class="topRightLinks">Contact</a>
+        </td>
+        </tr>
+      </table>
+      </td>
+      <td height="26" width="40" nowrap>&nbsp;</td>
+    </tr>
+
+    </table>
+    <!-- end site title header -->
+  </td>
+  </tr>
+  <tr height="20">
+  <td height="20" class="topSubNavRow">
+    <!-- begin nav buttons -->
+    <table border="0" cellspacing="0" cellpadding="0" width="541" height="20">
+    <tr height="19">
+
+      <!-- second top nav row (nav buttons) -->
+      <td height="19" width="141"><img src="/CorporateTheme/univincludes/globalnav/images/nav_fade.gif" width="141" height="19" alt="" border="0"></td>
+      <td height="19" width="400" nowrap><table border="0" cellspacing="0" cellpadding="0">
+  <tr height="19" width="400">
+					
+<td width="1" height="19"  class="leftSectionBorder"><img src="/CorporateTheme/univincludes/globalnav/images/spacer.gif" width="1" height="1" alt="" border="0"></td>
+<td nowrap height="19"  align="center"> &nbsp; &nbsp; <a href="/geonetmonitor/index.php" class="topNavButton">Home</a> &nbsp; &nbsp; </td>
+
+<td width="1" height="19"  class="rightSectionBorder"><img src="/CorporateTheme/univincludes/globalnav/images/spacer.gif" width="1" height="1" alt="" border="0"></td>
+			
+<td width="1" height="19"  class="leftSectionBorder"><img src="/CorporateTheme/univincludes/globalnav/images/spacer.gif" width="1" height="1" alt="" border="0"></td>
+<td nowrap height="19"  align="center"> &nbsp; &nbsp; <a href="/geonetmonitor/security.php" class="topNavButton">Users</a> &nbsp; &nbsp; </td>
+<td width="1" height="19"  class="rightSectionBorder"><img src="/CorporateTheme/univincludes/globalnav/images/spacer.gif" width="1" height="1" alt="" border="0"></td>
+			
+<td width="1" height="19"  class="leftSectionBorder"><img src="/CorporateTheme/univincludes/globalnav/images/spacer.gif" width="1" height="1" alt="" border="0"></td>
+<td nowrap height="19"   class="currentSection"align="center"> &nbsp; &nbsp; <a href="/geonetmonitor/view_group_assignment.php" class="topNavButton">Groups</a> &nbsp; &nbsp; </td>
+
+<td width="1" height="19"  class="rightSectionBorder"><img src="/CorporateTheme/univincludes/globalnav/images/spacer.gif" width="1" height="1" alt="" border="0"></td>
+			
+<td width="1" height="19"  class="leftSectionBorder"><img src="/CorporateTheme/univincludes/globalnav/images/spacer.gif" width="1" height="1" alt="" border="0"></td>
+<td nowrap height="19"  align="center"> &nbsp; &nbsp; <a href="/geonetmonitor/links.php" class="topNavButton">Database</a> &nbsp; &nbsp; </td>
+<td width="1" height="19"  class="rightSectionBorder"><img src="/CorporateTheme/univincludes/globalnav/images/spacer.gif" width="1" height="1" alt="" border="0"></td>
+			
+<td width="1" height="19"  class="leftSectionBorder"><img src="/CorporateTheme/univincludes/globalnav/images/spacer.gif" width="1" height="1" alt="" border="0"></td>
+<td nowrap height="19"  align="center"> &nbsp; &nbsp; <a href="/geonetmonitor/logOff.php" class="topNavButton">Logout</a> &nbsp; &nbsp; </td>
+
+<td width="1" height="19"  class="rightSectionBorder"><img src="/CorporateTheme/univincludes/globalnav/images/spacer.gif" width="1" height="1" alt="" border="0"></td>
+
+    <td width="1" height="19" class="leftSectionBorder"><img src="/CorporateTheme/univincludes/globalnav/images/spacer.gif" width="1" height="1" alt="" border="0"></td>
+    <td width="1" height="19" class="rightSectionBorder"><img src="/CorporateTheme/univincludes/globalnav/images/spacer.gif" width="1" height="1" alt="" border="0"></td>
+  </tr>
+</table>
+		
+      </td>
+    </tr>
+    <tr height="1">
+      <td height="1"><img src="/CorporateTheme/univincludes/globalnav/images/spacer.gif" width="1" height="1" alt="" border="0"></td>
+
+    </tr>
+    </table>
+    <!-- end nav buttons -->
+  </td>
+  </tr>
+  <tr>
+  <td valign="top" height="400">
+    <!-- begin middle section of page (minimum height = 400 -->
+    <table border="0" cellspacing="0" cellpadding="0" width="100%" height="400">
+
+    <tr>
+
+      <td valign="top" width="142" class="leftNavCol" background="/CorporateTheme/univincludes/globalnav/images/blackline.gif">
+      <!-- begin left column -->
+        <table width="142" border="0" cellspacing="0" cellpadding="0" >
+          <tr>
+            <td class="topFrameCell">&nbsp;</td>
+          </tr>
+        </table>
+
+      <!-- end left column -->
+      </td>
+
+      <td width="100%" valign="top" class="bodyText">
+        <table border="0" cellpadding="10" cellspacing="0">
+          <tr>
+            <td>
+            <table border="0" cellpadding="0" cellspacing="0" align="center">
+              <tr>
+
+                <td>
+                <p class="pagehead">GeoNet has encountered a transient error.  Retrying...</p>
+                </td>
+              </tr>
+            </table>
+
+            </td>
+            </tr>
+        </table>
+      </td>
+    </tr>
+    <!-- end main body right column -->
+    </table>
+
+    <!-- end middle section of page -->
+
+  </td>
+  </tr>
+  <tr height="1">
+  <!-- begin footer rows -->
+  <td height="1" class="divLines"><img src="/CorporateTheme/univincludes/globalnav/images/spacer.gif" height="1" width="1" border="0" alt=""></td>
+  </tr>
+  <tr height="25">
+  <td height="25" class="footerRow" align="center"><a href="http://ppld.corp.sprint.com/intranetstandard/notice/notice.html" class="linkFooter">Copyright
+    &copy; Sprint 2002. All rights reserved.</a></td>
+  </tr>
+</table>
+  
+
+		</body>
+</html>

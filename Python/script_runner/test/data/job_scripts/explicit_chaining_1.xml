@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<script id="S0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" chaining="explicit">
+<input />
+<result>
+  <type>application/vnd.mir_xml;type="document"</type>
+  <src_id>urn:3</src_id>
+  <src_field>result</src_field>
+</result>
+<commands>
+  <command xsi:type="TimeSkewScriptCommand" id="urn:2">
+    <input>
+      <type>application/vnd.mir+xml;type="document"</type>
+      <src_id>urn:1</src_id>
+      <src_field>result</src_field>
+    </input>
+    <result>
+      <type>application/vnd.mir+xml;type="document"</type>
+    </result>
+    <offset>PT6M20S</offset>
+  </command>
+  <command xsi:type="AuditHostScriptCommand" id="urn:0">
+    <input>
+      <type>application/vnd.mir+xml;type="host"</type>
+      <src_id>S0</src_id>
+      <src_field>input</src_field>
+    </input>
+    <result>
+      <type>application/vnd.mir+xml;type="auditresult"</type>
+    </result>
+    <script chaining="none">
+      <commands>
+        <command xsi:type="ExecuteModuleCommand">
+          <module name="w32ports" />
+        </command>
+        <command xsi:type="ExecuteModuleCommand">
+          <module name="w32processes-API" />
+        </command>
+        <command xsi:type="ExecuteModuleCommand">
+          <module name="w32files" />
+          <config xsi:type="ParameterListModuleConfig">
+            <parameters>
+              <param name="paths">
+                <value xsi:type="ArrayOfString">
+                  <string>C:\</string>
+                  <string>D:\</string>
+                </value>
+              </param>
+              <param name="depth">
+                <value xsi:type="xsd:int">50</value>
+              </param>
+            </parameters>
+          </config>
+        </command>
+      </commands>
+    </script>
+  </command>
+  <command xsi:type="IterateAuditResultCommand" id="urn:1">
+    <input>
+      <type>application/vnd.mir+xml;type="auditresult"</type>
+      <src_id>urn:0</src_id>
+      <src_field>result</src_field>
+    </input>
+    <result>
+      <type>application/vnd.mir+xml;type="document"</type>
+    </result>
+  </command>
+  <command xsi:type="TimelineScriptCommand" id="urn:3">
+    <input>
+      <type>application/vnd.mir+xml;type="document"</type>
+      <src_id>urn:2</src_id>
+      <src_field>result</src_field>
+    </input>
+    <result>
+      <type>application/vnd.mir+xml;type="document"</type>
+    </result>
+    <fieldMap>
+      <type>application/vnd.mir+xml;type="document/PortList"</type>
+      <timeField>created</timeField>
+    </fieldMap>
+    <fieldMap>
+      <type>application/vnd.mir+xml;type="document/FileList"</type>
+      <timeField>fileCreated</timeField>
+    </fieldMap>
+  </command>
+</commands>
+</script>

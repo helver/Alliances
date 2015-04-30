@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?><script src="/workspaces/1/documents/1910128.txt" chaining="implicit">
+  <commands>
+    <command xsi:type="AutoRetryAuditHostScriptCommand">
+      <input>
+        <type>application/vnd.mir+xml;type="host"</type>
+      </input>
+      <result>
+        <type>application/vnd.mir+xml;type="auditresult"</type>
+      </result>
+      <fieldMap>
+        <targetDocument>/workspaces/1/documents/all/7/</targetDocument>
+        <targetDocument>/workspaces/1/documents/all/7/</targetDocument>
+      </fieldMap>
+      <script chaining="none">
+        <commands>
+          <command xsi:type="ExecuteModuleCommand">
+            <module name="w32memory" />
+          </command>
+        </commands>
+      </script>
+    </command>
+  </commands>
+</script>

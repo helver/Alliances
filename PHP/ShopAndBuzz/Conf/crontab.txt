@@ -1,0 +1,2 @@
+0 4 * * * /usr/bin/php Bin/GoodStanding.php&
+10 4 * * * /usr/bin/php Bin/NightlyPurchases.php&

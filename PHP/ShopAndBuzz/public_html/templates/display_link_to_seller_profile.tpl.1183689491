@@ -1,0 +1,2 @@
+{assign var=sellername value=$ebay_username}
+<a target="_blank" href="http://rover.ebay.com/rover/1/711-1751-2978-71/1?AID=5463217&PID=2502212&mpre=http%3A%2F%2Ffeedback.ebay.com/ws/eBayISAPI.dll?ViewFeedback&userid={$sellername}"><b>{$userlabel} eBay Feedback</b></a>

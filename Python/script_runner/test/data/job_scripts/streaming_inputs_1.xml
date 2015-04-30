@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<script chaining="implicit" id="urn:uuid:0b44d8a0-7ec5-4de5-9d08-61c72aacbb35">
+  <commands>
+    <command id="urn:uuid:3f50fd6d-3f11-4b7a-a06c-b17e015a7c94" xsi:type="AuditHostScriptCommand" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <input>
+        <type>application/vnd.mandiant.host+xml</type>
+      </input>
+      <result>
+        <type>application/vnd.mandiant.auditresult+xml</type>
+      </result>
+      <script chaining="none" id="urn:uuid:9afa5ad6-da12-4eed-a3e3-3c9365fb8254">
+        <commands>
+          <command id="urn:uuid:c18ae7cf-7005-407e-953f-277ce0478c92" xsi:type="ExecuteModuleCommand">
+            <module name="w32system" version="1.0.11.1" />
+            <filters />
+          </command>
+        </commands>
+      </script>
+    </command>
+    <command transfermode="stream" id="urn:uuid:b6a49136-7ee7-4d8a-9cc4-511ee7f17b84" xsi:type="DiffCommand" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <input>
+        <type>application/vnd.mandiant.document+xml</type>
+        <type>application/vnd.mandiant.auditresult+xml</type>
+      </input>
+      <result>
+        <type>application/vnd.mandiant.document+xml</type>
+      </result>
+      <field>Md5sum</field>
+    </command>
+  </commands>
+</script>
+
+

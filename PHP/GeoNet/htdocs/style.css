@@ -1,0 +1,32 @@
+A:link {color: #0000ff;}
+A:visited {color: #0000ff;}
+A:hover {color: #ff0000;}
+A:link.nextprevious {color: #ffffff;}
+A:visited.nextprevious {color: #ffffff;}
+A:hover.nextprevious {color: #ff0000;}
+A:link.leftlink {color: #0000ff;}
+A:visited.leftlink {color: #0000ff;}
+A:hover.leftlink {color: #ff0000;}
+A:link.alarm {color: #ffffff;}
+A:visited.alarm {color: #ffffff;}
+A:hover.alarm {color: #0000ff;}
+.head {font-family:verdana,sans-serif; font-weight: bold; font-size: 18pt;}
+.bigtitle {font-family:verdana,sans-serif; font-weight: bold; font-size: 32pt; color: #ffffff}
+.title {font-family:verdana,sans-serif; font-weight: bold; font-size: 18pt; color: #ffffff}
+.header {font-family:verdana,sans-serif; font-weight: bold; font-size: 18pt; color: #ffffff}
+.content {font-family:verdana,sans-serif; font-size: 10pt;}
+.contentWhite {font-family:verdana,sans-serif; font-size: 10pt; color: #ffffff}
+.smallContent {font-family:verdana,sans-serif; font-size: 8pt;}
+.smallContentBold {font-family:verdana,sans-serif; font-size: 8pt; font-weight: bold;}
+.label {font-family:verdana,sans-serif; font-size: 10pt; font-weight: bold;}
+.labelWhite {font-family:verdana,sans-serif; font-size: 10pt; font-weight: bold; color: #ffffff}
+.labelRed {font-family:verdana,sans-serif; font-size: 10pt; font-weight: bold; color: #ff0000}
+.fieldName {font-family:verdana,sans-serif; font-size: 10pt; font-weight: bold; background-color: #4682b4;}
+.data {font-family:verdana,sans-serif; font-size: 10pt; background-color: #FFFFFF;}
+.leftLink {font-family:verdana,sans-serif; font-size: 10pt; }
+.top {font-family:verdana,sans-serif; font-size: 10pt; color: #ffffff;}
+.errorMessage {font-family:verdana,sans-serif; font-size: 10pt; color: #FF0000;}
+.smallLink {font-family:verdana,sans-serif; font-size: 8pt; color: #E93C3C;}
+.smallContentHeader {font-family:verdana,sans-serif; font-size: 8pt; font-weight: bold; background-color: #E1D7AA;}
+.smallhead {font-family:verdana,sans-serif; font-weight: bold; font-size: 12pt;}
+.leftside {font-family:verdana,arial,sans-serif; text-align:right; font-weight:bold; font-size: 10pt; color:#000000; z-index: 50;}

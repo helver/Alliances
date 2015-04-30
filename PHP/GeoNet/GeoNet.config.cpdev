@@ -1,0 +1,6 @@
+DBhost|
+SubmittorHost|localhost
+StartingNumOfCollectors|5
+RequestorHost|localhost
+NotificationEmails|OSD-NetOps@sprintspectrum.com
+URLs|cpdev,corky,porky

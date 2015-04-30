@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<job xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" href="/workspaces/1/jobs/234/">
+<script src="/workspaces/1/documents/1910128.txt" chaining="implicit">
+  <commands>
+    <command xsi:type="AuditHostScriptCommand">
+      <input>
+        <type>application/vnd.mir+xml;type="host"</type>
+      </input>
+      <result>
+        <type>application/vnd.mir+xml;type="auditresult"</type>
+      </result>
+      <script chaining="none">
+        <commands>
+          <command xsi:type="ExecuteModuleCommand">
+            <module name="w32ports" />
+          </command>
+          <command xsi:type="ExecuteModuleCommand">
+            <module name="w32processes-API" />
+          </command>
+          <command xsi:type="ExecuteModuleCommand">
+            <module name="w32files" />
+            <config xsi:type="ParameterListModuleConfig">
+              <parameters>
+                <param name="paths">
+                  <value xsi:type="ArrayOfString">
+                    <string>C:\</string>
+                    <string>D:\</string>
+                  </value>
+                </param>
+                <param name="depth">
+                  <value xsi:type="xsd:int">50</value>
+                </param>
+              </parameters>
+            </config>
+          </command>
+        </commands>
+      </script>
+    </command>
+    <command xsi:type="IterateAuditResultCommand">
+      <input>
+        <type>application/vnd.mir+xml;type="auditresult"</type>
+      </input>
+      <result>
+        <type>application/vnd.mir+xml;type="document"</type>
+      </result>
+    </command>
+    <command xsi:type="TimeSkewScriptCommand">
+      <input>
+        <type>application/vnd.mir+xml;type="document"</type>
+      </input>
+      <result>
+        <type>application/vnd.mir+xml;type="document"</type>
+      </result>
+      <offset>PT6M20S</offset>
+    </command>
+    <command xsi:type="TimelineScriptCommand">
+      <input>
+        <type>application/vnd.mir+xml;type="document"</type>
+      </input>
+      <result>
+        <type>application/vnd.mir+xml;type="document"</type>
+      </result>
+      <fieldMap>
+        <type>application/vnd.mir+xml;type="document/PortList"</type>
+        <timeField>created</timeField>
+      </fieldMap>
+      <fieldMap>
+        <type>application/vnd.mir+xml;type="document/FileList"</type>
+        <timeField>fileCreated</timeField>
+      </fieldMap>
+    </command>
+  </commands>
+</script>
+<when>now</when>
+<input>
+  <uris>/workspaces/1/hosts/all/1/</uris>
+  <uris>/workspaces/1/hosts/all/2/</uris>
+</input>
+<results href="/workspaces/1/feeds/all/321/" count="-1" />
+</job>

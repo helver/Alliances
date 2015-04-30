@@ -1,0 +1,26 @@
+<HTML>
+<body onLoad="document.forms['subform'].submit();">
+<form name="subform" action="{$paypalURL}" method="POST">
+<input type="hidden" name="cmd" value="_xclick-subscriptions">
+<input type="hidden" name="business" value="{$paypalAccount}">
+<input type="hidden" name="item_name" value="Shop and Buzz Subscription">
+<input type="hidden" name="item_number" value="{$item_number}">
+<input type="hidden" name="return" value="{$returnURL}/payments/pmt_thank_you.php">
+<input type="hidden" name="cancel_return" value="{$returnURL}/payments/sub_cancel.php">
+<input type="hidden" name="no_shipping" value="1">
+<input type="hidden" name="no_note" value="1">
+<input type="hidden" name="currency_code" value="USD">
+<input type="hidden" name="lc" value="US">
+<input type="hidden" name="bn" value="PP-SubscriptionsBF">
+<input type="hidden" name="a1" value="0.00">
+<input type="hidden" name="p1" value="{$months_free}">
+<input type="hidden" name="t1" value="M">
+<input type="hidden" name="a3" value="{$monthly_rate}">
+<input type="hidden" name="p3" value="1">
+<input type="hidden" name="t3" value="M">
+<input type="hidden" name="src" value="1">
+<input type="hidden" name="sra" value="1">
+</form>
+<p>Please Wait</p>
+</body>
+</HTML>

@@ -1,0 +1,25 @@
+DROP PROCEDURE Clear_Alarm_For_Interface;
+DROP PROCEDURE Create_Alarm_For_Interface;
+DROP PROCEDURE Evaluate_Single_PM;
+DROP PROCEDURE Status_To_Facilities_Rollup;
+DROP PROCEDURE Status_To_TIDs_Rollup;
+DROP PROCEDURE Status_To_Customers_Rollup;
+DROP FUNCTION Call_Populate_TID_Queue;
+DROP PROCEDURE Populate_TID_Queue;
+DROP FUNCTION Get_Next_TID;
+DROP FUNCTION Shift_TID_Queue;
+DROP FUNCTION pnni_insertOrUpdate_facilities;
+DROP FUNCTION pnni_insertOrUpdate_interfaces;
+DROP PROCEDURE pnni_insOrUpd_tid_facility_map;
+DROP PROCEDURE pnni_insOrUpd_tid_intf_status;
+DROP FUNCTION pnni_insertOrUpdate_tids;
+DROP PROCEDURE determine_tis;
+DROP FUNCTION all_speeds_for_speed;
+DROP PROCEDURE delete_TID;
+DROP PROCEDURE Build_Links;
+DROP PROCEDURE Drop_Links;
+DROP PROCEDURE Build_Sequence;
+DROP FUNCTION all_customers_for_proc;
+
+SELECT DISTINCT 'Procedures Still Existing: ' || name FROM user_source WHERE type = 'PROCEDURE';
+SELECT DISTINCT 'Fuctions Still Existing: ' || name FROM user_source WHERE type = 'FUNCTION';
